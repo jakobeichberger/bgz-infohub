@@ -74,8 +74,11 @@ export default function ServicesPage() {
       </P>
 
       <Callout type="info" title="Hinweis für Eltern">
-        Erziehungsberechtigte haben derzeit keinen eigenen WebUntis-Zugang,
-        können aber den Zugang ihres Kindes mitbenutzen.
+        Eltern können WebUntis über das{" "}
+        <a href="https://www.bildung.gv.at" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-blue-400 hover:underline">Bildungsportal</a>{" "}
+        nutzen oder den Zugang ihres Kindes mitbenutzen. Bei Problemen mit
+        dem WebUntis-Elternaccount schreiben Sie bitte an{" "}
+        <a href="mailto:bnb@bgzwn.at" className="text-primary dark:text-blue-400 hover:underline">bnb@bgzwn.at</a>.
       </Callout>
 
       <H3>Farbcodes im Stundenplan</H3>

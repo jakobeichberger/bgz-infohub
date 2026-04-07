@@ -47,9 +47,11 @@ export default function ServicesPageEN() {
       </P>
 
       <Callout type="info" title="Note for parents">
-        Parents can now access WebUntis through the{" "}
+        Parents can access WebUntis through the{" "}
         <a href="https://www.bildung.gv.at" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-blue-400 hover:underline">Bildungsportal</a>{" "}
-        or use their child&apos;s login.
+        or use their child&apos;s login. For problems with your WebUntis
+        parent account, please contact{" "}
+        <a href="mailto:bnb@bgzwn.at" className="text-primary dark:text-blue-400 hover:underline">bnb@bgzwn.at</a>.
       </Callout>
 
       <H3>Colour codes in the timetable</H3>
