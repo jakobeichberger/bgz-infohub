@@ -19,7 +19,7 @@
   --card: #1e293b;
   --border: #334155;
   --text: #e2e8f0;
-  --text-light: #94a3b8;
+  --text-light: #a1a1aa;
   --hover-bg: #1e293b;
   --code-bg: #334155;
   --nav-bg: #1e293b;
@@ -34,6 +34,14 @@ body {
   background-color: var(--bg);
   color: var(--text);
   transition: background-color 0.2s, color 0.2s;
+}
+
+/* Focus styles for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 /* Scrollbar styling */

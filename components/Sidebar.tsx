@@ -41,7 +41,7 @@ function ThemeToggle() {
   return (
     <button
       onClick={toggle}
-      className="p-2 rounded-lg hover:bg-[var(--hover-bg)] transition-colors text-lg"
+      className="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-[var(--hover-bg)] transition-colors text-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]"
       aria-label="Toggle theme"
       title={dark ? "Switch to light mode" : "Switch to dark mode"}
     >
@@ -147,7 +147,8 @@ export function Sidebar() {
                 href={item.href}
                 onClick={() => setOpen(false)}
                 className={`
-                  flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all
+                  flex items-center gap-3 px-3 py-2.5 min-h-[44px] rounded-lg text-sm transition-all
+                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:ring-offset-1
                   ${
                     isActive
                       ? "bg-[var(--primary)]/10 text-[var(--primary)] font-semibold"
