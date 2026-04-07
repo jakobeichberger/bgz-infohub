@@ -10,6 +10,7 @@ const navItemsDE = [
   { href: "/infohub/schulaccount", label: "Schulaccount & Office", icon: "🔑" },
   { href: "/infohub/services", label: "Schulservices", icon: "🏫" },
   { href: "/infohub/mdm", label: "MDM-Einrichtung", icon: "⚙️" },
+  { href: "/infohub/nextexam", label: "Next-Exam", icon: "📝" },
   { href: "/infohub/bildungsportal", label: "Bildungsportal", icon: "🏛️" },
   { href: "/infohub/hilfe", label: "Hilfe & Kontakte", icon: "🆘" },
 ];
@@ -20,6 +21,7 @@ const navItemsEN = [
   { href: "/en/infohub/schulaccount", label: "School Account & Office", icon: "🔑" },
   { href: "/en/infohub/services", label: "School Services", icon: "🏫" },
   { href: "/en/infohub/mdm", label: "MDM Setup", icon: "⚙️" },
+  { href: "/en/infohub/nextexam", label: "Next-Exam", icon: "📝" },
   { href: "/en/infohub/bildungsportal", label: "Education Portal", icon: "🏛️" },
   { href: "/en/infohub/hilfe", label: "Help & Contacts", icon: "🆘" },
 ];
