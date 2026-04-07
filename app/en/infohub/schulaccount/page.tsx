@@ -212,50 +212,23 @@ export default function SchulaccountPageEN() {
         </ul>
       </Callout>
 
-      <H2>Microsoft Office 365</H2>
+      <H2>Microsoft 365</H2>
 
       <P>
-        Through the MS-ACH agreement, all students at BG Zehnergasse receive
-        Microsoft Office 365 <strong>for free</strong>, including installation
-        on up to <strong>5 devices</strong>.
+        Through the MS-ACH agreement, all students receive Microsoft 365 with
+        the <strong>A3 licence completely free</strong> — including desktop
+        apps, OneDrive, OneNote, Teams and Copilot.
       </P>
 
-      <H3>Included services</H3>
-
-      <Table
-        headers={["Service", "Description"]}
-        rows={[
-          ["Word, Excel, PowerPoint", "Available in browser and as desktop app (Windows & Mac)"],
-          ["OneDrive", "Cloud storage for files (automatic backup)"],
-          ["Outlook", "Email inbox with your school address"],
-          ["Microsoft Teams", "Communication, video conferences, teamwork"],
-        ]}
-      />
-
-      <H3>Sign in &amp; install</H3>
-
-      <StepList>
-        <Step title="Sign in via browser">
-          Open{" "}
-          <a href="https://portal.office.com" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-blue-400 hover:underline">
-            portal.office.com
-          </a>{" "}
-          and sign in with <InlineCode>lastname.firstname@bgzwn.at</InlineCode>.
-        </Step>
-        <Step title="Use browser apps">
-          After login you can use Word, Excel and PowerPoint directly in the
-          browser.
-        </Step>
-        <Step title="Desktop installation (optional)">
-          Click &quot;Install Office&quot; → &quot;Microsoft 365 Apps&quot; for
-          the full desktop version.
-        </Step>
-      </StepList>
-
-      <Callout type="warning" title="Licence notice">
-        The Office licence renews automatically each year and{" "}
-        <strong>expires when you leave the school</strong>. Back up important
-        files to private storage in time.
+      <Callout type="info" title="Dedicated page">
+        Full details on A3 licence benefits, OneDrive, OneNote, Copilot and
+        installation:{" "}
+        <a
+          href="/en/infohub/office365"
+          className="text-primary dark:text-blue-400 hover:underline font-semibold"
+        >
+          Microsoft 365 → View full details
+        </a>
       </Callout>
     </>
   );

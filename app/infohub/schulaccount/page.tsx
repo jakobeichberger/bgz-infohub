@@ -258,57 +258,23 @@ export default function SchulaccountPage() {
       </Callout>
 
       {/* ─── Office 365 ─── */}
-      <H2>Microsoft Office 365</H2>
+      <H2>Microsoft 365</H2>
 
       <P>
-        Über den MS-ACH-Vertrag erhalten alle Schülerinnen und Schüler am BG
-        Zehnergasse Microsoft Office 365{" "}
-        <strong>kostenlos</strong>, inklusive Installation auf bis zu{" "}
-        <strong>5 Geräten</strong>.
+        Über den MS-ACH-Vertrag erhalten alle Schülerinnen und Schüler
+        Microsoft 365 mit der <strong>A3-Lizenz komplett kostenlos</strong> —
+        inklusive Desktop-Apps, OneDrive, OneNote, Teams und Copilot.
       </P>
 
-      <H3>Enthaltene Dienste</H3>
-
-      <Table
-        headers={["Dienst", "Beschreibung"]}
-        rows={[
-          ["Word, Excel, PowerPoint", "Im Browser und als Desktop-App (Windows & Mac)"],
-          ["OneDrive", "Cloud-Speicher für Dateien (automatisches Backup)"],
-          ["Outlook", "E-Mail-Postfach mit der Schuladresse"],
-          ["Microsoft Teams", "Kommunikation, Videokonferenzen, Teamarbeit"],
-        ]}
-      />
-
-      <H3>Anmelden &amp; installieren</H3>
-
-      <StepList>
-        <Step title="Im Browser anmelden">
-          Öffnen Sie{" "}
-          <a
-            href="https://portal.office.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary dark:text-blue-400 hover:underline"
-          >
-            portal.office.com
-          </a>{" "}
-          und melden Sie sich mit{" "}
-          <InlineCode>nachname.vorname@bgzwn.at</InlineCode> an.
-        </Step>
-        <Step title="Browser-Apps nutzen">
-          Nach dem Login können Word, Excel und PowerPoint direkt im Browser
-          verwendet werden.
-        </Step>
-        <Step title="Desktop-Installation (optional)">
-          Klicken Sie auf &quot;Office installieren&quot; →
-          &quot;Microsoft 365-Apps&quot; für die vollständige Desktop-Version.
-        </Step>
-      </StepList>
-
-      <Callout type="warning" title="Lizenz-Hinweis">
-        Die Office-Lizenz verlängert sich jährlich automatisch und{" "}
-        <strong>erlischt mit dem Verlassen der Schule</strong>. Sichern Sie
-        wichtige Dateien rechtzeitig auf einem privaten Speicher.
+      <Callout type="info" title="Eigene Seite">
+        Alle Details zu den Vorteilen der A3-Lizenz, OneDrive, OneNote,
+        Copilot und Installation:{" "}
+        <a
+          href="/infohub/office365"
+          className="text-primary dark:text-blue-400 hover:underline font-semibold"
+        >
+          Microsoft 365 → Zur vollständigen Übersicht
+        </a>
       </Callout>
     </>
   );

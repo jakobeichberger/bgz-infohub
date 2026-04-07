@@ -200,75 +200,20 @@ export default function ServicesPageEN() {
       {/* ═══ edu.Card ═══ */}
       <H2>edu.Card — Student ID &amp; Copy Card</H2>
 
-      <Table
-        headers={["Detail", "Information"]}
-        rows={[
-          ["Cost", "EUR 15 (incl. EUR 5 starting credit for copies)"],
-          ["Copy balance", "Top up via edu.Pay (max. EUR 25)"],
-          ["Validity", "Up to 4 years (lower or upper school)"],
-          ["Delivery time", "Approx. 1–2 weeks after payment"],
-        ]}
-      />
+      <P>
+        The edu.Card is the official student ID with copy function. Full
+        details on ordering, loss reporting, replacement, and the digital
+        edu.digicard can be found on the dedicated page:
+      </P>
 
-      <H3>Usage</H3>
-      <UL>
-        <li>Printing &amp; copying (authenticate at printer)</li>
-        <li><strong>Official student ID</strong> in credit card format</li>
-        <li><strong>Note:</strong> Currently <strong>not</strong> usable for vending machines or school cafeteria</li>
-      </UL>
-
-      <Callout type="danger" title="Card lost? — File a loss report!">
-        <p>
-          The edu.Card is an <strong>official ID document</strong>. If lost,
-          you should file a <strong>loss report</strong>:
-        </p>
-        <ul>
-          <li>
-            <strong>Online (free):</strong> File a loss report at{" "}
-            <a href="https://fundamt.gv.at" target="_blank" rel="noopener noreferrer">
-              Fundamt Austria (fundamt.gv.at)
-            </a>
-          </li>
-          <li>
-            <strong>In person:</strong> At your local municipality (EUR 2.10
-            admin fee for verbal reports)
-          </li>
-          <li>
-            <strong>If stolen:</strong> File a theft report with the police
-          </li>
-        </ul>
-        <p>
-          More information:{" "}
-          <a href="https://www.oesterreich.gv.at/de/themen/notfaelle_unfaelle_und_kriminalitaet/verloren_gefunden/Seite.628000" target="_blank" rel="noopener noreferrer">
-            oesterreich.gv.at — Loss report
-          </a>
-        </p>
+      <Callout type="info" title="Dedicated page">
+        <a
+          href="/en/infohub/educard"
+          className="text-primary dark:text-blue-400 hover:underline font-semibold"
+        >
+          edu.Card &amp; edu.digicard → View full details
+        </a>
       </Callout>
-
-      <H3>Order a replacement card</H3>
-
-      <StepList>
-        <Step title="Order yourself via edu.Pay">
-          Sign in at the{" "}
-          <a href="https://edusuite.at/portal/" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-blue-400 hover:underline">
-            edu.Suite portal
-          </a>{" "}
-          and order a new edu.Card via the edu.Pay webshop. The card only
-          enters production after full payment.
-        </Step>
-        <Step title="Self-ordering not possible?">
-          Contact{" "}
-          <a href="mailto:admin@bgzwn.at" className="text-primary dark:text-blue-400 hover:underline">
-            admin@bgzwn.at
-          </a>{" "}
-          — IT can also place the order manually.
-        </Step>
-        <Step title="Wait for delivery">
-          The replacement card is produced with your current photo and takes
-          approx. <strong>1–2 weeks</strong>. The copy balance from the old
-          card is transferred to the new one. The old card is deactivated.
-        </Step>
-      </StepList>
 
       {/* ═══ Printing ═══ */}
       <H2>Printing &amp; Copying</H2>
