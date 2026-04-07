@@ -358,32 +358,94 @@ export default function ServicesPage() {
       <Table
         headers={["Detail", "Information"]}
         rows={[
-          ["Kosten", "13 EUR (Bestellung über edu.Pay)"],
+          ["Kosten", "15 EUR (inkl. 5 EUR Startguthaben für Kopien)"],
           ["Kopierguthaben", "Kann über edu.Pay aufgeladen werden (max. 25 EUR)"],
           ["Gültigkeit", "Bis zu 4 Jahre (Unter- oder Oberstufe)"],
+          ["Lieferzeit", "Ca. 1–2 Wochen nach Zahlungseingang"],
         ]}
       />
 
       <H3>Verwendung</H3>
       <UL>
         <li>Drucken &amp; Kopieren (Authentifizierung am Drucker)</li>
-        <li>Ausweis im Scheckkartenformat</li>
+        <li><strong>Offizieller Schülerausweis</strong> im Scheckkartenformat</li>
         <li>
           <strong>Hinweis:</strong> Derzeit <strong>nicht</strong> für Automaten
           oder Schulbuffet einsetzbar
         </li>
       </UL>
 
-      <Callout type="warning" title="Karte verloren?">
-        Sofort melden an{" "}
-        <a
-          href="mailto:admin@bgzwn.at"
-          className="text-primary dark:text-blue-400 hover:underline"
-        >
-          admin@bgzwn.at
-        </a>
-        . Das Guthaben wird auf die Ersatzkarte übertragen.
+      <Callout type="danger" title="Karte verloren? — Verlustanzeige erstatten!">
+        <p>
+          Die edu.Card ist ein <strong>offizieller Ausweis</strong>. Bei Verlust
+          sollten Sie eine <strong>Verlustanzeige</strong> erstatten:
+        </p>
+        <ul>
+          <li>
+            <strong>Online (kostenlos):</strong> Über das{" "}
+            <a
+              href="https://fundamt.gv.at"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Fundamt Österreich (fundamt.gv.at)
+            </a>{" "}
+            eine Verlustmeldung aufgeben
+          </li>
+          <li>
+            <strong>Vor Ort:</strong> Bei der zuständigen Gemeinde (bei
+            mündlicher Anzeige: 2,10 EUR Verwaltungsabgabe)
+          </li>
+          <li>
+            <strong>Bei Diebstahl:</strong> Diebstahlsanzeige bei der Polizei
+            erstatten
+          </li>
+        </ul>
+        <p>
+          Mehr Informationen:{" "}
+          <a
+            href="https://www.oesterreich.gv.at/de/themen/notfaelle_unfaelle_und_kriminalitaet/verloren_gefunden/Seite.628000"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            oesterreich.gv.at — Verlustanzeige
+          </a>
+        </p>
       </Callout>
+
+      <H3>Ersatzkarte bestellen</H3>
+
+      <StepList>
+        <Step title="Selbst über edu.Pay bestellen">
+          Melden Sie sich im{" "}
+          <a
+            href="https://edusuite.at/portal/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary dark:text-blue-400 hover:underline"
+          >
+            edu.Suite-Portal
+          </a>{" "}
+          an und bestellen Sie eine neue edu.Card über den edu.Pay-Webshop.
+          Die Karte geht erst nach vollständiger Bezahlung in Produktion.
+        </Step>
+        <Step title="Selbstbestellung nicht möglich?">
+          Wenden Sie sich an{" "}
+          <a
+            href="mailto:admin@bgzwn.at"
+            className="text-primary dark:text-blue-400 hover:underline"
+          >
+            admin@bgzwn.at
+          </a>{" "}
+          — die IT kann die Bestellung auch manuell auslösen.
+        </Step>
+        <Step title="Lieferung abwarten">
+          Die Ersatzkarte wird mit dem aktuellen Foto produziert und
+          dauert ca. <strong>1–2 Wochen</strong>. Das Kopierguthaben der
+          alten Karte wird auf die neue Karte übertragen. Die alte Karte
+          wird im System deaktiviert.
+        </Step>
+      </StepList>
 
       {/* ═══════════════ Drucken ═══════════════ */}
       <H2>Drucken &amp; Kopieren</H2>
