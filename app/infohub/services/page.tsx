@@ -306,11 +306,16 @@ export default function ServicesPage() {
       <Table
         headers={["Zahlungsart", "Hinweis"]}
         rows={[
-          ["EPS-Online", "Sofortüberweisung — sofort verbucht"],
-          ["Maestro / Debit", "Kartenzahlung — sofort verbucht"],
+          ["EPS-Überweisung", "Online-Überweisung — sofort verbucht"],
           ["Banküberweisung", "Dauert 2–4 Werktage"],
         ]}
       />
+
+      <Callout type="info" title="Keine Kartenzahlung">
+        Kreditkarten- und Debitkartenzahlungen werden aufgrund zu hoher
+        Gebühren nicht mehr angeboten. Bitte verwenden Sie EPS oder eine
+        klassische Banküberweisung.
+      </Callout>
 
       <Callout type="info" title="Überzahlung / Rückerstattung">
         Beträge unter 10 EUR können auf die Kopierkarte übertragen werden. Ab
@@ -445,7 +450,7 @@ export default function ServicesPage() {
           ],
           [
             "Eltern",
-            "Derzeit noch nicht möglich — das Ministerium arbeitet an einer Lösung",
+            "Über bildung.gv.at → Login mit ID Austria oder Bildungsportal-Zugangsdaten",
           ],
           [
             "Lehrkräfte",
