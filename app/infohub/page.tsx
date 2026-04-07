@@ -80,9 +80,20 @@ export default function InfoHubPage() {
           Digitale Prüfungsumgebung — Downloads, Anleitungen, Schnellhilfe
           und FAQ.
         </Card>
+        <Card href="/infohub/laptop" icon="💻" title="Laptop-Vorgaben">
+          Mindestanforderungen für die Oberstufe, Kaufberatung und Tipps.
+        </Card>
+        <Card href="/infohub/tipp10" icon="⌨️" title="TIPP10 Tipptrainer">
+          Kostenloses 10-Finger-Schreibtraining — Online, Software und
+          Schulversion.
+        </Card>
         <Card href="/infohub/bildungsportal" icon="🏛️" title="Bildungsportal & IT-Services">
           Bildungsportal für Eltern, edu.digicard (digitaler Schülerausweis),
           Lernplattformen.
+        </Card>
+        <Card href="/infohub/lizenzen" icon="🎁" title="Gratis Software">
+          Kostenlose Lizenzen: GitHub Copilot, JetBrains, Autodesk, Figma,
+          Canva und mehr.
         </Card>
         <Card href="/infohub/hilfe" icon="🆘" title="Hilfe & Kontakte">
           Ansprechpartner, häufige Probleme und Lösungen, alle wichtigen Links

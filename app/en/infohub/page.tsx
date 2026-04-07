@@ -78,9 +78,20 @@ export default function InfoHubPageEN() {
           Digital examination environment — downloads, guides, quick fixes
           and FAQ.
         </Card>
+        <Card href="/en/infohub/laptop" icon="💻" title="Laptop Requirements">
+          Minimum specs for upper school, buying guide and tips.
+        </Card>
+        <Card href="/en/infohub/tipp10" icon="⌨️" title="TIPP10 Typing Trainer">
+          Free 10-finger touch typing training — online, software and
+          school version.
+        </Card>
         <Card href="/en/infohub/bildungsportal" icon="🏛️" title="Education Portal & IT Services">
           Austrian Education Portal for parents, edu.digicard (digital student
           ID), learning platforms.
+        </Card>
+        <Card href="/en/infohub/lizenzen" icon="🎁" title="Free Software">
+          Free licences: GitHub Copilot, JetBrains, Autodesk, Figma, Canva
+          and more.
         </Card>
         <Card href="/en/infohub/hilfe" icon="🆘" title="Help & Contacts">
           Contact persons, common problems and solutions, all important links
