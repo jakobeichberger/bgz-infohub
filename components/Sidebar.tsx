@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
-const navItems = [
+const navItemsDE = [
   { href: "/infohub", label: "Startseite", icon: "🏠" },
   { href: "/infohub/geraete", label: "iPad & Geräte", icon: "📱" },
   { href: "/infohub/schulaccount", label: "Schulaccount & Office", icon: "🔑" },
@@ -12,6 +12,16 @@ const navItems = [
   { href: "/infohub/mdm", label: "MDM-Einrichtung", icon: "⚙️" },
   { href: "/infohub/bildungsportal", label: "Bildungsportal", icon: "🏛️" },
   { href: "/infohub/hilfe", label: "Hilfe & Kontakte", icon: "🆘" },
+];
+
+const navItemsEN = [
+  { href: "/en/infohub", label: "Home", icon: "🏠" },
+  { href: "/en/infohub/geraete", label: "iPad & Devices", icon: "📱" },
+  { href: "/en/infohub/schulaccount", label: "School Account & Office", icon: "🔑" },
+  { href: "/en/infohub/services", label: "School Services", icon: "🏫" },
+  { href: "/en/infohub/mdm", label: "MDM Setup", icon: "⚙️" },
+  { href: "/en/infohub/bildungsportal", label: "Education Portal", icon: "🏛️" },
+  { href: "/en/infohub/hilfe", label: "Help & Contacts", icon: "🆘" },
 ];
 
 function ThemeToggle() {
@@ -32,8 +42,8 @@ function ThemeToggle() {
     <button
       onClick={toggle}
       className="p-2 rounded-lg hover:bg-[var(--hover-bg)] transition-colors text-lg"
-      aria-label="Farbmodus wechseln"
-      title={dark ? "Hellen Modus aktivieren" : "Dunklen Modus aktivieren"}
+      aria-label="Toggle theme"
+      title={dark ? "Switch to light mode" : "Switch to dark mode"}
     >
       {dark ? "☀️" : "🌙"}
     </button>
@@ -44,6 +54,15 @@ export function Sidebar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
+  const isEN = pathname.startsWith("/en/");
+  const navItems = isEN ? navItemsEN : navItemsDE;
+  const basePath = isEN ? "/en/infohub" : "/infohub";
+
+  // Build the language switch URL
+  const langSwitchHref = isEN
+    ? pathname.replace("/en/infohub", "/infohub")
+    : "/en" + pathname;
+
   return (
     <>
       {/* Mobile header */}
@@ -51,7 +70,7 @@ export function Sidebar() {
         <button
           onClick={() => setOpen(!open)}
           className="p-2 rounded-lg hover:bg-[var(--hover-bg)] transition-colors"
-          aria-label="Menü öffnen"
+          aria-label="Open menu"
         >
           <svg
             width="24"
@@ -73,7 +92,15 @@ export function Sidebar() {
         <span className="font-bold text-[var(--primary)] text-sm">
           BG Zehnergasse InfoHub
         </span>
-        <ThemeToggle />
+        <div className="flex items-center gap-1">
+          <Link
+            href={langSwitchHref}
+            className="px-2 py-1 rounded text-xs font-medium hover:bg-[var(--hover-bg)] transition-colors text-[var(--text-light)]"
+          >
+            {isEN ? "DE" : "EN"}
+          </Link>
+          <ThemeToggle />
+        </div>
       </div>
 
       {/* Mobile overlay */}
@@ -96,7 +123,7 @@ export function Sidebar() {
       >
         <div className="p-5 border-b border-[var(--nav-border)]">
           <Link
-            href="/infohub"
+            href={basePath}
             className="block"
             onClick={() => setOpen(false)}
           >
@@ -104,7 +131,7 @@ export function Sidebar() {
               BG Zehnergasse
             </div>
             <div className="text-xs text-[var(--text-light)]">
-              InfoHub — Informationsportal
+              InfoHub — {isEN ? "Information Portal" : "Informationsportal"}
             </div>
           </Link>
         </div>
@@ -113,7 +140,7 @@ export function Sidebar() {
           {navItems.map((item) => {
             const isActive =
               pathname === item.href ||
-              (item.href !== "/infohub" && pathname.startsWith(item.href));
+              (item.href !== basePath && pathname.startsWith(item.href));
             return (
               <Link
                 key={item.href}
@@ -136,17 +163,21 @@ export function Sidebar() {
         </nav>
 
         <div className="p-3 mt-auto border-t border-[var(--nav-border)]">
-          <div className="flex items-center justify-between px-3">
-            <span className="text-xs text-[var(--text-light)]">
-              Farbmodus
-            </span>
+          <div className="flex items-center justify-between px-3 mb-2">
+            <Link
+              href={langSwitchHref}
+              className="flex items-center gap-1.5 text-xs text-[var(--text-light)] hover:text-[var(--primary)] transition-colors"
+            >
+              <span>🌐</span>
+              <span>{isEN ? "Deutsch" : "English"}</span>
+            </Link>
             <ThemeToggle />
           </div>
           <a
             href="https://www.bgzwn.at"
             target="_blank"
             rel="noopener noreferrer"
-            className="block mt-3 px-3 py-2 text-xs text-[var(--text-light)] hover:text-[var(--primary)] transition-colors"
+            className="block px-3 py-2 text-xs text-[var(--text-light)] hover:text-[var(--primary)] transition-colors"
           >
             bgzwn.at &rarr;
           </a>

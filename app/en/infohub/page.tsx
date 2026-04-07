@@ -1,0 +1,186 @@
+import type { Metadata } from "next";
+import { PageHeader } from "@/components/ui/PageHeader";
+import { CardGrid, Card } from "@/components/ui/CardGrid";
+import { H2, P } from "@/components/ui/Section";
+import { Callout } from "@/components/ui/Callout";
+
+export const metadata: Metadata = {
+  title: "InfoHub — BG Zehnergasse",
+  description:
+    "Central information portal for parents and students at BG Zehnergasse: school account, iPad, IT services, guides and support.",
+};
+
+function QuickLink({
+  href,
+  label,
+  description,
+}: {
+  href: string;
+  label: string;
+  description: string;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-primary/40 dark:hover:border-blue-400/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
+    >
+      <div className="w-2 h-2 rounded-full bg-primary dark:bg-blue-400 flex-shrink-0" />
+      <div>
+        <span className="text-sm font-medium text-[var(--text)] group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">
+          {label}
+        </span>
+        <span className="text-xs text-[var(--text-light)] block">
+          {description}
+        </span>
+      </div>
+    </a>
+  );
+}
+
+export default function InfoHubPageEN() {
+  return (
+    <>
+      <PageHeader title="InfoHub" />
+
+      <P>
+        Welcome to the InfoHub of BG Zehnergasse! Here parents and students
+        can find all important information about school accounts, iPads,
+        digital services and support — clearly explained and easy to navigate.
+      </P>
+
+      <Callout type="info" title="School code for edu.Suite services">
+        The school code for all edu.Suite services (edu.Flow, edu.Pay,
+        edu.Card) is: <strong>304046</strong>. You will need this code when
+        logging in for the first time.
+      </Callout>
+
+      <H2>Topics</H2>
+
+      <CardGrid>
+        <Card href="/en/infohub/geraete" icon="📱" title="iPad & Devices">
+          Device initiative, procurement, child protection, accessories and
+          warranty.
+        </Card>
+        <Card href="/en/infohub/schulaccount" icon="🔑" title="School Account & Office 365">
+          Login credentials, password rules, password reset, free Microsoft
+          Office 365.
+        </Card>
+        <Card href="/en/infohub/services" icon="🏫" title="School Services">
+          WebUntis (timetable), edu.Flow (parent communication), edu.Pay
+          (payments), printing, PoDS.
+        </Card>
+        <Card href="/en/infohub/mdm" icon="⚙️" title="MDM Setup">
+          Device management setup — step by step for iOS, Android and Windows.
+        </Card>
+        <Card href="/en/infohub/bildungsportal" icon="🏛️" title="Education Portal & IT Services">
+          Austrian Education Portal for parents, edu.digicard (digital student
+          ID), learning platforms.
+        </Card>
+        <Card href="/en/infohub/hilfe" icon="🆘" title="Help & Contacts">
+          Contact persons, common problems and solutions, all important links
+          at a glance.
+        </Card>
+      </CardGrid>
+
+      <H2>Quick Access — Most Important Links</H2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+        <QuickLink
+          href="https://melpomene.webuntis.com/WebUntis/?school=bgzehnwn"
+          label="Open WebUntis"
+          description="Timetable, report absences, office hours"
+        />
+        <QuickLink
+          href="https://portal.office.com"
+          label="Open Office 365"
+          description="Word, Excel, Teams, OneDrive, change password"
+        />
+        <QuickLink
+          href="https://edusuite.at/portal/"
+          label="edu.Suite Portal"
+          description="edu.Flow, edu.Pay, edu.Card (school code: 304046)"
+        />
+        <QuickLink
+          href="https://www.bildung.gv.at"
+          label="Education Portal"
+          description="Central login for all education services"
+        />
+        <QuickLink
+          href="https://www.bgzwn.at"
+          label="School Website"
+          description="Official homepage of BG Zehnergasse"
+        />
+      </div>
+
+      <H2>Important Contacts</H2>
+
+      <P>
+        If you have questions or problems, please contact the appropriate
+        department:
+      </P>
+
+      <div className="overflow-x-auto my-4">
+        <table className="w-full text-sm">
+          <thead>
+            <tr>
+              <th className="text-left px-3 py-2 font-semibold text-primary dark:text-blue-400 bg-[var(--bg)] border-b border-[var(--border)]">
+                Issue
+              </th>
+              <th className="text-left px-3 py-2 font-semibold text-primary dark:text-blue-400 bg-[var(--bg)] border-b border-[var(--border)]">
+                Contact
+              </th>
+              <th className="text-left px-3 py-2 font-semibold text-primary dark:text-blue-400 bg-[var(--bg)] border-b border-[var(--border)]">
+                Responsible for
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="hover:bg-[var(--hover-bg)] transition-colors">
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">IT Administration</td>
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+                <a href="mailto:admin@bgzwn.at" className="text-primary dark:text-blue-400 hover:underline">admin@bgzwn.at</a>
+              </td>
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">Accounts, WiFi, software, password reset</td>
+            </tr>
+            <tr className="hover:bg-[var(--hover-bg)] transition-colors">
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">School Office</td>
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+                <a href="mailto:kanzlei@bgzwn.at" className="text-primary dark:text-blue-400 hover:underline">kanzlei@bgzwn.at</a>
+              </td>
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">Payments, certificates, edu.Pay refunds</td>
+            </tr>
+            <tr className="hover:bg-[var(--hover-bg)] transition-colors">
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">iPad Hardware Support</td>
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+                +43 1 813 0000 / <a href="mailto:sales@acptechrent.at" className="text-primary dark:text-blue-400 hover:underline">sales@acptechrent.at</a>
+              </td>
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">ACP TechRent — warranty, repair, defects</td>
+            </tr>
+            <tr className="hover:bg-[var(--hover-bg)] transition-colors">
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">OeAD Digital Learning</td>
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+                +43 720 080 356 / <a href="mailto:digitaleslernen@oead.at" className="text-primary dark:text-blue-400 hover:underline">digitaleslernen@oead.at</a>
+              </td>
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">Device initiative, exemption, device exchange (Mon–Fri 07:30–18:00)</td>
+            </tr>
+            <tr className="hover:bg-[var(--hover-bg)] transition-colors">
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">Education Portal Hotline</td>
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+                +43 1 53120 3344 / <a href="mailto:support@bildung.gv.at" className="text-primary dark:text-blue-400 hover:underline">support@bildung.gv.at</a>
+              </td>
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">Bildungsportal, ID Austria in education</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <Callout type="warning" title="Disclaimer">
+        All information on these pages is provided for guidance and assistance.
+        It is legally non-binding. For questions, please contact the school
+        directly.
+      </Callout>
+    </>
+  );
+}
