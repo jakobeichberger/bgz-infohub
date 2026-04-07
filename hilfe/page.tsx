@@ -255,9 +255,9 @@ export default function HilfePage() {
             desc: "PoDS — Digitale Schulverwaltung",
           },
           {
-            href: "https://www.pods.gv.at/hilfe/",
-            label: "PoDS Hilfe & FAQ",
-            desc: "Anleitungen zum Portal Digitale Schule",
+            href: "https://www.bildung.gv.at",
+            label: "Bildungsportal (PoDS)",
+            desc: "Portal Digitale Schule — jetzt im Bildungsportal",
           },
           {
             href: "https://www.bildung.gv.at",
@@ -270,9 +270,9 @@ export default function HilfePage() {
             desc: "Häufige Fragen zur Geräteinitiative",
           },
           {
-            href: "https://befreiung.digitaleslernen.gv.at/",
-            label: "Kostenbefreiung",
-            desc: "Befreiung vom Geräte-Eigenanteil beantragen",
+            href: "https://digitaleslernen.oead.at/de/fuer-eltern/avb-bezahlung-befreiung",
+            label: "Bezahlung & Befreiung",
+            desc: "Geräte-Eigenanteil: Bezahlung und Befreiung",
           },
           {
             href: "https://www.bgzwn.at",

@@ -115,14 +115,14 @@ export default function GeraetePage() {
 
       <UL>
         <li>
-          Online unter{" "}
+          Online über die OeAD-Website:{" "}
           <a
-            href="https://befreiung.digitaleslernen.gv.at/"
+            href="https://digitaleslernen.oead.at/de/fuer-eltern/avb-bezahlung-befreiung"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary dark:text-blue-400 hover:underline"
           >
-            befreiung.digitaleslernen.gv.at
+            Bezahlung &amp; Befreiung auf digitaleslernen.oead.at
           </a>
         </li>
         <li>Oder über den PoDS-Elternzugang</li>
@@ -382,9 +382,9 @@ export default function GeraetePage() {
             desc: "Technische Spezifikationen",
           },
           {
-            href: "https://befreiung.digitaleslernen.gv.at/",
-            label: "Kostenbefreiung",
-            desc: "Antrag auf Befreiung vom Eigenanteil",
+            href: "https://digitaleslernen.oead.at/de/fuer-eltern/avb-bezahlung-befreiung",
+            label: "Bezahlung & Befreiung",
+            desc: "Eigenanteil bezahlen oder Befreiung beantragen",
           },
           {
             href: "https://digitaleslernen.oead.at/de/garantie-versicherung",
