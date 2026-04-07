@@ -56,7 +56,7 @@ export function Sidebar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  const isEN = pathname.startsWith("/en/");
+  const isEN = pathname.startsWith("/en/") || pathname === "/en";
   const navItems = isEN ? navItemsEN : navItemsDE;
   const basePath = isEN ? "/en/infohub" : "/infohub";
 

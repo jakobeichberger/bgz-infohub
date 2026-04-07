@@ -74,6 +74,10 @@ export default function InfoHubPageEN() {
         <Card href="/en/infohub/mdm" icon="⚙️" title="MDM Setup">
           Device management setup — step by step for iOS, Android and Windows.
         </Card>
+        <Card href="/en/infohub/nextexam" icon="📝" title="Next-Exam">
+          Digital examination environment — downloads, guides, quick fixes
+          and FAQ.
+        </Card>
         <Card href="/en/infohub/bildungsportal" icon="🏛️" title="Education Portal & IT Services">
           Austrian Education Portal for parents, edu.digicard (digital student
           ID), learning platforms.

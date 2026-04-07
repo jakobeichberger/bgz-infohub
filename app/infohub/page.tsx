@@ -76,6 +76,10 @@ export default function InfoHubPage() {
           Geräteverwaltung einrichten — Schritt für Schritt für iOS, Android
           und Windows.
         </Card>
+        <Card href="/infohub/nextexam" icon="📝" title="Next-Exam">
+          Digitale Prüfungsumgebung — Downloads, Anleitungen, Schnellhilfe
+          und FAQ.
+        </Card>
         <Card href="/infohub/bildungsportal" icon="🏛️" title="Bildungsportal & IT-Services">
           Bildungsportal für Eltern, edu.digicard (digitaler Schülerausweis),
           Lernplattformen.
