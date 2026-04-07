@@ -14,6 +14,7 @@ const navItemsDE = [
   { href: "/infohub/nextexam", label: "Next-Exam", icon: "📝" },
   { href: "/infohub/mdm", label: "MDM-Einrichtung", icon: "⚙️" },
   { href: "/infohub/bildungsportal", label: "Bildungsportal", icon: "🏛️" },
+  { href: "/infohub/vwa", label: "VWA / ABA", icon: "🎓" },
   { href: "/infohub/lizenzen", label: "Gratis Software", icon: "🎁" },
   { href: "/infohub/hilfe", label: "Hilfe & Kontakte", icon: "🆘" },
 ];
@@ -28,6 +29,7 @@ const navItemsEN = [
   { href: "/en/infohub/nextexam", label: "Next-Exam", icon: "📝" },
   { href: "/en/infohub/mdm", label: "MDM Setup", icon: "⚙️" },
   { href: "/en/infohub/bildungsportal", label: "Education Portal", icon: "🏛️" },
+  { href: "/en/infohub/vwa", label: "VWA / ABA (Thesis)", icon: "🎓" },
   { href: "/en/infohub/lizenzen", label: "Free Software", icon: "🎁" },
   { href: "/en/infohub/hilfe", label: "Help & Contacts", icon: "🆘" },
 ];

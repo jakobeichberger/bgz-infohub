@@ -61,9 +61,9 @@ export default function Office365PageEN() {
       <H2>OneDrive — Cloud Storage</H2>
 
       <P>
-        OneDrive is your personal cloud storage. With the A3 licence you get
-        a generous amount of storage (the school shares a pool of over
-        100 TB across all users).
+        OneDrive is your personal cloud storage. With the A3 licence,
+        each student gets <strong>5 TB of storage</strong> — more than
+        enough for all school documents, photos and projects.
       </P>
 
       <UL>
@@ -182,15 +182,6 @@ export default function Office365PageEN() {
         </p>
       </Callout>
 
-      <Callout type="warning" title="Note on the Austrian Data Protection Authority">
-        The Austrian Data Protection Authority (DSB) found in decisions
-        from 2025/2026 that Microsoft 365 Education violates the GDPR in
-        certain areas (transparency and right of access). The school and
-        the Ministry are working on implementing the required measures.
-        Copilot Chat itself offers additional data protection guarantees
-        (Commercial Data Protection) that go beyond the base platform.
-      </Callout>
-
       {/* ═══ A3 vs A1 ═══ */}
       <H2>A3 vs. A1 — What is the Difference?</H2>
 
@@ -199,7 +190,7 @@ export default function Office365PageEN() {
         rows={[
           ["Office apps", "Web + Mobile only", "Desktop + Web + Mobile (15 devices)"],
           ["Mailbox", "50 GB", "100 GB + 1.5 TB archive"],
-          ["OneDrive", "100 GB per user", "Pooled storage (100+ TB)"],
+          ["OneDrive", "100 GB per user", "5 TB per user"],
           ["OneNote", "Web/Mobile only", "Full desktop version"],
           ["Copilot Chat", "Available", "Available"],
           ["Copilot in Office apps", "Not available", "Available as add-on"],

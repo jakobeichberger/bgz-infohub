@@ -1,0 +1,92 @@
+%% ============================================================
+%% Vorwissenschaftliche Arbeit - Hauptdatei
+%% BG Zehnergasse, Wiener Neustadt
+%% Vorlage mit APA6-Zitierstil
+%% ============================================================
+%%
+%% Optionen fuer \documentclass:
+%%   german/english  - Sprache (Standard: german)
+%%   oneside/twoside - Ein-/Zweiseitig (Standard: oneside)
+%%   color/black     - Farbig/Schwarz-Weiss (Standard: color)
+%%
+\documentclass[german,oneside,color]{bgzvwa}
+
+% === Literatur-Datei ===
+\addbibresource{literatur.bib}
+
+% === Glossar vorbereiten ===
+\makeglossaries
+
+% === Glossar- und Abkuerzungseintraege ===
+\input{glossar}
+
+% ============================================================
+% Metadaten der VWA
+% ============================================================
+\title{Titel der Vorwissenschaftlichen Arbeit}
+\verfasserIn{Vorname Nachname}
+\klasse{8A}
+\betreuungsperson{Mag.\ Vorname Nachname}
+\fachbereich{Geschichte und Politische Bildung}
+\abgabejahr{2025}
+
+% Optional: Schuldaten aendern (Standardwerte sind bereits gesetzt)
+% \schule{BG Zehnergasse}
+% \schuladresse{Zehnergasse 15, 2700 Wiener Neustadt}
+% \schullogo{bgz-logo.png}
+
+% ============================================================
+\begin{document}
+
+% === Frontmatter (roemische Seitenzahlen) ===
+\frontmatter
+
+% === Titelseite ===
+\maketitle
+
+% === Inhaltsverzeichnis ===
+\tableofcontents
+
+% === Selbststaendigkeitserklaerung ===
+\selbststaendigkeitserklaerung
+
+% === Kurzfassung (Deutsch) ===
+\input{kapitel/kurzfassung}
+
+% === Abstract (Englisch) ===
+\input{kapitel/abstract}
+
+% ============================================================
+% === Hauptteil (arabische Seitenzahlen) ===
+% ============================================================
+\mainmatter
+
+\input{kapitel/einleitung}
+\input{kapitel/hauptteil}
+\input{kapitel/fazit}
+
+% ============================================================
+% === Backmatter ===
+% ============================================================
+
+% Literaturverzeichnis
+\clearpage
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+\printbibliography[title={Literaturverzeichnis}]
+
+% Abbildungsverzeichnis
+\clearpage
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\listoffigures
+
+% Abkuerzungsverzeichnis (falls Eintraege vorhanden)
+\printglossary[type=\acronymtype, title={Abk\"urzungsverzeichnis}]
+
+% Glossar (falls Eintraege vorhanden)
+\printglossary[title={Glossar}]
+
+% Anhang
+\appendix
+\input{kapitel/anhang}
+
+\end{document}

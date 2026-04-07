@@ -1,0 +1,48 @@
+# LaTeX Hilfsdateien
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.ist
+*.lof
+*.log
+*.lot
+*.lol
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.synctex(busy)
+*.toc
+*.vrb
+*.acn
+*.acr
+*.alg
+
+# Kompilierte Ausgabe
+*.pdf
+
+# Editor-spezifisch
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# IDE / Editor Ordner
+.vscode/
+.idea/
+*.sublime-*
+
+# Latexmk
+latexmkrc
+
+# Temporaere Ordner
+_minted-*/
