@@ -1,5 +1,21 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-light: var(--primary-light);
+  --color-bg: var(--bg);
+  --color-card: var(--card);
+  --color-border-app: var(--border);
+  --color-txt: var(--text);
+  --color-txt-light: var(--text-light);
+  --color-hover-bg: var(--hover-bg);
+  --color-code-bg: var(--code-bg);
+  --color-nav-bg: var(--nav-bg);
+  --color-nav-border: var(--nav-border);
+  --color-nav-active-bg: var(--nav-active-bg);
+}
 
 :root {
   --primary: #00796b;

@@ -24,14 +24,14 @@ function QuickLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)]/40 hover:border-[var(--primary)]/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
+      className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
     >
-      <div className="w-2 h-2 rounded-full bg-[var(--primary)] flex-shrink-0" />
+      <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
       <div>
-        <span className="text-sm font-medium text-[var(--text)] group-hover:text-primary group-hover:text-[var(--primary)] transition-colors">
+        <span className="text-sm font-medium text-txt group-hover:text-primary group-hover:text-primary transition-colors">
           {label}
         </span>
-        <span className="text-xs text-[var(--text-light)] block">
+        <span className="text-xs text-txt-light block">
           {description}
         </span>
       </div>
@@ -156,143 +156,143 @@ export default function InfoHubPage() {
         <table className="w-full text-sm">
           <thead>
             <tr>
-              <th className="text-left px-3 py-2 font-semibold text-[var(--primary)] bg-[var(--bg)] border-b border-[var(--border)]">
+              <th className="text-left px-3 py-2 font-semibold text-primary bg-bg border-b border-border-app">
                 Anliegen
               </th>
-              <th className="text-left px-3 py-2 font-semibold text-[var(--primary)] bg-[var(--bg)] border-b border-[var(--border)]">
+              <th className="text-left px-3 py-2 font-semibold text-primary bg-bg border-b border-border-app">
                 Kontakt
               </th>
-              <th className="text-left px-3 py-2 font-semibold text-[var(--primary)] bg-[var(--bg)] border-b border-[var(--border)]">
+              <th className="text-left px-3 py-2 font-semibold text-primary bg-bg border-b border-border-app">
                 Zuständig für
               </th>
             </tr>
           </thead>
           <tbody>
-            <tr className="hover:bg-[var(--hover-bg)] transition-colors">
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+            <tr className="hover:bg-hover-bg transition-colors">
+              <td className="px-3 py-2 border-b border-border-app text-txt">
                 IT-Administration
               </td>
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+              <td className="px-3 py-2 border-b border-border-app text-txt">
                 <a
                   href="mailto:admin@bgzwn.at"
-                  className="text-[var(--primary)] hover:underline"
+                  className="text-primary hover:underline"
                 >
                   admin@bgzwn.at
                 </a>
               </td>
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">
+              <td className="px-3 py-2 border-b border-border-app text-txt-light">
                 Accounts, WLAN, Software, Passwort-Reset
               </td>
             </tr>
-            <tr className="hover:bg-[var(--hover-bg)] transition-colors">
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+            <tr className="hover:bg-hover-bg transition-colors">
+              <td className="px-3 py-2 border-b border-border-app text-txt">
                 Schulkanzlei
               </td>
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+              <td className="px-3 py-2 border-b border-border-app text-txt">
                 <a
                   href="mailto:kanzlei@bgzwn.at"
-                  className="text-[var(--primary)] hover:underline"
+                  className="text-primary hover:underline"
                 >
                   kanzlei@bgzwn.at
                 </a>
               </td>
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">
+              <td className="px-3 py-2 border-b border-border-app text-txt-light">
                 Zahlungen, Bescheinigungen, edu.Pay-Rückerstattungen
               </td>
             </tr>
-            <tr className="hover:bg-[var(--hover-bg)] transition-colors">
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+            <tr className="hover:bg-hover-bg transition-colors">
+              <td className="px-3 py-2 border-b border-border-app text-txt">
                 WebUntis (Elternaccounts, Noten, Abwesenheiten)
               </td>
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+              <td className="px-3 py-2 border-b border-border-app text-txt">
                 <a
                   href="mailto:bnb@bgzwn.at"
-                  className="text-[var(--primary)] hover:underline"
+                  className="text-primary hover:underline"
                 >
                   bnb@bgzwn.at
                 </a>
               </td>
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">
+              <td className="px-3 py-2 border-b border-border-app text-txt-light">
                 WebUntis-Probleme, Elternzugang, Noteneinsicht
               </td>
             </tr>
-            <tr className="hover:bg-[var(--hover-bg)] transition-colors">
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+            <tr className="hover:bg-hover-bg transition-colors">
+              <td className="px-3 py-2 border-b border-border-app text-txt">
                 Datenänderungen (Adresse, Name, Telefon)
               </td>
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+              <td className="px-3 py-2 border-b border-border-app text-txt">
                 Jeweiliger Klassenvorstand
               </td>
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">
+              <td className="px-3 py-2 border-b border-border-app text-txt-light">
                 Persönliche Daten in SOKRATES aktualisieren → edu.Flow, edu.Pay
               </td>
             </tr>
-            <tr className="hover:bg-[var(--hover-bg)] transition-colors">
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+            <tr className="hover:bg-hover-bg transition-colors">
+              <td className="px-3 py-2 border-b border-border-app text-txt">
                 Hardware-Support iPad
               </td>
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+              <td className="px-3 py-2 border-b border-border-app text-txt">
                 +43 1 813 0000 /{" "}
                 <a
                   href="mailto:sales@acptechrent.at"
-                  className="text-[var(--primary)] hover:underline"
+                  className="text-primary hover:underline"
                 >
                   sales@acptechrent.at
                 </a>
               </td>
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">
+              <td className="px-3 py-2 border-b border-border-app text-txt-light">
                 ACP TechRent — Garantie, Reparatur, Defekte
               </td>
             </tr>
-            <tr className="hover:bg-[var(--hover-bg)] transition-colors">
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+            <tr className="hover:bg-hover-bg transition-colors">
+              <td className="px-3 py-2 border-b border-border-app text-txt">
                 OeAD Digitales Lernen
               </td>
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+              <td className="px-3 py-2 border-b border-border-app text-txt">
                 +43 720 080 356 /{" "}
                 <a
                   href="mailto:digitaleslernen@oead.at"
-                  className="text-[var(--primary)] hover:underline"
+                  className="text-primary hover:underline"
                 >
                   digitaleslernen@oead.at
                 </a>
               </td>
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">
+              <td className="px-3 py-2 border-b border-border-app text-txt-light">
                 Geräteinitiative, Befreiung, Gerätebörse (Mo–Fr 07:30–18:00)
               </td>
             </tr>
-            <tr className="hover:bg-[var(--hover-bg)] transition-colors">
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+            <tr className="hover:bg-hover-bg transition-colors">
+              <td className="px-3 py-2 border-b border-border-app text-txt">
                 PoDS-Support
               </td>
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+              <td className="px-3 py-2 border-b border-border-app text-txt">
                 <a
                   href="https://www.bildung.gv.at"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--primary)] hover:underline"
+                  className="text-primary hover:underline"
                 >
                   bildung.gv.at (nach Login)
                 </a>
               </td>
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">
+              <td className="px-3 py-2 border-b border-border-app text-txt-light">
                 Portal Digitale Schule — Anleitungen &amp; FAQ
               </td>
             </tr>
-            <tr className="hover:bg-[var(--hover-bg)] transition-colors">
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+            <tr className="hover:bg-hover-bg transition-colors">
+              <td className="px-3 py-2 border-b border-border-app text-txt">
                 Bildungsportal-Hotline
               </td>
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+              <td className="px-3 py-2 border-b border-border-app text-txt">
                 +43 1 53120 3344 /{" "}
                 <a
                   href="mailto:support@bildung.gv.at"
-                  className="text-[var(--primary)] hover:underline"
+                  className="text-primary hover:underline"
                 >
                   support@bildung.gv.at
                 </a>
               </td>
-              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">
+              <td className="px-3 py-2 border-b border-border-app text-txt-light">
                 Bildungsportal, ID Austria im Bildungswesen
               </td>
             </tr>

@@ -67,7 +67,7 @@ export default function GeraetePageEN() {
 
       <UL>
         <li>Online via{" "}
-          <a href="https://digitaleslernen.oead.at/de/fuer-eltern/avb-bezahlung-befreiung" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">
+          <a href="https://digitaleslernen.oead.at/de/fuer-eltern/avb-bezahlung-befreiung" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
             Payment &amp; exemption on digitaleslernen.oead.at
           </a>
         </li>
@@ -97,7 +97,7 @@ export default function GeraetePageEN() {
 
       <P>
         More about warranty:{" "}
-        <a href="https://digitaleslernen.oead.at/de/garantie-versicherung" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">
+        <a href="https://digitaleslernen.oead.at/de/garantie-versicherung" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
           digitaleslernen.oead.at/de/garantie-versicherung
         </a>
       </P>
@@ -107,7 +107,7 @@ export default function GeraetePageEN() {
       <P>
         When changing schools, devices can be exchanged via the OeAD device
         exchange:{" "}
-        <a href="https://digitaleslernen.oead.at/de/fuer-eltern/geraete-support/geraeteboerse" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">
+        <a href="https://digitaleslernen.oead.at/de/fuer-eltern/geraete-support/geraeteboerse" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
           Device exchange
         </a>
       </P>
@@ -116,10 +116,10 @@ export default function GeraetePageEN() {
         <ul>
           <li><strong>Phone:</strong> +43 720 080 356 (Mon–Fri 07:30–18:00)</li>
           <li><strong>Email:</strong>{" "}
-            <a href="mailto:digitaleslernen@oead.at" className="text-[var(--primary)] hover:underline">digitaleslernen@oead.at</a>
+            <a href="mailto:digitaleslernen@oead.at" className="text-primary hover:underline">digitaleslernen@oead.at</a>
           </li>
           <li><strong>FAQ:</strong>{" "}
-            <a href="https://digitaleslernen.oead.at/de/faqs" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">digitaleslernen.oead.at/de/faqs</a>
+            <a href="https://digitaleslernen.oead.at/de/faqs" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">digitaleslernen.oead.at/de/faqs</a>
           </li>
         </ul>
       </Callout>
@@ -141,7 +141,7 @@ export default function GeraetePageEN() {
         Parents can adjust child protection settings via the{" "}
         <strong>PoDS portal</strong> (Portal Digitale Schule). Tips for safe
         internet use:{" "}
-        <a href="https://www.saferinternet.at" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">SaferInternet.at</a>
+        <a href="https://www.saferinternet.at" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">SaferInternet.at</a>
       </Callout>
 
       <H2>Device Management (Azure AD / InTune)</H2>
@@ -225,7 +225,7 @@ export default function GeraetePageEN() {
             href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=14a"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             SchUG, BGBl. Nr. 472/1986 i.d.g.F.
           </a>{" "}
@@ -237,7 +237,7 @@ export default function GeraetePageEN() {
             href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011647"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             IKT-Schulverordnung, BGBl. II Nr. 382/2021
           </a>{" "}
@@ -249,7 +249,7 @@ export default function GeraetePageEN() {
             href="https://www.ris.bka.gv.at/eli/bgbl/i/2021/9"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             SchulDigiG, BGBl. I Nr. 9/2021
           </a>{" "}

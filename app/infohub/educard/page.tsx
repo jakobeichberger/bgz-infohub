@@ -66,7 +66,7 @@ export default function EduCardPage() {
             href="https://edusuite.at/portal/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             edusuite.at/portal/
           </a>{" "}
@@ -147,7 +147,7 @@ export default function EduCardPage() {
             href="https://edusuite.at/portal/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             edu.Suite-Portal
           </a>{" "}
@@ -158,7 +158,7 @@ export default function EduCardPage() {
           Wenden Sie sich an{" "}
           <a
             href="mailto:admin@bgzwn.at"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             admin@bgzwn.at
           </a>{" "}
@@ -180,7 +180,7 @@ export default function EduCardPage() {
         dringende Fälle kann ein Foto manuell an{" "}
         <a
           href="mailto:admin@bgzwn.at"
-          className="text-[var(--primary)] hover:underline"
+          className="text-primary hover:underline"
         >
           admin@bgzwn.at
         </a>{" "}
@@ -198,7 +198,7 @@ export default function EduCardPage() {
           href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=57b"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[var(--primary)] hover:underline"
+          className="text-primary hover:underline"
         >
           § 57b Schulunterrichtsgesetz
         </a>.
@@ -234,7 +234,7 @@ export default function EduCardPage() {
             href="https://apps.apple.com/at/app/edu-digicard/id1635556317"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             Apple App Store
           </a>{" "}
@@ -243,7 +243,7 @@ export default function EduCardPage() {
             href="https://play.google.com/store/apps/details?id=at.asitplus.digitalid.wallet.pupilid"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             Google Play Store
           </a>
@@ -271,7 +271,7 @@ export default function EduCardPage() {
             href="https://www.bildung.gv.at"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             Bildungsportal
           </a>{" "}
@@ -325,14 +325,14 @@ export default function EduCardPage() {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)]/40 hover:border-[var(--primary)]/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
+            className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
           >
-            <div className="w-2 h-2 rounded-full bg-[var(--primary)] flex-shrink-0" />
+            <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
             <div>
-              <span className="text-sm font-medium text-[var(--text)] group-hover:text-[var(--primary)] transition-colors">
+              <span className="text-sm font-medium text-txt group-hover:text-primary transition-colors">
                 {link.label}
               </span>
-              <span className="text-xs text-[var(--text-light)] block">
+              <span className="text-xs text-txt-light block">
                 {link.desc}
               </span>
             </div>

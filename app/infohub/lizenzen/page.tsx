@@ -23,7 +23,9 @@ export default function LizenzenPage() {
 
       <Callout type="success" title="Tipp">
         Für die meisten Angebote benötigen Sie nur Ihre Schul-E-Mail-Adresse
-        (<code>nachname.vorname@bgzwn.at</code>) als Nachweis.
+        (<code>nachname.vorname@bgzwn.at</code>) als Nachweis. Die Schule muss
+        dafür <strong>keine Partnerschaft</strong> mit dem Anbieter eingehen —
+        Sie können sich selbstständig registrieren.
       </Callout>
 
       {/* ═══ GitHub ═══ */}
@@ -111,83 +113,60 @@ export default function LizenzenPage() {
         <Card icon="🎨" title="Figma (Design)">
           Kostenloser Professional-Plan für Schüler. Design, Prototyping und
           Zusammenarbeit.{" "}
-          <a href="https://www.figma.com/education/" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">figma.com/education</a>
+          <a href="https://www.figma.com/education/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">figma.com/education</a>
         </Card>
         <Card icon="🖌️" title="Canva (Grafikdesign)">
           100% kostenlos für Schüler und Lehrkräfte. Präsentationen, Poster,
           Videos erstellen.{" "}
-          <a href="https://www.canva.com/education/" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">canva.com/education</a>
+          <a href="https://www.canva.com/education/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">canva.com/education</a>
         </Card>
         <Card icon="🎮" title="Unity (Spieleentwicklung)">
           Kostenloser Student Plan. Spiele und interaktive 3D-Anwendungen
           entwickeln.{" "}
-          <a href="https://unity.com/products/unity-student" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">unity.com/student</a>
+          <a href="https://unity.com/products/unity-student" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">unity.com/student</a>
         </Card>
         <Card icon="🎬" title="Unreal Engine">
           Komplett kostenlos für Bildung. Professionelle Game Engine für 3D,
           VR und Simulation.{" "}
-          <a href="https://www.unrealengine.com/education" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">unrealengine.com/education</a>
+          <a href="https://www.unrealengine.com/education" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">unrealengine.com/education</a>
         </Card>
         <Card icon="📝" title="Notion (Notizen & Planung)">
           Kostenloser Plus-Plan für Schüler. Notizen, Aufgaben, Wikis und
           Datenbanken.{" "}
-          <a href="https://www.notion.com/product/notion-for-education" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">notion.com/education</a>
+          <a href="https://www.notion.com/product/notion-for-education" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">notion.com/education</a>
         </Card>
         <Card icon="🍎" title="Apple Developer (kostenlos)">
           Kostenlose Entwicklertools (Xcode, Swift Playgrounds, TestFlight)
           für Schulen.{" "}
-          <a href="https://developer.apple.com/education/" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">developer.apple.com/education</a>
+          <a href="https://developer.apple.com/education/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">developer.apple.com/education</a>
         </Card>
       </CardGrid>
-
-      <H2>Google Workspace for Education</H2>
-
-      <P>
-        Google bietet Schulen eine kostenlose Basisversion von Google
-        Workspace an:
-      </P>
-
-      <UL>
-        <li>Gmail, Calendar, Drive, Docs, Sheets, Slides, Forms</li>
-        <li>Google Meet und Google Classroom</li>
-        <li>Gemini KI in Classroom (ab 18 Jahren)</li>
-      </UL>
-
-      <P>
-        Ob Ihre Schule Google Workspace nutzt, erfahren Sie bei der
-        IT-Administration.
-      </P>
-
-      <H2>Adobe Creative Cloud</H2>
-
-      <Callout type="warning" title="Nicht kostenlos für Einzelpersonen">
-        Adobe bietet <strong>keine kostenlosen Einzellizenzen</strong> für
-        Schüler an. Es gibt einen vergünstigten Studententarif (ca. 75 %
-        Rabatt) und institutionelle Lizenzen ab ca. 5 EUR/Schüler/Jahr für
-        Schulen. <strong>Adobe Express for Education</strong> ist kostenlos
-        wenn von der Schule bereitgestellt.
-      </Callout>
 
       <H2>Zusammenfassung</H2>
 
       <Table
-        headers={["Software", "Kostenlos?", "Nachweis"]}
+        headers={["Software", "Kostenlos?", "Selbst beantragen?", "Nachweis"]}
         rows={[
-          ["Microsoft 365 (A3)", "Ja (MS-ACH)", "Schulkonto"],
-          ["GitHub Student Pack", "Ja", "Schul-E-Mail"],
-          ["GitHub Copilot", "Ja (im Student Pack)", "Schul-E-Mail"],
-          ["JetBrains (alle IDEs)", "Ja", "Schul-E-Mail / ISIC"],
-          ["Autodesk (AutoCAD etc.)", "Ja", "Schul-E-Mail"],
-          ["Figma", "Ja", "Schul-E-Mail"],
-          ["Canva", "Ja", "Schul-E-Mail"],
-          ["Unity", "Ja", "Schul-E-Mail"],
-          ["Unreal Engine", "Ja", "Für alle kostenlos"],
-          ["Notion", "Ja", "Schul-E-Mail"],
-          ["Apple Developer Tools", "Ja", "Für alle kostenlos"],
-          ["Google Workspace", "Ja (für Schulen)", "Über die Schule"],
-          ["Adobe Creative Cloud", "Nein (vergünstigt)", "Studententarif"],
+          ["Microsoft 365 (A3)", "Ja (MS-ACH)", "Nein — über die Schule", "Schulkonto wird bereitgestellt"],
+          ["GitHub Student Pack", "Ja", "Ja ✅", "Schul-E-Mail"],
+          ["GitHub Copilot", "Ja (im Student Pack)", "Ja ✅", "Schul-E-Mail"],
+          ["JetBrains (alle IDEs)", "Ja", "Ja ✅", "Schul-E-Mail / ISIC"],
+          ["Autodesk (AutoCAD etc.)", "Ja", "Ja ✅", "Schul-E-Mail"],
+          ["Figma", "Ja", "Ja ✅", "Schul-E-Mail"],
+          ["Canva", "Ja", "Ja ✅", "Schul-E-Mail"],
+          ["Unity", "Ja", "Ja ✅", "Schul-E-Mail"],
+          ["Unreal Engine", "Ja", "Ja ✅", "Für alle kostenlos"],
+          ["Notion", "Ja", "Ja ✅", "Schul-E-Mail"],
+          ["Apple Developer Tools", "Ja", "Ja ✅", "Für alle kostenlos"],
         ]}
       />
+
+      <Callout type="info" title="Selbst beantragen = keine Schulpartnerschaft nötig">
+        Alle mit ✅ markierten Angebote können Schüler <strong>selbstständig</strong>{" "}
+        über die Schul-E-Mail-Adresse aktivieren. Die Schule muss dafür keine
+        Partnerschaft oder Vereinbarung mit dem Anbieter haben. Nur Microsoft 365
+        (über den MS-ACH-Vertrag) erfordert eine institutionelle Vereinbarung.
+      </Callout>
     </>
   );
 }

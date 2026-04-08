@@ -178,7 +178,7 @@ export default function SchulaccountPage() {
                 href="https://portal.office.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[var(--primary)] hover:underline"
+                className="text-primary hover:underline"
               >
                 portal.office.com
               </a>{" "}
@@ -188,7 +188,7 @@ export default function SchulaccountPage() {
             <li>Wählen Sie &quot;Kennwort&quot; oder &quot;Kennwort ändern&quot;</li>
             <li>Altes Passwort 1× eingeben, neues Passwort 2× eingeben</li>
           </ol>
-          <p className="text-xs text-[var(--text-light)] mt-1">
+          <p className="text-xs text-txt-light mt-1">
             Änderungen gelten innerhalb weniger Minuten für alle
             Microsoft-Dienste. Im Schulnetzwerk kann es bis zu 15 Minuten
             dauern.
@@ -226,7 +226,7 @@ export default function SchulaccountPage() {
             href="https://portal.office.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             portal.office.com
           </a>{" "}
@@ -249,7 +249,7 @@ export default function SchulaccountPage() {
             IT-Administration:{" "}
             <a
               href="mailto:admin@bgzwn.at"
-              className="text-[var(--primary)] hover:underline"
+              className="text-primary hover:underline"
             >
               admin@bgzwn.at
             </a>
@@ -271,7 +271,7 @@ export default function SchulaccountPage() {
         Copilot und Installation:{" "}
         <a
           href="/infohub/office365"
-          className="text-[var(--primary)] hover:underline font-semibold"
+          className="text-primary hover:underline font-semibold"
         >
           Microsoft 365 → Zur vollständigen Übersicht
         </a>

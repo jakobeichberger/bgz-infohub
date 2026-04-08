@@ -10,11 +10,11 @@ export function StepList({ children }: { children: React.ReactNode }) {
         return (
           <div key={i} className="flex gap-4">
             <div className="flex flex-col items-center">
-              <div className="w-8 h-8 rounded-full bg-[var(--primary)] text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
+              <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
                 {i + 1}
               </div>
               {i < Children.count(children) - 1 && (
-                <div className="w-0.5 flex-1 bg-[var(--border)] my-1" />
+                <div className="w-0.5 flex-1 bg-border-app my-1" />
               )}
             </div>
             <div className="pb-5 flex-1">{child}</div>
@@ -34,8 +34,8 @@ export function Step({
 }) {
   return (
     <div>
-      <h4 className="font-semibold text-[var(--text)] mb-1">{title}</h4>
-      <div className="text-sm text-[var(--text-light)] leading-relaxed [&_a]:text-[var(--primary)] [&_a]:underline [&_ol]:list-decimal [&_ol]:ml-5 [&_ol]:mt-1 [&_ol]:space-y-0.5">
+      <h4 className="font-semibold text-txt mb-1">{title}</h4>
+      <div className="text-sm text-txt-light leading-relaxed [&_a]:text-primary [&_a]:underline [&_ol]:list-decimal [&_ol]:ml-5 [&_ol]:mt-1 [&_ol]:space-y-0.5">
         {children}
       </div>
     </div>

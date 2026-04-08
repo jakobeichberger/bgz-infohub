@@ -273,7 +273,7 @@ export default function WlanPage() {
           an{" "}
           <a
             href="mailto:admin@bgzwn.at"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             admin@bgzwn.at
           </a>
@@ -286,7 +286,7 @@ export default function WlanPage() {
         IT-Administration:{" "}
         <a
           href="mailto:admin@bgzwn.at"
-          className="text-[var(--primary)] hover:underline"
+          className="text-primary hover:underline"
         >
           admin@bgzwn.at
         </a>
@@ -304,7 +304,7 @@ export default function WlanPage() {
             href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011647"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             IKT-Schulverordnung, BGBl. II Nr. 382/2021
           </a>{" "}
@@ -317,7 +317,7 @@ export default function WlanPage() {
             href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011451"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             BilDokG 2020, BGBl. I Nr. 20/2021
           </a>{" "}

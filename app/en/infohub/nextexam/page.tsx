@@ -170,6 +170,62 @@ export default function NextExamPageEN() {
         <strong> Firefox</strong> or <strong>Chrome</strong> to download.
       </P>
 
+      <H3>Can I print during the exam?</H3>
+      <P>
+        No. Printer access is blocked during a Next-Exam session. If the
+        teacher wants a printout, this is done after the exam ends via
+        the Teacher computer.
+      </P>
+
+      <H3>Can I change the font size?</H3>
+      <P>
+        Yes. In Language mode the font size can be adjusted via the menu.
+        In other modes (e.g. Microsoft 365) the settings of the respective
+        application apply.
+      </P>
+
+      <H3>Does Next-Exam need to be installed?</H3>
+      <P>
+        No. The Windows EXE and the Linux AppImage are{" "}
+        <strong>portable</strong> and can be run directly from a folder.
+        Only the MSI variant (Windows) performs a traditional installation.
+        On macOS the app is dragged from the DMG to the Applications folder
+        as usual.
+      </P>
+
+      <H3>Does Next-Exam work without the internet?</H3>
+      <P>
+        Yes — for Mathematics, Languages, and Microsoft 365 modes,{" "}
+        <strong>no internet is required</strong>. A local school network
+        (Wi-Fi) is sufficient for the student and teacher apps to connect.
+        Only the Moodle, Google Forms, and Website modes require internet
+        access.
+      </P>
+
+      <H3>Is my screen being recorded?</H3>
+      <P>
+        Not continuously. The teacher can take{" "}
+        <strong>live screenshots</strong> of student devices. Automatic
+        screenshots are only created when a student attempts to leave the
+        exam environment. There is no video streaming or permanent
+        monitoring.
+      </P>
+
+      <H3>What happens if there is a crash / power failure?</H3>
+      <P>
+        Next-Exam automatically saves every <strong>6 minutes</strong>{" "}
+        to the Teacher computer. In case of a crash, the last backup can
+        be restored. Additionally, regular saving with Ctrl+S / Cmd+S is
+        recommended.
+      </P>
+
+      <H3>Can I use copy &amp; paste?</H3>
+      <P>
+        Copy &amp; paste works normally within the exam environment.
+        However, pasting externally copied content is blocked, as the
+        clipboard is cleared when the exam starts.
+      </P>
+
       <H2>Downloads — Current Version: 1.1.3</H2>
 
       <P>
@@ -178,7 +234,7 @@ export default function NextExamPageEN() {
           href="https://github.com/Bildungsportal/next-exam/releases"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[var(--primary)] hover:underline"
+          className="text-primary hover:underline"
         >
           GitHub (Bildungsportal/next-exam)
         </a>
@@ -213,14 +269,14 @@ export default function NextExamPageEN() {
           <a
             key={link.href}
             href={link.href}
-            className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)]/40 hover:border-[var(--primary)]/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
+            className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
           >
             <div className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
             <div>
-              <span className="text-sm font-medium text-[var(--text)] group-hover:text-[var(--primary)] transition-colors">
+              <span className="text-sm font-medium text-txt group-hover:text-primary transition-colors">
                 {link.label}
               </span>
-              <span className="text-xs text-[var(--text-light)] block">
+              <span className="text-xs text-txt-light block">
                 {link.desc}
               </span>
             </div>
@@ -256,14 +312,14 @@ export default function NextExamPageEN() {
           <a
             key={link.href}
             href={link.href}
-            className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)]/40 hover:border-[var(--primary)]/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
+            className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
           >
             <div className="w-2 h-2 rounded-full bg-blue-500 flex-shrink-0" />
             <div>
-              <span className="text-sm font-medium text-[var(--text)] group-hover:text-[var(--primary)] transition-colors">
+              <span className="text-sm font-medium text-txt group-hover:text-primary transition-colors">
                 {link.label}
               </span>
-              <span className="text-xs text-[var(--text-light)] block">
+              <span className="text-xs text-txt-light block">
                 {link.desc}
               </span>
             </div>
@@ -297,7 +353,7 @@ export default function NextExamPageEN() {
           href="https://github.com/Bildungsportal/next-exam/releases"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[var(--primary)] hover:underline"
+          className="text-primary hover:underline"
         >
           GitHub
         </a>
@@ -330,12 +386,12 @@ export default function NextExamPageEN() {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)]/40 hover:border-[var(--primary)]/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
+            className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
           >
-            <div className="w-2 h-2 rounded-full bg-[var(--primary)] flex-shrink-0" />
+            <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
             <div>
-              <span className="text-sm font-medium text-[var(--text)] group-hover:text-[var(--primary)] transition-colors">{link.label}</span>
-              <span className="text-xs text-[var(--text-light)] block">{link.desc}</span>
+              <span className="text-sm font-medium text-txt group-hover:text-primary transition-colors">{link.label}</span>
+              <span className="text-xs text-txt-light block">{link.desc}</span>
             </div>
           </a>
         ))}
@@ -343,7 +399,7 @@ export default function NextExamPageEN() {
 
       <Callout type="info" title="Support">
         For technical issues with Next-Exam:{" "}
-        <a href="mailto:support@bildung.gv.at" className="text-[var(--primary)] hover:underline">support@bildung.gv.at</a>
+        <a href="mailto:support@bildung.gv.at" className="text-primary hover:underline">support@bildung.gv.at</a>
       </Callout>
     </>
   );

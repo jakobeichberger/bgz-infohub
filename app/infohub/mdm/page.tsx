@@ -140,7 +140,7 @@ export default function MdmPage() {
           Bei Problemen:{" "}
           <a
             href="mailto:admin@bgzwn.at"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             admin@bgzwn.at
           </a>
@@ -157,7 +157,7 @@ export default function MdmPage() {
             href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=14"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             SchUG, BGBl. Nr. 472/1986 i.d.g.F.
           </a>{" "}
@@ -169,7 +169,7 @@ export default function MdmPage() {
             href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011647"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             IKT-Schulverordnung, BGBl. II Nr. 382/2021
           </a>{" "}

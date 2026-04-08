@@ -93,7 +93,7 @@ export default function VwaPage() {
             href="https://genehmigung.ahs-vwa.at"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             Genehmigungsdatenbank
           </a>{" "}
@@ -273,9 +273,14 @@ export default function VwaPage() {
           Inhaltsverzeichnis, Abbildungsverzeichnis und BG Zehnergasse
           Branding. Ideal für wissenschaftliche Arbeiten.
         </Card>
-        <Card icon="📝" title="Word-Vorlage">
-          Anleitungen und Tipps für die Erstellung Ihrer VWA in Microsoft
-          Word — siehe Abschnitt unten.
+        <Card
+          href="/templates/bgz-vwa-word.docx"
+          icon="📝"
+          title="Word-Vorlage"
+        >
+          Professionelle Word-Vorlage mit vordefinierten Formatvorlagen,
+          automatischem Inhaltsverzeichnis und BG Zehnergasse Branding.
+          Einfach Platzhalter ersetzen und losschreiben.
         </Card>
       </CardGrid>
 
@@ -303,7 +308,7 @@ export default function VwaPage() {
           Laden Sie die{" "}
           <a
             href="/templates/bgz-vwa.zip"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             BG Zehnergasse VWA-Vorlage
           </a>{" "}
@@ -541,14 +546,14 @@ export default function VwaPage() {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)]/40 hover:border-[var(--primary)]/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
+            className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
           >
-            <div className="w-2 h-2 rounded-full bg-[var(--primary)] flex-shrink-0" />
+            <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
             <div>
-              <span className="text-sm font-medium text-[var(--text)] group-hover:text-[var(--primary)] transition-colors">
+              <span className="text-sm font-medium text-txt group-hover:text-primary transition-colors">
                 {link.label}
               </span>
-              <span className="text-xs text-[var(--text-light)] block">
+              <span className="text-xs text-txt-light block">
                 {link.desc}
               </span>
             </div>
@@ -561,7 +566,7 @@ export default function VwaPage() {
         technische Probleme mit dem ABA-Portal:{" "}
         <a
           href="mailto:support-aba@aba.bildung.gv.at"
-          className="text-[var(--primary)] hover:underline"
+          className="text-primary hover:underline"
         >
           support-aba@aba.bildung.gv.at
         </a>{" "}

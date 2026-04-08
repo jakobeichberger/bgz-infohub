@@ -22,17 +22,17 @@ export function Card({
   const content = (
     <>
       {icon && <span className="text-2xl mb-2 block">{icon}</span>}
-      <h3 className="text-base font-semibold text-[var(--text)] group-hover:text-[var(--primary)] transition-colors mb-1">
+      <h3 className="text-base font-semibold text-txt group-hover:text-primary transition-colors mb-1">
         {title}
       </h3>
-      <p className="text-sm text-[var(--text-light)] leading-relaxed">
+      <p className="text-sm text-txt-light leading-relaxed">
         {children}
       </p>
     </>
   );
 
   const className =
-    "block p-4 rounded-xl bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)]/40 transition-all hover:-translate-y-0.5 hover:shadow-lg group";
+    "block p-4 rounded-xl bg-card border border-border-app hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-lg group";
 
   if (href?.startsWith("/")) {
     return (

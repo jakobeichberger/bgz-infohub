@@ -40,19 +40,19 @@ export default function HilfePageEN() {
       <H3>Forgot password</H3>
       <UL>
         <li><strong>Self-service reset:</strong> Go to{" "}
-          <a href="https://portal.office.com" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">portal.office.com</a>{" "}
+          <a href="https://portal.office.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">portal.office.com</a>{" "}
           → &quot;Forgot password&quot; → verify via email or SMS
         </li>
         <li><strong>Requirement:</strong> A private email or phone number must have been registered during first login</li>
         <li><strong>No self-service?</strong> Contact DigiGB teachers or{" "}
-          <a href="mailto:admin@bgzwn.at" className="text-[var(--primary)] hover:underline">admin@bgzwn.at</a>
+          <a href="mailto:admin@bgzwn.at" className="text-primary hover:underline">admin@bgzwn.at</a>
         </li>
       </UL>
 
       <H3>Forgot edu.Flow password (parents)</H3>
       <UL>
         <li>Reset password at:{" "}
-          <a href="https://www.eduflow.at/EduFlow/Account/forgotpassword?tenant=304046&username=" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">edu.Flow password reset</a>
+          <a href="https://www.eduflow.at/EduFlow/Account/forgotpassword?tenant=304046&username=" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">edu.Flow password reset</a>
         </li>
         <li>IT administration <strong>cannot</strong> reset parent passwords — only the self-service portal can</li>
       </UL>
@@ -63,7 +63,7 @@ export default function HilfePageEN() {
         <li>Use the school account (<code>lastname.firstname</code>) to sign in — not the email address</li>
         <li>Restart the device and try again</li>
         <li>Still having problems?{" "}
-          <a href="mailto:admin@bgzwn.at" className="text-[var(--primary)] hover:underline">admin@bgzwn.at</a>
+          <a href="mailto:admin@bgzwn.at" className="text-primary hover:underline">admin@bgzwn.at</a>
         </li>
       </UL>
 
@@ -87,7 +87,7 @@ export default function HilfePageEN() {
       <UL>
         <li><strong>Force restart:</strong> Hold Home + Power button simultaneously (or on newer iPads: press Volume Up, Volume Down, then hold Power)</li>
         <li>If problem persists: Reset iPad via iTunes (see{" "}
-          <a href="/en/infohub/geraete" className="text-[var(--primary)] hover:underline">iPad &amp; Devices</a>)
+          <a href="/en/infohub/geraete" className="text-primary hover:underline">iPad &amp; Devices</a>)
         </li>
         <li>Hardware defect? Contact ACP TechRent: +43 1 813 0000</li>
       </UL>
@@ -97,7 +97,7 @@ export default function HilfePageEN() {
         <li>After <strong>10 failed attempts</strong> the account is locked for <strong>10 minutes</strong></li>
         <li>Wait 10 minutes and try again</li>
         <li>If you forgot your password: Self-service reset via{" "}
-          <a href="https://portal.office.com" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">portal.office.com</a>{" "}
+          <a href="https://portal.office.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">portal.office.com</a>{" "}
           or contact IT
         </li>
       </UL>
@@ -147,12 +147,12 @@ export default function HilfePageEN() {
             href={link.href}
             target={link.href.startsWith("/") ? undefined : "_blank"}
             rel={link.href.startsWith("/") ? undefined : "noopener noreferrer"}
-            className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)]/40 hover:border-[var(--primary)]/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
+            className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
           >
-            <div className="w-2 h-2 rounded-full bg-[var(--primary)] flex-shrink-0" />
+            <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
             <div>
-              <span className="text-sm font-medium text-[var(--text)] group-hover:text-primary group-hover:text-[var(--primary)] transition-colors">{link.label}</span>
-              <span className="text-xs text-[var(--text-light)] block">{link.desc}</span>
+              <span className="text-sm font-medium text-txt group-hover:text-primary group-hover:text-primary transition-colors">{link.label}</span>
+              <span className="text-xs text-txt-light block">{link.desc}</span>
             </div>
           </a>
         ))}

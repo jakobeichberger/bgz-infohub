@@ -92,7 +92,7 @@ export default function GeraetePage() {
             href="https://www.ris.bka.gv.at/eli/bgbl/i/2021/9/P5/NOR40229759"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             SchDigiG § 5
           </a>
@@ -103,7 +103,7 @@ export default function GeraetePage() {
             href="https://digitaleslernen.oead.at/fileadmin/Dokumente/digitaleslernen.oead.at/Allgemeine_Vertragsbedingungen.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             Allgemeine Vertragsbedingungen (PDF)
           </a>
@@ -124,7 +124,7 @@ export default function GeraetePage() {
             href="https://digitaleslernen.oead.at/de/fuer-eltern/avb-bezahlung-befreiung"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             Bezahlung &amp; Befreiung auf digitaleslernen.oead.at
           </a>
@@ -163,7 +163,7 @@ export default function GeraetePage() {
           href="https://digitaleslernen.oead.at/de/garantie-versicherung"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[var(--primary)] hover:underline"
+          className="text-primary hover:underline"
         >
           digitaleslernen.oead.at/de/garantie-versicherung
         </a>
@@ -178,7 +178,7 @@ export default function GeraetePage() {
           href="https://digitaleslernen.oead.at/de/fuer-eltern/geraete-support/geraeteboerse"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[var(--primary)] hover:underline"
+          className="text-primary hover:underline"
         >
           Zur Gerätebörse
         </a>
@@ -194,7 +194,7 @@ export default function GeraetePage() {
             <strong>E-Mail:</strong>{" "}
             <a
               href="mailto:digitaleslernen@oead.at"
-              className="text-[var(--primary)] hover:underline"
+              className="text-primary hover:underline"
             >
               digitaleslernen@oead.at
             </a>
@@ -209,7 +209,7 @@ export default function GeraetePage() {
               href="https://digitaleslernen.oead.at/de/faqs"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--primary)] hover:underline"
+              className="text-primary hover:underline"
             >
               digitaleslernen.oead.at/de/faqs
             </a>
@@ -222,9 +222,9 @@ export default function GeraetePage() {
 
       <P>
         Gemäß{" "}
-        <a href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=14a" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">SchUG § 14a</a>{" "}
+        <a href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=14a" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">SchUG § 14a</a>{" "}
         und der{" "}
-        <a href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011647" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">IKT-Schulverordnung</a>{" "}
+        <a href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011647" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">IKT-Schulverordnung</a>{" "}
         (BGBl. II Nr. 382/2021, § 10 Z 6) sind auf den Geräten der
         Unterstufe Kinderschutz-Maßnahmen aktiv:
       </P>
@@ -243,7 +243,7 @@ export default function GeraetePage() {
           href="https://www.saferinternet.at"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[var(--primary)] hover:underline"
+          className="text-primary hover:underline"
         >
           SaferInternet.at
         </a>
@@ -410,14 +410,14 @@ export default function GeraetePage() {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)]/40 hover:border-[var(--primary)]/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
+            className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
           >
-            <div className="w-2 h-2 rounded-full bg-[var(--primary)] flex-shrink-0" />
+            <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
             <div>
-              <span className="text-sm font-medium text-[var(--text)] group-hover:text-primary group-hover:text-[var(--primary)] transition-colors">
+              <span className="text-sm font-medium text-txt group-hover:text-primary group-hover:text-primary transition-colors">
                 {link.label}
               </span>
-              <span className="text-xs text-[var(--text-light)] block">
+              <span className="text-xs text-txt-light block">
                 {link.desc}
               </span>
             </div>

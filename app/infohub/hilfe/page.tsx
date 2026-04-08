@@ -84,7 +84,7 @@ export default function HilfePage() {
             href="https://portal.office.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             portal.office.com
           </a>{" "}
@@ -99,7 +99,7 @@ export default function HilfePage() {
           oder an{" "}
           <a
             href="mailto:admin@bgzwn.at"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             admin@bgzwn.at
           </a>
@@ -114,7 +114,7 @@ export default function HilfePage() {
             href="https://www.eduflow.at/EduFlow/Account/forgotpassword?tenant=304046&username="
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             edu.Flow Passwort-Reset
           </a>
@@ -137,7 +137,7 @@ export default function HilfePage() {
           Falls weiterhin Probleme:{" "}
           <a
             href="mailto:admin@bgzwn.at"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             admin@bgzwn.at
           </a>
@@ -182,7 +182,7 @@ export default function HilfePage() {
           (siehe{" "}
           <a
             href="/infohub/geraete"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             iPad &amp; Geräte
           </a>
@@ -206,7 +206,7 @@ export default function HilfePage() {
             href="https://portal.office.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             portal.office.com
           </a>{" "}
@@ -231,7 +231,7 @@ export default function HilfePage() {
           Fordern Sie einen neuen Code bei{" "}
           <a
             href="mailto:admin@bgzwn.at"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             admin@bgzwn.at
           </a>{" "}
@@ -333,14 +333,14 @@ export default function HilfePage() {
             rel={
               link.href.startsWith("/") ? undefined : "noopener noreferrer"
             }
-            className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)]/40 hover:border-[var(--primary)]/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
+            className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
           >
-            <div className="w-2 h-2 rounded-full bg-[var(--primary)] flex-shrink-0" />
+            <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
             <div>
-              <span className="text-sm font-medium text-[var(--text)] group-hover:text-primary group-hover:text-[var(--primary)] transition-colors">
+              <span className="text-sm font-medium text-txt group-hover:text-primary group-hover:text-primary transition-colors">
                 {link.label}
               </span>
-              <span className="text-xs text-[var(--text-light)] block">
+              <span className="text-xs text-txt-light block">
                 {link.desc}
               </span>
             </div>

@@ -27,7 +27,7 @@ export default function LaptopPage() {
           href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=43"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[var(--primary)] hover:underline"
+          className="text-primary hover:underline"
         >
           § 43 Abs. 1 SchUG
         </a>{" "}
@@ -43,7 +43,7 @@ export default function LaptopPage() {
           href="https://www.bgzwn.at/wp-content/uploads/Information-zum-Notebook.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[var(--primary)] hover:underline"
+          className="text-primary hover:underline"
         >
           Information zum Notebook (PDF)
         </a>
@@ -118,7 +118,7 @@ export default function LaptopPage() {
         Neuere MacBooks mit M1/M2/M3/M4-Chip verwenden ARM-Architektur.
         Windows 11 ARM kann in einer VM laufen, aber die Schule warnt vor
         Kompatibilitätsproblemen bei Spezialsoftware. Klären Sie vor dem
-        Kauf mit der IT (<a href="mailto:admin@bgzwn.at" className="text-[var(--primary)] hover:underline">admin@bgzwn.at</a>),
+        Kauf mit der IT (<a href="mailto:admin@bgzwn.at" className="text-primary hover:underline">admin@bgzwn.at</a>),
         ob alle benötigten Programme funktionieren.
       </Callout>
 
@@ -280,7 +280,7 @@ export default function LaptopPage() {
         Bei Fragen zu den Laptop-Vorgaben wenden Sie sich an die IT:{" "}
         <a
           href="mailto:admin@bgzwn.at"
-          className="text-[var(--primary)] hover:underline"
+          className="text-primary hover:underline"
         >
           admin@bgzwn.at
         </a>
@@ -296,7 +296,7 @@ export default function LaptopPage() {
             href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=43"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             SchUG, BGBl. Nr. 472/1986 i.d.g.F.
           </a>{" "}

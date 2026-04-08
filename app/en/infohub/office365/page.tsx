@@ -210,7 +210,7 @@ export default function Office365PageEN() {
             href="https://portal.office.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             portal.office.com
           </a>{" "}
@@ -249,7 +249,7 @@ export default function Office365PageEN() {
             href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011451"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             BilDokG 2020, BGBl. I Nr. 20/2021
           </a>{" "}
@@ -261,7 +261,7 @@ export default function Office365PageEN() {
             href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--primary)] hover:underline"
+            className="text-primary hover:underline"
           >
             DSG, BGBl. I Nr. 165/1999 i.d.g.F.
           </a>{" "}

@@ -152,7 +152,7 @@ export default function SchulaccountPageEN() {
           <ol>
             <li>
               Sign in at{" "}
-              <a href="https://portal.office.com" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">
+              <a href="https://portal.office.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                 portal.office.com
               </a>{" "}
               with your email and current password
@@ -161,7 +161,7 @@ export default function SchulaccountPageEN() {
             <li>Select &quot;Password&quot; or &quot;Change password&quot;</li>
             <li>Enter old password once, new password twice</li>
           </ol>
-          <p className="text-xs text-[var(--text-light)] mt-1">
+          <p className="text-xs text-txt-light mt-1">
             Changes apply within minutes for all Microsoft services. The school
             network may take up to 15 minutes.
           </p>
@@ -191,7 +191,7 @@ export default function SchulaccountPageEN() {
       <StepList>
         <Step title="Open self-service reset">
           Go to{" "}
-          <a href="https://portal.office.com" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">
+          <a href="https://portal.office.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
             portal.office.com
           </a>{" "}
           and enter your school email address.
@@ -208,7 +208,7 @@ export default function SchulaccountPageEN() {
         If self-service was not set up, please contact:
         <ul>
           <li>DigiGB teachers or IT teachers during class</li>
-          <li>IT administration: <a href="mailto:admin@bgzwn.at" className="text-[var(--primary)] hover:underline">admin@bgzwn.at</a></li>
+          <li>IT administration: <a href="mailto:admin@bgzwn.at" className="text-primary hover:underline">admin@bgzwn.at</a></li>
         </ul>
       </Callout>
 
@@ -225,7 +225,7 @@ export default function SchulaccountPageEN() {
         installation:{" "}
         <a
           href="/en/infohub/office365"
-          className="text-[var(--primary)] hover:underline font-semibold"
+          className="text-primary hover:underline font-semibold"
         >
           Microsoft 365 → View full details
         </a>

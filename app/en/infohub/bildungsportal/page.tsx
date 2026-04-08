@@ -18,7 +18,7 @@ export default function BildungsportalPageEN() {
 
       <P>
         The Bildungsportal (
-        <a href="https://www.bildung.gv.at" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">bildung.gv.at</a>
+        <a href="https://www.bildung.gv.at" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">bildung.gv.at</a>
         ) is Austria&apos;s central digital education platform, operated by the
         Federal Ministry of Education. It offers a unified login and a
         personalised dashboard for students, parents and teachers.
@@ -26,7 +26,7 @@ export default function BildungsportalPageEN() {
 
       <Callout type="info" title="Education Portal Hotline">
         <strong>+43 1 53120 3344</strong> or{" "}
-        <a href="mailto:support@bildung.gv.at" className="text-[var(--primary)] hover:underline">support@bildung.gv.at</a>
+        <a href="mailto:support@bildung.gv.at" className="text-primary hover:underline">support@bildung.gv.at</a>
       </Callout>
 
       <H2>Guide for Parents</H2>
@@ -59,7 +59,7 @@ export default function BildungsportalPageEN() {
         </Step>
         <Step title="Registration">
           Open{" "}
-          <a href="https://www.bildung.gv.at" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">bildung.gv.at</a>{" "}
+          <a href="https://www.bildung.gv.at" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">bildung.gv.at</a>{" "}
           and register with the received data or directly with ID Austria.
         </Step>
         <Step title="Personalise dashboard">
@@ -114,7 +114,7 @@ export default function BildungsportalPageEN() {
 
       <Callout type="info" title="Download the app">
         The edu.digicard app is free in the{" "}
-        <a href="https://apps.apple.com/at/app/edu-digicard/id1635556317" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">Apple App Store</a>{" "}
+        <a href="https://apps.apple.com/at/app/edu-digicard/id1635556317" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Apple App Store</a>{" "}
         and Google Play Store.
       </Callout>
 

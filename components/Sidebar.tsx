@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -57,7 +58,7 @@ function ThemeToggle() {
   return (
     <button
       onClick={toggle}
-      className="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-[var(--hover-bg)] transition-colors text-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]"
+      className="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-hover-bg transition-colors text-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
       aria-label="Toggle theme"
       title={dark ? "Switch to light mode" : "Switch to dark mode"}
     >
@@ -82,10 +83,10 @@ export function Sidebar() {
   return (
     <>
       {/* Mobile header */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-[var(--nav-bg)] border-b border-[var(--nav-border)] px-4 py-3 flex items-center justify-between">
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-nav-bg border-b border-nav-border px-4 py-3 flex items-center justify-between">
         <button
           onClick={() => setOpen(!open)}
-          className="p-2 rounded-lg hover:bg-[var(--hover-bg)] transition-colors"
+          className="p-2 rounded-lg hover:bg-hover-bg transition-colors"
           aria-label="Open menu"
         >
           <svg
@@ -96,7 +97,7 @@ export function Sidebar() {
             stroke="currentColor"
             strokeWidth="2"
             strokeLinecap="round"
-            className="text-[var(--text)]"
+            className="text-txt"
           >
             {open ? (
               <path d="M18 6L6 18M6 6l12 12" />
@@ -105,13 +106,19 @@ export function Sidebar() {
             )}
           </svg>
         </button>
-        <span className="font-bold text-[var(--primary)] text-sm">
+        <span className="flex items-center gap-2 font-bold text-primary text-sm">
+          <Image
+            src="/bgz-logo.png"
+            alt="BG Zehnergasse Logo"
+            width={24}
+            height={24}
+          />
           BG Zehnergasse InfoHub
         </span>
         <div className="flex items-center gap-1">
           <Link
             href={langSwitchHref}
-            className="px-2 py-1 rounded text-xs font-medium hover:bg-[var(--hover-bg)] transition-colors text-[var(--text-light)]"
+            className="px-2 py-1 rounded text-xs font-medium hover:bg-hover-bg transition-colors text-txt-light"
           >
             {isEN ? "DE" : "EN"}
           </Link>
@@ -131,23 +138,32 @@ export function Sidebar() {
       <aside
         className={`
           fixed lg:sticky top-0 left-0 z-40 h-screen w-64 flex-shrink-0
-          bg-[var(--nav-bg)] border-r border-[var(--nav-border)]
+          bg-nav-bg border-r border-nav-border
           transform transition-transform duration-200
           ${open ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
           overflow-y-auto
         `}
       >
-        <div className="p-5 border-b border-[var(--nav-border)]">
+        <div className="p-5 border-b border-nav-border">
           <Link
             href={basePath}
-            className="block"
+            className="flex items-center gap-3"
             onClick={() => setOpen(false)}
           >
-            <div className="font-bold text-[var(--primary)] text-lg">
-              BG Zehnergasse
-            </div>
-            <div className="text-xs text-[var(--text-light)]">
-              InfoHub — {isEN ? "Information Portal" : "Informationsportal"}
+            <Image
+              src="/bgz-logo.png"
+              alt="BG Zehnergasse Logo"
+              width={40}
+              height={40}
+              className="flex-shrink-0"
+            />
+            <div>
+              <div className="font-bold text-primary text-lg leading-tight">
+                BG Zehnergasse
+              </div>
+              <div className="text-xs text-txt-light">
+                InfoHub — {isEN ? "Information Portal" : "Informationsportal"}
+              </div>
             </div>
           </Link>
         </div>
@@ -164,11 +180,11 @@ export function Sidebar() {
                 onClick={() => setOpen(false)}
                 className={`
                   flex items-center gap-3 px-3 py-2.5 min-h-[44px] rounded-lg text-sm transition-all
-                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:ring-offset-1
+                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1
                   ${
                     isActive
-                      ? "bg-[var(--nav-active-bg)] text-[var(--primary)] font-semibold"
-                      : "text-[var(--text)] hover:bg-[var(--hover-bg)]"
+                      ? "bg-nav-active-bg text-primary font-semibold"
+                      : "text-txt hover:bg-hover-bg"
                   }
                 `}
               >
@@ -179,11 +195,11 @@ export function Sidebar() {
           })}
         </nav>
 
-        <div className="p-3 mt-auto border-t border-[var(--nav-border)]">
+        <div className="p-3 mt-auto border-t border-nav-border">
           <div className="flex items-center justify-between px-3 mb-2">
             <Link
               href={langSwitchHref}
-              className="flex items-center gap-1.5 text-xs text-[var(--text-light)] hover:text-[var(--primary)] transition-colors"
+              className="flex items-center gap-1.5 text-xs text-txt-light hover:text-primary transition-colors"
             >
               <span>🌐</span>
               <span>{isEN ? "Deutsch" : "English"}</span>
@@ -194,7 +210,7 @@ export function Sidebar() {
             href="https://www.bgzwn.at"
             target="_blank"
             rel="noopener noreferrer"
-            className="block px-3 py-2 text-xs text-[var(--text-light)] hover:text-[var(--primary)] transition-colors"
+            className="block px-3 py-2 text-xs text-txt-light hover:text-primary transition-colors"
           >
             bgzwn.at &rarr;
           </a>
