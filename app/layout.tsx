@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   },
   description:
     "Zentrales Informationsportal für Eltern und Schüler am BG Zehnergasse.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
