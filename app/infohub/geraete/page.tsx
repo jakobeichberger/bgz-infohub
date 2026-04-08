@@ -50,6 +50,10 @@ export default function GeraetePage() {
             "Umsetzung",
             "OeAD — Agentur für Bildung und Internationalisierung",
           ],
+          [
+            "Rechtsgrundlage",
+            "SchulDigiG (BGBl. I Nr. 9/2021)",
+          ],
         ]}
       />
 
@@ -217,8 +221,12 @@ export default function GeraetePage() {
       <H2>Kinderschutz &amp; MDM</H2>
 
       <P>
-        Gemäß SchUG § 14a und der IKT-Schulverordnung 2025 sind auf den
-        Geräten der Unterstufe Kinderschutz-Maßnahmen aktiv:
+        Gemäß{" "}
+        <a href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=14a" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">SchUG § 14a</a>{" "}
+        und der{" "}
+        <a href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011647" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">IKT-Schulverordnung</a>{" "}
+        (BGBl. II Nr. 382/2021, § 10 Z 6) sind auf den Geräten der
+        Unterstufe Kinderschutz-Maßnahmen aktiv:
       </P>
 
       <UL>

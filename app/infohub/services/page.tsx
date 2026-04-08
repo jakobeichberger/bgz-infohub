@@ -114,11 +114,17 @@ export default function ServicesPage() {
       </StepList>
 
       <Callout type="danger" title="Schulpflicht">
-        Laut SchUG § 43 und § 45 besteht Schulbesuchspflicht.
+        Laut{" "}
+        <a href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=43" target="_blank" rel="noopener noreferrer">SchUG § 43</a>{" "}
+        und{" "}
+        <a href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=45" target="_blank" rel="noopener noreferrer">§ 45</a>{" "}
+        besteht Schulbesuchspflicht.
         Erziehungsberechtigte müssen Abwesenheiten bis{" "}
         <strong>7:30 Uhr am ersten Fehltag</strong> dem Klassenvorstand melden.
         Bei Abwesenheiten über eine Woche oder häufigen Kurzerkrankungen ist
-        eine ärztliche Bestätigung erforderlich.
+        eine ärztliche Bestätigung erforderlich. Bei mehr als 5 unentschuldigten
+        Tagen oder 30 Stunden droht die automatische Abmeldung
+        (<a href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=45" target="_blank" rel="noopener noreferrer">§ 45 Abs. 4</a>).
       </Callout>
 
       {/* ═══════════════ edu.Suite ═══════════════ */}

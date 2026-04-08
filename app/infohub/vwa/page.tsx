@@ -26,10 +26,12 @@ export default function VwaPage() {
 
       <Callout type="info" title="Reform 2024: VWA wird freiwillig">
         Seit dem Schuljahr 2024/25 ist die VWA/ABA{" "}
-        <strong>freiwillig</strong>. Schüler können stattdessen eine
-        zusätzliche schriftliche oder mündliche Prüfung wählen. Die
-        Entscheidung muss bis <strong>15. Jänner</strong> der 7. Klasse
-        gemeldet werden. Die Regelung gilt bis 2028/29.
+        <strong>freiwillig</strong> (
+        <a href="https://www.ris.bka.gv.at/eli/bgbl/I/2024/121" target="_blank" rel="noopener noreferrer">BGBl. I Nr. 121/2024</a>).
+        Schüler können stattdessen eine zusätzliche schriftliche oder
+        mündliche Prüfung wählen. Die Entscheidung muss bis{" "}
+        <strong>15. Jänner</strong> der 7. Klasse gemeldet werden. Die
+        Regelung gilt bis 2028/29.
       </Callout>
 
       {/* ═══ Überblick ═══ */}
