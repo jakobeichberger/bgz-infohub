@@ -61,43 +61,49 @@ export default function InfoHubPage() {
 
       <CardGrid>
         <Card href="/infohub/geraete" icon="📱" title="iPad & Geräte">
-          Geräteinitiative, Beschaffung, Kinderschutz, Zubehör-Nachbestellung
-          und Garantie.
+          Geräteinitiative, Beschaffung, Kinderschutz, Zubehör und Garantie.
         </Card>
-        <Card href="/infohub/schulaccount" icon="🔑" title="Schulaccount & Office 365">
-          Login-Daten, Passwort-Regeln, Passwort zurücksetzen, Microsoft
-          Office 365 kostenlos nutzen.
+        <Card href="/infohub/schulaccount" icon="🔑" title="Schulaccount">
+          Login-Daten, Passwort-Regeln, Passwort ändern und zurücksetzen.
+        </Card>
+        <Card href="/infohub/office365" icon="💻" title="Microsoft 365">
+          A3-Lizenz kostenlos: Desktop-Apps, OneDrive (5 TB), OneNote, Teams,
+          Copilot.
         </Card>
         <Card href="/infohub/services" icon="🏫" title="Schulservices">
-          WebUntis (Stundenplan), edu.Flow (Elternkommunikation), edu.Pay
-          (Zahlungen), Drucken, PoDS.
+          WebUntis, edu.Flow, edu.Pay, Drucken und Portal Digitale Schule.
+        </Card>
+        <Card href="/infohub/educard" icon="🪪" title="edu.Card & digicard">
+          Schülerausweis, Kopierkarte, Verlust melden, digitaler Ausweis am
+          Smartphone.
+        </Card>
+        <Card href="/infohub/nextexam" icon="📝" title="Next-Exam">
+          Digitale Prüfungsumgebung — Downloads, Anleitungen und Schnellhilfe.
+        </Card>
+        <Card href="/infohub/laptop" icon="💻" title="Laptop-Vorgaben">
+          Notebook-Anforderungen für die Oberstufe, Kaufberatung und Tipps.
         </Card>
         <Card href="/infohub/mdm" icon="⚙️" title="MDM-Einrichtung">
           Geräteverwaltung einrichten — Schritt für Schritt für iOS, Android
           und Windows.
-        </Card>
-        <Card href="/infohub/nextexam" icon="📝" title="Next-Exam">
-          Digitale Prüfungsumgebung — Downloads, Anleitungen, Schnellhilfe
-          und FAQ.
-        </Card>
-        <Card href="/infohub/laptop" icon="💻" title="Laptop-Vorgaben">
-          Mindestanforderungen für die Oberstufe, Kaufberatung und Tipps.
         </Card>
         <Card href="/infohub/tipp10" icon="⌨️" title="TIPP10 Tipptrainer">
           Kostenloses 10-Finger-Schreibtraining — Online, Software und
           Schulversion.
         </Card>
         <Card href="/infohub/bildungsportal" icon="🏛️" title="Bildungsportal & IT-Services">
-          Bildungsportal für Eltern, edu.digicard (digitaler Schülerausweis),
-          Lernplattformen.
+          Bildungsportal für Eltern, edu.digicard, Lernplattformen.
+        </Card>
+        <Card href="/infohub/vwa" icon="🎓" title="VWA / ABA">
+          Vorwissenschaftliche Arbeit: Ablauf, Aufbau, Zitieren, LaTeX- und
+          Word-Vorlage.
         </Card>
         <Card href="/infohub/lizenzen" icon="🎁" title="Gratis Software">
-          Kostenlose Lizenzen: GitHub Copilot, JetBrains, Autodesk, Figma,
-          Canva und mehr.
+          Kostenlose Lizenzen: GitHub Copilot, JetBrains, Autodesk, Figma
+          und mehr.
         </Card>
         <Card href="/infohub/hilfe" icon="🆘" title="Hilfe & Kontakte">
-          Ansprechpartner, häufige Probleme und Lösungen, alle wichtigen Links
-          auf einen Blick.
+          Ansprechpartner, häufige Probleme und Lösungen, wichtige Links.
         </Card>
       </CardGrid>
 

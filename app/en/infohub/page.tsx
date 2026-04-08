@@ -63,39 +63,46 @@ export default function InfoHubPageEN() {
           Device initiative, procurement, child protection, accessories and
           warranty.
         </Card>
-        <Card href="/en/infohub/schulaccount" icon="🔑" title="School Account & Office 365">
-          Login credentials, password rules, password reset, free Microsoft
-          Office 365.
+        <Card href="/en/infohub/schulaccount" icon="🔑" title="School Account">
+          Login credentials, password rules, change and reset password.
+        </Card>
+        <Card href="/en/infohub/office365" icon="💻" title="Microsoft 365">
+          Free A3 licence: desktop apps, OneDrive (5 TB), OneNote, Teams,
+          Copilot.
         </Card>
         <Card href="/en/infohub/services" icon="🏫" title="School Services">
-          WebUntis (timetable), edu.Flow (parent communication), edu.Pay
-          (payments), printing, PoDS.
+          WebUntis, edu.Flow, edu.Pay, printing and Portal Digitale Schule.
         </Card>
-        <Card href="/en/infohub/mdm" icon="⚙️" title="MDM Setup">
-          Device management setup — step by step for iOS, Android and Windows.
+        <Card href="/en/infohub/educard" icon="🪪" title="edu.Card & digicard">
+          Student ID, copy card, report loss, digital ID on smartphone.
         </Card>
         <Card href="/en/infohub/nextexam" icon="📝" title="Next-Exam">
-          Digital examination environment — downloads, guides, quick fixes
-          and FAQ.
+          Digital exam environment — downloads, guides and quick fixes.
         </Card>
         <Card href="/en/infohub/laptop" icon="💻" title="Laptop Requirements">
-          Minimum specs for upper school, buying guide and tips.
+          Notebook specs for upper school, buying guide and tips.
+        </Card>
+        <Card href="/en/infohub/mdm" icon="⚙️" title="MDM Setup">
+          Device management setup — step by step for iOS, Android and
+          Windows.
         </Card>
         <Card href="/en/infohub/tipp10" icon="⌨️" title="TIPP10 Typing Trainer">
-          Free 10-finger touch typing training — online, software and
-          school version.
+          Free 10-finger touch typing — online, software and school version.
         </Card>
         <Card href="/en/infohub/bildungsportal" icon="🏛️" title="Education Portal & IT Services">
-          Austrian Education Portal for parents, edu.digicard (digital student
-          ID), learning platforms.
+          Austrian Education Portal for parents, edu.digicard, learning
+          platforms.
+        </Card>
+        <Card href="/en/infohub/vwa" icon="🎓" title="VWA / ABA (Thesis)">
+          Pre-scientific thesis: process, structure, citation, LaTeX and Word
+          templates.
         </Card>
         <Card href="/en/infohub/lizenzen" icon="🎁" title="Free Software">
-          Free licences: GitHub Copilot, JetBrains, Autodesk, Figma, Canva
-          and more.
+          Free licences: GitHub Copilot, JetBrains, Autodesk, Figma and
+          more.
         </Card>
         <Card href="/en/infohub/hilfe" icon="🆘" title="Help & Contacts">
-          Contact persons, common problems and solutions, all important links
-          at a glance.
+          Contact persons, common problems and solutions, important links.
         </Card>
       </CardGrid>
 
