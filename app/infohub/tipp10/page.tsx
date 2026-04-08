@@ -91,7 +91,7 @@ export default function Tipp10Page() {
             href="https://www.tipp10.com/de/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary dark:text-blue-400 hover:underline"
+            className="text-[var(--primary)] hover:underline"
           >
             tipp10.com
           </a>{" "}
@@ -189,9 +189,9 @@ export default function Tipp10Page() {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-primary/40 dark:hover:border-blue-400/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
+            className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)]/40 hover:border-[var(--primary)]/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
           >
-            <div className="w-2 h-2 rounded-full bg-primary dark:bg-blue-400 flex-shrink-0" />
+            <div className="w-2 h-2 rounded-full bg-[var(--primary)] flex-shrink-0" />
             <div>
               <span className="text-sm font-medium text-[var(--text)] group-hover:text-[var(--primary)] transition-colors">
                 {link.label}

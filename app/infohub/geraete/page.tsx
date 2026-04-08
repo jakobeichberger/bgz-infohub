@@ -88,7 +88,7 @@ export default function GeraetePage() {
             href="https://www.ris.bka.gv.at/eli/bgbl/i/2021/9/P5/NOR40229759"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary dark:text-blue-400 hover:underline"
+            className="text-[var(--primary)] hover:underline"
           >
             SchDigiG § 5
           </a>
@@ -99,7 +99,7 @@ export default function GeraetePage() {
             href="https://digitaleslernen.oead.at/fileadmin/Dokumente/digitaleslernen.oead.at/Allgemeine_Vertragsbedingungen.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary dark:text-blue-400 hover:underline"
+            className="text-[var(--primary)] hover:underline"
           >
             Allgemeine Vertragsbedingungen (PDF)
           </a>
@@ -120,7 +120,7 @@ export default function GeraetePage() {
             href="https://digitaleslernen.oead.at/de/fuer-eltern/avb-bezahlung-befreiung"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary dark:text-blue-400 hover:underline"
+            className="text-[var(--primary)] hover:underline"
           >
             Bezahlung &amp; Befreiung auf digitaleslernen.oead.at
           </a>
@@ -159,7 +159,7 @@ export default function GeraetePage() {
           href="https://digitaleslernen.oead.at/de/garantie-versicherung"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary dark:text-blue-400 hover:underline"
+          className="text-[var(--primary)] hover:underline"
         >
           digitaleslernen.oead.at/de/garantie-versicherung
         </a>
@@ -174,7 +174,7 @@ export default function GeraetePage() {
           href="https://digitaleslernen.oead.at/de/fuer-eltern/geraete-support/geraeteboerse"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary dark:text-blue-400 hover:underline"
+          className="text-[var(--primary)] hover:underline"
         >
           Zur Gerätebörse
         </a>
@@ -190,7 +190,7 @@ export default function GeraetePage() {
             <strong>E-Mail:</strong>{" "}
             <a
               href="mailto:digitaleslernen@oead.at"
-              className="text-primary dark:text-blue-400 hover:underline"
+              className="text-[var(--primary)] hover:underline"
             >
               digitaleslernen@oead.at
             </a>
@@ -205,7 +205,7 @@ export default function GeraetePage() {
               href="https://digitaleslernen.oead.at/de/faqs"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary dark:text-blue-400 hover:underline"
+              className="text-[var(--primary)] hover:underline"
             >
               digitaleslernen.oead.at/de/faqs
             </a>
@@ -235,7 +235,7 @@ export default function GeraetePage() {
           href="https://www.saferinternet.at"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary dark:text-blue-400 hover:underline"
+          className="text-[var(--primary)] hover:underline"
         >
           SaferInternet.at
         </a>
@@ -402,11 +402,11 @@ export default function GeraetePage() {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-primary/40 dark:hover:border-blue-400/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
+            className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)]/40 hover:border-[var(--primary)]/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
           >
-            <div className="w-2 h-2 rounded-full bg-primary dark:bg-blue-400 flex-shrink-0" />
+            <div className="w-2 h-2 rounded-full bg-[var(--primary)] flex-shrink-0" />
             <div>
-              <span className="text-sm font-medium text-[var(--text)] group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">
+              <span className="text-sm font-medium text-[var(--text)] group-hover:text-primary group-hover:text-[var(--primary)] transition-colors">
                 {link.label}
               </span>
               <span className="text-xs text-[var(--text-light)] block">

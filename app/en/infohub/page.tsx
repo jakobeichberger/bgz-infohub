@@ -24,11 +24,11 @@ function QuickLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-primary/40 dark:hover:border-blue-400/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
+      className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)]/40 hover:border-[var(--primary)]/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
     >
-      <div className="w-2 h-2 rounded-full bg-primary dark:bg-blue-400 flex-shrink-0" />
+      <div className="w-2 h-2 rounded-full bg-[var(--primary)] flex-shrink-0" />
       <div>
-        <span className="text-sm font-medium text-[var(--text)] group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">
+        <span className="text-sm font-medium text-[var(--text)] group-hover:text-primary group-hover:text-[var(--primary)] transition-colors">
           {label}
         </span>
         <span className="text-xs text-[var(--text-light)] block">
@@ -147,13 +147,13 @@ export default function InfoHubPageEN() {
         <table className="w-full text-sm">
           <thead>
             <tr>
-              <th className="text-left px-3 py-2 font-semibold text-primary dark:text-blue-400 bg-[var(--bg)] border-b border-[var(--border)]">
+              <th className="text-left px-3 py-2 font-semibold text-[var(--primary)] bg-[var(--bg)] border-b border-[var(--border)]">
                 Issue
               </th>
-              <th className="text-left px-3 py-2 font-semibold text-primary dark:text-blue-400 bg-[var(--bg)] border-b border-[var(--border)]">
+              <th className="text-left px-3 py-2 font-semibold text-[var(--primary)] bg-[var(--bg)] border-b border-[var(--border)]">
                 Contact
               </th>
-              <th className="text-left px-3 py-2 font-semibold text-primary dark:text-blue-400 bg-[var(--bg)] border-b border-[var(--border)]">
+              <th className="text-left px-3 py-2 font-semibold text-[var(--primary)] bg-[var(--bg)] border-b border-[var(--border)]">
                 Responsible for
               </th>
             </tr>
@@ -162,35 +162,35 @@ export default function InfoHubPageEN() {
             <tr className="hover:bg-[var(--hover-bg)] transition-colors">
               <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">IT Administration</td>
               <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
-                <a href="mailto:admin@bgzwn.at" className="text-primary dark:text-blue-400 hover:underline">admin@bgzwn.at</a>
+                <a href="mailto:admin@bgzwn.at" className="text-[var(--primary)] hover:underline">admin@bgzwn.at</a>
               </td>
               <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">Accounts, WiFi, software, password reset</td>
             </tr>
             <tr className="hover:bg-[var(--hover-bg)] transition-colors">
               <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">School Office</td>
               <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
-                <a href="mailto:kanzlei@bgzwn.at" className="text-primary dark:text-blue-400 hover:underline">kanzlei@bgzwn.at</a>
+                <a href="mailto:kanzlei@bgzwn.at" className="text-[var(--primary)] hover:underline">kanzlei@bgzwn.at</a>
               </td>
               <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">Payments, certificates, edu.Pay refunds</td>
             </tr>
             <tr className="hover:bg-[var(--hover-bg)] transition-colors">
               <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">iPad Hardware Support</td>
               <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
-                +43 1 813 0000 / <a href="mailto:sales@acptechrent.at" className="text-primary dark:text-blue-400 hover:underline">sales@acptechrent.at</a>
+                +43 1 813 0000 / <a href="mailto:sales@acptechrent.at" className="text-[var(--primary)] hover:underline">sales@acptechrent.at</a>
               </td>
               <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">ACP TechRent — warranty, repair, defects</td>
             </tr>
             <tr className="hover:bg-[var(--hover-bg)] transition-colors">
               <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">OeAD Digital Learning</td>
               <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
-                +43 720 080 356 / <a href="mailto:digitaleslernen@oead.at" className="text-primary dark:text-blue-400 hover:underline">digitaleslernen@oead.at</a>
+                +43 720 080 356 / <a href="mailto:digitaleslernen@oead.at" className="text-[var(--primary)] hover:underline">digitaleslernen@oead.at</a>
               </td>
               <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">Device initiative, exemption, device exchange (Mon–Fri 07:30–18:00)</td>
             </tr>
             <tr className="hover:bg-[var(--hover-bg)] transition-colors">
               <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">Education Portal Hotline</td>
               <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
-                +43 1 53120 3344 / <a href="mailto:support@bildung.gv.at" className="text-primary dark:text-blue-400 hover:underline">support@bildung.gv.at</a>
+                +43 1 53120 3344 / <a href="mailto:support@bildung.gv.at" className="text-[var(--primary)] hover:underline">support@bildung.gv.at</a>
               </td>
               <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">Bildungsportal, ID Austria in education</td>
             </tr>

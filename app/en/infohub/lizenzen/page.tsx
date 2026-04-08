@@ -111,31 +111,31 @@ export default function LizenzenPageEN() {
         <Card icon="🎨" title="Figma (Design)">
           Free Professional plan for students. Design, prototyping and
           collaboration.{" "}
-          <a href="https://www.figma.com/education/" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-blue-400 hover:underline">figma.com/education</a>
+          <a href="https://www.figma.com/education/" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">figma.com/education</a>
         </Card>
         <Card icon="🖌️" title="Canva (Graphic Design)">
           100% free for students and teachers. Create presentations, posters,
           videos.{" "}
-          <a href="https://www.canva.com/education/" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-blue-400 hover:underline">canva.com/education</a>
+          <a href="https://www.canva.com/education/" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">canva.com/education</a>
         </Card>
         <Card icon="🎮" title="Unity (Game Development)">
           Free Student Plan. Develop games and interactive 3D applications.{" "}
-          <a href="https://unity.com/products/unity-student" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-blue-400 hover:underline">unity.com/student</a>
+          <a href="https://unity.com/products/unity-student" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">unity.com/student</a>
         </Card>
         <Card icon="🎬" title="Unreal Engine">
           Completely free for education. Professional game engine for 3D,
           VR and simulation.{" "}
-          <a href="https://www.unrealengine.com/education" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-blue-400 hover:underline">unrealengine.com/education</a>
+          <a href="https://www.unrealengine.com/education" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">unrealengine.com/education</a>
         </Card>
         <Card icon="📝" title="Notion (Notes & Planning)">
           Free Plus plan for students. Notes, tasks, wikis and
           databases.{" "}
-          <a href="https://www.notion.com/product/notion-for-education" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-blue-400 hover:underline">notion.com/education</a>
+          <a href="https://www.notion.com/product/notion-for-education" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">notion.com/education</a>
         </Card>
         <Card icon="🍎" title="Apple Developer (free)">
           Free developer tools (Xcode, Swift Playgrounds, TestFlight)
           for schools.{" "}
-          <a href="https://developer.apple.com/education/" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-blue-400 hover:underline">developer.apple.com/education</a>
+          <a href="https://developer.apple.com/education/" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">developer.apple.com/education</a>
         </Card>
       </CardGrid>
 

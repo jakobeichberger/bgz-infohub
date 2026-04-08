@@ -1,9 +1,9 @@
 const styles = {
   info: {
-    bg: "bg-blue-50 dark:bg-blue-950/30",
-    border: "border-blue-200 dark:border-blue-800",
+    bg: "bg-orange-50 dark:bg-orange-950/30",
+    border: "border-orange-200 dark:border-orange-800",
     icon: "ℹ️",
-    title: "text-blue-800 dark:text-blue-300",
+    title: "text-orange-800 dark:text-orange-300",
   },
   success: {
     bg: "bg-green-50 dark:bg-green-950/30",

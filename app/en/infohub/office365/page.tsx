@@ -210,7 +210,7 @@ export default function Office365PageEN() {
             href="https://portal.office.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary dark:text-blue-400 hover:underline"
+            className="text-[var(--primary)] hover:underline"
           >
             portal.office.com
           </a>{" "}

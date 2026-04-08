@@ -26,7 +26,7 @@ export default function ServicesPageEN() {
       <P>
         WebUntis is the digital timetable and electronic class register of the
         school, operated by Gruber &amp; Petters (
-        <a href="https://www.untis.at/" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-blue-400 hover:underline">untis.at</a>).
+        <a href="https://www.untis.at/" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">untis.at</a>).
       </P>
 
       <H3>Access</H3>
@@ -43,15 +43,15 @@ export default function ServicesPageEN() {
       <P>
         <strong>Without login:</strong> The timetable, dashboard and office
         hours are publicly visible. Search for &quot;BG Zehnergasse&quot; on{" "}
-        <a href="https://webuntis.com" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-blue-400 hover:underline">webuntis.com</a>.
+        <a href="https://webuntis.com" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">webuntis.com</a>.
       </P>
 
       <Callout type="info" title="Note for parents">
         Parents can access WebUntis through the{" "}
-        <a href="https://www.bildung.gv.at" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-blue-400 hover:underline">Bildungsportal</a>{" "}
+        <a href="https://www.bildung.gv.at" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">Bildungsportal</a>{" "}
         or use their child&apos;s login. For problems with your WebUntis
         parent account, please contact{" "}
-        <a href="mailto:bnb@bgzwn.at" className="text-primary dark:text-blue-400 hover:underline">bnb@bgzwn.at</a>.
+        <a href="mailto:bnb@bgzwn.at" className="text-[var(--primary)] hover:underline">bnb@bgzwn.at</a>.
       </Callout>
 
       <H3>Colour codes in the timetable</H3>
@@ -133,7 +133,7 @@ export default function ServicesPageEN() {
         </Step>
         <Step title="Verify your email">
           Scan the QR code or enter the data at{" "}
-          <a href="https://edusuite.at/portal/" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-blue-400 hover:underline">edusuite.at/portal/</a>.
+          <a href="https://edusuite.at/portal/" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">edusuite.at/portal/</a>.
           Confirm your email address.
         </Step>
         <Step title="Return the signed letter">
@@ -159,7 +159,7 @@ export default function ServicesPageEN() {
       <H3>Forgot password (parents)</H3>
       <P>
         Reset your edu.Flow password here:{" "}
-        <a href="https://www.eduflow.at/EduFlow/Account/forgotpassword?tenant=304046&username=" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-blue-400 hover:underline">
+        <a href="https://www.eduflow.at/EduFlow/Account/forgotpassword?tenant=304046&username=" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">
           Password reset
         </a>. The IT team <strong>cannot</strong> reset parent passwords — only
         the self-service portal can.
@@ -194,7 +194,7 @@ export default function ServicesPageEN() {
         Amounts under EUR 10 can be transferred to the copy card. From
         EUR 10 a refund is possible — send the application form with name,
         class and signature to{" "}
-        <a href="mailto:kanzlei@bgzwn.at" className="text-primary dark:text-blue-400 hover:underline">kanzlei@bgzwn.at</a>.
+        <a href="mailto:kanzlei@bgzwn.at" className="text-[var(--primary)] hover:underline">kanzlei@bgzwn.at</a>.
       </Callout>
 
       {/* ═══ edu.Card ═══ */}
@@ -209,7 +209,7 @@ export default function ServicesPageEN() {
       <Callout type="info" title="Dedicated page">
         <a
           href="/en/infohub/educard"
-          className="text-primary dark:text-blue-400 hover:underline font-semibold"
+          className="text-[var(--primary)] hover:underline font-semibold"
         >
           edu.Card &amp; edu.digicard → View full details
         </a>
@@ -276,9 +276,9 @@ export default function ServicesPageEN() {
 
       <Callout type="info" title="Help with PoDS">
         Guides are available after login at{" "}
-        <a href="https://www.bildung.gv.at" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-blue-400 hover:underline">bildung.gv.at</a>.
+        <a href="https://www.bildung.gv.at" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">bildung.gv.at</a>.
         Activation code expired? Contact{" "}
-        <a href="mailto:admin@bgzwn.at" className="text-primary dark:text-blue-400 hover:underline">admin@bgzwn.at</a>{" "}
+        <a href="mailto:admin@bgzwn.at" className="text-[var(--primary)] hover:underline">admin@bgzwn.at</a>{" "}
         for a new code.
       </Callout>
     </>

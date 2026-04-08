@@ -165,7 +165,7 @@ export function Sidebar() {
                   focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:ring-offset-1
                   ${
                     isActive
-                      ? "bg-[var(--primary)]/10 text-[var(--primary)] font-semibold"
+                      ? "bg-[var(--nav-active-bg)] text-[var(--primary)] font-semibold"
                       : "text-[var(--text)] hover:bg-[var(--hover-bg)]"
                   }
                 `}

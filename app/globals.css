@@ -1,29 +1,38 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap');
 
 :root {
-  --primary: #1d4ed8;
-  --bg: #f8fafc;
+  --primary: #ff9800;
+  --primary-hover: #dd9933;
+  --primary-light: #fff3e0;
+  --bg: #f7f7f7;
   --card: #ffffff;
-  --border: #e2e8f0;
-  --text: #1e293b;
-  --text-light: #64748b;
-  --hover-bg: #f1f5f9;
-  --code-bg: #f1f5f9;
+  --border: #e0e0e0;
+  --text: #020202;
+  --text-light: #555555;
+  --hover-bg: #f0f0f0;
+  --code-bg: #f5f5f5;
   --nav-bg: #ffffff;
-  --nav-border: #e2e8f0;
+  --nav-border: #e0e0e0;
+  --nav-active-bg: #fff3e0;
+  --font-heading: 'Roboto', sans-serif;
+  --font-body: 'Ubuntu', 'Arial', sans-serif;
 }
 
 .dark {
-  --primary: #60a5fa;
-  --bg: #0f172a;
-  --card: #1e293b;
-  --border: #334155;
-  --text: #e2e8f0;
-  --text-light: #a1a1aa;
-  --hover-bg: #1e293b;
-  --code-bg: #334155;
-  --nav-bg: #1e293b;
-  --nav-border: #334155;
+  --primary: #ffb74d;
+  --primary-hover: #ffa726;
+  --primary-light: #3e2723;
+  --bg: #121212;
+  --card: #1e1e1e;
+  --border: #333333;
+  --text: #e0e0e0;
+  --text-light: #a0a0a0;
+  --hover-bg: #2a2a2a;
+  --code-bg: #2a2a2a;
+  --nav-bg: #1a1a1a;
+  --nav-border: #333333;
+  --nav-active-bg: #3e2723;
 }
 
 html {
@@ -33,7 +42,12 @@ html {
 body {
   background-color: var(--bg);
   color: var(--text);
+  font-family: var(--font-body);
   transition: background-color 0.2s, color 0.2s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
 }
 
 /* Focus styles for accessibility */

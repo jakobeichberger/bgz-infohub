@@ -31,7 +31,7 @@ export default function ServicesPage() {
           href="https://www.untis.at/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary dark:text-blue-400 hover:underline"
+          className="text-[var(--primary)] hover:underline"
         >
           untis.at
         </a>
@@ -60,7 +60,7 @@ export default function ServicesPage() {
           href="https://webuntis.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary dark:text-blue-400 hover:underline"
+          className="text-[var(--primary)] hover:underline"
         >
           webuntis.com
         </a>{" "}
@@ -75,10 +75,10 @@ export default function ServicesPage() {
 
       <Callout type="info" title="Hinweis für Eltern">
         Eltern können WebUntis über das{" "}
-        <a href="https://www.bildung.gv.at" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-blue-400 hover:underline">Bildungsportal</a>{" "}
+        <a href="https://www.bildung.gv.at" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">Bildungsportal</a>{" "}
         nutzen oder den Zugang ihres Kindes mitbenutzen. Bei Problemen mit
         dem WebUntis-Elternaccount schreiben Sie bitte an{" "}
-        <a href="mailto:bnb@bgzwn.at" className="text-primary dark:text-blue-400 hover:underline">bnb@bgzwn.at</a>.
+        <a href="mailto:bnb@bgzwn.at" className="text-[var(--primary)] hover:underline">bnb@bgzwn.at</a>.
       </Callout>
 
       <H3>Farbcodes im Stundenplan</H3>
@@ -130,7 +130,7 @@ export default function ServicesPage() {
           href="https://www.quarto.at/home.html"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary dark:text-blue-400 hover:underline"
+          className="text-[var(--primary)] hover:underline"
         >
           quarto.at
         </a>
@@ -156,7 +156,7 @@ export default function ServicesPage() {
           href="https://www.bgzwn.at"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary dark:text-blue-400 hover:underline"
+          className="text-[var(--primary)] hover:underline"
         >
           bgzwn.at
         </a>{" "}
@@ -190,7 +190,7 @@ export default function ServicesPage() {
             href="https://edusuite.at/portal/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary dark:text-blue-400 hover:underline"
+            className="text-[var(--primary)] hover:underline"
           >
             edusuite.at/portal/
           </a>{" "}
@@ -211,7 +211,7 @@ export default function ServicesPage() {
           href="https://edusuite.at/portal/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary dark:text-blue-400 hover:underline"
+          className="text-[var(--primary)] hover:underline"
         >
           edu.Suite-Portal
         </a>{" "}
@@ -226,7 +226,7 @@ export default function ServicesPage() {
             href="https://www.eduflow.at/EduFlow.Wiki/doku.php?id=portal:webapp"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary dark:text-blue-400 hover:underline"
+            className="text-[var(--primary)] hover:underline"
           >
             Anleitung
           </a>
@@ -258,7 +258,7 @@ export default function ServicesPage() {
           href="https://www.eduflow.at/EduFlow/Account/forgotpassword?tenant=304046&username="
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary dark:text-blue-400 hover:underline"
+          className="text-[var(--primary)] hover:underline"
         >
           Passwort zurücksetzen
         </a>
@@ -288,7 +288,7 @@ export default function ServicesPage() {
             href="https://edusuite.at/portal/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary dark:text-blue-400 hover:underline"
+            className="text-[var(--primary)] hover:underline"
           >
             edusuite.at/portal/
           </a>{" "}
@@ -327,14 +327,14 @@ export default function ServicesPage() {
           href="https://wiki.bgzwn.at/lib/exe/fetch.php?media=antrag_rueckerstattung.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary dark:text-blue-400 hover:underline"
+          className="text-[var(--primary)] hover:underline"
         >
           Antragsformular
         </a>{" "}
         mit Name, Klasse und Unterschrift an{" "}
         <a
           href="mailto:kanzlei@bgzwn.at"
-          className="text-primary dark:text-blue-400 hover:underline"
+          className="text-[var(--primary)] hover:underline"
         >
           kanzlei@bgzwn.at
         </a>
@@ -359,7 +359,7 @@ export default function ServicesPage() {
       <Callout type="info" title="Eigene Seite">
         <a
           href="/infohub/educard"
-          className="text-primary dark:text-blue-400 hover:underline font-semibold"
+          className="text-[var(--primary)] hover:underline font-semibold"
         >
           edu.Card &amp; edu.digicard → Zur vollständigen Übersicht
         </a>
@@ -448,14 +448,14 @@ export default function ServicesPage() {
           href="https://www.bildung.gv.at"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary dark:text-blue-400 hover:underline"
+          className="text-[var(--primary)] hover:underline"
         >
           bildung.gv.at
         </a>
         . Aktivierungscode abgelaufen? Wenden Sie sich an{" "}
         <a
           href="mailto:admin@bgzwn.at"
-          className="text-primary dark:text-blue-400 hover:underline"
+          className="text-[var(--primary)] hover:underline"
         >
           admin@bgzwn.at
         </a>{" "}

@@ -26,7 +26,7 @@ export default function LaptopPageEN() {
           href="https://www.bgzwn.at/wp-content/uploads/Information-zum-Notebook.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary dark:text-blue-400 hover:underline"
+          className="text-[var(--primary)] hover:underline"
         >
           Notebook Information (PDF)
         </a>
@@ -97,7 +97,7 @@ export default function LaptopPageEN() {
         Newer MacBooks with M1/M2/M3/M4 chips use ARM architecture.
         Windows 11 ARM can run in a VM, but the school warns about
         compatibility issues with specialized software. Check with
-        IT before purchasing (<a href="mailto:admin@bgzwn.at" className="text-primary dark:text-blue-400 hover:underline">admin@bgzwn.at</a>)
+        IT before purchasing (<a href="mailto:admin@bgzwn.at" className="text-[var(--primary)] hover:underline">admin@bgzwn.at</a>)
         whether all required programs will work.
       </Callout>
 
@@ -259,7 +259,7 @@ export default function LaptopPageEN() {
         For questions about laptop requirements, contact IT:{" "}
         <a
           href="mailto:admin@bgzwn.at"
-          className="text-primary dark:text-blue-400 hover:underline"
+          className="text-[var(--primary)] hover:underline"
         >
           admin@bgzwn.at
         </a>

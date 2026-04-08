@@ -174,7 +174,7 @@ export default function MdmPage() {
           Bei Problemen:{" "}
           <a
             href="mailto:admin@bgzwn.at"
-            className="text-primary dark:text-blue-400 hover:underline"
+            className="text-[var(--primary)] hover:underline"
           >
             admin@bgzwn.at
           </a>

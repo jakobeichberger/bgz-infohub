@@ -118,7 +118,7 @@ export default function MdmPageEN() {
         <li>With Partial Management, IT has <strong>no access</strong> to personal files, photos or messages</li>
         <li>Required apps like WebUntis and Teams are provided automatically after registration</li>
         <li>You can undo the registration at any time in device settings</li>
-        <li>For problems: <a href="mailto:admin@bgzwn.at" className="text-primary dark:text-blue-400 hover:underline">admin@bgzwn.at</a></li>
+        <li>For problems: <a href="mailto:admin@bgzwn.at" className="text-[var(--primary)] hover:underline">admin@bgzwn.at</a></li>
       </UL>
     </>
   );

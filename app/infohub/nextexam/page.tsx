@@ -210,7 +210,7 @@ export default function NextExamPage() {
           href="https://github.com/Bildungsportal/next-exam/releases"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary dark:text-blue-400 hover:underline"
+          className="text-[var(--primary)] hover:underline"
         >
           GitHub (Bildungsportal/next-exam)
         </a>
@@ -276,7 +276,7 @@ export default function NextExamPage() {
           <a
             key={link.href}
             href={link.href}
-            className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-primary/40 dark:hover:border-blue-400/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
+            className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)]/40 hover:border-[var(--primary)]/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
           >
             <div className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
             <div>
@@ -319,7 +319,7 @@ export default function NextExamPage() {
           <a
             key={link.href}
             href={link.href}
-            className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-primary/40 dark:hover:border-blue-400/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
+            className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)]/40 hover:border-[var(--primary)]/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
           >
             <div className="w-2 h-2 rounded-full bg-blue-500 flex-shrink-0" />
             <div>
@@ -364,7 +364,7 @@ export default function NextExamPage() {
           href="https://github.com/Bildungsportal/next-exam/releases"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary dark:text-blue-400 hover:underline"
+          className="text-[var(--primary)] hover:underline"
         >
           GitHub
         </a>
@@ -415,9 +415,9 @@ export default function NextExamPage() {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-primary/40 dark:hover:border-blue-400/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
+            className="flex items-center gap-3 p-3 rounded-lg bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)]/40 hover:border-[var(--primary)]/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
           >
-            <div className="w-2 h-2 rounded-full bg-primary dark:bg-blue-400 flex-shrink-0" />
+            <div className="w-2 h-2 rounded-full bg-[var(--primary)] flex-shrink-0" />
             <div>
               <span className="text-sm font-medium text-[var(--text)] group-hover:text-[var(--primary)] transition-colors">
                 {link.label}
@@ -434,7 +434,7 @@ export default function NextExamPage() {
         Bei technischen Problemen mit Next-Exam:{" "}
         <a
           href="mailto:support@bildung.gv.at"
-          className="text-primary dark:text-blue-400 hover:underline"
+          className="text-[var(--primary)] hover:underline"
         >
           support@bildung.gv.at
         </a>

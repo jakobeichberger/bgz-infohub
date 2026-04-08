@@ -178,7 +178,7 @@ export default function SchulaccountPage() {
                 href="https://portal.office.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary dark:text-blue-400 hover:underline"
+                className="text-[var(--primary)] hover:underline"
               >
                 portal.office.com
               </a>{" "}
@@ -226,7 +226,7 @@ export default function SchulaccountPage() {
             href="https://portal.office.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary dark:text-blue-400 hover:underline"
+            className="text-[var(--primary)] hover:underline"
           >
             portal.office.com
           </a>{" "}
@@ -249,7 +249,7 @@ export default function SchulaccountPage() {
             IT-Administration:{" "}
             <a
               href="mailto:admin@bgzwn.at"
-              className="text-primary dark:text-blue-400 hover:underline"
+              className="text-[var(--primary)] hover:underline"
             >
               admin@bgzwn.at
             </a>
@@ -271,7 +271,7 @@ export default function SchulaccountPage() {
         Copilot und Installation:{" "}
         <a
           href="/infohub/office365"
-          className="text-primary dark:text-blue-400 hover:underline font-semibold"
+          className="text-[var(--primary)] hover:underline font-semibold"
         >
           Microsoft 365 → Zur vollständigen Übersicht
         </a>
