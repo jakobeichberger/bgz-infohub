@@ -20,6 +20,22 @@ export default function LaptopPageEN() {
         minimum requirements of the school and a buying guide.
       </P>
 
+      <Callout type="warning" title="Work Equipment — Duty of Care">
+        The notebook is considered a <strong>work tool</strong> under
+        Austrian school law. Pursuant to{" "}
+        <a
+          href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=43"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[var(--primary)] hover:underline"
+        >
+          Section 43(1) SchUG
+        </a>
+        , students are required to bring the necessary work tools in proper
+        working condition and have them ready for classes. A non-functioning
+        notebook may be considered a breach of the duty to cooperate.
+      </Callout>
+
       <Callout type="info" title="Official Document">
         The complete requirements can be found in the official school PDF:{" "}
         <a
@@ -79,13 +95,15 @@ export default function LaptopPageEN() {
 
       <UL>
         <li>
-          You <strong>must</strong> set up a working
-          Windows installation (dual-boot or virtualization
-          via Parallels / UTM)
+          You may need to set up a working Windows installation
+          (dual-boot or virtualization via Parallels / UTM) — this is{" "}
+          <strong>not mandatory</strong>, but may be necessary for
+          certain Windows-exclusive software
         </li>
         <li>
-          This is the <strong>responsibility of the
-          student</strong> — teachers will not assist with this
+          Setting this up is the{" "}
+          <strong>responsibility of the student</strong> — teachers will
+          not assist with this
         </li>
         <li>
           Next-Exam has its own macOS version (Intel + Apple Silicon)
@@ -264,6 +282,25 @@ export default function LaptopPageEN() {
           admin@bgzwn.at
         </a>
       </Callout>
+
+      {/* ═══ Legal Sources ═══ */}
+      <H2>Legal Sources</H2>
+
+      <UL>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=43"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--primary)] hover:underline"
+          >
+            SchUG, BGBl. Nr. 472/1986 i.d.g.F.
+          </a>{" "}
+          — § 43 Abs. 1 (duty to cooperate: keep work tools in proper
+          working condition)
+        </li>
+      </UL>
     </>
   );
 }

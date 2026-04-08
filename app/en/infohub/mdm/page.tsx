@@ -7,7 +7,7 @@ import { StepList, Step } from "@/components/ui/StepList";
 export const metadata: Metadata = {
   title: "MDM Setup",
   description:
-    "Step-by-step instructions for device management (Mobile Device Management) on iOS, Android and Windows.",
+    "Step-by-step instructions for device management (Mobile Device Management) on iOS and Windows.",
 };
 
 export default function MdmPageEN() {
@@ -62,32 +62,6 @@ export default function MdmPageEN() {
 
       <H3>Option 3: Full Management</H3>
       <P>Configured automatically for devices from the device initiative. No manual setup needed.</P>
-
-      <H2>Android</H2>
-
-      <H3>Option 1: Apps Only</H3>
-      <P>Install the required apps directly from the Google Play Store.</P>
-
-      <H3>Option 2: Partial Management (recommended)</H3>
-
-      <StepList>
-        <Step title="Install Company Portal">
-          Download &quot;Intune Company Portal&quot; from the Google Play Store.
-        </Step>
-        <Step title="Sign in with school account">
-          Sign in with your school account.
-        </Step>
-        <Step title="Set up work profile">
-          The app creates a separate work profile. School apps appear with a briefcase icon in the &quot;Business&quot; tab.
-        </Step>
-        <Step title="Done!">
-          Personal and school data are now completely separated. IT has no access to your private apps and data.
-        </Step>
-      </StepList>
-
-      <Callout type="success" title="Data separation on Android">
-        The work profile creates a complete separation between school and private data. Your personal photos, messages and apps remain private.
-      </Callout>
 
       <H2>Windows</H2>
 

@@ -7,7 +7,7 @@ import { StepList, Step } from "@/components/ui/StepList";
 export const metadata: Metadata = {
   title: "MDM-Einrichtung — BG Zehnergasse",
   description:
-    "Schritt-für-Schritt-Anleitungen zur Geräteverwaltung (Mobile Device Management) auf iOS, Android und Windows.",
+    "Schritt-für-Schritt-Anleitungen zur Geräteverwaltung (Mobile Device Management) auf iOS und Windows.",
 };
 
 export default function MdmPage() {
@@ -86,40 +86,6 @@ export default function MdmPage() {
         Wird automatisch bei Geräten der Geräteinitiative konfiguriert. Keine
         manuelle Einrichtung nötig.
       </P>
-
-      {/* ═══════════════ Android ═══════════════ */}
-      <H2>Android</H2>
-
-      <H3>Option 1: Apps Only</H3>
-      <P>
-        Installieren Sie die benötigten Apps direkt aus dem Google Play Store.
-      </P>
-
-      <H3>Option 2: Partial Management (empfohlen)</H3>
-
-      <StepList>
-        <Step title="Company Portal installieren">
-          Laden Sie &quot;Intune-Unternehmensportal&quot; aus dem Google Play
-          Store herunter.
-        </Step>
-        <Step title="Mit Schulkonto anmelden">
-          Melden Sie sich mit Ihrem Schulkonto an.
-        </Step>
-        <Step title="Arbeitsprofil einrichten">
-          Die App erstellt ein separates Arbeitsprofil. Schul-Apps erscheinen
-          mit einem Aktenkoffer-Symbol im &quot;Business&quot;-Tab.
-        </Step>
-        <Step title="Fertig!">
-          Persönliche und schulische Daten sind nun vollständig getrennt. Die
-          IT hat keinen Zugriff auf Ihre privaten Apps und Daten.
-        </Step>
-      </StepList>
-
-      <Callout type="success" title="Datentrennung auf Android">
-        Das Arbeitsprofil erstellt eine vollständige Trennung zwischen Schul-
-        und Privatdaten. Ihre persönlichen Fotos, Nachrichten und Apps bleiben
-        privat.
-      </Callout>
 
       {/* ═══════════════ Windows ═══════════════ */}
       <H2>Windows</H2>

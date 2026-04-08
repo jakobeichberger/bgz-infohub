@@ -20,6 +20,23 @@ export default function LaptopPage() {
         die offiziellen Mindestanforderungen der Schule und eine Kaufberatung.
       </P>
 
+      <Callout type="warning" title="Arbeitsmittel — Pflicht zur Instandhaltung">
+        Das Notebook gilt als <strong>Arbeitsmittel</strong> im Sinne des
+        Schulunterrichtsgesetzes. Gemäß{" "}
+        <a
+          href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=43"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[var(--primary)] hover:underline"
+        >
+          § 43 Abs. 1 SchUG
+        </a>{" "}
+        sind Schülerinnen und Schüler verpflichtet, die erforderlichen
+        Arbeitsmittel in ordnungsgemäßem Zustand mitzubringen und für den
+        Unterricht bereitzuhalten. Ein nicht funktionsfähiges Notebook kann
+        als Versäumnis der Mitwirkungspflicht gewertet werden.
+      </Callout>
+
       <Callout type="info" title="Offizielles Dokument">
         Die vollständigen Vorgaben finden Sie im offiziellen PDF der Schule:{" "}
         <a
@@ -80,13 +97,16 @@ export default function LaptopPage() {
 
       <UL>
         <li>
-          Sie <strong>müssen</strong> eine funktionierende
-          Windows-Installation einrichten (Dual-Boot oder Virtualisierung
-          über Parallels / UTM)
+          Es kann sein, dass Sie eine funktionierende
+          Windows-Installation einrichten müssen (Dual-Boot oder
+          Virtualisierung über Parallels / UTM) — das ist{" "}
+          <strong>kein Muss</strong>, kann aber für bestimmte
+          Windows-exklusive Software nötig sein
         </li>
         <li>
-          Dies liegt in der <strong>Verantwortung der Schülerin / des
-          Schülers</strong> — Lehrkräfte helfen dabei nicht
+          Die Einrichtung liegt in der{" "}
+          <strong>Verantwortung der Schülerin / des Schülers</strong> —
+          Lehrkräfte helfen dabei nicht
         </li>
         <li>
           Next-Exam hat eine eigene macOS-Version (Intel + Apple Silicon)
@@ -265,6 +285,25 @@ export default function LaptopPage() {
           admin@bgzwn.at
         </a>
       </Callout>
+
+      {/* ═══ Rechtsquellen ═══ */}
+      <H2>Rechtsquellen</H2>
+
+      <UL>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=43"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--primary)] hover:underline"
+          >
+            SchUG, BGBl. Nr. 472/1986 i.d.g.F.
+          </a>{" "}
+          — § 43 Abs. 1 (Mitwirkungspflicht: Arbeitsmittel in
+          ordnungsgemäßem Zustand bereithalten)
+        </li>
+      </UL>
     </>
   );
 }
