@@ -202,6 +202,33 @@ export default function InfoHubPage() {
             </tr>
             <tr className="hover:bg-[var(--hover-bg)] transition-colors">
               <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+                WebUntis (Elternaccounts, Noten, Abwesenheiten)
+              </td>
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+                <a
+                  href="mailto:bnb@bgzwn.at"
+                  className="text-[var(--primary)] hover:underline"
+                >
+                  bnb@bgzwn.at
+                </a>
+              </td>
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">
+                WebUntis-Probleme, Elternzugang, Noteneinsicht
+              </td>
+            </tr>
+            <tr className="hover:bg-[var(--hover-bg)] transition-colors">
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+                Datenänderungen (Adresse, Name, Telefon)
+              </td>
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+                Jeweiliger Klassenvorstand
+              </td>
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">
+                Persönliche Daten in SOKRATES aktualisieren → edu.Flow, edu.Pay
+              </td>
+            </tr>
+            <tr className="hover:bg-[var(--hover-bg)] transition-colors">
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
                 Hardware-Support iPad
               </td>
               <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">

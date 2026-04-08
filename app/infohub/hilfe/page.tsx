@@ -36,6 +36,16 @@ export default function HilfePage() {
             "Per E-Mail oder persönlich im Sekretariat",
           ],
           [
+            "WebUntis (Elternaccounts, Noten, Abwesenheiten)",
+            "bnb@bgzwn.at",
+            "Per E-Mail",
+          ],
+          [
+            "Datenänderungen (Adresse, Name, Telefon)",
+            "Jeweiliger Klassenvorstand",
+            "Daten werden in SOKRATES eingepflegt → edu.Flow, edu.Pay",
+          ],
+          [
             "edu.Flow & edu.Pay — Plattformprobleme",
             "eduflow@bgzwn.at / edupay@bgzwn.at",
             "Per E-Mail",

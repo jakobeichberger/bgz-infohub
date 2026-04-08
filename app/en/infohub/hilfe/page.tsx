@@ -26,6 +26,8 @@ export default function HilfePageEN() {
         rows={[
           ["School account, WiFi, software, password reset", "admin@bgzwn.at", "By email or in person at IT office"],
           ["Payments, certificates, edu.Pay refund", "kanzlei@bgzwn.at", "By email or in person at office"],
+          ["WebUntis (parent accounts, grades, absences)", "bnb@bgzwn.at", "By email"],
+          ["Data changes (address, name, phone)", "Your child's class advisor", "Data updated in SOKRATES → edu.Flow, edu.Pay"],
           ["edu.Flow & edu.Pay — platform issues", "eduflow@bgzwn.at / edupay@bgzwn.at", "By email"],
           ["iPad hardware (defect, warranty, repair)", "sales@acptechrent.at / +43 1 813 0000", "ACP TechRent — phone or email"],
           ["Device initiative, exemption, exchange", "digitaleslernen@oead.at / +43 720 080 356", "OeAD hotline Mon–Fri 07:30–18:00"],

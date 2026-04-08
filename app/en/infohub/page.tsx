@@ -178,6 +178,18 @@ export default function InfoHubPageEN() {
               <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">Payments, certificates, edu.Pay refunds</td>
             </tr>
             <tr className="hover:bg-[var(--hover-bg)] transition-colors">
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">WebUntis (parent accounts, grades, absences)</td>
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
+                <a href="mailto:bnb@bgzwn.at" className="text-[var(--primary)] hover:underline">bnb@bgzwn.at</a>
+              </td>
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">WebUntis issues, parent access, grade overview</td>
+            </tr>
+            <tr className="hover:bg-[var(--hover-bg)] transition-colors">
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">Data changes (address, name, phone)</td>
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">Your child&apos;s class advisor</td>
+              <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text-light)]">Update personal data in SOKRATES → edu.Flow, edu.Pay</td>
+            </tr>
+            <tr className="hover:bg-[var(--hover-bg)] transition-colors">
               <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">iPad Hardware Support</td>
               <td className="px-3 py-2 border-b border-[var(--border)] text-[var(--text)]">
                 +43 1 813 0000 / <a href="mailto:sales@acptechrent.at" className="text-[var(--primary)] hover:underline">sales@acptechrent.at</a>
