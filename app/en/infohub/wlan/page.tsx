@@ -290,6 +290,36 @@ export default function WlanPageEN() {
         . Please include: your device (e.g., iPhone 15, Windows 11), which
         network, and the exact error message.
       </Callout>
+
+      {/* ═══ Legal Sources ═══ */}
+      <H2>Legal Sources</H2>
+
+      <UL>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011647"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--primary)] hover:underline"
+          >
+            IKT-Schulverordnung, BGBl. II Nr. 382/2021
+          </a>{" "}
+          — § 5 (authentication and secure access to school IT systems)
+        </li>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011451"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--primary)] hover:underline"
+          >
+            BilDokG 2020, BGBl. I Nr. 20/2021
+          </a>{" "}
+          (processing of login data in the school network)
+        </li>
+      </UL>
     </>
   );
 }

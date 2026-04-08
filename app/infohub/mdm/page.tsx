@@ -180,6 +180,37 @@ export default function MdmPage() {
           </a>
         </li>
       </UL>
+
+      {/* ═══ Rechtsquellen ═══ */}
+      <H2>Rechtsquellen</H2>
+
+      <UL>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=14"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--primary)] hover:underline"
+          >
+            SchUG, BGBl. Nr. 472/1986 i.d.g.F.
+          </a>{" "}
+          — § 14 Abs. 8a (Verwendung digitaler Endgeräte im Unterricht)
+        </li>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011647"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--primary)] hover:underline"
+          >
+            IKT-Schulverordnung, BGBl. II Nr. 382/2021
+          </a>{" "}
+          — § 10 (Verwaltung und Konfiguration der Endgeräte), § 5
+          (Authentifizierung und sicherer Zugang)
+        </li>
+      </UL>
     </>
   );
 }

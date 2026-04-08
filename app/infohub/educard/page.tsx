@@ -193,7 +193,15 @@ export default function EduCardPage() {
       <P>
         Neben der physischen edu.Card gibt es seit 2023 die{" "}
         <strong>edu.digicard</strong> — den kostenlosen digitalen
-        Schülerausweis auf dem Smartphone gemäß § 57b Schulunterrichtsgesetz.
+        Schülerausweis auf dem Smartphone gemäß{" "}
+        <a
+          href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=57b"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[var(--primary)] hover:underline"
+        >
+          § 57b Schulunterrichtsgesetz
+        </a>.
         Die Nutzung ist freiwillig und unabhängig von der physischen Karte.
       </P>
 

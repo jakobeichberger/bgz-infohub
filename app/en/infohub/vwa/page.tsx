@@ -26,7 +26,9 @@ export default function VwaPageEN() {
 
       <Callout type="info" title="2024 Reform: VWA becomes optional">
         Since the 2024/25 school year the VWA/ABA is{" "}
-        <strong>optional</strong>. Students may instead choose an additional
+        <strong>optional</strong> (
+        <a href="https://www.ris.bka.gv.at/eli/bgbl/I/2024/121" target="_blank" rel="noopener noreferrer">BGBl. I No. 121/2024</a>).
+        Students may instead choose an additional
         written or oral exam. The decision must be reported by{" "}
         <strong>15 January</strong> of Year 11 (7. Klasse). This regulation
         applies until 2028/29.

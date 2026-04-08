@@ -238,6 +238,40 @@ export default function Office365PageEN() {
         Make sure to back up important files to a personal storage in good
         time.
       </Callout>
+
+      {/* ═══ Legal Sources ═══ */}
+      <H2>Legal Sources</H2>
+
+      <UL>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011451"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--primary)] hover:underline"
+          >
+            BilDokG 2020, BGBl. I Nr. 20/2021
+          </a>{" "}
+          — § 4 (responsibility for education data)
+        </li>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--primary)] hover:underline"
+          >
+            DSG, BGBl. I Nr. 165/1999 i.d.g.F.
+          </a>{" "}
+          (Austrian implementation of the EU GDPR)
+        </li>
+        <li>
+          § GDPR Art. 6(1)(e) (processing in the public interest — legal
+          basis for Microsoft 365 in schools)
+        </li>
+      </UL>
     </>
   );
 }

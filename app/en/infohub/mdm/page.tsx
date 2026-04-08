@@ -120,6 +120,37 @@ export default function MdmPageEN() {
         <li>You can undo the registration at any time in device settings</li>
         <li>For problems: <a href="mailto:admin@bgzwn.at" className="text-[var(--primary)] hover:underline">admin@bgzwn.at</a></li>
       </UL>
+
+      {/* ═══ Legal Sources ═══ */}
+      <H2>Legal Sources</H2>
+
+      <UL>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=14"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--primary)] hover:underline"
+          >
+            SchUG, BGBl. Nr. 472/1986 i.d.g.F.
+          </a>{" "}
+          — § 14 Abs. 8a (use of digital devices in the classroom)
+        </li>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011647"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--primary)] hover:underline"
+          >
+            IKT-Schulverordnung, BGBl. II Nr. 382/2021
+          </a>{" "}
+          — § 10 (device management and configuration), § 5
+          (authentication and secure access)
+        </li>
+      </UL>
     </>
   );
 }

@@ -241,6 +241,40 @@ export default function Office365Page() {
         und <strong>erlischt mit dem Verlassen der Schule</strong>. Sichern Sie
         wichtige Dateien rechtzeitig auf einem privaten Speicher.
       </Callout>
+
+      {/* ═══ Rechtsquellen ═══ */}
+      <H2>Rechtsquellen</H2>
+
+      <UL>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011451"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--primary)] hover:underline"
+          >
+            BilDokG 2020, BGBl. I Nr. 20/2021
+          </a>{" "}
+          — § 4 (Verantwortlichkeit für Bildungsdaten)
+        </li>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--primary)] hover:underline"
+          >
+            DSG, BGBl. I Nr. 165/1999 i.d.g.F.
+          </a>{" "}
+          (nationale Umsetzung der EU-DSGVO)
+        </li>
+        <li>
+          § DSGVO Art. 6 Abs. 1 lit. e (Verarbeitung im öffentlichen
+          Interesse — Rechtsgrundlage für Microsoft 365 im Schulbetrieb)
+        </li>
+      </UL>
     </>
   );
 }

@@ -86,11 +86,16 @@ export default function ServicesPageEN() {
       </StepList>
 
       <Callout type="danger" title="Compulsory attendance">
-        According to Austrian school law (SchUG § 43 and § 45), school
-        attendance is compulsory. Parents must notify the class advisor by{" "}
+        According to Austrian school law (
+        <a href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=43" target="_blank" rel="noopener noreferrer">SchUG § 43</a>{" "}
+        and{" "}
+        <a href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=45" target="_blank" rel="noopener noreferrer">§ 45</a>),
+        school attendance is compulsory. Parents must notify the class advisor by{" "}
         <strong>7:30 AM on the first day of absence</strong>. A medical
         certificate is required for absences longer than one week or frequent
-        short-term illness.
+        short-term illness. After more than 5 unexcused absences, the student
+        may be automatically de-enrolled (
+        <a href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=45" target="_blank" rel="noopener noreferrer">§ 45 para. 4</a>).
       </Callout>
 
       {/* ═══ edu.Suite ═══ */}

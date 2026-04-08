@@ -193,7 +193,15 @@ export default function EduCardPageEN() {
       <P>
         In addition to the physical edu.Card, since 2023 there is the{" "}
         <strong>edu.digicard</strong> — the free digital student ID on your
-        smartphone pursuant to Section 57b of the School Education Act.
+        smartphone pursuant to{" "}
+        <a
+          href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=57b"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[var(--primary)] hover:underline"
+        >
+          Section 57b of the School Education Act (SchUG)
+        </a>.
         Its use is voluntary and independent of the physical card.
       </P>
 

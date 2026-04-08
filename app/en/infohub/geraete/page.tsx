@@ -214,6 +214,49 @@ export default function GeraetePageEN() {
           management.
         </Step>
       </StepList>
+
+      {/* ═══ Legal Sources ═══ */}
+      <H2>Legal Sources</H2>
+
+      <UL>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=14a"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--primary)] hover:underline"
+          >
+            SchUG, BGBl. Nr. 472/1986 i.d.g.F.
+          </a>{" "}
+          — § 14a (use of digital devices in the classroom)
+        </li>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011647"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--primary)] hover:underline"
+          >
+            IKT-Schulverordnung, BGBl. II Nr. 382/2021
+          </a>{" "}
+          (device management, child protection)
+        </li>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/eli/bgbl/i/2021/9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--primary)] hover:underline"
+          >
+            SchulDigiG, BGBl. I Nr. 9/2021
+          </a>{" "}
+          (legal framework for the &quot;Digital Learning&quot; device
+          initiative)
+        </li>
+      </UL>
     </>
   );
 }
