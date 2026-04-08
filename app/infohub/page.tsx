@@ -63,6 +63,10 @@ export default function InfoHubPage() {
         <Card href="/infohub/geraete" icon="📱" title="iPad & Geräte">
           Geräteinitiative, Beschaffung, Kinderschutz, Zubehör und Garantie.
         </Card>
+        <Card href="/infohub/wlan" icon="📶" title="WLAN-Anleitung">
+          Schul-WLAN verbinden auf allen Geräten, Zertifikate und
+          Problemlösung.
+        </Card>
         <Card href="/infohub/schulaccount" icon="🔑" title="Schulaccount">
           Login-Daten, Passwort-Regeln, Passwort ändern und zurücksetzen.
         </Card>

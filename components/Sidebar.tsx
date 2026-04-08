@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 const navItemsDE = [
   { href: "/infohub", label: "Startseite", icon: "🏠" },
   { href: "/infohub/geraete", label: "iPad & Geräte", icon: "📱" },
+  { href: "/infohub/wlan", label: "WLAN-Anleitung", icon: "📶" },
   { href: "/infohub/schulaccount", label: "Schulaccount", icon: "🔑" },
   { href: "/infohub/office365", label: "Microsoft 365", icon: "💻" },
   { href: "/infohub/services", label: "Schulservices", icon: "🏫" },
@@ -24,6 +25,7 @@ const navItemsDE = [
 const navItemsEN = [
   { href: "/en/infohub", label: "Home", icon: "🏠" },
   { href: "/en/infohub/geraete", label: "iPad & Devices", icon: "📱" },
+  { href: "/en/infohub/wlan", label: "WiFi Guide", icon: "📶" },
   { href: "/en/infohub/schulaccount", label: "School Account", icon: "🔑" },
   { href: "/en/infohub/office365", label: "Microsoft 365", icon: "💻" },
   { href: "/en/infohub/services", label: "School Services", icon: "🏫" },

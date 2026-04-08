@@ -63,6 +63,10 @@ export default function InfoHubPageEN() {
           Device initiative, procurement, child protection, accessories and
           warranty.
         </Card>
+        <Card href="/en/infohub/wlan" icon="📶" title="WiFi Guide">
+          Connect to school WiFi on all devices, certificates and
+          troubleshooting.
+        </Card>
         <Card href="/en/infohub/schulaccount" icon="🔑" title="School Account">
           Login credentials, password rules, change and reset password.
         </Card>
