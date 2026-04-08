@@ -229,6 +229,26 @@ export default function HilfePage() {
         </li>
       </UL>
 
+      <H3>Persönliche Daten ändern (Adresse, Name, Telefon)</H3>
+      <UL>
+        <li>
+          Änderungen an Adresse, Telefonnummer, Familienname oder
+          Erziehungsberechtigung bitte <strong>direkt an den
+          Klassenvorstand</strong> Ihres Kindes schicken
+        </li>
+        <li>
+          Der Klassenvorstand pflegt die Daten in <strong>SOKRATES</strong> ein
+        </li>
+        <li>
+          Von SOKRATES werden die Daten automatisch an edu.Flow, edu.Pay
+          und das Bildungsportal weitergegeben
+        </li>
+        <li>
+          <strong>Nicht</strong> selbst in edu.Flow ändern — dort werden
+          nur die E-Mail-Adresse und das Passwort verwaltet
+        </li>
+      </UL>
+
       {/* ═══════════════ Links ═══════════════ */}
       <H2>Alle wichtigen Links</H2>
 

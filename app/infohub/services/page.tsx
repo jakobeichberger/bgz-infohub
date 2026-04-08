@@ -168,6 +168,15 @@ export default function ServicesPage() {
         Änderungen an Ihren Daten sind daher erst am nächsten Tag sichtbar.
       </Callout>
 
+      <Callout type="warning" title="Persönliche Daten geändert? (Adresse, Telefonnummer, Name etc.)">
+        Wenn sich Ihre persönlichen Daten ändern (z.B. Adresse, Telefonnummer,
+        Familienname, Erziehungsberechtigung), senden Sie die Änderung bitte
+        <strong> direkt an den Klassenvorstand</strong> Ihres Kindes. Der
+        Klassenvorstand pflegt die Daten in SOKRATES ein — von dort werden sie
+        automatisch an edu.Flow und edu.Pay weitergegeben. Nur so bleiben alle
+        Systeme aktuell.
+      </Callout>
+
       {/* ═══════════════ edu.Flow ═══════════════ */}
       <H2>edu.Flow — Digitale Elternkommunikation</H2>
 

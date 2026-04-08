@@ -116,6 +116,15 @@ export default function ServicesPageEN() {
         your data will be visible the next day.
       </Callout>
 
+      <Callout type="warning" title="Personal data changed? (address, phone number, name etc.)">
+        If your personal data changes (e.g. address, phone number, family
+        name, guardianship), please send the update{" "}
+        <strong>directly to your child&apos;s class advisor</strong>{" "}
+        (Klassenvorstand). The class advisor updates the data in SOKRATES —
+        from there it is automatically passed on to edu.Flow and edu.Pay.
+        This is the only way to keep all systems up to date.
+      </Callout>
+
       {/* ═══ edu.Flow ═══ */}
       <H2>edu.Flow — Digital Parent Communication</H2>
 

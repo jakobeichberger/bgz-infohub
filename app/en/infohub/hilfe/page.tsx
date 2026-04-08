@@ -105,6 +105,26 @@ export default function HilfePageEN() {
         <li>Clear browser cookies after logging out, or use a private / incognito window</li>
       </UL>
 
+      <H3>Change personal data (address, name, phone)</H3>
+      <UL>
+        <li>
+          Changes to address, phone number, family name or guardianship
+          should be sent <strong>directly to your child&apos;s class
+          advisor</strong> (Klassenvorstand)
+        </li>
+        <li>
+          The class advisor updates the data in <strong>SOKRATES</strong>
+        </li>
+        <li>
+          From SOKRATES, the data is automatically passed on to edu.Flow,
+          edu.Pay and the Bildungsportal
+        </li>
+        <li>
+          Do <strong>not</strong> change it in edu.Flow yourself — only
+          email address and password are managed there
+        </li>
+      </UL>
+
       <H2>All Important Links</H2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-6">
