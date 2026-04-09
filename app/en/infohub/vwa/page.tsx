@@ -24,14 +24,37 @@ export default function VwaPageEN() {
         to independently research and present a topic in a scholarly manner.
       </P>
 
-      <Callout type="info" title="2024 Reform: VWA becomes optional">
+      {/* ═══ Matura Context ═══ */}
+      <Callout type="info" title="The Matura at a Glance — 3-Pillar Model">
+        The AHS Matura consists of <strong>three pillars</strong> with
+        a total of 7 partial exams:
+        <ul>
+          <li><strong>Pillar 1:</strong> Concluding Paper (ABA) — presentation &amp; discussion</li>
+          <li><strong>Pillar 2:</strong> Written exams — 3 or 4 exams (German, Mathematics, Modern Language mandatory)</li>
+          <li><strong>Pillar 3:</strong> Oral exams — 2 to 3 exams from topic pools</li>
+        </ul>
+        <p>
+          The system is <strong>modular</strong>: a negative result in one
+          pillar does not prevent sitting exams in the other pillars. For a
+          failed written exam there is a compensation exam (oral, max. grade:
+          Satisfactory). Each partial exam may be repeated up to 3 times.
+        </p>
+        <p>
+          More information:{" "}
+          <a href="https://www.matura.gv.at" target="_blank" rel="noopener noreferrer">
+            matura.gv.at
+          </a>
+        </p>
+      </Callout>
+
+      <Callout type="warning" title="2024 Reform: VWA becomes optional">
         Since the 2024/25 school year the VWA/ABA is{" "}
         <strong>optional</strong> (
         <a href="https://www.ris.bka.gv.at/eli/bgbl/I/2024/121" target="_blank" rel="noopener noreferrer">BGBl. I No. 121/2024</a>).
         Students may instead choose an additional
         written or oral exam. The decision must be reported by{" "}
         <strong>15 January</strong> of Year 11 (7. Klasse). This regulation
-        applies until 2028/29.
+        applies until 2028/29 inclusive.
       </Callout>
 
       {/* ═══ Overview ═══ */}
@@ -51,21 +74,26 @@ export default function VwaPageEN() {
         ]}
       />
 
-      {/* ═══ Two Formats ═══ */}
-      <H2>Two Formats to Choose From</H2>
+      {/* ═══ Three Formats ═══ */}
+      <H2>Three Formats to Choose From</H2>
 
       <Table
         headers={["Format", "Description", "Examples"]}
         rows={[
           [
             "Research Paper",
-            "Classic written paper using scholarly methodology",
+            "Classic written paper using scholarly methodology — gathering, examining and analysing information",
             "Interviews, experiments, surveys, source analysis, lab protocols",
           ],
           [
-            "Creative Paper",
-            "Creative/artistic product + written documentation",
-            "Podcast, short film, composition, sculpture, graphic novel, website",
+            "Design-based Paper",
+            "Result of a deliberate creative process + written documentation with background, methodology and reflection",
+            "Podcast, video reportage, sports programme, graphic novel, website",
+          ],
+          [
+            "Artistic Paper",
+            "Practical artistic output contextualised within relevant art genres + comparison with similar works and reflection",
+            "Composition, sculpture, painting, installation, performance",
           ],
         ]}
       />
@@ -86,16 +114,16 @@ export default function VwaPageEN() {
           topic title (max. 100 characters), research question,
           core bibliography (min. 3 works), methods, outline.
         </Step>
-        <Step title="Approval (by end of April)">
+        <Step title="Approval (by end of March)">
           The proposal is submitted via the{" "}
           <a
-            href="https://genehmigung.ahs-vwa.at"
+            href="https://www.ahs-aba.at"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:underline"
           >
-            approval database
-          </a>{" "}
+            ABA portal
+          </a>
           . The principal approves or rejects it. Once approved, the topic is
           fixed.
         </Step>
@@ -116,13 +144,28 @@ export default function VwaPageEN() {
         </Step>
         <Step title="Submission (end of 1st week, 2nd semester)">
           <strong>2 bound copies</strong> (principal&apos;s office + supervisor) +
-          digital upload to the ABA portal. Include the supervision log.
+          digital upload to the ABA portal. Include:{" "}
+          <strong>companion protocol</strong> (workflow, tools used, AI usage)
+          and <strong>supervision protocol</strong> (maintained by the
+          supervisor).
         </Step>
         <Step title="Presentation & discussion (approx. March)">
           Max. 25 minutes: presentation (10–15 min.) + discussion with the
-          examination panel (5–10 min.).
+          examination panel (5–10 min.). The presentation is public.
         </Step>
       </StepList>
+
+      <H3>Make-up Submission Dates</H3>
+
+      <Table
+        headers={["Session", "Submission Deadline"]}
+        rows={[
+          ["Main session", "End of 1st week of 2nd semester"],
+          ["1st make-up", "End of 1st week of classes (autumn)"],
+          ["2nd make-up", "5th school day in December"],
+          ["3rd make-up", "End of 1st week of 2nd semester (following year)"],
+        ]}
+      />
 
       {/* ═══ Structure ═══ */}
       <H2>Structure of the Paper</H2>
@@ -512,19 +555,19 @@ export default function VwaPageEN() {
             desc: "Official site for the Concluding Paper",
           },
           {
-            href: "https://genehmigung.ahs-vwa.at",
-            label: "Approval Database",
-            desc: "Submit your proposal",
+            href: "https://www.matura.gv.at",
+            label: "matura.gv.at",
+            desc: "Official Matura site — exams, task pool, dates",
           },
           {
             href: "https://www.bmb.gv.at/Themen/schule/schulpraxis/zentralmatura/srdp_ahs/aba.html",
-            label: "BMBWF Info Page",
-            desc: "Ministry page on the ABA/VWA",
+            label: "BMBWF — ABA/VWA",
+            desc: "Ministry page on the Concluding Paper",
           },
           {
-            href: "https://www.bmb.gv.at/dam/jcr:17c15fa0-1e4d-4ab7-a67d-39a64e8e2719/reifepruefung_ahs_vwa_handreichung.pdf",
-            label: "Guideline Document (PDF)",
-            desc: "Official BMBWF guidance document",
+            href: "https://aufgabenpool.at",
+            label: "Aufgabenpool",
+            desc: "Practice tasks for Matura written exams",
           },
           {
             href: "https://www.zotero.org",
@@ -568,6 +611,49 @@ export default function VwaPageEN() {
         </a>{" "}
         or +43 664 851 3000.
       </Callout>
+
+      {/* ═══ Legal Sources ═══ */}
+      <H2>Legal Sources</H2>
+
+      <UL>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            SchUG, BGBl. Nr. 472/1986 i.d.g.F.
+          </a>{" "}
+          — §§ 34–40 (Matura, Concluding Paper)
+        </li>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20007845"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            Prüfungsordnung AHS, BGBl. II Nr. 297/2024
+          </a>{" "}
+          — §§ 7–10 (Concluding Paper: topic, process, submission,
+          assessment)
+        </li>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/eli/bgbl/I/2024/121"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            BGBl. I Nr. 121/2024
+          </a>{" "}
+          (ABA becomes optional from 2024/25 to 2028/29)
+        </li>
+      </UL>
     </>
   );
 }

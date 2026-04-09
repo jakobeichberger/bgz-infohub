@@ -24,14 +24,38 @@ export default function VwaPage() {
         können.
       </P>
 
-      <Callout type="info" title="Reform 2024: VWA wird freiwillig">
+      {/* ═══ Matura-Kontext ═══ */}
+      <Callout type="info" title="Die Matura im Überblick — 3-Säulen-Modell">
+        Die AHS-Reifeprüfung besteht aus <strong>drei Säulen</strong> mit
+        insgesamt 7 Teilprüfungen:
+        <ul>
+          <li><strong>Säule 1:</strong> Abschließende Arbeit (ABA) — Präsentation &amp; Diskussion</li>
+          <li><strong>Säule 2:</strong> Schriftliche Klausuren — 3 oder 4 Prüfungen (Deutsch, Mathematik, Fremdsprache verpflichtend)</li>
+          <li><strong>Säule 3:</strong> Mündliche Prüfungen — 2 bis 3 Prüfungen aus Themenkörben</li>
+        </ul>
+        <p>
+          Das System ist <strong>modular</strong>: Ein negatives Ergebnis in
+          einer Säule verhindert nicht den Antritt in den anderen Säulen. Bei
+          negativer Klausur gibt es eine Kompensationsprüfung (mündlich, max.
+          Note: Befriedigend). Jede Teilprüfung kann bis zu 3× wiederholt
+          werden.
+        </p>
+        <p>
+          Mehr Informationen:{" "}
+          <a href="https://www.matura.gv.at" target="_blank" rel="noopener noreferrer">
+            matura.gv.at
+          </a>
+        </p>
+      </Callout>
+
+      <Callout type="warning" title="Reform 2024: VWA wird freiwillig">
         Seit dem Schuljahr 2024/25 ist die VWA/ABA{" "}
         <strong>freiwillig</strong> (
         <a href="https://www.ris.bka.gv.at/eli/bgbl/I/2024/121" target="_blank" rel="noopener noreferrer">BGBl. I Nr. 121/2024</a>).
         Schüler können stattdessen eine zusätzliche schriftliche oder
         mündliche Prüfung wählen. Die Entscheidung muss bis{" "}
         <strong>15. Jänner</strong> der 7. Klasse gemeldet werden. Die
-        Regelung gilt bis 2028/29.
+        Regelung gilt bis einschließlich 2028/29.
       </Callout>
 
       {/* ═══ Überblick ═══ */}
@@ -51,21 +75,26 @@ export default function VwaPage() {
         ]}
       />
 
-      {/* ═══ Zwei Formate ═══ */}
-      <H2>Zwei Formate zur Wahl</H2>
+      {/* ═══ Drei Formate ═══ */}
+      <H2>Drei Formate zur Wahl</H2>
 
       <Table
         headers={["Format", "Beschreibung", "Beispiele"]}
         rows={[
           [
             "Forschende Arbeit",
-            "Klassische schriftliche Arbeit mit wissenschaftlicher Methodik",
+            "Klassische schriftliche Arbeit mit wissenschaftlicher Methodik — Informationen sammeln, untersuchen und analysieren",
             "Interviews, Experimente, Umfragen, Quellenanalyse, Laborprotokolle",
           ],
           [
             "Gestalterische Arbeit",
-            "Kreatives/künstlerisches Produkt + schriftliche Dokumentation",
-            "Podcast, Kurzfilm, Komposition, Skulptur, Graphic Novel, Website",
+            "Ergebnis eines bewussten kreativen Prozesses + schriftliche Dokumentation mit Hintergrund, Methodik und Reflexion",
+            "Podcast, Videoreportage, Sportprogramm, Graphic Novel, Website",
+          ],
+          [
+            "Künstlerische Arbeit",
+            "Praktisches künstlerisches Produkt im Kontext relevanter Kunstgattungen + Vergleich mit ähnlichen Werken und Reflexion",
+            "Komposition, Skulptur, Gemälde, Installation, Performance",
           ],
         ]}
       />
@@ -87,15 +116,15 @@ export default function VwaPage() {
           Themenstellung (max. 100 Zeichen), Forschungsfrage,
           Basisliteratur (mind. 3 Werke), Methoden, Gliederung.
         </Step>
-        <Step title="Genehmigung (bis Ende April)">
-          Der Erwartungshorizont wird über die{" "}
+        <Step title="Genehmigung (bis Ende März)">
+          Der Erwartungshorizont wird über das{" "}
           <a
-            href="https://genehmigung.ahs-vwa.at"
+            href="https://www.ahs-aba.at"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:underline"
           >
-            Genehmigungsdatenbank
+            ABA-Portal
           </a>{" "}
           eingereicht. Die Schulleitung genehmigt oder lehnt ab. Nach
           Genehmigung ist das Thema fix.
@@ -117,13 +146,28 @@ export default function VwaPage() {
         </Step>
         <Step title="Abgabe (Ende 1. Woche 2. Semester)">
           <strong>2 gebundene Exemplare</strong> (Direktion + Betreuung) +
-          digitaler Upload ins ABA-Portal. Begleitprotokoll beilegen.
+          digitaler Upload ins ABA-Portal. Beilegen:{" "}
+          <strong>Begleitprotokoll</strong> (Arbeitsablauf, verwendete
+          Hilfsmittel, KI-Nutzung) und <strong>Betreuungsprotokoll</strong>{" "}
+          (von der Betreuungsperson geführt).
         </Step>
         <Step title="Präsentation & Diskussion (ca. März)">
           Max. 25 Minuten: Präsentation (10–15 Min.) + Diskussion mit der
-          Kommission (5–10 Min.).
+          Kommission (5–10 Min.). Die Präsentation ist öffentlich.
         </Step>
       </StepList>
+
+      <H3>Nachtermine bei Abgabe</H3>
+
+      <Table
+        headers={["Termin", "Abgabefrist"]}
+        rows={[
+          ["Haupttermin", "Ende der 1. Woche des 2. Semesters"],
+          ["1. Nebentermin", "Ende der 1. Unterrichtswoche (Herbst)"],
+          ["2. Nebentermin", "5. Schultag im Dezember"],
+          ["3. Nebentermin", "Ende der 1. Woche des 2. Semesters (Folgejahr)"],
+        ]}
+      />
 
       {/* ═══ Aufbau ═══ */}
       <H2>Aufbau der Arbeit</H2>
@@ -516,19 +560,19 @@ export default function VwaPage() {
             desc: "Offizielle Seite für die Abschließende Arbeit",
           },
           {
-            href: "https://genehmigung.ahs-vwa.at",
-            label: "Genehmigungsdatenbank",
-            desc: "Erwartungshorizont einreichen",
+            href: "https://www.matura.gv.at",
+            label: "matura.gv.at",
+            desc: "Offizielle Matura-Seite — Klausuren, Aufgabenpool, Termine",
           },
           {
             href: "https://www.bmb.gv.at/Themen/schule/schulpraxis/zentralmatura/srdp_ahs/aba.html",
-            label: "BMBWF Infoseite",
-            desc: "Ministeriumsseite zur ABA/VWA",
+            label: "BMBWF — ABA/VWA",
+            desc: "Ministeriumsseite zur Abschließenden Arbeit",
           },
           {
-            href: "https://www.bmb.gv.at/dam/jcr:17c15fa0-1e4d-4ab7-a67d-39a64e8e2719/reifepruefung_ahs_vwa_handreichung.pdf",
-            label: "Handreichung (PDF)",
-            desc: "Offizielles Leitdokument des BMBWF",
+            href: "https://aufgabenpool.at",
+            label: "Aufgabenpool",
+            desc: "Übungsaufgaben für Matura-Klausuren",
           },
           {
             href: "https://www.zotero.org",
@@ -572,6 +616,49 @@ export default function VwaPage() {
         </a>{" "}
         oder +43 664 851 3000.
       </Callout>
+
+      {/* ═══ Rechtsquellen ═══ */}
+      <H2>Rechtsquellen</H2>
+
+      <UL>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            SchUG, BGBl. Nr. 472/1986 i.d.g.F.
+          </a>{" "}
+          — §§ 34–40 (Reifeprüfung, Abschließende Arbeit)
+        </li>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20007845"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            Prüfungsordnung AHS, BGBl. II Nr. 297/2024
+          </a>{" "}
+          — §§ 7–10 (Abschließende Arbeit: Thema, Durchführung,
+          Abgabetermin, Beurteilung)
+        </li>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/eli/bgbl/I/2024/121"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            BGBl. I Nr. 121/2024
+          </a>{" "}
+          (ABA wird freiwillig ab Schuljahr 2024/25 bis 2028/29)
+        </li>
+      </UL>
     </>
   );
 }
