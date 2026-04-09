@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -107,7 +106,7 @@ export function Sidebar() {
           </svg>
         </button>
         <span className="flex items-center gap-2 font-bold text-primary text-sm">
-          <Image
+          <img
             src="/bgz-logo.png"
             alt="BG Zehnergasse Logo"
             width={24}
@@ -150,7 +149,7 @@ export function Sidebar() {
             className="flex items-center gap-3"
             onClick={() => setOpen(false)}
           >
-            <Image
+            <img
               src="/bgz-logo.png"
               alt="BG Zehnergasse Logo"
               width={40}
