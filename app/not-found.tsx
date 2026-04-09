@@ -16,6 +16,11 @@ const allPages = [
   { href: "/infohub/tipp10/", label: "TIPP10", desc: "10-Finger-Schreibtrainer", icon: "⌨️" },
   { href: "/infohub/bildungsportal/", label: "Bildungsportal", desc: "Bildungsportal für Eltern", icon: "🏛️" },
   { href: "/infohub/vwa/", label: "VWA / ABA", desc: "Vorwissenschaftliche Arbeit", icon: "🎓" },
+  { href: "/infohub/vwa/aufbau/", label: "VWA Aufbau", desc: "Gliederung, Forschungsfrage, Formatierung", icon: "📋" },
+  { href: "/infohub/vwa/schreiben/", label: "Wissenschaftliches Schreiben", desc: "Stil, Sprache, Plagiat", icon: "✍️" },
+  { href: "/infohub/vwa/zitieren/", label: "Zitieren & Zotero", desc: "Literaturverwaltung, KI-Nutzung", icon: "📚" },
+  { href: "/infohub/vwa/vorlagen/", label: "VWA Vorlagen", desc: "LaTeX, Word, Downloads", icon: "📄" },
+  { href: "/infohub/vwa/praesentation/", label: "VWA Präsentation", desc: "Aufbau, Fragen, Tipps", icon: "🎤" },
   { href: "/infohub/lizenzen/", label: "Gratis Software", desc: "Kostenlose Lizenzen", icon: "🎁" },
   { href: "/infohub/hilfe/", label: "Hilfe & Kontakte", desc: "Support, FAQ, Links", icon: "🆘" },
 ];

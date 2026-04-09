@@ -4,7 +4,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
-const navItemsDE = [
+type NavItem = {
+  href: string;
+  label: string;
+  icon: string;
+  children?: { href: string; label: string }[];
+};
+
+const navItemsDE: NavItem[] = [
   { href: "/infohub", label: "Startseite", icon: "🏠" },
   { href: "/infohub/geraete", label: "iPad & Geräte", icon: "📱" },
   { href: "/infohub/wlan", label: "WLAN-Anleitung", icon: "📶" },
@@ -17,12 +24,23 @@ const navItemsDE = [
   { href: "/infohub/mdm", label: "MDM-Einrichtung", icon: "⚙️" },
   { href: "/infohub/tipp10", label: "TIPP10 Tipptrainer", icon: "⌨️" },
   { href: "/infohub/bildungsportal", label: "Bildungsportal", icon: "🏛️" },
-  { href: "/infohub/vwa", label: "VWA / ABA", icon: "🎓" },
+  {
+    href: "/infohub/vwa",
+    label: "VWA / ABA",
+    icon: "🎓",
+    children: [
+      { href: "/infohub/vwa/aufbau", label: "Aufbau & Forschungsfrage" },
+      { href: "/infohub/vwa/schreiben", label: "Wissenschaftliches Schreiben" },
+      { href: "/infohub/vwa/zitieren", label: "Zitieren & Zotero" },
+      { href: "/infohub/vwa/vorlagen", label: "Vorlagen & Tools" },
+      { href: "/infohub/vwa/praesentation", label: "Präsentation" },
+    ],
+  },
   { href: "/infohub/lizenzen", label: "Gratis Software", icon: "🎁" },
   { href: "/infohub/hilfe", label: "Hilfe & Kontakte", icon: "🆘" },
 ];
 
-const navItemsEN = [
+const navItemsEN: NavItem[] = [
   { href: "/en/infohub", label: "Home", icon: "🏠" },
   { href: "/en/infohub/geraete", label: "iPad & Devices", icon: "📱" },
   { href: "/en/infohub/wlan", label: "WiFi Guide", icon: "📶" },
@@ -35,7 +53,18 @@ const navItemsEN = [
   { href: "/en/infohub/mdm", label: "MDM Setup", icon: "⚙️" },
   { href: "/en/infohub/tipp10", label: "TIPP10 Typing", icon: "⌨️" },
   { href: "/en/infohub/bildungsportal", label: "Education Portal", icon: "🏛️" },
-  { href: "/en/infohub/vwa", label: "VWA / ABA (Thesis)", icon: "🎓" },
+  {
+    href: "/en/infohub/vwa",
+    label: "VWA / ABA (Thesis)",
+    icon: "🎓",
+    children: [
+      { href: "/en/infohub/vwa/aufbau", label: "Structure & Research Question" },
+      { href: "/en/infohub/vwa/schreiben", label: "Academic Writing" },
+      { href: "/en/infohub/vwa/zitieren", label: "Citations & Zotero" },
+      { href: "/en/infohub/vwa/vorlagen", label: "Templates & Tools" },
+      { href: "/en/infohub/vwa/praesentation", label: "Presentation" },
+    ],
+  },
   { href: "/en/infohub/lizenzen", label: "Free Software", icon: "🎁" },
   { href: "/en/infohub/hilfe", label: "Help & Contacts", icon: "🆘" },
 ];
@@ -172,24 +201,52 @@ export function Sidebar() {
             const isActive =
               pathname === item.href ||
               (item.href !== basePath && pathname.startsWith(item.href));
+            const showChildren =
+              item.children && pathname.startsWith(item.href);
             return (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className={`
-                  flex items-center gap-3 px-3 py-2.5 min-h-[44px] rounded-lg text-sm transition-all
-                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1
-                  ${
-                    isActive
-                      ? "bg-nav-active-bg text-primary font-semibold"
-                      : "text-txt hover:bg-hover-bg"
-                  }
-                `}
-              >
-                <span className="text-base">{item.icon}</span>
-                <span>{item.label}</span>
-              </Link>
+              <div key={item.href}>
+                <Link
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className={`
+                    flex items-center gap-3 px-3 py-2.5 min-h-[44px] rounded-lg text-sm transition-all
+                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1
+                    ${
+                      isActive
+                        ? "bg-nav-active-bg text-primary font-semibold"
+                        : "text-txt hover:bg-hover-bg"
+                    }
+                  `}
+                >
+                  <span className="text-base">{item.icon}</span>
+                  <span>{item.label}</span>
+                </Link>
+                {showChildren && (
+                  <div className="ml-7 mt-1 space-y-0.5 border-l-2 border-border-app pl-3">
+                    {item.children!.map((child) => {
+                      const childActive = pathname === child.href;
+                      return (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          onClick={() => setOpen(false)}
+                          className={`
+                            block px-2 py-1.5 rounded text-xs transition-all
+                            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary
+                            ${
+                              childActive
+                                ? "text-primary font-semibold bg-nav-active-bg"
+                                : "text-txt-light hover:text-txt hover:bg-hover-bg"
+                            }
+                          `}
+                        >
+                          {child.label}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
             );
           })}
         </nav>
