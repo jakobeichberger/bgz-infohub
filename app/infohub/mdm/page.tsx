@@ -50,6 +50,85 @@ export default function MdmPage() {
         Arbeitsprofil mit den Schul-Apps wird verwaltet.
       </Callout>
 
+      {/* ═══════════════ Unternehmensportal ═══════════════ */}
+      <H2>Intune-Unternehmensportal (Company Portal)</H2>
+
+      <P>
+        Das <strong>Intune-Unternehmensportal</strong> (englisch: Company
+        Portal) ist die zentrale App von Microsoft zur Geräteverwaltung. Sie
+        ist der Einstiegspunkt für die Registrierung und den Bezug von
+        Schul-Apps auf iOS und Windows.
+      </P>
+
+      <Table
+        headers={["Detail", "Information"]}
+        rows={[
+          ["App-Name", "Intune-Unternehmensportal (Company Portal)"],
+          ["Hersteller", "Microsoft Corporation"],
+          ["Preis", "Kostenlos"],
+          ["Verfügbar für", "iOS (App Store), Windows (Microsoft Store)"],
+          ["Benötigte Anmeldedaten", "nachname.vorname@bgzwn.at + Schulpasswort"],
+        ]}
+      />
+
+      <H3>Was kann die App?</H3>
+
+      <UL>
+        <li>
+          <strong>Geräteregistrierung</strong> — Ihr Gerät wird bei der Schul-IT
+          angemeldet (Partial oder Full Management)
+        </li>
+        <li>
+          <strong>Schul-Apps installieren</strong> — Pflicht-Apps (WebUntis,
+          Teams) werden automatisch bereitgestellt, weitere Apps können manuell
+          aus dem App-Katalog geladen werden
+        </li>
+        <li>
+          <strong>Compliance-Status prüfen</strong> — Zeigt an, ob Ihr Gerät
+          den Schulrichtlinien entspricht (z.B. Passcode gesetzt, aktuelles
+          Betriebssystem)
+        </li>
+        <li>
+          <strong>Gerät umbenennen</strong> — Optional: dem Gerät einen
+          erkennbaren Namen geben
+        </li>
+        <li>
+          <strong>Gerät abmelden</strong> — Die Registrierung kann jederzeit
+          rückgängig gemacht werden
+        </li>
+      </UL>
+
+      <Callout type="info" title="So finden Sie die App">
+        <div className="flex items-start gap-4">
+          <img
+            src="/icons/intune-company-portal.png"
+            alt="Intune-Unternehmensportal App-Symbol"
+            width={64}
+            height={64}
+            className="rounded-xl flex-shrink-0"
+          />
+          <div>
+            <p>
+              Suchen Sie im App Store nach{" "}
+              <strong>&quot;Intune&quot;</strong> oder{" "}
+              <strong>&quot;Company Portal&quot;</strong>. Achten Sie auf das
+              App-Symbol links. Herausgeber:{" "}
+              <strong>Microsoft Corporation</strong>.
+            </p>
+            <p>
+              <a
+                href="https://apps.apple.com/at/app/intune-unternehmensportal/id719171358"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                Direkt im App Store öffnen
+              </a>
+            </p>
+          </div>
+        </div>
+      </Callout>
+
       {/* ═══════════════ iOS ═══════════════ */}
       <H2>iOS (iPhone / iPad)</H2>
 
@@ -63,29 +142,88 @@ export default function MdmPage() {
 
       <StepList>
         <Step title="Company Portal installieren">
-          Laden Sie die App &quot;Intune-Unternehmensportal&quot; aus dem App
-          Store herunter.
+          Laden Sie die App &quot;Intune-Unternehmensportal&quot; aus dem{" "}
+          <a
+            href="https://apps.apple.com/at/app/intune-unternehmensportal/id719171358"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            App Store
+          </a>{" "}
+          herunter. Suchen Sie nach &quot;Intune&quot; oder &quot;Company
+          Portal&quot;.
         </Step>
         <Step title="Mit Schulkonto anmelden">
-          Melden Sie sich mit <code>nachname.vorname@bgzwn.at</code> und
-          Ihrem persönlichen Passwort an.
+          Öffnen Sie die App und melden Sie sich mit{" "}
+          <code>nachname.vorname@bgzwn.at</code> und Ihrem persönlichen
+          Passwort an.
         </Step>
-        <Step title="Verwaltungsprofil installieren">
-          Folgen Sie den Anweisungen in der App. Sie werden aufgefordert, in
-          den iOS-Einstellungen ein Verwaltungsprofil zu bestätigen.
+        <Step title="Gerät registrieren">
+          Tippen Sie auf &quot;Registrierung starten&quot; und folgen Sie den
+          Anweisungen. Die App fordert Sie auf, ein{" "}
+          <strong>Verwaltungsprofil</strong> zu installieren.
         </Step>
-        <Step title="Schul-Apps laden">
-          Nach der Registrierung stehen alle Schul-Apps im Unternehmensportal
-          zur Verfügung. Pflicht-Apps wie WebUntis und Teams werden
-          automatisch installiert.
+        <Step title="Verwaltungsprofil bestätigen">
+          Sie werden zu den iOS-Einstellungen weitergeleitet. Tippen Sie auf
+          &quot;Profil heruntergeladen&quot; → &quot;Installieren&quot; →
+          Geräte-Passcode eingeben → &quot;Installieren&quot; bestätigen →
+          &quot;Vertrauen&quot;.
+        </Step>
+        <Step title="Zurück zur App">
+          Wechseln Sie zurück zum Unternehmensportal. Die Compliance-Prüfung
+          läuft automatisch. Sobald alles grün ist, werden die Schul-Apps
+          installiert.
+        </Step>
+        <Step title="Schul-Apps nutzen">
+          Pflicht-Apps wie WebUntis und Teams werden automatisch installiert.
+          Weitere Apps finden Sie im Tab &quot;Apps&quot; im
+          Unternehmensportal.
         </Step>
       </StepList>
 
       <H3>Option 3: Full Management</H3>
       <P>
-        Wird automatisch bei Geräten der Geräteinitiative konfiguriert. Keine
-        manuelle Einrichtung nötig.
+        Wird automatisch bei Geräten der Geräteinitiative konfiguriert. Das
+        iPad wird beim ersten Einschalten über Apple DEP (Device Enrollment
+        Program) in die Schulverwaltung aufgenommen — keine manuelle
+        Einrichtung nötig.
       </P>
+
+      {/* ═══ iOS Troubleshooting ═══ */}
+      <H3>Häufige Probleme auf iOS</H3>
+
+      <UL>
+        <li>
+          <strong>&quot;Registrierung fehlgeschlagen&quot;</strong> — Stellen
+          Sie sicher, dass Sie mit dem Schul-WLAN verbunden sind und das
+          Passwort korrekt ist. Nach 10 Fehlversuchen wird das Konto 10 Min.
+          gesperrt.
+        </li>
+        <li>
+          <strong>Profil-Installation bricht ab</strong> — Gehen Sie zu
+          Einstellungen → Allgemein → VPN &amp; Geräteverwaltung und prüfen
+          Sie, ob ein &quot;Heruntergeladenes Profil&quot; wartet. Falls ja,
+          tippen Sie darauf und installieren Sie es manuell.
+        </li>
+        <li>
+          <strong>&quot;Gerät nicht konform&quot;</strong> — Häufigste
+          Ursache: Kein Geräte-Passcode gesetzt. Gehen Sie zu Einstellungen →
+          Face ID &amp; Code (oder Touch ID &amp; Code) und richten Sie einen
+          Passcode ein.
+        </li>
+        <li>
+          <strong>Apps werden nicht installiert</strong> — Öffnen Sie das
+          Unternehmensportal → Tab &quot;Geräte&quot; → Ihr Gerät antippen →
+          &quot;Compliance prüfen&quot;. Falls alles grün: warten Sie 5–10
+          Minuten, die Apps werden im Hintergrund geladen.
+        </li>
+        <li>
+          <strong>Unternehmensportal öffnet sich nicht</strong> — App
+          deinstallieren und neu aus dem App Store installieren. Ihre
+          Registrierung bleibt erhalten.
+        </li>
+      </UL>
 
       {/* ═══════════════ Windows ═══════════════ */}
       <H2>Windows</H2>

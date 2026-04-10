@@ -44,6 +44,16 @@ export default function InfoHubPage() {
     <>
       <PageHeader title="InfoHub" />
 
+      <Callout type="warning" title="Seite in Bearbeitung">
+        Diese Website befindet sich noch <strong>im Aufbau</strong>. Inhalte
+        werden laufend ergänzt und überprüft. Es kann vorkommen, dass einzelne
+        Informationen noch nicht aktuell oder fehlerhaft sind. Bei Fragen oder
+        Unklarheiten wenden Sie sich bitte an{" "}
+        <a href="mailto:admin@bgzwn.at" className="text-primary hover:underline">
+          admin@bgzwn.at
+        </a>.
+      </Callout>
+
       <P>
         Willkommen im InfoHub des BG Zehnergasse! Hier finden Eltern und
         Schülerinnen und Schüler alle wichtigen Informationen rund um

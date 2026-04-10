@@ -44,6 +44,16 @@ export default function InfoHubPageEN() {
     <>
       <PageHeader title="InfoHub" />
 
+      <Callout type="warning" title="Work in Progress">
+        This website is still <strong>under construction</strong>. Content is
+        being continuously added and reviewed. Some information may not yet be
+        up to date or may contain errors. If you have questions, please
+        contact{" "}
+        <a href="mailto:admin@bgzwn.at" className="text-primary hover:underline">
+          admin@bgzwn.at
+        </a>.
+      </Callout>
+
       <P>
         Welcome to the InfoHub of BG Zehnergasse! Here parents and students
         can find all important information about school accounts, iPads,
