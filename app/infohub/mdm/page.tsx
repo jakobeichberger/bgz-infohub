@@ -101,7 +101,7 @@ export default function MdmPage() {
       <Callout type="info" title="So finden Sie die App">
         <div className="flex items-start gap-4">
           <img
-            src="/icons/intune-company-portal.png"
+            src="/intune-company-portal.png"
             alt="Intune-Unternehmensportal App-Symbol"
             width={64}
             height={64}
