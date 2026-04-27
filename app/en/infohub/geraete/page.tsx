@@ -105,12 +105,46 @@ export default function GeraetePageEN() {
       <H3>School transfer — Device exchange</H3>
 
       <P>
-        When changing schools, devices can be exchanged via the OeAD device
-        exchange:{" "}
-        <a href="https://digitaleslernen.oead.at/de/fuer-eltern/geraete-support/geraeteboerse" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-          Device exchange
-        </a>
+        When transferring to BG Zehnergasse, the next steps depend on which
+        device was used at the previous school:
       </P>
+
+      <UL>
+        <li>
+          <strong>Same device at the previous school (Apple iPad):</strong>{" "}
+          Bring the device to the IT department (to{" "}
+          <strong>Prof. Bruckschwaiger</strong>) so it can be added to the
+          school&apos;s management system. <strong>Important:</strong> The
+          device must <strong>not</strong> be registered in Apple Family
+          Sharing at this point — it must be removed from the family before
+          the appointment.
+        </li>
+        <li>
+          <strong>Different device at the previous school:</strong> Exchange
+          the device for an Apple iPad via the{" "}
+          <a
+            href="https://digitaleslernen.oead.at/de/fuer-eltern/geraete-support/geraeteboerse"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            OeAD device exchange
+          </a>
+          , then register it with the school IT.
+        </li>
+      </UL>
+
+      <Callout type="warning" title="Disable Apple Family Sharing">
+        If the iPad is registered in Apple Family Sharing, the school IT
+        cannot add it to the management system. Remove the device before
+        your appointment in the iPad settings:
+        <ul>
+          <li>
+            Settings → Apple ID (top) → Family Sharing → Remove device from
+            family
+          </li>
+        </ul>
+      </Callout>
 
       <Callout type="info" title="OeAD hotline for all device initiative questions">
         <ul>

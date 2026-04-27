@@ -172,17 +172,47 @@ export default function GeraetePage() {
       <H3>Schulwechsel — Gerätebörse</H3>
 
       <P>
-        Beim Schulwechsel kann das Gerät über die OeAD-Gerätebörse
-        getauscht werden:{" "}
-        <a
-          href="https://digitaleslernen.oead.at/de/fuer-eltern/geraete-support/geraeteboerse"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-primary hover:underline"
-        >
-          Zur Gerätebörse
-        </a>
+        Bei einem Wechsel an das BG Zehnergasse hängt das weitere Vorgehen
+        davon ab, welches Gerät an der alten Schule verwendet wurde:
       </P>
+
+      <UL>
+        <li>
+          <strong>Gleiches Gerät an der alten Schule (Apple iPad):</strong>{" "}
+          Bringen Sie das Gerät in die IT (zu{" "}
+          <strong>Prof. Bruckschwaiger</strong>), damit es im
+          Verwaltungssystem der Schule aufgenommen werden kann.{" "}
+          <strong>Wichtig:</strong> Das Gerät darf zu diesem Zeitpunkt{" "}
+          <strong>nicht über die Apple-Familienverwaltung</strong> laufen —
+          es muss vor dem Termin aus der Familienfreigabe entfernt werden.
+        </li>
+        <li>
+          <strong>Anderes Gerät an der alten Schule:</strong> Tauschen Sie
+          das Gerät über die{" "}
+          <a
+            href="https://digitaleslernen.oead.at/de/fuer-eltern/geraete-support/geraeteboerse"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            OeAD-Gerätebörse
+          </a>{" "}
+          gegen das passende Gerät (Apple iPad) — anschließend in der IT
+          registrieren lassen.
+        </li>
+      </UL>
+
+      <Callout type="warning" title="Apple-Familienverwaltung deaktivieren">
+        Wenn das iPad in der Apple-Familienfreigabe registriert ist, kann
+        die Schul-IT es nicht ins Verwaltungssystem aufnehmen. Entfernen
+        Sie das Gerät vor dem Termin in den iPad-Einstellungen unter:
+        <ul>
+          <li>
+            Einstellungen → Apple-ID (oben) → Familienfreigabe → Gerät aus
+            der Familie entfernen
+          </li>
+        </ul>
+      </Callout>
 
       {/* ─── OeAD Kontakt ─── */}
       <Callout type="info" title="OeAD-Hotline für alle Fragen zur Geräteinitiative">
