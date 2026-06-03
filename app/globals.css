@@ -88,3 +88,45 @@ button:focus-visible {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-light);
 }
+
+/* ───────────────────────────────────────────────────────────────
+   Callout colors — explicit hex/rgba instead of Tailwind's oklch
+   palette, so the colored info/success/warning/danger boxes render
+   readably on ALL browsers (incl. older Safari / Android Chrome
+   that lack oklch() support). Layout (border, radius, padding) stays
+   on Tailwind utilities; only the colors are overridden here.
+   ─────────────────────────────────────────────────────────────── */
+
+/* Light mode */
+.callout-info    { background-color: #f0fdfa; border-color: #5eead4; }
+.callout-info    .callout-title { color: #115e59; }
+.callout-info    .callout-body  { color: #134e4a; }
+
+.callout-success { background-color: #f0fdf4; border-color: #86efac; }
+.callout-success .callout-title { color: #166534; }
+.callout-success .callout-body  { color: #14532d; }
+
+.callout-warning { background-color: #fffbeb; border-color: #fcd34d; }
+.callout-warning .callout-title { color: #92400e; }
+.callout-warning .callout-body  { color: #78350f; }
+
+.callout-danger  { background-color: #fef2f2; border-color: #fca5a5; }
+.callout-danger  .callout-title { color: #991b1b; }
+.callout-danger  .callout-body  { color: #7f1d1d; }
+
+/* Dark mode (rgba backgrounds are universally supported) */
+.dark .callout-info    { background-color: rgba(19, 78, 74, 0.40);  border-color: #115e59; }
+.dark .callout-info    .callout-title { color: #99f6e4; }
+.dark .callout-info    .callout-body  { color: #ccfbf1; }
+
+.dark .callout-success { background-color: rgba(20, 83, 45, 0.40);  border-color: #166534; }
+.dark .callout-success .callout-title { color: #bbf7d0; }
+.dark .callout-success .callout-body  { color: #dcfce7; }
+
+.dark .callout-warning { background-color: rgba(120, 53, 15, 0.40); border-color: #92400e; }
+.dark .callout-warning .callout-title { color: #fde68a; }
+.dark .callout-warning .callout-body  { color: #fef3c7; }
+
+.dark .callout-danger  { background-color: rgba(127, 29, 29, 0.40); border-color: #991b1b; }
+.dark .callout-danger  .callout-title { color: #fecaca; }
+.dark .callout-danger  .callout-body  { color: #fee2e2; }
