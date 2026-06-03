@@ -37,6 +37,7 @@ const navItemsDE: NavItem[] = [
     ],
   },
   { href: "/infohub/lizenzen", label: "Gratis Software", icon: "🎁" },
+  { href: "/infohub/lehrkraefte", label: "Lehrkräfte: IT-Schnellhilfe", icon: "🧑‍🏫" },
   { href: "/infohub/hilfe", label: "Hilfe & Kontakte", icon: "🆘" },
 ];
 
@@ -66,6 +67,7 @@ const navItemsEN: NavItem[] = [
     ],
   },
   { href: "/en/infohub/lizenzen", label: "Free Software", icon: "🎁" },
+  { href: "/en/infohub/lehrkraefte", label: "Teachers: IT Quick Help", icon: "🧑‍🏫" },
   { href: "/en/infohub/hilfe", label: "Help & Contacts", icon: "🆘" },
 ];
 

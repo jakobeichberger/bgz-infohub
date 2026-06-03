@@ -19,9 +19,10 @@ const allPages = [
   { href: "/infohub/vwa/aufbau/", label: "VWA Aufbau", desc: "Gliederung, Forschungsfrage, Formatierung", icon: "📋" },
   { href: "/infohub/vwa/schreiben/", label: "Wissenschaftliches Schreiben", desc: "Stil, Sprache, Plagiat", icon: "✍️" },
   { href: "/infohub/vwa/zitieren/", label: "Zitieren & Zotero", desc: "Literaturverwaltung, KI-Nutzung", icon: "📚" },
-  { href: "/infohub/vwa/vorlagen/", label: "VWA Vorlagen", desc: "LaTeX, Word, Downloads", icon: "📄" },
+  { href: "/infohub/vwa/vorlagen/", label: "VWA Vorlagen", desc: "Word-Vorlage, Tipps, Downloads", icon: "📄" },
   { href: "/infohub/vwa/praesentation/", label: "VWA Präsentation", desc: "Aufbau, Fragen, Tipps", icon: "🎤" },
   { href: "/infohub/lizenzen/", label: "Gratis Software", desc: "Kostenlose Lizenzen", icon: "🎁" },
+  { href: "/infohub/lehrkraefte/", label: "Lehrkräfte: IT-Schnellhilfe", desc: "Beamer, Computer, Ton, Quickfixes", icon: "🧑‍🏫" },
   { href: "/infohub/hilfe/", label: "Hilfe & Kontakte", desc: "Support, FAQ, Links", icon: "🆘" },
 ];
 

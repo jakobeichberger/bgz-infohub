@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader } from "@/components/ui/PageHeader";
-import { H2, H3, P, UL, Table } from "@/components/ui/Section";
+import { H2, H3, P, UL } from "@/components/ui/Section";
 import { Callout } from "@/components/ui/Callout";
 import { CardGrid, Card } from "@/components/ui/CardGrid";
 import { StepList, Step } from "@/components/ui/StepList";
@@ -9,7 +9,7 @@ import { StepList, Step } from "@/components/ui/StepList";
 export const metadata: Metadata = {
   title: "Templates & Tools — VWA / ABA",
   description:
-    "LaTeX and Word templates, setup instructions, file descriptions and tips for the VWA/ABA at BG Zehnergasse.",
+    "Word template, setup instructions, tips and reference management for the VWA/ABA at BG Zehnergasse.",
 };
 
 export default function VwaVorlagenPageEN() {
@@ -18,24 +18,15 @@ export default function VwaVorlagenPageEN() {
       <PageHeader title="Templates & Tools — VWA / ABA" />
 
       <P>
-        BG Zehnergasse provides professional templates for LaTeX and Microsoft
-        Word. Both templates include the school branding, pre-configured styles
-        and automatic directories.
+        BG Zehnergasse provides a professional Word template. It includes the
+        school branding, pre-configured styles and an automatic table of
+        contents — you only need to replace the placeholders.
       </P>
 
-      {/* ═══ Downloads ═══ */}
-      <H2>Templates for Download</H2>
+      {/* ═══ Download ═══ */}
+      <H2>Template for Download</H2>
 
       <CardGrid>
-        <Card
-          href="/templates/bgz-vwa.zip"
-          icon="📄"
-          title="LaTeX Template (recommended)"
-        >
-          Professional LaTeX template with APA citation style, automatic table
-          of contents, list of figures and BG Zehnergasse branding. Ideal for
-          academic papers.
-        </Card>
         <Card
           href="/templates/bgz-vwa-word.docx"
           icon="📝"
@@ -47,84 +38,12 @@ export default function VwaVorlagenPageEN() {
         </Card>
       </CardGrid>
 
-      {/* ═══ LaTeX ═══ */}
-      <H2>Writing a VWA with LaTeX</H2>
-
-      <P>
-        LaTeX produces professionally typeset documents with automatic
-        directories and correct citations. The school template is
-        pre-configured — you only need to insert your content.
-      </P>
-
-      <H3>Setup</H3>
-
-      <StepList>
-        <Step title="Install a TeX distribution">
-          <strong>Windows:</strong> MiKTeX or TeX Live (full installation,
-          4–6 GB). <strong>macOS:</strong> MacTeX. <strong>Linux:</strong> TeX Live.
-        </Step>
-        <Step title="Install an editor">
-          <strong>TeXstudio</strong> (beginner-friendly) or{" "}
-          <strong>VS Code</strong> with the LaTeX Workshop extension.
-        </Step>
-        <Step title="Download the template">
-          Download the{" "}
-          <a
-            href="/templates/bgz-vwa.zip"
-            className="text-primary hover:underline"
-          >
-            BG Zehnergasse VWA template
-          </a>{" "}
-          and extract the ZIP file.
-        </Step>
-        <Step title="Open main.tex and fill in metadata">
-          Enter your name, title, class, supervisor and subject area.
-        </Step>
-        <Step title="Compile">
-          Press F5 (TeXstudio) or Ctrl+Alt+B (VS Code). On the first run:
-          pdflatex → biber → pdflatex → pdflatex.
-        </Step>
-      </StepList>
-
-      <H3>Important Files in the Template</H3>
-
-      <Table
-        headers={["File", "Purpose"]}
-        rows={[
-          ["main.tex", "Main file — enter metadata here"],
-          ["bgzvwa.cls", "Document class (do not modify)"],
-          ["kapitel/einleitung.tex", "Introduction with research question"],
-          ["kapitel/hauptteil.tex", "Theoretical and empirical section"],
-          ["kapitel/fazit.tex", "Conclusion and outlook"],
-          ["literatur.bib", "Bibliography (BibTeX format)"],
-          ["images/", "Folder for figures"],
-        ]}
-      />
-
-      <Callout type="success" title="Tip: Use Git">
-        Use Git and GitHub for version control. This gives you a backup,
-        lets you track changes and revert to a previous version if needed.
-      </Callout>
-
-      <Callout type="info" title="Reference management with Zotero + LaTeX">
-        With the Better BibTeX plugin you can automatically export your
-        Zotero library as a .bib file. This means you never have to maintain
-        the bibliography entries manually. Full details are on the{" "}
-        <Link
-          href="/en/infohub/vwa/zitieren"
-          className="text-primary hover:underline"
-        >
-          Citations &amp; Zotero
-        </Link>{" "}
-        page.
-      </Callout>
-
       {/* ═══ Word ═══ */}
       <H2>Writing a VWA with Microsoft Word</H2>
 
       <P>
-        Word is the simpler alternative to LaTeX. With the right settings you
-        can achieve a professional result.
+        With the right settings you can achieve a professional result in Word.
+        The key steps:
       </P>
 
       <H3>Setup</H3>
@@ -152,6 +71,12 @@ export default function VwaVorlagenPageEN() {
           insert a section break, then change the page number format.
         </Step>
       </StepList>
+
+      <Callout type="success" title="Tip: Automatic backup with OneDrive">
+        Save your work in <strong>OneDrive</strong> (via your school account,
+        5 TB). The file is then backed up automatically and you can return to
+        an earlier version at any time via the <strong>version history</strong>.
+      </Callout>
 
       <H3>Reference Management in Word</H3>
 

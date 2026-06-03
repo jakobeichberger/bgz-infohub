@@ -94,7 +94,7 @@ export default function VwaAufbauPage() {
         headers={["Eigenschaft", "Vorgabe"]}
         rows={[
           ["Format", "DIN A4, einseitig"],
-          ["Schriftart", "Gut lesbar (z.B. Calibri, Times New Roman, Latin Modern)"],
+          ["Schriftart", "Gut lesbar (z.B. Calibri, Times New Roman, Arial)"],
           ["Schriftgröße", "12pt (Text), 10pt (Fußnoten)"],
           ["Zeilenabstand", "1,5-fach (Text), 1-fach (Fußnoten)"],
           ["Ränder", "Links 2,5 cm + 1 cm Bundsteg, rechts 2–2,5 cm"],
@@ -116,7 +116,7 @@ export default function VwaAufbauPage() {
         <Card href="/infohub/vwa" icon="🎓" title="Übersicht">Zeitplan, Formate, Bewertung</Card>
         <Card href="/infohub/vwa/schreiben" icon="✍️" title="Wissenschaftliches Schreiben">Stil, Sprache, Plagiat</Card>
         <Card href="/infohub/vwa/zitieren" icon="📚" title="Zitieren & Zotero">Literaturverwaltung, KI-Nutzung</Card>
-        <Card href="/infohub/vwa/vorlagen" icon="📄" title="Vorlagen & Tools">LaTeX, Word, Downloads</Card>
+        <Card href="/infohub/vwa/vorlagen" icon="📄" title="Vorlagen & Tools">Word-Vorlage, Tipps, Downloads</Card>
         <Card href="/infohub/vwa/praesentation" icon="🎤" title="Präsentation">Aufbau, Fragen, Tipps</Card>
       </CardGrid>
     </>

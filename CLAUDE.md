@@ -38,8 +38,9 @@ bgz-infohub/
 │   │   ├── mdm/                # InTune: nur iOS + Windows (KEIN Android!)
 │   │   ├── tipp10/             # 10-Finger-Schreibtrainer
 │   │   ├── bildungsportal/     # PoDS, ID Austria, Elternzugang
-│   │   ├── vwa/                # VWA/ABA: Ablauf, Aufbau, Zitieren, LaTeX, Word, Bewertung
+│   │   ├── vwa/                # VWA/ABA: Ablauf, Aufbau, Zitieren, Word, Bewertung (Unterseiten: aufbau, schreiben, zitieren, vorlagen, praesentation)
 │   │   ├── lizenzen/           # Gratis Software (GitHub, JetBrains, Autodesk, Figma, etc.)
+│   │   ├── lehrkraefte/        # IT-Schnellhilfe fuer Lehrkraefte (Beamer, PC, Ton, Teams, Quickfixes)
 │   │   └── hilfe/              # FAQ, Kontakte, Support
 │   └── en/infohub/             # 15 Englische Seiten (gleiche Struktur)
 ├── components/
@@ -56,9 +57,7 @@ bgz-infohub/
 │   ├── favicon.ico             # BGZ Logo als Favicon
 │   ├── apple-touch-icon.png    # BGZ Logo fuer iOS
 │   └── templates/
-│       ├── bgz-vwa.zip         # LaTeX-Vorlage (bgzvwa.cls + main.tex + Kapitel)
-│       ├── bgz-vwa-word.docx   # Word-Vorlage mit Logo, Styles, Auto-TOC
-│       └── bgz-vwa/            # LaTeX-Quellen (entpackte Version)
+│       └── bgz-vwa-word.docx   # Word-Vorlage mit Logo, Styles, Auto-TOC
 ├── scripts/
 │   └── create_vwa_word_template.py  # Python-Script zur Regeneration der Word-Vorlage
 ├── next.config.ts              # output: "export", trailingSlash: true
@@ -262,10 +261,10 @@ Tailwind 4 hat Probleme mit `text-[var(--text)]` — Next.js splittet JS-Chunks 
 - H2 "Wichtige Kontakte" mit Kontakttabelle (8 Eintraege)
 - H2 "Schnelllinks" mit externen Links (WebUntis, edu.Suite, bildung.gv.at, etc.)
 
-### VWA/ABA Templates
-- **LaTeX** (`bgz-vwa.zip`): bgzvwa.cls Dokumentklasse, APA-Zitierstil via biblatex, pdflatex+biber Build Chain, BGZ-Logo auf Titelseite
-- **Word** (`bgz-vwa-word.docx`): Calibri 12pt, 1.5x Zeilenabstand, 3 Sektionen (Titelseite ohne Seitenzahlen, Vorspann roemisch, Hauptteil arabisch), Heading-Styles in Teal, rote Platzhalter-Texte, automatisches Inhaltsverzeichnis, BGZ-Logo auf Titelseite
+### VWA/ABA Template
+- **NUR Word** (`bgz-vwa-word.docx`): Calibri 12pt, 1.5x Zeilenabstand, 3 Sektionen (Titelseite ohne Seitenzahlen, Vorspann roemisch, Hauptteil arabisch), Heading-Styles in Teal, rote Platzhalter-Texte, automatisches Inhaltsverzeichnis, BGZ-Logo auf Titelseite
 - **Regeneration**: `python3 scripts/create_vwa_word_template.py` (benoetigt python-docx)
+- **WICHTIG**: LaTeX-Inhalte wurden komplett entfernt (Maintainer-Entscheidung). Keine LaTeX-Vorlage, keine LaTeX-Anleitungen, kein Better-BibTeX. Nur Word + Zotero (Word-Plugin).
 
 ### Build & Deployment
 ```bash

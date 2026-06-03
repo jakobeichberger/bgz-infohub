@@ -108,12 +108,16 @@ export default function InfoHubPageEN() {
           platforms.
         </Card>
         <Card href="/en/infohub/vwa" icon="🎓" title="VWA / ABA (Thesis)">
-          Pre-scientific thesis: process, structure, citation, LaTeX and Word
-          templates.
+          Pre-scientific thesis: process, structure, citation and Word
+          template.
         </Card>
         <Card href="/en/infohub/lizenzen" icon="🎁" title="Free Software">
           Free licences: GitHub Copilot, JetBrains, Autodesk, Figma and
           more.
+        </Card>
+        <Card href="/en/infohub/lehrkraefte" icon="🧑‍🏫" title="Teachers: IT Quick Help">
+          Quick fixes for projector, computer, audio and presentation problems
+          in the classroom.
         </Card>
         <Card href="/en/infohub/hilfe" icon="🆘" title="Help & Contacts">
           Contact persons, common problems and solutions, important links.

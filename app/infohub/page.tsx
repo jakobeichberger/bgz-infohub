@@ -109,12 +109,16 @@ export default function InfoHubPage() {
           Bildungsportal für Eltern, edu.digicard, Lernplattformen.
         </Card>
         <Card href="/infohub/vwa" icon="🎓" title="VWA / ABA">
-          Vorwissenschaftliche Arbeit: Ablauf, Aufbau, Zitieren, LaTeX- und
+          Vorwissenschaftliche Arbeit: Ablauf, Aufbau, Zitieren und
           Word-Vorlage.
         </Card>
         <Card href="/infohub/lizenzen" icon="🎁" title="Gratis Software">
           Kostenlose Lizenzen: GitHub Copilot, JetBrains, Autodesk, Figma
           und mehr.
+        </Card>
+        <Card href="/infohub/lehrkraefte" icon="🧑‍🏫" title="Lehrkräfte: IT-Schnellhilfe">
+          Quickfixes für Beamer-, Computer-, Ton- und Präsentationsprobleme im
+          Unterricht.
         </Card>
         <Card href="/infohub/hilfe" icon="🆘" title="Hilfe & Kontakte">
           Ansprechpartner, häufige Probleme und Lösungen, wichtige Links.

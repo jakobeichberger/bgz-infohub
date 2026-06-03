@@ -136,7 +136,7 @@ export default function VwaPraesentationPageEN() {
         <Card href="/en/infohub/vwa/aufbau" icon="📋" title="Structure & Research Question">Outline, formatting</Card>
         <Card href="/en/infohub/vwa/schreiben" icon="✍️" title="Academic Writing">Style, language, plagiarism</Card>
         <Card href="/en/infohub/vwa/zitieren" icon="📚" title="Citations & Zotero">Reference management, AI usage</Card>
-        <Card href="/en/infohub/vwa/vorlagen" icon="📄" title="Templates & Tools">LaTeX, Word, downloads</Card>
+        <Card href="/en/infohub/vwa/vorlagen" icon="📄" title="Templates & Tools">Word template, tips, downloads</Card>
       </CardGrid>
     </>
   );

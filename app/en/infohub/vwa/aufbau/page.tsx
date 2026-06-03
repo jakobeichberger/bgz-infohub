@@ -94,7 +94,7 @@ export default function VwaAufbauPageEN() {
         headers={["Property", "Requirement"]}
         rows={[
           ["Format", "DIN A4, single-sided"],
-          ["Font", "Easily readable (e.g. Calibri, Times New Roman, Latin Modern)"],
+          ["Font", "Easily readable (e.g. Calibri, Times New Roman, Arial)"],
           ["Font size", "12pt (body text), 10pt (footnotes)"],
           ["Line spacing", "1.5 (body text), 1.0 (footnotes)"],
           ["Margins", "Left 2.5 cm + 1 cm binding offset, right 2–2.5 cm"],
@@ -115,7 +115,7 @@ export default function VwaAufbauPageEN() {
         <Card href="/en/infohub/vwa" icon="🎓" title="Overview">Timeline, formats, assessment</Card>
         <Card href="/en/infohub/vwa/schreiben" icon="✍️" title="Academic Writing">Style, language, plagiarism</Card>
         <Card href="/en/infohub/vwa/zitieren" icon="📚" title="Citations & Zotero">Reference management, AI usage</Card>
-        <Card href="/en/infohub/vwa/vorlagen" icon="📄" title="Templates & Tools">LaTeX, Word, downloads</Card>
+        <Card href="/en/infohub/vwa/vorlagen" icon="📄" title="Templates & Tools">Word template, tips, downloads</Card>
         <Card href="/en/infohub/vwa/praesentation" icon="🎤" title="Presentation">Structure, questions, tips</Card>
       </CardGrid>
     </>

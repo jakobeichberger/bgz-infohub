@@ -8,7 +8,7 @@ import { StepList, Step } from "@/components/ui/StepList";
 export const metadata: Metadata = {
   title: "Citations & Reference Management — VWA / ABA",
   description:
-    "Proper citations, Zotero for LaTeX and Word, documenting AI usage and literature research for the VWA/ABA.",
+    "Proper citations, Zotero for Word, documenting AI usage and literature research for the VWA/ABA.",
 };
 
 export default function VwaZitierenPageEN() {
@@ -71,7 +71,7 @@ export default function VwaZitierenPageEN() {
       <P>
         Zotero is a free, open-source reference manager. It stores sources,
         organises them into collections and automatically generates citations
-        and bibliographies in Word and LaTeX. Recommended by the school for
+        and bibliographies in Word. Recommended by the school for
         all VWA papers.
       </P>
 
@@ -189,47 +189,6 @@ export default function VwaZitierenPageEN() {
         next refresh.
       </Callout>
 
-      <H3>Zotero + LaTeX (Better BibTeX)</H3>
-      <StepList>
-        <Step title="Install Better BibTeX">
-          Download from{" "}
-          <a
-            href="https://retorque.re/zotero-better-bibtex/installation/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:underline"
-          >
-            retorque.re/zotero-better-bibtex
-          </a>
-          . In Zotero: Tools → Add-ons → gear icon → &quot;Install Add-on
-          From File&quot; → select the .xpi file → restart Zotero.
-        </Step>
-        <Step title="Configure citation keys">
-          Better BibTeX → Preferences → Citation Key Format:{" "}
-          <code>[auth][year]</code> generates keys like{" "}
-          <code>Mueller2023</code>. Use these keys in LaTeX as{" "}
-          <code>\cite&#123;Mueller2023&#125;</code>.
-        </Step>
-        <Step title="Set up automatic .bib export">
-          Right-click on your VWA collection → &quot;Export Collection&quot; →
-          Format: &quot;Better BibLaTeX&quot; → tick &quot;Keep updated&quot;
-          → save as <code>literatur.bib</code> in your LaTeX project folder.
-          The file is updated automatically whenever you add sources.
-        </Step>
-        <Step title="Use in LaTeX">
-          In the preamble: <code>\addbibresource&#123;literatur.bib&#125;</code>.
-          In the text: <code>\cite&#123;Mueller2023&#125;</code> or{" "}
-          <code>\parencite&#123;Mueller2023&#125;</code>. At the end:{" "}
-          <code>\printbibliography</code>. The BGZ template already has this
-          pre-configured.
-        </Step>
-      </StepList>
-
-      <Callout type="success" title="Automatic export">
-        With Better BibTeX + automatic export you never need to edit the .bib
-        file manually. New sources in Zotero appear automatically in LaTeX.
-      </Callout>
-
       {/* ═══ Source Research ═══ */}
       <H2>Source Research — Databases</H2>
 
@@ -317,7 +276,7 @@ export default function VwaZitierenPageEN() {
         <Card href="/en/infohub/vwa" icon="🎓" title="Overview">Timeline, formats, assessment</Card>
         <Card href="/en/infohub/vwa/aufbau" icon="📋" title="Structure & Research Question">Outline, formatting</Card>
         <Card href="/en/infohub/vwa/schreiben" icon="✍️" title="Academic Writing">Style, language, plagiarism</Card>
-        <Card href="/en/infohub/vwa/vorlagen" icon="📄" title="Templates & Tools">LaTeX, Word, downloads</Card>
+        <Card href="/en/infohub/vwa/vorlagen" icon="📄" title="Templates & Tools">Word template, tips, downloads</Card>
         <Card href="/en/infohub/vwa/praesentation" icon="🎤" title="Presentation">Structure, questions, tips</Card>
       </CardGrid>
     </>

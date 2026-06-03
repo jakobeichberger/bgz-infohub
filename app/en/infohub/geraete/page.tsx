@@ -225,14 +225,81 @@ export default function GeraetePageEN() {
 
       <H2>Order Accessories</H2>
 
-      <Table
-        headers={["Product", "Order via"]}
-        rows={[
-          ["Active Pen replacement tips (Gen 1)", "justedu.at"],
-          ["Active Pen replacement tips (Gen 2)", "justedu.at"],
-          ["Slim Keyboard Cover (iPad 8/9)", "justedu.at"],
-        ]}
-      />
+      <P>
+        Spare parts, accessories and replacement devices can be ordered
+        directly from the justEDU web shop:
+      </P>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-6">
+        {[
+          {
+            href: "https://www.justedu.at/justedu-active-pen-ipad-mit-palm-rejection-tilt/",
+            label: "justEDU Active Pen (iPad)",
+            desc: "Stylus with palm rejection & tilt",
+          },
+          {
+            href: "https://www.justedu.at/justedu-active-pen-ipad-2xersatzspitzen-fuer-stift-der-generation-2/",
+            label: "Active Pen replacement tips (Gen 2)",
+            desc: "2-pack of replacement tips for the pen",
+          },
+          {
+            href: "https://www.justedu.at/justedu-active-pen-ipad-ersatzladekabel/",
+            label: "Active Pen charging cable",
+            desc: "Replacement charging cable for the justEDU Active Pen",
+          },
+          {
+            href: "https://www.justedu.at/justedu-cover-nur-huelle-fuer-das-ipad-89/",
+            label: "Case for iPad 8/9",
+            desc: "Protective case (cover only) for the iPad 8/9",
+          },
+          {
+            href: "https://www.justedu.at/justedu-rundum-sorglos-paket/",
+            label: "All-round worry-free package",
+            desc: "Protection and service package for the iPad",
+          },
+          {
+            href: "https://www.justedu.at/ipad-9-gen-inkl-justedu-active-pen/",
+            label: "iPad 9th gen incl. Active Pen",
+            desc: "Complete set: iPad with justEDU Active Pen",
+          },
+          {
+            href: "https://www.justedu.at/ipad-wi-fi-64gb-space-grau-10-2-9-gen-2/",
+            label: "iPad Wi-Fi 64 GB (10.2\", 9th gen)",
+            desc: "iPad on its own, space grey",
+          },
+        ].map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
+          >
+            <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+            <div>
+              <span className="text-sm font-medium text-txt group-hover:text-primary transition-colors">
+                {link.label}
+              </span>
+              <span className="text-xs text-txt-light block">
+                {link.desc}
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <Callout type="info" title="School web shop">
+        All products are available in the justEDU web shop at{" "}
+        <a
+          href="https://www.justedu.at"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          justedu.at
+        </a>
+        . Delivery is handled directly by justEDU.
+      </Callout>
 
       <H2>Decouple iPad (Leaving School)</H2>
 

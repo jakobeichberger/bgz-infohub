@@ -8,7 +8,7 @@ import { StepList, Step } from "@/components/ui/StepList";
 export const metadata: Metadata = {
   title: "VWA / ABA — Pre-Scientific Paper",
   description:
-    "Everything about the Pre-Scientific Paper (VWA / ABA) at BG Zehnergasse: process, structure, citations, LaTeX template, Word template and tips.",
+    "Everything about the Pre-Scientific Paper (VWA / ABA) at BG Zehnergasse: process, structure, citations, Word template and tips.",
 };
 
 export default function VwaPageEN() {
@@ -33,10 +33,10 @@ export default function VwaPageEN() {
           Style, language, dos &amp; don&apos;ts, avoiding plagiarism
         </Card>
         <Card href="/en/infohub/vwa/zitieren" icon="📚" title="Citations & Zotero">
-          Reference management, Zotero for Word &amp; LaTeX, AI usage
+          Reference management, Zotero for Word, AI usage
         </Card>
         <Card href="/en/infohub/vwa/vorlagen" icon="📄" title="Templates & Tools">
-          LaTeX template, Word template, downloads, setup
+          Word template, downloads, setup, tips
         </Card>
         <Card href="/en/infohub/vwa/praesentation" icon="🎤" title="Presentation & Discussion">
           Structure, typical questions, assessment, tips
