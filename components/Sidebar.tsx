@@ -36,7 +36,8 @@ const navItemsDE: NavItem[] = [
       { href: "/infohub/vwa/praesentation", label: "Präsentation" },
     ],
   },
-  { href: "/infohub/lizenzen", label: "Gratis Software", icon: "🎁" },
+  // Ausgeblendet (Seite existiert weiterhin, nur nicht verlinkt):
+  // { href: "/infohub/lizenzen", label: "Gratis Software", icon: "🎁" },
   { href: "/infohub/lehrkraefte", label: "Lehrkräfte: IT-Schnellhilfe", icon: "🧑‍🏫" },
   { href: "/infohub/hilfe", label: "Hilfe & Kontakte", icon: "🆘" },
 ];
@@ -66,7 +67,8 @@ const navItemsEN: NavItem[] = [
       { href: "/en/infohub/vwa/praesentation", label: "Presentation" },
     ],
   },
-  { href: "/en/infohub/lizenzen", label: "Free Software", icon: "🎁" },
+  // Hidden (page still exists, just not linked):
+  // { href: "/en/infohub/lizenzen", label: "Free Software", icon: "🎁" },
   { href: "/en/infohub/lehrkraefte", label: "Teachers: IT Quick Help", icon: "🧑‍🏫" },
   { href: "/en/infohub/hilfe", label: "Help & Contacts", icon: "🆘" },
 ];

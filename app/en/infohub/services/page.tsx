@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { H2, H3, P, UL, Table, InlineCode } from "@/components/ui/Section";
 import { Callout } from "@/components/ui/Callout";
@@ -241,7 +242,7 @@ export default function ServicesPageEN() {
         headers={["Method", "Description"]}
         rows={[
           ["FollowMe (school PC)", "Send print job → collect at printer with edu.Card or login"],
-          ["Windows / Mac", "Set up printer via school network"],
+          ["Windows / Mac", "Universal Print (cloud) — see guide below"],
           ["iPad", "AirPrint via school WiFi"],
           ["Email print", "Send document to printme@bgzwn.at (from school address)"],
         ]}
@@ -249,9 +250,68 @@ export default function ServicesPageEN() {
 
       <UL>
         <li>Print jobs are stored for <strong>4 days</strong> in the queue</li>
-        <li>FollowMe printing is free in IT labs</li>
-        <li>Mac printing only works on the teacher WiFi</li>
       </UL>
+
+      <H3>Universal Print (cloud printing)</H3>
+      <P>
+        Universal Print is the cloud printing service of Microsoft 365. The
+        school printers appear directly in the print dialog — no IP addresses
+        or driver installation. Requirement: sign in with your school account
+        (<InlineCode>lastname.firstname@bgzwn.at</InlineCode>) and an internet
+        connection.
+      </P>
+
+      <P>
+        <strong>Windows (built in):</strong>
+      </P>
+      <StepList>
+        <Step title="Sign in with your school account">
+          Be signed in to the Windows PC with your school account (device
+          registered with Microsoft Entra — see{" "}
+          <Link href="/en/infohub/mdm" className="text-primary hover:underline">
+            MDM Setup
+          </Link>
+          ).
+        </Step>
+        <Step title="Add a printer">
+          Settings → Bluetooth &amp; devices → Printers &amp; scanners →{" "}
+          <strong>&quot;Add device&quot;</strong>. The shared Universal Print
+          printers are listed.
+        </Step>
+        <Step title="Select & print">
+          Add the printer, then print normally via{" "}
+          <InlineCode>Ctrl + P</InlineCode>.
+        </Step>
+      </StepList>
+
+      <P>
+        <strong>macOS:</strong>
+      </P>
+      <StepList>
+        <Step title="Install the Universal Print app">
+          Download the <strong>&quot;Universal Print&quot;</strong> app from the{" "}
+          <strong>Mac App Store</strong> (search for &quot;Universal
+          Print&quot;). Requires <strong>macOS Sonoma 14.6.1</strong> or later.
+        </Step>
+        <Step title="Sign in with your school account">
+          Open the app and sign in with your school account (Microsoft Entra
+          ID).
+        </Step>
+        <Step title="Install the printer">
+          In the app, select and install the available school printer(s).
+        </Step>
+        <Step title="Print">
+          Print from any app via <InlineCode>Cmd + P</InlineCode> — the printer
+          appears in the print dialog like a normal printer.
+        </Step>
+      </StepList>
+
+      <Callout type="info" title="Print from anywhere">
+        Universal Print is cloud-based — you can print from anywhere with an
+        internet connection, not just on the school WiFi. It requires a school
+        account with a Universal Print entitlement (included in the
+        Microsoft 365 A3 licence).
+      </Callout>
 
       {/* ═══ PoDS ═══ */}
       <H2>Portal Digitale Schule (PoDS)</H2>

@@ -112,10 +112,12 @@ export default function InfoHubPage() {
           Vorwissenschaftliche Arbeit: Ablauf, Aufbau, Zitieren und
           Word-Vorlage.
         </Card>
+        {/* Ausgeblendet (Seite existiert weiterhin, nur nicht verlinkt):
         <Card href="/infohub/lizenzen" icon="🎁" title="Gratis Software">
           Kostenlose Lizenzen: GitHub Copilot, JetBrains, Autodesk, Figma
           und mehr.
         </Card>
+        */}
         <Card href="/infohub/lehrkraefte" icon="🧑‍🏫" title="Lehrkräfte: IT-Schnellhilfe">
           Quickfixes für Beamer-, Computer-, Ton- und Präsentationsprobleme im
           Unterricht.

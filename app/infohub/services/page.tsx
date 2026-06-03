@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { H2, H3, P, UL, Table, InlineCode } from "@/components/ui/Section";
 import { Callout } from "@/components/ui/Callout";
@@ -395,7 +396,7 @@ export default function ServicesPage() {
             "FollowMe (Schul-PC)",
             "Druckauftrag senden → am Drucker mit edu.Card oder Login abholen",
           ],
-          ["Windows / Mac", "Drucker über Schulnetzwerk einrichten"],
+          ["Windows / Mac", "Universal Print (Cloud) — siehe Anleitung unten"],
           ["iPad", "AirPrint über Schul-WLAN"],
           [
             "E-Mail-Druck",
@@ -409,9 +410,69 @@ export default function ServicesPage() {
           Druckaufträge werden <strong>4 Tage</strong> in der Warteschlange
           gespeichert
         </li>
-        <li>In IT-Laboren ist FollowMe-Drucken kostenlos</li>
-        <li>Mac-Druck funktioniert nur im Lehrer-WLAN</li>
       </UL>
+
+      <H3>Universal Print (Cloud-Drucken)</H3>
+      <P>
+        Universal Print ist der Cloud-Druckdienst von Microsoft 365. Die
+        Schuldrucker erscheinen direkt im Druckdialog — ohne IP-Adressen oder
+        Treiberinstallation. Voraussetzung: Anmeldung mit dem Schulkonto
+        (<InlineCode>nachname.vorname@bgzwn.at</InlineCode>) und eine
+        Internetverbindung.
+      </P>
+
+      <P>
+        <strong>Windows (bereits integriert):</strong>
+      </P>
+      <StepList>
+        <Step title="Mit Schulkonto anmelden">
+          Am Windows-PC mit dem Schulkonto angemeldet sein (Gerät bei
+          Microsoft Entra registriert — siehe{" "}
+          <Link href="/infohub/mdm" className="text-primary hover:underline">
+            MDM-Einrichtung
+          </Link>
+          ).
+        </Step>
+        <Step title="Drucker hinzufügen">
+          Einstellungen → Bluetooth &amp; Geräte → Drucker &amp; Scanner →{" "}
+          <strong>&quot;Gerät hinzufügen&quot;</strong>. Die freigegebenen
+          Universal-Print-Drucker werden angezeigt.
+        </Step>
+        <Step title="Auswählen & drucken">
+          Drucker hinzufügen und dann normal über{" "}
+          <InlineCode>Strg + P</InlineCode> drucken.
+        </Step>
+      </StepList>
+
+      <P>
+        <strong>macOS:</strong>
+      </P>
+      <StepList>
+        <Step title="Universal Print App installieren">
+          Die App <strong>&quot;Universal Print&quot;</strong> aus dem{" "}
+          <strong>Mac App Store</strong> laden (nach &quot;Universal
+          Print&quot; suchen). Benötigt <strong>macOS Sonoma 14.6.1</strong>{" "}
+          oder neuer.
+        </Step>
+        <Step title="Mit Schulkonto anmelden">
+          App öffnen und mit dem Schulkonto (Microsoft Entra ID) anmelden.
+        </Step>
+        <Step title="Drucker installieren">
+          In der App den/die verfügbaren Schuldrucker auswählen und
+          installieren.
+        </Step>
+        <Step title="Drucken">
+          Aus jeder App über <InlineCode>Cmd + P</InlineCode> drucken — der
+          Drucker erscheint im Druckdialog wie ein normaler Drucker.
+        </Step>
+      </StepList>
+
+      <Callout type="info" title="Von überall drucken">
+        Universal Print ist cloudbasiert — Sie können von überall mit
+        Internetverbindung drucken, nicht nur im Schul-WLAN. Voraussetzung ist
+        ein Schulkonto mit Universal-Print-Berechtigung (in der Microsoft 365
+        A3-Lizenz enthalten).
+      </Callout>
 
       {/* ═══════════════ PoDS ═══════════════ */}
       <H2>Portal Digitale Schule (PoDS)</H2>

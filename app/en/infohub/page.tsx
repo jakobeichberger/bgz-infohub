@@ -111,10 +111,12 @@ export default function InfoHubPageEN() {
           Pre-scientific thesis: process, structure, citation and Word
           template.
         </Card>
+        {/* Hidden (page still exists, just not linked):
         <Card href="/en/infohub/lizenzen" icon="🎁" title="Free Software">
           Free licences: GitHub Copilot, JetBrains, Autodesk, Figma and
           more.
         </Card>
+        */}
         <Card href="/en/infohub/lehrkraefte" icon="🧑‍🏫" title="Teachers: IT Quick Help">
           Quick fixes for projector, computer, audio and presentation problems
           in the classroom.

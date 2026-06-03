@@ -117,7 +117,9 @@ export default function VwaPageEN() {
         ]}
       />
 
-      {/* ═══ Timeline ═══ */}
+      {/* ═══ Timeline & Process — HIDDEN (set false → true to show again) ═══ */}
+      {false && (
+        <>
       <H2>Timeline &amp; Process</H2>
 
       <H3>Year 11 — Preparation</H3>
@@ -185,6 +187,8 @@ export default function VwaPageEN() {
           ["3rd make-up", "End of 1st week of 2nd semester (following year)"],
         ]}
       />
+        </>
+      )}
 
       {/* ═══ Assessment ═══ */}
       <H2>Assessment</H2>

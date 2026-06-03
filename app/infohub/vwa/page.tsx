@@ -118,7 +118,9 @@ export default function VwaPage() {
         ]}
       />
 
-      {/* ═══ Zeitplan ═══ */}
+      {/* ═══ Zeitplan & Ablauf — AUSGEBLENDET (false → true zum Wieder-Einblenden) ═══ */}
+      {false && (
+        <>
       <H2>Zeitplan &amp; Ablauf</H2>
 
       <H3>7. Klasse — Vorbereitung</H3>
@@ -187,6 +189,8 @@ export default function VwaPage() {
           ["3. Nebentermin", "Ende der 1. Woche des 2. Semesters (Folgejahr)"],
         ]}
       />
+        </>
+      )}
 
       {/* ═══ Bewertung ═══ */}
       <H2>Bewertung</H2>
