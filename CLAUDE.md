@@ -62,10 +62,22 @@ bgz-infohub/
 │   └── create_vwa_word_template.py  # Python-Script zur Regeneration der Word-Vorlage
 ├── next.config.ts              # output: "export", trailingSlash: true
 ├── package.json                # next 15, react 19, tailwindcss 4
+├── components/LastUpdated.tsx  # Zeigt "Zuletzt aktualisiert"-Datum pro Seite (Client, usePathname)
+├── lib/last-updated.json       # GENERIERT: Route → ISO-Datum (nicht manuell editieren)
+├── scripts/gen-last-updated.mjs # Generiert lib/last-updated.json aus git (laeuft vor dev/build)
 └── CLAUDE.md                   # Diese Datei
 ```
 
 ## Architektur im Detail
+
+### "Zuletzt aktualisiert"-Datum (pro Seite automatisch)
+- `scripts/gen-last-updated.mjs` scannt alle `app/**/page.tsx`, ermittelt pro Route das letzte Aenderungsdatum und schreibt `lib/last-updated.json` (Route → ISO-Datum).
+- Logik: committete/saubere Datei → git-Commit-Datum (`git log -1 --format=%cI`); Datei mit uncommitteten Aenderungen → File-mtime. So stimmt das Datum sowohl nach frischem Clone als auch bei lokalen Edits.
+- Laeuft automatisch via npm-Script (`"dev"`/`"build"` starten mit `node scripts/gen-last-updated.mjs && ...`). Manuell: `npm run gen-dates`.
+- `components/LastUpdated.tsx` (Client, `usePathname`) liest die JSON, normalisiert den Pfad (trailing slash weg) und zeigt unten auf jeder Seite "Zuletzt aktualisiert: …" / "Last updated: …" an. Sprache via `pathname.startsWith("/en/")`.
+- **Deterministische Datumsformatierung** (eigene Monats-Arrays, KEIN `Intl`/`new Date()`) — sonst Hydration-Mismatch zwischen Build (Node) und Browser.
+- In `app/layout.tsx` einmalig `<LastUpdated />` nach `{children}` eingebunden → gilt fuer alle Seiten, kein Boilerplate pro Seite.
+- `lib/last-updated.json` ist generiert; nicht manuell editieren (wird bei jedem Build ueberschrieben).
 
 ### Routing & i18n
 - `/infohub/*` — 15 Deutsche Seiten
@@ -279,11 +291,15 @@ rm -rf .next && npm run build          # Clean build bei CSS-Cache-Problemen
 
 ### WCAG 2.1 AA Accessibility
 - Skip-to-content Link (`<a href="#main">Zum Inhalt springen</a>`)
-- `lang="de"` auf `<html>` (aendert sich NICHT bei EN-Seiten — bekannte Limitation)
+- **`<html lang>` wird clientseitig synchronisiert**: Root-Layout rendert statisch `lang="de"`, `Sidebar.tsx` setzt per `useEffect` `document.documentElement.lang = isEN ? "en" : "de"` (WCAG 3.1.1). EN-Seiten melden korrekt Englisch.
+- **Aktive Navigation**: `aria-current="page"` auf dem exakten aktuellen Link. WICHTIG: `trailingSlash: true` → `usePathname()` liefert Pfad MIT Slash; daher `const current = pathname.replace(/\/+$/, "") || "/"` als trailing-slash-tolerante Basis fuer Active-/aria-current-Vergleiche (nav hrefs haben KEINEN Slash).
+- **Hamburger** (mobil): `aria-expanded`, dynamisches lokalisiertes `aria-label`, `aria-controls="sidebar-nav"`; Escape schliesst das Menue (`useEffect` keydown-Listener); `<aside id="sidebar-nav">` hat `aria-label`.
+- **Deko-Icons** (Nav-Emojis, Theme-Toggle-Emoji, Stecker-SVGs auf lehrkraefte) mit `aria-hidden="true"`; Callout-Icons koennen ebenfalls so behandelt werden.
+- **Tabellen**: `<th scope="col">` in `Section.tsx` Table-Komponente + Homepage-Kontakttabellen.
 - Focus-visible Styles: 2px solid primary, outline-offset 2px
 - Min Touch Targets: 44x44px (`min-w-[44px] min-h-[44px]`)
 - Alle Bilder haben alt-Texte
-- Farbkontraste wurden ueberprueft (Teal auf Weiss: 5.3:1 Ratio)
+- Farbkontraste geprueft (alle ≥ 4.74:1, Teal #00796b auf Weiss = 5.36:1, Dark-Mode alle ≥ 6:1)
 
 ## Stil-Konventionen
 - Ueberschriften: `<H2>` und `<H3>` aus Section.tsx, NICHT `<h2>` direkt

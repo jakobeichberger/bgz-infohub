@@ -226,37 +226,117 @@ export default function MdmPage() {
       </UL>
 
       {/* ═══════════════ Windows ═══════════════ */}
-      <H2>Windows</H2>
+      <H2>Windows 10 / 11</H2>
 
-      <H3>Option 1: Nur im Browser nutzen</H3>
       <P>
-        Sie können alle Schuldienste (Office 365, WebUntis, edu.Suite) direkt
-        im Browser nutzen, ohne Ihr Gerät zu registrieren. Das ist die
-        einfachste Option.
+        Für Windows gibt es drei Wege — von &quot;gar nicht
+        registrieren&quot; bis &quot;vollständig verwaltet&quot;. Für{" "}
+        <strong>private Laptops</strong> empfehlen wir die Verbindung über das
+        Schulkonto (Partial Management).
       </P>
 
-      <H3>Option 2: Partial Management</H3>
+      <H3>Option 1: Nur im Browser nutzen (ohne Registrierung)</H3>
+      <P>
+        Sie können alle Schuldienste (Office 365, WebUntis, edu.Suite) direkt
+        im Browser nutzen, ohne das Gerät zu registrieren. Einfach unter{" "}
+        <a
+          href="https://portal.office.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          portal.office.com
+        </a>{" "}
+        mit dem Schulkonto anmelden. Das ist die einfachste und
+        datensparsamste Option.
+      </P>
+
+      <H3>Option 2: Mit Schulkonto verbinden (Partial Management — empfohlen)</H3>
+      <P>
+        Dabei wird Ihr privates Gerät bei{" "}
+        <strong>Microsoft Entra ID</strong> (früher Azure AD)
+        <strong> registriert</strong> — nicht vollständig verwaltet. Sie
+        bleiben Besitzer und Administrator des Geräts; die Schule erhält nur
+        eingeschränkten Zugriff (Bereitstellung von Schul-Apps,
+        Compliance-Prüfung). Persönliche Dateien bleiben privat.
+      </P>
 
       <StepList>
         <Step title="Einstellungen öffnen">
-          Gehen Sie zu Einstellungen → Konten → Auf Arbeits- oder Schulkonto
-          zugreifen.
+          <code>Windows-Taste + i</code> →{" "}
+          <strong>Konten</strong> →{" "}
+          <strong>Auf Arbeits- oder Schulkonto zugreifen</strong>.
         </Step>
-        <Step title="Verbinden">
-          Klicken Sie auf &quot;Verbinden&quot; und melden Sie sich mit Ihrem
-          Schulkonto an (<code>nachname.vorname@bgzwn.at</code>).
+        <Step title="Auf „Verbinden“ klicken">
+          Klicken Sie auf <strong>&quot;Verbinden&quot;</strong> (nicht auf die
+          alternativen Aktionen weiter unten — siehe Warnung).
         </Step>
-        <Step title="Einrichtung abschließen">
-          Folgen Sie den Anweisungen zur Registrierung des Geräts.
+        <Step title="Schulkonto eingeben">
+          <code>nachname.vorname@bgzwn.at</code> und das persönliche Passwort
+          eingeben.
+        </Step>
+        <Step title="Bestätigen">
+          Den Anweisungen folgen und bestätigen. Es wird <strong>kein</strong>{" "}
+          neues Windows-Benutzerkonto angelegt — Sie arbeiten weiter mit Ihrem
+          gewohnten Konto.
+        </Step>
+        <Step title="Fertig">
+          Das Schulkonto erscheint nun unter &quot;Auf Arbeits- oder
+          Schulkonto zugreifen&quot;. Schul-Apps und Richtlinien werden im
+          Hintergrund bereitgestellt.
         </Step>
       </StepList>
 
-      <Callout type="danger" title="Achtung: Vollverwaltung vermeiden!">
-        Wählen Sie während der Einrichtung <strong>nicht</strong> die
-        &quot;Alternative Aktion&quot; oder &quot;Dieses Gerät beitreten
-        lassen&quot;. Dies würde Ihr Gerät unbeabsichtigt in die vollständige
-        Schulverwaltung aufnehmen!
+      <Callout type="danger" title="Achtung: Vollverwaltung (Entra Join) vermeiden!">
+        Im Anmeldedialog erscheint unten der Link{" "}
+        <strong>&quot;Alternative Aktion: Dieses Gerät bei Microsoft Entra
+        einbinden&quot;</strong> (engl. &quot;Join this device to Microsoft
+        Entra ID&quot;). <strong>Diesen NICHT anklicken!</strong> Er würde Ihr
+        privates Gerät <strong>vollständig</strong> in die Schulverwaltung
+        aufnehmen (eigenes verwaltetes Benutzerkonto, volle Richtlinien). Für
+        private Laptops immer den normalen Weg über{" "}
+        <strong>&quot;Verbinden&quot;</strong> wählen.
       </Callout>
+
+      <H3>Option 3: Vollständige Verwaltung (Schulgeräte)</H3>
+      <P>
+        Von der Schule ausgegebene Windows-Geräte sind über{" "}
+        <strong>Windows Autopilot</strong> bereits vollständig verwaltet
+        (analog zu den iPads). Hier ist keine manuelle Einrichtung nötig — das
+        Gerät meldet sich beim ersten Start automatisch an.
+      </P>
+
+      {/* ═══ Windows Troubleshooting ═══ */}
+      <H3>Häufige Probleme unter Windows</H3>
+      <UL>
+        <li>
+          <strong>&quot;Etwas ist schiefgelaufen&quot; beim Verbinden</strong>{" "}
+          — Mit dem Schul-WLAN/Internet verbunden? Datum und Uhrzeit des PCs
+          korrekt eingestellt? Danach erneut versuchen.
+        </li>
+        <li>
+          <strong>Anmeldung schlägt fehl</strong> — Benutzername immer als
+          volle E-Mail <code>nachname.vorname@bgzwn.at</code>. Nach 10
+          Fehlversuchen ist das Konto 10 Minuten gesperrt.
+        </li>
+        <li>
+          <strong>Schul-Apps fehlen</strong> — nach dem Verbinden 10–15 Minuten
+          warten; Apps werden im Hintergrund installiert. Optional das{" "}
+          <strong>Unternehmensportal</strong> aus dem Microsoft Store laden, um
+          Apps manuell zu beziehen.
+        </li>
+        <li>
+          <strong>Versehentlich „beigetreten“ (Full Join)?</strong> Verbindung
+          trennen (siehe unten) und neu über &quot;Verbinden&quot; einrichten.
+        </li>
+      </UL>
+
+      <H3>Registrierung entfernen</H3>
+      <P>
+        Einstellungen → Konten → Auf Arbeits- oder Schulkonto zugreifen → das
+        Schulkonto anklicken → <strong>&quot;Trennen&quot;</strong> →
+        bestätigen. Anschließend das Gerät neu starten.
+      </P>
 
       {/* ═══════════════ Allgemeine Hinweise ═══════════════ */}
       <H2>Allgemeine Hinweise</H2>

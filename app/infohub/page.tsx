@@ -170,13 +170,13 @@ export default function InfoHubPage() {
         <table className="w-full text-sm">
           <thead>
             <tr>
-              <th className="text-left px-3 py-2 font-semibold text-primary bg-bg border-b border-border-app">
+              <th scope="col" className="text-left px-3 py-2 font-semibold text-primary bg-bg border-b border-border-app">
                 Anliegen
               </th>
-              <th className="text-left px-3 py-2 font-semibold text-primary bg-bg border-b border-border-app">
+              <th scope="col" className="text-left px-3 py-2 font-semibold text-primary bg-bg border-b border-border-app">
                 Kontakt
               </th>
-              <th className="text-left px-3 py-2 font-semibold text-primary bg-bg border-b border-border-app">
+              <th scope="col" className="text-left px-3 py-2 font-semibold text-primary bg-bg border-b border-border-app">
                 Zuständig für
               </th>
             </tr>

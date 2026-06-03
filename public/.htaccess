@@ -28,6 +28,11 @@ RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [L,R=301]
   Header always set X-XSS-Protection "1; mode=block"
   # Referrer policy
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  # Limit powerful browser features (none are used by this static site)
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+  # HTTP Strict Transport Security — force HTTPS for 1 year (only sent over HTTPS).
+  # Safe here because the site already redirects all traffic to HTTPS above.
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" "expr=%{HTTPS} == 'on'"
 </IfModule>
 
 # --- Cache static assets for performance ---

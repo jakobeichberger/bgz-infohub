@@ -206,28 +206,112 @@ export default function MdmPageEN() {
         </li>
       </UL>
 
-      <H2>Windows</H2>
+      <H2>Windows 10 / 11</H2>
 
-      <H3>Option 1: Use browser only</H3>
-      <P>You can use all school services (Office 365, WebUntis, edu.Suite) directly in the browser without registering your device. This is the simplest option.</P>
+      <P>
+        For Windows there are three paths — from &quot;don&apos;t register at
+        all&quot; to &quot;fully managed&quot;. For{" "}
+        <strong>private laptops</strong> we recommend connecting via your
+        school account (Partial Management).
+      </P>
 
-      <H3>Option 2: Partial Management</H3>
+      <H3>Option 1: Use browser only (no registration)</H3>
+      <P>
+        You can use all school services (Office 365, WebUntis, edu.Suite)
+        directly in the browser without registering your device. Just sign in
+        at{" "}
+        <a
+          href="https://portal.office.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          portal.office.com
+        </a>{" "}
+        with your school account. This is the simplest and most
+        privacy-friendly option.
+      </P>
+
+      <H3>Option 2: Connect with your school account (Partial Management — recommended)</H3>
+      <P>
+        This <strong>registers</strong> your private device with{" "}
+        <strong>Microsoft Entra ID</strong> (formerly Azure AD) — it is not
+        fully managed. You remain the owner and administrator of the device;
+        the school only gets limited access (deploying school apps, compliance
+        checks). Personal files stay private.
+      </P>
 
       <StepList>
         <Step title="Open Settings">
-          Go to Settings → Accounts → Access work or school.
+          <code>Windows key + i</code> → <strong>Accounts</strong> →{" "}
+          <strong>Access work or school</strong>.
         </Step>
-        <Step title="Connect">
-          Click &quot;Connect&quot; and sign in with your school account (<code>lastname.firstname@bgzwn.at</code>).
+        <Step title="Click “Connect”">
+          Click <strong>&quot;Connect&quot;</strong> (not the alternative
+          actions further down — see warning).
         </Step>
-        <Step title="Complete setup">
-          Follow the instructions to register the device.
+        <Step title="Enter your school account">
+          Enter <code>lastname.firstname@bgzwn.at</code> and your personal
+          password.
+        </Step>
+        <Step title="Confirm">
+          Follow the instructions and confirm. <strong>No</strong> new Windows
+          user account is created — you keep working with your usual account.
+        </Step>
+        <Step title="Done">
+          The school account now appears under &quot;Access work or
+          school&quot;. School apps and policies are deployed in the
+          background.
         </Step>
       </StepList>
 
-      <Callout type="danger" title="Warning: Avoid full management!">
-        During setup, do <strong>not</strong> select &quot;Alternative action&quot; or &quot;Join this device&quot;. This would unintentionally add your device to full school management!
+      <Callout type="danger" title="Warning: Avoid full management (Entra Join)!">
+        In the sign-in dialog, a link appears at the bottom:{" "}
+        <strong>&quot;Alternative action: Join this device to Microsoft Entra
+        ID&quot;</strong>. <strong>Do NOT click it!</strong> It would add your
+        private device to <strong>full</strong> school management (a separate
+        managed user account, full policies). For private laptops, always use
+        the normal <strong>&quot;Connect&quot;</strong> path.
       </Callout>
+
+      <H3>Option 3: Full management (school devices)</H3>
+      <P>
+        Windows devices issued by the school are already fully managed via{" "}
+        <strong>Windows Autopilot</strong> (like the iPads). No manual setup is
+        needed — the device enrols automatically on first start.
+      </P>
+
+      {/* ═══ Windows Troubleshooting ═══ */}
+      <H3>Common Windows issues</H3>
+      <UL>
+        <li>
+          <strong>&quot;Something went wrong&quot; when connecting</strong> —
+          Connected to the school Wi-Fi/internet? Are the PC&apos;s date and
+          time correct? Then try again.
+        </li>
+        <li>
+          <strong>Login fails</strong> — Always use the full email{" "}
+          <code>lastname.firstname@bgzwn.at</code> as the username. After 10
+          failed attempts the account is locked for 10 minutes.
+        </li>
+        <li>
+          <strong>School apps missing</strong> — after connecting, wait 10–15
+          minutes; apps install in the background. Optionally install the{" "}
+          <strong>Company Portal</strong> from the Microsoft Store to get apps
+          manually.
+        </li>
+        <li>
+          <strong>Accidentally &quot;joined&quot; (full join)?</strong>{" "}
+          Disconnect (see below) and set it up again via &quot;Connect&quot;.
+        </li>
+      </UL>
+
+      <H3>Remove the registration</H3>
+      <P>
+        Settings → Accounts → Access work or school → click the school account
+        → <strong>&quot;Disconnect&quot;</strong> → confirm. Then restart the
+        device.
+      </P>
 
       <H2>General Notes</H2>
 

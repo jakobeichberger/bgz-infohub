@@ -759,6 +759,7 @@ export default function LehrkraeftePage() {
         <div className="p-4 rounded-xl bg-card border border-border-app">
           <svg
             viewBox="0 0 90 56"
+            aria-hidden="true"
             className="text-primary w-24 h-14 mb-2"
             fill="none"
             stroke="currentColor"
@@ -781,6 +782,7 @@ export default function LehrkraeftePage() {
         <div className="p-4 rounded-xl bg-card border border-border-app">
           <svg
             viewBox="0 0 90 56"
+            aria-hidden="true"
             className="text-primary w-24 h-14 mb-2"
             fill="none"
             stroke="currentColor"
@@ -803,6 +805,7 @@ export default function LehrkraeftePage() {
         <div className="p-4 rounded-xl bg-card border border-border-app">
           <svg
             viewBox="0 0 90 56"
+            aria-hidden="true"
             className="text-primary w-24 h-14 mb-2"
             fill="none"
             stroke="currentColor"
@@ -825,6 +828,7 @@ export default function LehrkraeftePage() {
         <div className="p-4 rounded-xl bg-card border border-border-app">
           <svg
             viewBox="0 0 90 56"
+            aria-hidden="true"
             className="text-primary w-24 h-14 mb-2"
             fill="none"
             stroke="currentColor"
@@ -848,6 +852,7 @@ export default function LehrkraeftePage() {
         <div className="p-4 rounded-xl bg-card border border-border-app">
           <svg
             viewBox="0 0 90 56"
+            aria-hidden="true"
             className="text-primary w-24 h-14 mb-2"
             fill="none"
             stroke="currentColor"

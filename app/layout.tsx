@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Sidebar } from "@/components/Sidebar";
+import { LastUpdated } from "@/components/LastUpdated";
 
 export const metadata: Metadata = {
   title: {
@@ -47,6 +48,7 @@ export default function RootLayout({
           <Sidebar />
           <main id="main" className="flex-1 min-w-0 px-4 sm:px-8 py-8 max-w-4xl mx-auto w-full">
             {children}
+            <LastUpdated />
           </main>
         </div>
       </body>

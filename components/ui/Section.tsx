@@ -59,6 +59,7 @@ export function Table({
             {headers.map((h) => (
               <th
                 key={h}
+                scope="col"
                 className="text-left px-3 py-2 font-semibold text-primary bg-bg border-b border-border-app"
               >
                 {h}

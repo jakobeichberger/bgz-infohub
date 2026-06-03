@@ -89,10 +89,10 @@ function ThemeToggle() {
     <button
       onClick={toggle}
       className="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-hover-bg transition-colors text-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-      aria-label="Toggle theme"
+      aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
       title={dark ? "Switch to light mode" : "Switch to dark mode"}
     >
-      {dark ? "☀️" : "🌙"}
+      <span aria-hidden="true">{dark ? "☀️" : "🌙"}</span>
     </button>
   );
 }
@@ -105,6 +105,26 @@ export function Sidebar() {
   const navItems = isEN ? navItemsEN : navItemsDE;
   const basePath = isEN ? "/en/infohub" : "/infohub";
 
+  // trailing-slash-tolerant current path (static export uses trailingSlash: true,
+  // so usePathname() can return e.g. "/infohub/vwa/" while nav hrefs have no slash)
+  const current = pathname.replace(/\/+$/, "") || "/";
+
+  // WCAG 3.1.1: keep <html lang> in sync with the page language.
+  // (Root layout statically renders lang="de"; this corrects EN routes.)
+  useEffect(() => {
+    document.documentElement.lang = isEN ? "en" : "de";
+  }, [isEN]);
+
+  // Close the mobile menu with Escape (keyboard accessibility).
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [open]);
+
   // Build the language switch URL
   const langSwitchHref = isEN
     ? pathname.replace("/en/infohub", "/infohub")
@@ -116,8 +136,18 @@ export function Sidebar() {
       <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-nav-bg border-b border-nav-border px-4 py-3 flex items-center justify-between">
         <button
           onClick={() => setOpen(!open)}
-          className="p-2 rounded-lg hover:bg-hover-bg transition-colors"
-          aria-label="Open menu"
+          className="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-hover-bg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          aria-label={
+            open
+              ? isEN
+                ? "Close menu"
+                : "Menü schließen"
+              : isEN
+                ? "Open menu"
+                : "Menü öffnen"
+          }
+          aria-expanded={open}
+          aria-controls="sidebar-nav"
         >
           <svg
             width="24"
@@ -128,6 +158,7 @@ export function Sidebar() {
             strokeWidth="2"
             strokeLinecap="round"
             className="text-txt"
+            aria-hidden="true"
           >
             {open ? (
               <path d="M18 6L6 18M6 6l12 12" />
@@ -166,6 +197,8 @@ export function Sidebar() {
 
       {/* Sidebar */}
       <aside
+        id="sidebar-nav"
+        aria-label={isEN ? "Main navigation" : "Hauptnavigation"}
         className={`
           fixed lg:sticky top-0 left-0 z-40 h-screen w-64 flex-shrink-0
           bg-nav-bg border-r border-nav-border
@@ -201,15 +234,17 @@ export function Sidebar() {
         <nav className="p-3 space-y-1">
           {navItems.map((item) => {
             const isActive =
-              pathname === item.href ||
-              (item.href !== basePath && pathname.startsWith(item.href));
+              current === item.href ||
+              (item.href !== basePath && current.startsWith(item.href + "/"));
             const showChildren =
-              item.children && pathname.startsWith(item.href);
+              !!item.children &&
+              (current === item.href || current.startsWith(item.href + "/"));
             return (
               <div key={item.href}>
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
+                  aria-current={current === item.href ? "page" : undefined}
                   className={`
                     flex items-center gap-3 px-3 py-2.5 min-h-[44px] rounded-lg text-sm transition-all
                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1
@@ -220,18 +255,19 @@ export function Sidebar() {
                     }
                   `}
                 >
-                  <span className="text-base">{item.icon}</span>
+                  <span className="text-base" aria-hidden="true">{item.icon}</span>
                   <span>{item.label}</span>
                 </Link>
                 {showChildren && (
                   <div className="ml-7 mt-1 space-y-0.5 border-l-2 border-border-app pl-3">
                     {item.children!.map((child) => {
-                      const childActive = pathname === child.href;
+                      const childActive = current === child.href;
                       return (
                         <Link
                           key={child.href}
                           href={child.href}
                           onClick={() => setOpen(false)}
+                          aria-current={childActive ? "page" : undefined}
                           className={`
                             block px-2 py-1.5 rounded text-xs transition-all
                             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary
