@@ -38,9 +38,10 @@ export default function LaptopPage() {
       </Callout>
 
       <Callout type="info" title="Offizielles Dokument">
-        Die vollständigen Vorgaben finden Sie im offiziellen PDF der Schule:{" "}
+        Die vollständigen Vorgaben finden Sie im offiziellen PDF der Schule
+        (Stand: Juni 2026):{" "}
         <a
-          href="https://www.bgzwn.at/wp-content/uploads/Information-zum-Notebook.pdf"
+          href="/templates/Information-zum-Notebook-2026.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="text-primary hover:underline"
@@ -56,24 +57,24 @@ export default function LaptopPage() {
         headers={["Eigenschaft", "Anforderung"]}
         rows={[
           ["Bildschirm", "Mindestens 14 Zoll, empfohlen 14 oder 15,4 Zoll, FullHD (1920×1080)"],
-          ["Prozessor", "Intel Core i5 (aktuelle Generation) oder gleichwertiger AMD-Prozessor"],
+          ["Prozessor", "Intel Core i5 / Core Ultra 5 (aktuelle Generation) oder gleichwertiger AMD Ryzen 5"],
           ["Arbeitsspeicher", "Mindestens 16 GB RAM"],
           ["Speicher", "Mindestens 512 GB SSD"],
           ["Betriebssystem", "Windows 11 (nicht die S-Version!)"],
           ["Admin-Rechte", "Lokale Administratorrechte erforderlich"],
           ["WLAN", "Wi-Fi-fähig"],
-          ["Anschlüsse", "USB-Ports, 3,5mm Kopfhöreranschluss (oder Bluetooth/USB-Adapter)"],
+          ["Anschlüsse", "USB-Anschlüsse, 3,5mm Kopfhöreranschluss (oder Bluetooth/USB-Adapter)"],
           ["Gewicht", "Leicht transportierbar (typisch 1,3–1,6 kg bei 14 Zoll)"],
+          ["Optional", "Externe Maus (Funk/Kabel), externes DVD-Laufwerk"],
         ]}
       />
 
       <Callout type="danger" title="Nicht geeignet">
         <ul>
           <li>
-            <strong>ARM-Prozessoren (z.B. Qualcomm Snapdragon):</strong>{" "}
-            Ausdrücklich nicht empfohlen! Viele Schulprogramme laufen nur
-            über Emulation, was zu Leistungsproblemen und
-            Kompatibilitätsproblemen führt.
+            <strong>Windows 10:</strong> Erhält seit <strong>14. Oktober
+            2025</strong> keine Sicherheitsupdates mehr — beim Neukauf
+            unbedingt <strong>Windows 11</strong> wählen.
           </li>
           <li>
             <strong>Windows 11 S-Mode:</strong> Kann keine Programme außerhalb
@@ -114,12 +115,21 @@ export default function LaptopPage() {
         <li>Microsoft 365 läuft nativ auf macOS</li>
       </UL>
 
-      <Callout type="warning" title="ARM-Hinweis für MacBooks">
-        Neuere MacBooks mit M1/M2/M3/M4-Chip verwenden ARM-Architektur.
-        Windows 11 ARM kann in einer VM laufen, aber die Schule warnt vor
-        Kompatibilitätsproblemen bei Spezialsoftware. Klären Sie vor dem
-        Kauf mit der IT (<a href="mailto:admin@bgzwn.at" className="text-primary hover:underline">admin@bgzwn.at</a>),
-        ob alle benötigten Programme funktionieren.
+      <Callout type="warning" title="ARM-Prozessoren (Apple Silicon &amp; Windows-ARM)">
+        <p>
+          Geräte mit ARM-Prozessor — also <strong>MacBooks mit
+          M1/M2/M3/M4-Chip</strong> sowie <strong>Windows-Laptops mit ARM
+          (z.B. Qualcomm Snapdragon)</strong> — sollten{" "}
+          <strong>grundsätzlich funktionieren</strong> (Office 365, Teams,
+          Browser, und Next-Exam mit eigener macOS-/ARM-Version).
+        </p>
+        <p>
+          Bei <strong>Spezialsoftware</strong> kann es jedoch zu
+          Kompatibilitäts- oder Leistungsproblemen kommen (manche Programme
+          laufen nur über Emulation). In diesem Fall muss sich die Schülerin /
+          der Schüler <strong>selbst darum kümmern</strong> — Lehrkräfte und IT
+          bieten dafür keinen Support.
+        </p>
       </Callout>
 
       {/* ═══ Warum diese Specs ═══ */}
@@ -133,7 +143,7 @@ export default function LaptopPage() {
             "Next-Exam (Prüfungssoftware) benötigt Windows. Viele Schulprogramme sind Windows-exklusiv.",
           ],
           [
-            "Intel i5 / AMD Ryzen 5",
+            "Intel Core i5 / Core Ultra 5 · AMD Ryzen 5",
             "Ausreichend Leistung für Microsoft Teams (Videokonferenzen), Office 365, Programmieren und Multimedia.",
           ],
           [
@@ -149,8 +159,8 @@ export default function LaptopPage() {
             "Gute Balance zwischen Bildschirmgröße (für Split-Screen-Arbeiten) und Transportierbarkeit.",
           ],
           [
-            "x86/x64 (kein ARM)",
-            "Manche Schulprogramme und Next-Exam laufen nur nativ auf x86/x64. ARM-Emulation ist langsamer und fehleranfällig.",
+            "x86/x64 (empfohlen)",
+            "Maximale Kompatibilität — alle Schulprogramme laufen nativ. ARM-Geräte (Apple Silicon, Snapdragon) funktionieren meist ebenfalls; bei Spezialsoftware liegt die Lösung aber in der Eigenverantwortung.",
           ],
         ]}
       />
@@ -205,6 +215,23 @@ export default function LaptopPage() {
         </li>
       </UL>
 
+      <H3>Anschlüsse</H3>
+      <UL>
+        <li>
+          Viele aktuelle Laptops haben fast nur noch <strong>USB-C</strong> —
+          ein <strong>USB-C-Hub/Adapter</strong> (für USB-A-Sticks, HDMI/Beamer)
+          kann nötig sein
+        </li>
+        <li>
+          Ein <strong>3,5-mm-Kopfhöreranschluss</strong> ist praktisch; sonst
+          Kopfhörer per USB-C oder Bluetooth verbinden
+        </li>
+        <li>
+          <strong>USB-C-Laden</strong> bevorzugen — ein Ladegerät für Laptop
+          und Smartphone
+        </li>
+      </UL>
+
       <H3>Zubehör (empfohlen)</H3>
       <UL>
         <li>
@@ -221,6 +248,10 @@ export default function LaptopPage() {
         </li>
         <li>
           <strong>USB-Stick</strong> — für schnellen Datenaustausch
+        </li>
+        <li>
+          <strong>Externes DVD-Laufwerk</strong> (optional) — moderne Laptops
+          haben kein eingebautes Laufwerk
         </li>
       </UL>
 
@@ -243,7 +274,7 @@ export default function LaptopPage() {
           [
             "900+ EUR",
             "Premium: Leichtgewicht, sehr langer Akku, Top-Tastatur, Metallgehäuse",
-            "Lenovo ThinkPad T/X, Dell XPS, HP EliteBook",
+            "Lenovo ThinkPad T/X, Dell Pro / XPS, HP EliteBook",
           ],
         ]}
       />
@@ -260,7 +291,8 @@ export default function LaptopPage() {
       <UL>
         <li>
           <strong>Virenschutz:</strong> Liegt in der Verantwortung der
-          Schüler (Windows Defender ist vorinstalliert und ausreichend)
+          Schüler (<strong>Microsoft Defender</strong> ist in Windows 11
+          vorinstalliert und ausreichend)
         </li>
         <li>
           <strong>Backups:</strong> Regelmäßig sichern! OneDrive (5 TB)

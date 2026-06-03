@@ -37,9 +37,10 @@ export default function LaptopPageEN() {
       </Callout>
 
       <Callout type="info" title="Official Document">
-        The complete requirements can be found in the official school PDF:{" "}
+        The complete requirements can be found in the official school PDF
+        (as of June 2026):{" "}
         <a
-          href="https://www.bgzwn.at/wp-content/uploads/Information-zum-Notebook.pdf"
+          href="/templates/Information-zum-Notebook-2026.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="text-primary hover:underline"
@@ -55,7 +56,7 @@ export default function LaptopPageEN() {
         headers={["Feature", "Requirement"]}
         rows={[
           ["Display", "At least 14 inches, recommended 14 or 15.4 inches, FullHD (1920x1080)"],
-          ["Processor", "Intel Core i5 (current generation) or equivalent AMD processor"],
+          ["Processor", "Intel Core i5 / Core Ultra 5 (current generation) or equivalent AMD Ryzen 5"],
           ["RAM", "At least 16 GB RAM"],
           ["Storage", "At least 512 GB SSD"],
           ["Operating System", "Windows 11 (not the S version!)"],
@@ -63,16 +64,16 @@ export default function LaptopPageEN() {
           ["Wi-Fi", "Wi-Fi capable"],
           ["Ports", "USB ports, 3.5mm headphone jack (or Bluetooth/USB adapter)"],
           ["Weight", "Easy to carry (typically 1.3-1.6 kg for 14 inches)"],
+          ["Optional", "External mouse (wireless/wired), external DVD drive"],
         ]}
       />
 
       <Callout type="danger" title="Not Suitable">
         <ul>
           <li>
-            <strong>ARM processors (e.g. Qualcomm Snapdragon):</strong>{" "}
-            Explicitly not recommended! Many school programs only run
-            through emulation, which leads to performance issues and
-            compatibility problems.
+            <strong>Windows 10:</strong> No longer receives security updates
+            since <strong>14 October 2025</strong> — when buying new, be sure
+            to choose <strong>Windows 11</strong>.
           </li>
           <li>
             <strong>Windows 11 S-Mode:</strong> Cannot install programs outside
@@ -111,12 +112,20 @@ export default function LaptopPageEN() {
         <li>Microsoft 365 runs natively on macOS</li>
       </UL>
 
-      <Callout type="warning" title="ARM Note for MacBooks">
-        Newer MacBooks with M1/M2/M3/M4 chips use ARM architecture.
-        Windows 11 ARM can run in a VM, but the school warns about
-        compatibility issues with specialized software. Check with
-        IT before purchasing (<a href="mailto:admin@bgzwn.at" className="text-primary hover:underline">admin@bgzwn.at</a>)
-        whether all required programs will work.
+      <Callout type="warning" title="ARM processors (Apple Silicon &amp; Windows on ARM)">
+        <p>
+          Devices with an ARM processor — i.e. <strong>MacBooks with
+          M1/M2/M3/M4 chips</strong> as well as <strong>Windows laptops on ARM
+          (e.g. Qualcomm Snapdragon)</strong> — should{" "}
+          <strong>generally work</strong> for everyday school use (Office 365,
+          Teams, browser, and Next-Exam with its own macOS/ARM version).
+        </p>
+        <p>
+          With <strong>specialised software</strong>, however, compatibility or
+          performance issues can occur (some programs only run via emulation).
+          In that case the student must <strong>resolve it themselves</strong> —
+          teachers and IT do not provide support for this.
+        </p>
       </Callout>
 
       {/* === Why These Specs === */}
@@ -130,7 +139,7 @@ export default function LaptopPageEN() {
             "Next-Exam (exam software) requires Windows. Many school programs are Windows-exclusive.",
           ],
           [
-            "Intel i5 / AMD Ryzen 5",
+            "Intel Core i5 / Core Ultra 5 · AMD Ryzen 5",
             "Sufficient performance for Microsoft Teams (video conferencing), Office 365, programming, and multimedia.",
           ],
           [
@@ -146,8 +155,8 @@ export default function LaptopPageEN() {
             "Good balance between screen size (for split-screen work) and portability.",
           ],
           [
-            "x86/x64 (no ARM)",
-            "Some school programs and Next-Exam only run natively on x86/x64. ARM emulation is slower and error-prone.",
+            "x86/x64 (recommended)",
+            "Maximum compatibility — all school programs run natively. ARM devices (Apple Silicon, Snapdragon) usually work too; but for specialised software, resolving any issues is the student's own responsibility.",
           ],
         ]}
       />
@@ -202,6 +211,23 @@ export default function LaptopPageEN() {
         </li>
       </UL>
 
+      <H3>Ports</H3>
+      <UL>
+        <li>
+          Many current laptops have almost only <strong>USB-C</strong> — a{" "}
+          <strong>USB-C hub/adapter</strong> (for USB-A sticks, HDMI/projector)
+          may be needed
+        </li>
+        <li>
+          A <strong>3.5 mm headphone jack</strong> is handy; otherwise connect
+          headphones via USB-C or Bluetooth
+        </li>
+        <li>
+          Prefer <strong>USB-C charging</strong> — one charger for laptop and
+          smartphone
+        </li>
+      </UL>
+
       <H3>Accessories (Recommended)</H3>
       <UL>
         <li>
@@ -218,6 +244,10 @@ export default function LaptopPageEN() {
         </li>
         <li>
           <strong>USB stick</strong> — for quick file transfers
+        </li>
+        <li>
+          <strong>External DVD drive</strong> (optional) — modern laptops have
+          no built-in drive
         </li>
       </UL>
 
@@ -240,7 +270,7 @@ export default function LaptopPageEN() {
           [
             "900+ EUR",
             "Premium: lightweight, very long battery, top keyboard, metal chassis",
-            "Lenovo ThinkPad T/X, Dell XPS, HP EliteBook",
+            "Lenovo ThinkPad T/X, Dell Pro / XPS, HP EliteBook",
           ],
         ]}
       />
@@ -257,7 +287,8 @@ export default function LaptopPageEN() {
       <UL>
         <li>
           <strong>Antivirus:</strong> Is the responsibility of the
-          student (Windows Defender is pre-installed and sufficient)
+          student (<strong>Microsoft Defender</strong> is pre-installed in
+          Windows 11 and sufficient)
         </li>
         <li>
           <strong>Backups:</strong> Back up regularly! OneDrive (5 TB)
