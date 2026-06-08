@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { H2, H3, P, UL, Table } from "@/components/ui/Section";
 import { Callout } from "@/components/ui/Callout";
+import { LinkCards } from "@/components/ui/LinkCards";
 
 export const metadata: Metadata = {
   title: "Laptop-Vorgaben — Oberstufe",
@@ -284,6 +285,120 @@ export default function LaptopPage() {
         (Oberstufe dauert 4 Jahre). Prüfen Sie auch eine
         Geräteversicherung gegen Sturz- und Flüssigkeitsschäden.
       </Callout>
+
+      {/* ═══ Bildungsrabatte ═══ */}
+      <H2>Bildungsrabatte beim Notebook-Kauf</H2>
+
+      <P>
+        Schülerinnen und Schüler der Oberstufe können bei vielen Anbietern{" "}
+        <strong>Bildungsrabatte</strong> nutzen — je nach Gerät mehrere Hundert
+        Euro Ersparnis. Bei fast allen Programmen ist ein{" "}
+        <strong>Bildungsnachweis</strong> erforderlich (z.&nbsp;B. ein von der
+        Schule abgestempelter Schülerausweis oder eine
+        Schulbesuchsbestätigung).
+      </P>
+
+      <Callout
+        type="warning"
+        title="Apple Education Store — Achtung bei Schüler:innen"
+      >
+        Der offizielle Apple-Bildungsrabatt (
+        <a
+          href="https://www.apple.com/at-edu/store"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          apple.com/at-edu
+        </a>
+        ) richtet sich an <strong>Studierende, Lehrkräfte und
+        Hochschulmitarbeitende</strong>. Oberstufenschüler:innen sind dort{" "}
+        <strong>in der Regel nicht direkt berechtigt</strong>. Für vergünstigte
+        Apple-Geräte als Schüler:in nutzen Sie stattdessen einen Händler wie{" "}
+        <strong>edustore.at</strong> (siehe unten), der gezielt auch höhere
+        Schulstufen bedient.
+      </Callout>
+
+      <Table
+        headers={["Anbieter", "Für wen", "Rabatt", "Nachweis"]}
+        rows={[
+          [
+            "edustore.at (österreichisch)",
+            "Schüler:innen, Studierende, Lehrkräfte",
+            "bis zu 500 € auf Notebooks (Apple, HP, Lenovo, Microsoft)",
+            "Bildungsnachweis nötig",
+          ],
+          [
+            "Lenovo Campus",
+            "Schüler:innen & Studierende",
+            "bis zu 25 % auf ThinkPad, ThinkBook, Legion",
+            "Statusnachweis (Upload beim Bestellen)",
+          ],
+          [
+            "HP Campus Advantage",
+            "Schüler:innen ausdrücklich zugelassen",
+            "Notebook-Rabatte, max. 2 Angebote pro Kalenderjahr",
+            "abgestempelter Schülerausweis (Vorder- & Rückseite)",
+          ],
+          [
+            "Microsoft Store (Education)",
+            "Schüler:innen, deren Eltern, Lehrkräfte",
+            "bis zu 10 % (inkl. Surface), ganzes Schuljahr",
+            "Verifizierung über das Microsoft-Konto",
+          ],
+          [
+            "notebooksbilliger.de (Campus)",
+            "Schüler:innen, Azubis, Lehrkräfte (DE + AT)",
+            "Campus-Preise + gratis Versand",
+            "Nachweis nötig; nicht mit anderen Rabatten kombinierbar",
+          ],
+        ]}
+      />
+
+      <LinkCards
+        items={[
+          {
+            href: "https://www.edustore.at/landingpages/apple-fur-hohere-schulstufen",
+            label: "edustore.at — Apple für höhere Schulstufen",
+            desc: "Österreichischer Händler, Top-Marken mit Schülerrabatt",
+          },
+          {
+            href: "https://www.lenovocampus.at/",
+            label: "Lenovo Campus",
+            desc: "ThinkPad, ThinkBook & Legion bis zu 25 % günstiger",
+          },
+          {
+            href: "https://www.hp.com/de-de/shop/offer.aspx?p=students-offers",
+            label: "HP Campus Advantage",
+            desc: "HP-Notebooks für Schüler:innen (Schülerausweis-Nachweis)",
+          },
+          {
+            href: "https://www.microsoft.com/de-at/store/b/student",
+            label: "Microsoft Store (Education)",
+            desc: "Surface & mehr, bis zu 10 % — auch für Eltern",
+          },
+          {
+            href: "https://www.notebooksbilliger.de/infocenter/section/campusprogramm",
+            label: "notebooksbilliger.de — Campus",
+            desc: "Schüler:innen aus AT zugelassen, gratis Versand",
+          },
+        ]}
+      />
+
+      <Callout type="info" title="Tipp: Vor dem Kauf Preise vergleichen">
+        Bildungspreise sind <strong>nicht immer</strong> der absolute Bestpreis
+        — auch bei Apple bringt z.&nbsp;B. die Back-to-School-Aktion nicht
+        automatisch den günstigsten Preis. Vergleichen Sie den Bildungsrabatt
+        vor dem Kauf mit regulären Angeboten und Aktionen.
+      </Callout>
+
+      <P>
+        <em>
+          Hinweis: Diese Übersicht dient nur zur Orientierung. Die Schule
+          empfiehlt oder bevorzugt keinen bestimmten Händler; Angebote, Preise
+          und Berechtigung können sich jederzeit ändern.
+        </em>
+      </P>
 
       {/* ═══ Eigenverantwortung ═══ */}
       <H2>Wichtig: Eigenverantwortung</H2>

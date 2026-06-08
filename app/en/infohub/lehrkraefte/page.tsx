@@ -833,6 +833,120 @@ export default function LehrkraeftePageEN() {
         directly. A photo of the error message speeds up the solution
         considerably.
       </Callout>
+
+      {/* ═══════════════ Error ticket ═══════════════ */}
+      <H2>Error Ticket in the IT Helpdesk (Microsoft Teams)</H2>
+
+      <P>
+        The <strong>preferred way</strong> to report an IT problem is an{" "}
+        <strong>error ticket</strong> (Fehlerticket) in the IT Helpdesk in
+        Microsoft Teams. Nothing gets lost, every ticket is traceable, and you
+        can always see the progress (NEU → in Bearbeitung → Erledigt / New → In
+        progress → Done).
+      </P>
+
+      <H3>How to get to the error tickets</H3>
+
+      <StepList>
+        <Step title="Open Microsoft Teams">
+          In the Teams app or in the browser at{" "}
+          <a
+            href="https://teams.microsoft.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            teams.microsoft.com
+          </a>{" "}
+          — signed in with your school account.
+        </Step>
+        <Step title="Go to the right team & channel">
+          Click <strong>Teams</strong> on the left, open the team{" "}
+          <strong>“bgzwn.LehrerInnen”</strong> and select the{" "}
+          <strong>“IT-Helpdesk”</strong> channel.
+        </Step>
+        <Step title="Open the “Fehlerticket” tab">
+          Click the <strong>“Fehlerticket”</strong> tab at the top of the
+          channel. There you see all tickets, grouped by status (NEU / in
+          Bearbeitung / Erledigt).
+        </Step>
+      </StepList>
+
+      <H3>Create a new error ticket</H3>
+
+      <StepList>
+        <Step title="Click “+ Neues Element hinzufügen” (Add new item)">
+          The button is at the top left above the ticket list.
+        </Step>
+        <Step title="Fill in the fields">
+          The <strong>required fields</strong> are marked with an{" "}
+          <strong>asterisk (*)</strong> — without them the ticket cannot be
+          saved (see the table below).
+        </Step>
+        <Step title="Save">
+          The ticket appears with status <strong>“NEU”</strong> in the list. IT
+          picks it up and sets the status to “in Bearbeitung” or “Erledigt”.
+        </Step>
+      </StepList>
+
+      <H3>What goes into which field?</H3>
+
+      <Table
+        headers={["Field", "Required?", "What to enter"]}
+        rows={[
+          [
+            "Problem (kurz) — short problem",
+            "Yes",
+            "Short title, e.g. “Beamer shows no image” or “No sound in 3A”",
+          ],
+          [
+            "Problembeschreibung — description",
+            "Yes",
+            "Describe in detail: What happens? Since when? What did you already try (e.g. restart)?",
+          ],
+          [
+            "Raum — room",
+            "Yes",
+            "Room or location, e.g. “3A”, “EDV-Saal 2”, “DAM/Werkraum”",
+          ],
+          [
+            "Gerätetyp — device type",
+            "Yes",
+            "Choice: Beamer/Projektor, Ton/Beschallung, Klassennotebook, iPad, Internet/Webseiten/Firewall, LAN/WLAN/Netzwerkverbindung, Schließsystem or sonstiges",
+          ],
+          [
+            "Priorität — priority",
+            "Optional",
+            "Kritisch / Hoch / Mittel / Niedrig (critical / high / medium / low) — use “Kritisch” only if an ongoing lesson is badly affected",
+          ],
+          [
+            "Foto hochladen — upload photo",
+            "Optional",
+            "Screenshot or photo of the error message — speeds up the solution considerably",
+          ],
+          [
+            "Status",
+            "Set by IT",
+            "Leave on “NEU” — IT updates the status while working on it",
+          ],
+          [
+            "Zugewiesen an — assigned to",
+            "Set by IT",
+            "Leave empty — IT assigns the ticket to the responsible person",
+          ],
+          [
+            "Datum — date",
+            "Automatic",
+            "Set automatically when the ticket is created",
+          ],
+        ]}
+      />
+
+      <Callout type="success" title="Tip for fast handling">
+        The more precise the <strong>title</strong>, <strong>room</strong> and{" "}
+        <strong>device type</strong> are — and the sooner a <strong>photo</strong>{" "}
+        of the error message is attached — the faster IT can help.
+      </Callout>
     </>
   );
 }

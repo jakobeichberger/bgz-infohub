@@ -1,6 +1,35 @@
+import React from "react";
+
+// Pull plain text out of arbitrary React children (strings, numbers, nested
+// elements) so we can derive a stable anchor id from a heading.
+function nodeText(node: React.ReactNode): string {
+  if (node == null || typeof node === "boolean") return "";
+  if (typeof node === "string" || typeof node === "number") return String(node);
+  if (Array.isArray(node)) return node.map(nodeText).join("");
+  if (React.isValidElement(node)) {
+    return nodeText((node.props as { children?: React.ReactNode }).children);
+  }
+  return "";
+}
+
+// Deterministic slug (no Intl / random) → safe for SSR, no hydration mismatch.
+function slugify(s: string): string {
+  return s
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "") // strip diacritics (ä→a, ö→o, ü→u)
+    .replace(/ß/g, "ss") // ß → ss
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 export function H2({ children }: { children: React.ReactNode }) {
+  const id = slugify(nodeText(children));
   return (
-    <h2 className="text-xl font-bold text-primary mt-10 mb-4 pb-2 border-b-2 border-border-app">
+    <h2
+      id={id || undefined}
+      className="scroll-mt-20 text-xl font-bold text-primary mt-10 mb-4 pb-2 border-b-2 border-border-app"
+    >
       {children}
     </h2>
   );

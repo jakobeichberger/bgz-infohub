@@ -34,13 +34,13 @@ bgz-infohub/
 │   │   ├── office365/          # MS 365 A3, OneDrive 5TB, OneNote, Teams, Copilot
 │   │   ├── educard/            # Physische edu.Card + digitale edu.digicard
 │   │   ├── nextexam/           # Pruefungssoftware: Modi, Downloads, umfangreiche FAQ
-│   │   ├── laptop/             # Oberstufe Notebook-Vorgaben, Kaufberatung, Arbeitsmittel-Pflicht
+│   │   ├── laptop/             # Oberstufe Notebook-Vorgaben, Kaufberatung, Bildungsrabatte (edustore/Lenovo/HP/MS/nbb), Arbeitsmittel-Pflicht
 │   │   ├── mdm/                # InTune: nur iOS + Windows (KEIN Android!)
 │   │   ├── tipp10/             # 10-Finger-Schreibtrainer
 │   │   ├── bildungsportal/     # PoDS, ID Austria, Elternzugang
 │   │   ├── vwa/                # VWA/ABA: Ablauf, Aufbau, Zitieren, Word, Bewertung (Unterseiten: aufbau, schreiben, zitieren, vorlagen, praesentation)
 │   │   ├── lizenzen/           # Gratis Software (GitHub, JetBrains, Autodesk, Figma, etc.)
-│   │   ├── lehrkraefte/        # IT-Schnellhilfe fuer Lehrkraefte (Beamer, PC, Ton, Teams, Quickfixes)
+│   │   ├── lehrkraefte/        # IT-Schnellhilfe fuer Lehrkraefte (Beamer, PC, Ton, Teams, Quickfixes, Fehlerticket-Anleitung)
 │   │   ├── iqes/               # IQES Evaluations-/Schulentwicklungsplattform (Lehrkraefte: Login, Vorlagen, Passwort)
 │   │   └── hilfe/              # FAQ, Kontakte, Support
 │   └── en/infohub/             # 15 Englische Seiten (gleiche Struktur)
@@ -122,6 +122,14 @@ bgz-infohub/
 - Desktop: Fixierte Sidebar links, sticky top-0
 - Aktive Seite: `bg-nav-active-bg text-primary font-semibold`
 - Footer: Sprachumschalter + Dark Mode Toggle + Link zu bgzwn.at
+- **Suchfeld** oben (`<Search />`, siehe Volltextsuche).
+
+**In-Page-Abschnitts-Submenu (Inhaltsverzeichnis in der Sidebar)**
+- Unter dem **aktiven** Navigationspunkt erscheinen automatisch die **H2-Abschnitte der aktuellen Seite** als anklickbare Sprungmarken (Anker). Klick → smooth-scroll zum Abschnitt + `setOpen(false)` (Mobil-Menue zu) + `history.replaceState` (Hash ohne Sprung).
+- **Scroll-Spy**: scroll-Listener (rAF-gedrosselt) markiert den letzten Abschnitt, dessen Ueberschrift `top <= 100px` ist → `aria-current="location"`, teal hervorgehoben.
+- Zwei Faelle: (a) Item **ohne** `children` & aktiv → Abschnitts-Anker direkt darunter (`ml-7`). (b) Item **mit** `children` (z. B. VWA) → zeigt die Unterseiten; unter der **aktiven Unterseite** werden zusaetzlich deren H2-Abschnitte eingeklappt (`ml-2`, tiefer verschachtelt). Gemeinsamer Renderer `sectionAnchors(wrapperClass)`.
+- Quelle der Abschnitte: Sidebar scannt nach jeder Navigation `#main` per `querySelectorAll("h2")` (rAF + 200ms-Zweitscan fuer spaet gerenderte Inhalte). `sections`-State startet leer → kein Hydration-Mismatch.
+- **H2-Anker-IDs**: `H2` in `Section.tsx` generiert eine **deterministische Slug-ID** aus dem Ueberschriftstext (`nodeText` zieht Text aus beliebigen Children, `slugify` NFD→Diakritika weg, `ß`→ss, deterministisch — KEIN Intl/Random → SSR-sicher). Plus `scroll-mt-20` (80px) damit der Mobil-Fixheader (56px) die Ueberschrift nicht ueberdeckt. IDs liegen im statischen HTML → echte Deep-Links moeglich.
 
 ### Custom 404 (app/not-found.tsx)
 - Bilingual (DE/EN basierend auf Pfad)
@@ -252,6 +260,7 @@ Tailwind 4 hat Probleme mit `text-[var(--text)]` — Next.js splittet JS-Chunks 
 - **Nur EPS-Ueberweisung** bei edu.Pay — Kreditkarten/Maestro wurden wegen hoher Gebuehren eingestellt
 - **MacBook Windows-Pflicht gelockert**: "Es kann sein dass" statt "Sie muessen"
 - **Notebook = Arbeitsmittel**: §43 SchUG Hinweis auf Laptop-Seite (Pflicht zur Instandhaltung)
+- **Bildungsrabatte (Laptop-Seite)**: Apple Education Store (apple.com/at-edu) ist offiziell NUR fuer Studierende/Lehrkraefte/Hochschulpersonal — **Oberstufenschueler i.d.R. NICHT direkt berechtigt**. Verguenstigte Apple-Geraete fuer Schueler ueber **edustore.at** (AT-Haendler, Landingpage "Apple fuer hoehere Schulstufen"). Explizit schuelerberechtigt: Lenovo Campus (lenovocampus.at, bis 25%), HP Campus Advantage (abgestempelter Schuelerausweis Vorder-/Rueckseite, max. 2/Jahr), Microsoft Store Education (bis 10% inkl. Surface, auch Eltern), notebooksbilliger.de Campus (DE+AT). Fast ueberall Bildungsnachweis noetig. Hinweis: Bildungspreise sind nicht immer Bestpreis → vergleichen. Neutralitaets-Disclaimer auf der Seite (Schule empfiehlt keinen Haendler).
 - **PoDS Elternzugang existiert**: Via bildung.gv.at mit ID Austria (nicht mehr "nicht verfuegbar")
 - **Farbe**: Teal (#00796b), NICHT orange — orange war schlecht lesbar, Teal passt zu bgzwn.at
 
@@ -271,6 +280,7 @@ Tailwind 4 hat Probleme mit `text-[var(--text)]` — Next.js splittet JS-Chunks 
 - MS-ACH Vertrag: Microsoft 365 A3 Education, laeuft bis mind. 31.05.2027, 25 Schueler pro Lehrkraft-Lizenz
 - Next-Exam Version: 1.1.3 (19. Maerz 2026), GPLv3, von Mag. Thomas Michael Weissel
 - Drucksystem: SafeQ by Y-Soft, FollowMe Printing, E-Mail-Druck an printme@bgzwn.at
+- **Fehlerticket-System (Lehrkraefte)**: Microsoft Teams → Team **„bgzwn.LehrerInnen"** → Kanal **„IT-Helpdesk"** → Reiter **„Fehlerticket"** (Microsoft Lists). Neu via „+ Neues Element hinzufuegen". Felder: Problem (kurz)*, Problembeschreibung*, Raum*, Geraetetyp* (Auswahl: Beamer/Projektor, Ton/Beschallung, Klassennotebook, iPad, Internet/Webseiten/Firewall, LAN/WLAN/Netzwerkverbindung, Schliesssystem, sonstiges), Prioritaet (Kritisch/Hoch/Mittel/Niedrig), Foto hochladen, Status (NEU→in Bearbeitung→Erledigt, von IT), Zugewiesen an (von IT), Datum (automatisch). Anleitung auf der lehrkraefte-Seite.
 - Kontakte:
   - admin@bgzwn.at — IT-Administration (allgemein)
   - bnb@bgzwn.at — WebUntis-Probleme

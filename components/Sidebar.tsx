@@ -105,6 +105,9 @@ function ThemeToggle() {
 export function Sidebar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  // In-page section sub-menu (H2 anchors of the current page).
+  const [sections, setSections] = useState<{ id: string; label: string }[]>([]);
+  const [activeSection, setActiveSection] = useState("");
 
   const isEN = pathname.startsWith("/en/") || pathname === "/en";
   const navItems = isEN ? navItemsEN : navItemsDE;
@@ -130,10 +133,100 @@ export function Sidebar() {
     return () => document.removeEventListener("keydown", onKey);
   }, [open]);
 
+  // Scan the current page for its H2 section anchors → sidebar sub-menu.
+  // Runs after each navigation; a second pass catches late-rendered content.
+  useEffect(() => {
+    setActiveSection("");
+    let t = 0;
+    const scan = () => {
+      const main = document.getElementById("main");
+      if (!main) return setSections([]);
+      const hs = Array.from(main.querySelectorAll("h2")).filter(
+        (h) => h.id && h.textContent && h.textContent.trim()
+      );
+      setSections(hs.map((h) => ({ id: h.id, label: h.textContent!.trim() })));
+    };
+    const raf = requestAnimationFrame(() => {
+      scan();
+      t = window.setTimeout(scan, 200);
+    });
+    return () => {
+      cancelAnimationFrame(raf);
+      clearTimeout(t);
+    };
+  }, [pathname]);
+
+  // Highlight the section currently in view (scroll-spy): the last heading
+  // whose top has scrolled above a threshold near the top of the viewport.
+  useEffect(() => {
+    if (sections.length === 0) return;
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      let cur = sections[0].id;
+      for (const s of sections) {
+        const el = document.getElementById(s.id);
+        if (!el) continue;
+        if (el.getBoundingClientRect().top <= 100) cur = s.id;
+        else break; // headings are in document order → the rest are below
+      }
+      setActiveSection(cur);
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, [sections]);
+
   // Build the language switch URL
   const langSwitchHref = isEN
     ? pathname.replace("/en/infohub", "/infohub")
     : "/en" + pathname;
+
+  // Renders the current page's H2 section anchors (in-page jump links).
+  // Used both under a top-level page and under the active sub-page.
+  const sectionAnchors = (wrapperClass: string) => (
+    <div
+      className={`mt-1 space-y-0.5 border-l-2 border-border-app pl-3 ${wrapperClass}`}
+    >
+      {sections.map((s) => {
+        const secActive = activeSection === s.id;
+        return (
+          <a
+            key={s.id}
+            href={`#${s.id}`}
+            aria-current={secActive ? "location" : undefined}
+            onClick={(e) => {
+              const el = document.getElementById(s.id);
+              if (el) {
+                e.preventDefault();
+                el.scrollIntoView({ behavior: "smooth", block: "start" });
+                window.history.replaceState(null, "", `#${s.id}`);
+                setActiveSection(s.id);
+                setOpen(false);
+              }
+            }}
+            className={`
+              block px-2 py-1.5 rounded text-xs transition-all
+              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary
+              ${
+                secActive
+                  ? "text-primary font-semibold bg-nav-active-bg"
+                  : "text-txt-light hover:text-txt hover:bg-hover-bg"
+              }
+            `}
+          >
+            {s.label}
+          </a>
+        );
+      })}
+    </div>
+  );
 
   return (
     <>
@@ -273,27 +366,37 @@ export function Sidebar() {
                     {item.children!.map((child) => {
                       const childActive = current === child.href;
                       return (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          onClick={() => setOpen(false)}
-                          aria-current={childActive ? "page" : undefined}
-                          className={`
-                            block px-2 py-1.5 rounded text-xs transition-all
-                            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary
-                            ${
-                              childActive
-                                ? "text-primary font-semibold bg-nav-active-bg"
-                                : "text-txt-light hover:text-txt hover:bg-hover-bg"
-                            }
-                          `}
-                        >
-                          {child.label}
-                        </Link>
+                        <div key={child.href}>
+                          <Link
+                            href={child.href}
+                            onClick={() => setOpen(false)}
+                            aria-current={childActive ? "page" : undefined}
+                            className={`
+                              block px-2 py-1.5 rounded text-xs transition-all
+                              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary
+                              ${
+                                childActive
+                                  ? "text-primary font-semibold bg-nav-active-bg"
+                                  : "text-txt-light hover:text-txt hover:bg-hover-bg"
+                              }
+                            `}
+                          >
+                            {child.label}
+                          </Link>
+                          {/* Active sub-page → expand its own H2 sections. */}
+                          {childActive &&
+                            sections.length > 0 &&
+                            sectionAnchors("ml-2")}
+                        </div>
                       );
                     })}
                   </div>
                 )}
+                {/* In-page section anchors for the active page (no sub-pages). */}
+                {!item.children &&
+                  isActive &&
+                  sections.length > 0 &&
+                  sectionAnchors("ml-7")}
               </div>
             );
           })}

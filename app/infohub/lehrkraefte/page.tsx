@@ -938,6 +938,120 @@ export default function LehrkraeftePage() {
         direkt an die IT vor Ort. Ein Foto der Fehlermeldung beschleunigt die
         Lösung erheblich.
       </Callout>
+
+      {/* ═══════════════ Fehlerticket ═══════════════ */}
+      <H2>Fehlerticket im IT-Helpdesk (Microsoft Teams)</H2>
+
+      <P>
+        Der <strong>bevorzugte Weg</strong>, ein IT-Problem zu melden, ist ein{" "}
+        <strong>Fehlerticket</strong> im IT-Helpdesk in Microsoft Teams. So geht
+        keine Meldung verloren, alle Tickets sind nachvollziehbar und Sie sehen
+        jederzeit den Bearbeitungsstand (NEU → in Bearbeitung → Erledigt).
+      </P>
+
+      <H3>So kommen Sie zu den Fehlertickets</H3>
+
+      <StepList>
+        <Step title="Microsoft Teams öffnen">
+          In der Teams-App oder im Browser unter{" "}
+          <a
+            href="https://teams.microsoft.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            teams.microsoft.com
+          </a>{" "}
+          — angemeldet mit Ihrem Schulkonto.
+        </Step>
+        <Step title="Zum richtigen Team & Kanal wechseln">
+          Links auf <strong>Teams</strong> klicken, das Team{" "}
+          <strong>„bgzwn.LehrerInnen“</strong> öffnen und den Kanal{" "}
+          <strong>„IT-Helpdesk“</strong> auswählen.
+        </Step>
+        <Step title="Reiter „Fehlerticket“ öffnen">
+          Oben im Kanal auf den Reiter <strong>„Fehlerticket“</strong> klicken.
+          Dort sehen Sie alle Tickets, gruppiert nach Status (NEU, in
+          Bearbeitung, Erledigt).
+        </Step>
+      </StepList>
+
+      <H3>Neues Fehlerticket erstellen</H3>
+
+      <StepList>
+        <Step title="„+ Neues Element hinzufügen“ klicken">
+          Der Button steht oben links über der Ticket-Liste.
+        </Step>
+        <Step title="Felder ausfüllen">
+          Die <strong>Pflichtfelder</strong> sind mit einem{" "}
+          <strong>Sternchen (*)</strong> markiert — ohne sie lässt sich das
+          Ticket nicht speichern (siehe Tabelle unten).
+        </Step>
+        <Step title="Speichern">
+          Das Ticket erscheint mit Status <strong>„NEU“</strong> in der Liste.
+          Die IT übernimmt es und setzt den Status auf „in Bearbeitung“ bzw.
+          „Erledigt“.
+        </Step>
+      </StepList>
+
+      <H3>Was kommt in welches Feld?</H3>
+
+      <Table
+        headers={["Feld", "Pflicht?", "Was Sie eintragen"]}
+        rows={[
+          [
+            "Problem (kurz)",
+            "Ja",
+            "Kurzer Titel, z. B. „Beamer zeigt kein Bild“ oder „Kein Ton in 3A“",
+          ],
+          [
+            "Problembeschreibung",
+            "Ja",
+            "Genauer beschreiben: Was passiert? Seit wann? Was wurde schon probiert (z. B. Neustart)?",
+          ],
+          [
+            "Raum",
+            "Ja",
+            "Raum bzw. Ort, z. B. „3A“, „EDV-Saal 2“, „DAM/Werkraum“",
+          ],
+          [
+            "Gerätetyp",
+            "Ja",
+            "Auswahl: Beamer/Projektor, Ton/Beschallung, Klassennotebook, iPad, Internet/Webseiten/Firewall, LAN/WLAN/Netzwerkverbindung, Schließsystem oder sonstiges",
+          ],
+          [
+            "Priorität",
+            "Optional",
+            "Kritisch / Hoch / Mittel / Niedrig — „Kritisch“ nur, wenn laufender Unterricht stark betroffen ist",
+          ],
+          [
+            "Foto hochladen",
+            "Optional",
+            "Screenshot oder Foto der Fehlermeldung — beschleunigt die Lösung erheblich",
+          ],
+          [
+            "Status",
+            "Von der IT",
+            "Bleibt auf „NEU“ — die IT setzt den Status während der Bearbeitung",
+          ],
+          [
+            "Zugewiesen an",
+            "Von der IT",
+            "Leer lassen — die IT weist das Ticket der zuständigen Person zu",
+          ],
+          [
+            "Datum",
+            "Automatisch",
+            "Wird beim Erstellen automatisch gesetzt",
+          ],
+        ]}
+      />
+
+      <Callout type="success" title="Tipp für schnelle Bearbeitung">
+        Je genauer <strong>Titel</strong>, <strong>Raum</strong> und{" "}
+        <strong>Gerätetyp</strong> sind — und je eher ein <strong>Foto</strong>{" "}
+        der Fehlermeldung dabei ist —, desto schneller kann die IT helfen.
+      </Callout>
     </>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { H2, H3, P, UL, Table } from "@/components/ui/Section";
 import { Callout } from "@/components/ui/Callout";
+import { LinkCards } from "@/components/ui/LinkCards";
 
 export const metadata: Metadata = {
   title: "Laptop Requirements — Upper Secondary",
@@ -280,6 +281,118 @@ export default function LaptopPageEN() {
         (upper secondary lasts 4 years). Also consider device insurance
         against drop and liquid damage.
       </Callout>
+
+      {/* === Education Discounts === */}
+      <H2>Education Discounts When Buying a Notebook</H2>
+
+      <P>
+        Upper-secondary students can use <strong>education discounts</strong> at
+        many retailers — savings of several hundred euros depending on the
+        device. Almost all programmes require <strong>proof of education
+        status</strong> (e.g. a student ID stamped by the school or a school
+        attendance confirmation).
+      </P>
+
+      <Callout
+        type="warning"
+        title="Apple Education Store — Caution for school pupils"
+      >
+        The official Apple education discount (
+        <a
+          href="https://www.apple.com/at-edu/store"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          apple.com/at-edu
+        </a>
+        ) is aimed at <strong>university students, teachers and higher-education
+        staff</strong>. Upper-secondary pupils are <strong>usually not
+        directly eligible</strong> there. To get discounted Apple devices as a
+        pupil, use a retailer such as <strong>edustore.at</strong> (see below),
+        which specifically serves higher school levels.
+      </Callout>
+
+      <Table
+        headers={["Provider", "Who qualifies", "Discount", "Proof"]}
+        rows={[
+          [
+            "edustore.at (Austrian)",
+            "Pupils, students, teachers",
+            "up to €500 on notebooks (Apple, HP, Lenovo, Microsoft)",
+            "Proof of education status required",
+          ],
+          [
+            "Lenovo Campus",
+            "Pupils & students",
+            "up to 25% on ThinkPad, ThinkBook, Legion",
+            "Status proof (upload when ordering)",
+          ],
+          [
+            "HP Campus Advantage",
+            "Pupils explicitly admitted",
+            "Notebook discounts, max. 2 offers per calendar year",
+            "School-stamped student ID (front & back)",
+          ],
+          [
+            "Microsoft Store (Education)",
+            "Pupils, their parents, teachers",
+            "up to 10% (incl. Surface), whole academic year",
+            "Verification via the Microsoft account",
+          ],
+          [
+            "notebooksbilliger.de (Campus)",
+            "Pupils, apprentices, teachers (DE + AT)",
+            "Campus prices + free shipping",
+            "Proof required; not combinable with other discounts",
+          ],
+        ]}
+      />
+
+      <LinkCards
+        items={[
+          {
+            href: "https://www.edustore.at/landingpages/apple-fur-hohere-schulstufen",
+            label: "edustore.at — Apple for higher school levels",
+            desc: "Austrian retailer, top brands with a pupil discount",
+          },
+          {
+            href: "https://www.lenovocampus.at/",
+            label: "Lenovo Campus",
+            desc: "ThinkPad, ThinkBook & Legion up to 25% off",
+          },
+          {
+            href: "https://www.hp.com/de-de/shop/offer.aspx?p=students-offers",
+            label: "HP Campus Advantage",
+            desc: "HP notebooks for pupils (student-ID proof)",
+          },
+          {
+            href: "https://www.microsoft.com/de-at/store/b/student",
+            label: "Microsoft Store (Education)",
+            desc: "Surface & more, up to 10% — parents included",
+          },
+          {
+            href: "https://www.notebooksbilliger.de/infocenter/section/campusprogramm",
+            label: "notebooksbilliger.de — Campus",
+            desc: "Pupils from AT admitted, free shipping",
+          },
+        ]}
+      />
+
+      <Callout type="info" title="Tip: Compare prices before buying">
+        Education prices are <strong>not always</strong> the absolute best
+        price — even at Apple, the back-to-school promotion does not
+        automatically give the cheapest price. Compare the education discount
+        against regular offers and promotions before you buy.
+      </Callout>
+
+      <P>
+        <em>
+          Note: This overview is for orientation only. The school does not
+          recommend or favour any particular retailer; offers, prices and
+          eligibility may change at any time.
+        </em>
+      </P>
 
       {/* === Personal Responsibility === */}
       <H2>Important: Personal Responsibility</H2>
