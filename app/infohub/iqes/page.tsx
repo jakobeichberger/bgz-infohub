@@ -38,7 +38,7 @@ export default function IqesPage() {
       <Table
         headers={["Detail", "Information"]}
         rows={[
-          ["Plattform", "iqes.bgzwn.at (Weiterleitung zu IQES Online)"],
+          ["Plattform", "www.iqesonline.net"],
           ["Anmeldung", "Mit der Schul-E-Mail-Adresse"],
           ["Passwort", "Eigenes IQES-Passwort (NICHT das Schulkonto-Passwort)"],
           ["Zielgruppe", "Lehrkräfte & QMS-Team"],
@@ -76,14 +76,14 @@ export default function IqesPage() {
         <Step title="IQES öffnen">
           Rufen Sie{" "}
           <a
-            href="https://iqes.bgzwn.at"
+            href="https://www.iqesonline.net"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:underline"
           >
-            iqes.bgzwn.at
+            www.iqesonline.net
           </a>{" "}
-          auf — Sie werden automatisch zu IQES Online weitergeleitet.
+          auf.
         </Step>
         <Step title="Anmelden">
           Oben links auf <strong>&quot;Anmelden&quot;</strong> klicken und mit{" "}
@@ -136,19 +136,14 @@ export default function IqesPage() {
       <LinkCards
         items={[
           {
-            href: "https://iqes.bgzwn.at",
-            label: "IQES BG Zehnergasse",
-            desc: "Anmeldung & Evaluationscenter",
+            href: "https://www.iqesonline.net",
+            label: "IQES Online",
+            desc: "Anmeldung, Evaluationscenter & Hilfe",
           },
           {
             href: "https://login.iqesonline.net/cgi-bin/selfservice/ldapportal.pl?mode=pwreset",
             label: "IQES Passwort zurücksetzen",
             desc: "Self-Service-Portal",
-          },
-          {
-            href: "https://www.iqesonline.net",
-            label: "IQES Online",
-            desc: "Offizielle Plattform & Hilfe",
           },
         ]}
       />
