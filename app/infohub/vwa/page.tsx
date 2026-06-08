@@ -4,6 +4,7 @@ import { H2, H3, P, UL, Table } from "@/components/ui/Section";
 import { Callout } from "@/components/ui/Callout";
 import { CardGrid, Card } from "@/components/ui/CardGrid";
 import { StepList, Step } from "@/components/ui/StepList";
+import { LinkCards } from "@/components/ui/LinkCards";
 
 export const metadata: Metadata = {
   title: "VWA / ABA — Vorwissenschaftliche Arbeit",
@@ -224,8 +225,8 @@ export default function VwaPage() {
       {/* ═══ Links ═══ */}
       <H2>Wichtige Links &amp; Ressourcen</H2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-6">
-        {[
+      <LinkCards
+        items={[
           {
             href: "https://www.ahs-aba.at",
             label: "ABA-Portal (offiziell)",
@@ -256,26 +257,8 @@ export default function VwaPage() {
             label: "Google Scholar",
             desc: "Akademische Quellensuche",
           },
-        ].map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
-          >
-            <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-            <div>
-              <span className="text-sm font-medium text-txt group-hover:text-primary transition-colors">
-                {link.label}
-              </span>
-              <span className="text-xs text-txt-light block">
-                {link.desc}
-              </span>
-            </div>
-          </a>
-        ))}
-      </div>
+        ]}
+      />
 
       <Callout type="info" title="Technischer Support">
         Bei Fragen zur ABA/VWA wenden Sie sich an Ihre Betreuungsperson. Für

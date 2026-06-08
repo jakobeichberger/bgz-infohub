@@ -3,6 +3,7 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { H2, P, UL, Table, InlineCode } from "@/components/ui/Section";
 import { Callout } from "@/components/ui/Callout";
 import { StepList, Step } from "@/components/ui/StepList";
+import { LinkCards } from "@/components/ui/LinkCards";
 
 export const metadata: Metadata = {
   title: "IQES — Evaluations- & Schulentwicklungsplattform",
@@ -132,8 +133,8 @@ export default function IqesPage() {
       {/* ═══ Links ═══ */}
       <H2>Wichtige Links</H2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-6">
-        {[
+      <LinkCards
+        items={[
           {
             href: "https://iqes.bgzwn.at",
             label: "IQES BG Zehnergasse",
@@ -149,26 +150,8 @@ export default function IqesPage() {
             label: "IQES Online",
             desc: "Offizielle Plattform & Hilfe",
           },
-        ].map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
-          >
-            <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-            <div>
-              <span className="text-sm font-medium text-txt group-hover:text-primary transition-colors">
-                {link.label}
-              </span>
-              <span className="text-xs text-txt-light block">
-                {link.desc}
-              </span>
-            </div>
-          </a>
-        ))}
-      </div>
+        ]}
+      />
 
       {/* ═══ Hilfe ═══ */}
       <H2>Hilfe &amp; Kontakt</H2>

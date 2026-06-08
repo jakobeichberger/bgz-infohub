@@ -3,6 +3,7 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { H2, H3, P, UL, Table } from "@/components/ui/Section";
 import { Callout } from "@/components/ui/Callout";
 import { StepList, Step } from "@/components/ui/StepList";
+import { LinkCards } from "@/components/ui/LinkCards";
 
 export const metadata: Metadata = {
   title: "iPad & Geräte — BG Zehnergasse",
@@ -369,8 +370,8 @@ export default function GeraetePage() {
         justEDU-Webshop bestellen:
       </P>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-6">
-        {[
+      <LinkCards
+        items={[
           {
             href: "https://www.justedu.at/justedu-active-pen-ipad-mit-palm-rejection-tilt/",
             label: "justEDU Active Pen (iPad)",
@@ -406,26 +407,8 @@ export default function GeraetePage() {
             label: "iPad Wi-Fi 64 GB (10,2\", 9. Gen)",
             desc: "iPad einzeln, Space Grau",
           },
-        ].map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
-          >
-            <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-            <div>
-              <span className="text-sm font-medium text-txt group-hover:text-primary transition-colors">
-                {link.label}
-              </span>
-              <span className="text-xs text-txt-light block">
-                {link.desc}
-              </span>
-            </div>
-          </a>
-        ))}
-      </div>
+        ]}
+      />
 
       <Callout type="info" title="Webshop der Schule">
         Alle Produkte finden Sie im justEDU-Webshop unter{" "}
@@ -465,8 +448,8 @@ export default function GeraetePage() {
       {/* ═══════════════ Weiterführende Links ═══════════════ */}
       <H2>Weiterführende Links</H2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-6">
-        {[
+      <LinkCards
+        items={[
           {
             href: "https://digitaleslernen.oead.at/de/",
             label: "OeAD Digitales Lernen",
@@ -497,26 +480,8 @@ export default function GeraetePage() {
             label: "Digitale Schule",
             desc: "Portal des Ministeriums",
           },
-        ].map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
-          >
-            <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-            <div>
-              <span className="text-sm font-medium text-txt group-hover:text-primary group-hover:text-primary transition-colors">
-                {link.label}
-              </span>
-              <span className="text-xs text-txt-light block">
-                {link.desc}
-              </span>
-            </div>
-          </a>
-        ))}
-      </div>
+        ]}
+      />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { H2, H3, P, UL, Table, InlineCode } from "@/components/ui/Section";
 import { Callout } from "@/components/ui/Callout";
@@ -551,9 +552,9 @@ export default function LehrkraeftePageEN() {
         <li>Restarting the device solves most connection problems</li>
         <li>
           Detailed WiFi guide:{" "}
-          <a href="/en/infohub/wlan" className="text-primary hover:underline">
+          <Link href="/en/infohub/wlan" className="text-primary hover:underline">
             WiFi page
-          </a>
+          </Link>
         </li>
       </UL>
 

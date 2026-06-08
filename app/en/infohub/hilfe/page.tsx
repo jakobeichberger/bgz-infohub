@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { H2, H3, P, UL, Table } from "@/components/ui/Section";
 import { Callout } from "@/components/ui/Callout";
+import { LinkCards } from "@/components/ui/LinkCards";
 
 export const metadata: Metadata = {
   title: "Help & Contacts",
@@ -87,7 +89,7 @@ export default function HilfePageEN() {
       <UL>
         <li><strong>Force restart:</strong> Hold Home + Power button simultaneously (or on newer iPads: press Volume Up, Volume Down, then hold Power)</li>
         <li>If problem persists: Reset iPad via iTunes (see{" "}
-          <a href="/en/infohub/geraete" className="text-primary hover:underline">iPad &amp; Devices</a>)
+          <Link href="/en/infohub/geraete" className="text-primary hover:underline">iPad &amp; Devices</Link>)
         </li>
         <li>Hardware defect? Contact ACP TechRent: +43 1 813 0000</li>
       </UL>
@@ -129,8 +131,8 @@ export default function HilfePageEN() {
 
       <H2>All Important Links</H2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-6">
-        {[
+      <LinkCards
+        items={[
           { href: "https://melpomene.webuntis.com/WebUntis/?school=bgzehnwn", label: "WebUntis", desc: "Timetable & class register" },
           { href: "https://portal.office.com", label: "Office 365 Portal", desc: "Word, Excel, Teams, OneDrive, change password" },
           { href: "https://edusuite.at/portal/", label: "edu.Suite Portal", desc: "edu.Flow, edu.Pay, edu.Card (code: 304046)" },
@@ -141,22 +143,8 @@ export default function HilfePageEN() {
           { href: "https://www.saferinternet.at", label: "Safer Internet", desc: "Tips for safe internet use" },
           { href: "https://digitaleschule.gv.at/", label: "Digital School", desc: "Ministry portal for digital education" },
           { href: "/en/infohub/bildungsportal", label: "Education Portal Guide", desc: "Our guide for parents" },
-        ].map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            target={link.href.startsWith("/") ? undefined : "_blank"}
-            rel={link.href.startsWith("/") ? undefined : "noopener noreferrer"}
-            className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
-          >
-            <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-            <div>
-              <span className="text-sm font-medium text-txt group-hover:text-primary group-hover:text-primary transition-colors">{link.label}</span>
-              <span className="text-xs text-txt-light block">{link.desc}</span>
-            </div>
-          </a>
-        ))}
-      </div>
+        ]}
+      />
 
       <Callout type="success" title="Tip">
         Save this page as a bookmark in your browser for quick access to all important links!

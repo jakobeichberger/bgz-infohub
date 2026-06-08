@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { H2, H3, P, UL, Table } from "@/components/ui/Section";
 import { Callout } from "@/components/ui/Callout";
+import { LinkCards } from "@/components/ui/LinkCards";
 
 export const metadata: Metadata = {
   title: "Hilfe & Kontakte — BG Zehnergasse",
@@ -180,12 +182,12 @@ export default function HilfePage() {
         <li>
           Falls das Problem bestehen bleibt: iPad über iTunes zurücksetzen
           (siehe{" "}
-          <a
+          <Link
             href="/infohub/geraete"
             className="text-primary hover:underline"
           >
             iPad &amp; Geräte
-          </a>
+          </Link>
           )
         </li>
         <li>
@@ -262,8 +264,8 @@ export default function HilfePage() {
       {/* ═══════════════ Links ═══════════════ */}
       <H2>Alle wichtigen Links</H2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-6">
-        {[
+      <LinkCards
+        items={[
           {
             href: "https://melpomene.webuntis.com/WebUntis/?school=bgzehnwn",
             label: "WebUntis",
@@ -323,30 +325,9 @@ export default function HilfePage() {
             href: "/infohub/bildungsportal",
             label: "Bildungsportal-Guide",
             desc: "Unser Guide für Eltern zum Bildungsportal",
-            internal: true,
           },
-        ].map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            target={link.href.startsWith("/") ? undefined : "_blank"}
-            rel={
-              link.href.startsWith("/") ? undefined : "noopener noreferrer"
-            }
-            className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
-          >
-            <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-            <div>
-              <span className="text-sm font-medium text-txt group-hover:text-primary group-hover:text-primary transition-colors">
-                {link.label}
-              </span>
-              <span className="text-xs text-txt-light block">
-                {link.desc}
-              </span>
-            </div>
-          </a>
-        ))}
-      </div>
+        ]}
+      />
 
       <Callout type="success" title="Tipp">
         Speichern Sie diese Seite als Lesezeichen in Ihrem Browser, damit Sie

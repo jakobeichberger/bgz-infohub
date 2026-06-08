@@ -33,6 +33,13 @@ RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [L,R=301]
   # HTTP Strict Transport Security — force HTTPS for 1 year (only sent over HTTPS).
   # Safe here because the site already redirects all traffic to HTTPS above.
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" "expr=%{HTTPS} == 'on'"
+  # Content Security Policy.
+  # 'unsafe-inline' for script/style is required by Next.js static export
+  # (inline hydration scripts + the dark-mode flash-prevention script + inline
+  # styles). Google Fonts are loaded via @import in the bundled CSS. The site
+  # has no user input, so the residual inline-script risk is negligible while
+  # the policy still blocks external script/resource injection, framing and plugins.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
 </IfModule>
 
 # --- Cache static assets for performance ---

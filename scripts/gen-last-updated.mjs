@@ -5,7 +5,7 @@
 
 import { readdirSync, statSync, writeFileSync, mkdirSync } from "node:fs";
 import { join, relative, sep } from "node:path";
-import { execSync } from "node:child_process";
+import { execFileSync } from "node:child_process";
 
 const root = process.cwd();
 const appDir = join(root, "app");
@@ -31,19 +31,16 @@ function routeFor(file) {
   return "/" + rel;
 }
 
+function git(args) {
+  // execFileSync avoids the shell entirely — no interpolation / injection surface.
+  return execFileSync("git", args, { cwd: root }).toString().trim();
+}
+
 function lastModified(file) {
   try {
-    const dirty = execSync(`git status --porcelain -- "${file}"`, {
-      cwd: root,
-    })
-      .toString()
-      .trim();
+    const dirty = git(["status", "--porcelain", "--", file]);
     if (!dirty) {
-      const iso = execSync(`git log -1 --format=%cI -- "${file}"`, {
-        cwd: root,
-      })
-        .toString()
-        .trim();
+      const iso = git(["log", "-1", "--format=%cI", "--", file]);
       if (iso) return iso;
     }
   } catch {

@@ -183,7 +183,8 @@ export function Sidebar() {
         <div className="flex items-center gap-1">
           <Link
             href={langSwitchHref}
-            className="px-2 py-1 rounded text-xs font-medium hover:bg-hover-bg transition-colors text-txt-light"
+            aria-label={isEN ? "Auf Deutsch wechseln" : "Switch to English"}
+            className="min-w-[44px] min-h-[44px] flex items-center justify-center rounded text-xs font-medium hover:bg-hover-bg transition-colors text-txt-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           >
             {isEN ? "DE" : "EN"}
           </Link>
@@ -297,9 +298,10 @@ export function Sidebar() {
           <div className="flex items-center justify-between px-3 mb-2">
             <Link
               href={langSwitchHref}
-              className="flex items-center gap-1.5 text-xs text-txt-light hover:text-primary transition-colors"
+              aria-label={isEN ? "Auf Deutsch wechseln" : "Switch to English"}
+              className="flex items-center gap-1.5 -mx-2 px-2 py-1.5 rounded text-xs text-txt-light hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
-              <span>🌐</span>
+              <span aria-hidden="true">🌐</span>
               <span>{isEN ? "Deutsch" : "English"}</span>
             </Link>
             <ThemeToggle />
