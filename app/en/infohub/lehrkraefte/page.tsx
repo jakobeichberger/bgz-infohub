@@ -808,42 +808,24 @@ export default function LehrkraeftePageEN() {
         ]}
       />
 
-      {/* ═══════════════ When to contact IT ═══════════════ */}
-      <H2>When to contact IT?</H2>
+      {/* ═══════════════ Contact IT / Error ticket ═══════════════ */}
+      <H2>Contacting IT — Error Ticket in the IT Helpdesk</H2>
 
       <P>
-        If the quick help does not solve the problem, contact the IT
-        administration. Please provide <strong>as much detail as possible</strong>:
-      </P>
-
-      <UL>
-        <li><strong>Room</strong> (e.g. room 204, computer lab 2)</li>
-        <li><strong>Device</strong> (PC, projector, display, iPad …)</li>
-        <li><strong>What isn't working?</strong> As precise a description as possible</li>
-        <li><strong>Exact error message</strong> (ideally a photo)</li>
-        <li><strong>What has already been tried?</strong> (e.g. restart)</li>
-        <li><strong>How urgent?</strong> (e.g. current lesson affected)</li>
-      </UL>
-
-      <Callout type="info" title="Contact IT Administration">
-        <a href="mailto:admin@bgzwn.at" className="text-primary hover:underline">
-          admin@bgzwn.at
-        </a>
-        {" "}— for urgent problems during lessons, contact the IT team on site
-        directly. A photo of the error message speeds up the solution
-        considerably.
-      </Callout>
-
-      {/* ═══════════════ Error ticket ═══════════════ */}
-      <H2>Error Ticket in the IT Helpdesk (Microsoft Teams)</H2>
-
-      <P>
-        The <strong>preferred way</strong> to report an IT problem is an{" "}
+        If the quick help does not solve the problem, report it to the IT
+        administration. The <strong>fastest way</strong> is an{" "}
         <strong>error ticket</strong> (Fehlerticket) in the IT Helpdesk in
-        Microsoft Teams. Nothing gets lost, every ticket is traceable, and you
+        Microsoft Teams: nothing gets lost, every ticket is traceable, and you
         can always see the progress (NEU → in Bearbeitung → Erledigt / New → In
         progress → Done).
       </P>
+
+      <Callout type="info" title="Please create an error ticket first">
+        Error tickets are <strong>handled first</strong> by IT — they are
+        centrally recorded, prioritised and traceable. Loose emails or verbal
+        requests are more easily overlooked. So please create a ticket for every
+        problem whenever possible.
+      </Callout>
 
       <H3>How to get to the error tickets</H3>
 
@@ -946,6 +928,21 @@ export default function LehrkraeftePageEN() {
         The more precise the <strong>title</strong>, <strong>room</strong> and{" "}
         <strong>device type</strong> are — and the sooner a <strong>photo</strong>{" "}
         of the error message is attached — the faster IT can help.
+      </Callout>
+
+      <H3>Urgent problems during a lesson</H3>
+
+      <Callout
+        type="warning"
+        title="For urgent disruptions, also report directly"
+      >
+        For <strong>urgent disruptions during an ongoing lesson</strong>, also
+        contact the IT team on site directly or at{" "}
+        <a href="mailto:admin@bgzwn.at" className="text-primary hover:underline">
+          admin@bgzwn.at
+        </a>
+        . A photo of the error message speeds up the solution considerably —
+        please still create an error ticket afterwards for documentation.
       </Callout>
     </>
   );

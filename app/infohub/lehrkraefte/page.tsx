@@ -912,42 +912,23 @@ export default function LehrkraeftePage() {
         ]}
       />
 
-      {/* ═══════════════ Wann IT kontaktieren ═══════════════ */}
-      <H2>Wann die IT kontaktieren?</H2>
+      {/* ═══════════════ IT kontaktieren / Fehlerticket ═══════════════ */}
+      <H2>IT kontaktieren — Fehlerticket im IT-Helpdesk</H2>
 
       <P>
-        Wenn die Schnellhilfe nicht weiterhilft, wenden Sie sich an die
-        IT-Administration. Geben Sie dabei <strong>so genau wie möglich</strong>{" "}
-        an:
-      </P>
-
-      <UL>
-        <li><strong>Raum</strong> (z.B. Raum 204, EDV-Saal 2)</li>
-        <li><strong>Gerät</strong> (PC, Beamer, Display, iPad …)</li>
-        <li><strong>Was funktioniert nicht?</strong> Möglichst genaue Beschreibung</li>
-        <li><strong>Genaue Fehlermeldung</strong> (am besten ein Foto)</li>
-        <li><strong>Was wurde bereits versucht?</strong> (z.B. Neustart)</li>
-        <li><strong>Wie dringend?</strong> (z.B. laufende Stunde betroffen)</li>
-      </UL>
-
-      <Callout type="info" title="IT-Administration kontaktieren">
-        <a href="mailto:admin@bgzwn.at" className="text-primary hover:underline">
-          admin@bgzwn.at
-        </a>
-        {" "}— bei akuten Problemen während des Unterrichts wenden Sie sich
-        direkt an die IT vor Ort. Ein Foto der Fehlermeldung beschleunigt die
-        Lösung erheblich.
-      </Callout>
-
-      {/* ═══════════════ Fehlerticket ═══════════════ */}
-      <H2>Fehlerticket im IT-Helpdesk (Microsoft Teams)</H2>
-
-      <P>
-        Der <strong>bevorzugte Weg</strong>, ein IT-Problem zu melden, ist ein{" "}
-        <strong>Fehlerticket</strong> im IT-Helpdesk in Microsoft Teams. So geht
+        Wenn die Schnellhilfe nicht weiterhilft, melden Sie das Problem der
+        IT-Administration. Der <strong>schnellste Weg</strong> ist ein{" "}
+        <strong>Fehlerticket</strong> im IT-Helpdesk in Microsoft Teams: So geht
         keine Meldung verloren, alle Tickets sind nachvollziehbar und Sie sehen
         jederzeit den Bearbeitungsstand (NEU → in Bearbeitung → Erledigt).
       </P>
+
+      <Callout type="info" title="Bitte zuerst ein Fehlerticket erstellen">
+        Fehlertickets werden von der IT <strong>zuerst bearbeitet</strong> — sie
+        sind zentral erfasst, priorisiert und nachverfolgbar. Lose E-Mails oder
+        mündliche Zurufe gehen dagegen leichter unter. Erstellen Sie daher für
+        jedes Problem möglichst ein Ticket.
+      </Callout>
 
       <H3>So kommen Sie zu den Fehlertickets</H3>
 
@@ -1051,6 +1032,22 @@ export default function LehrkraeftePage() {
         Je genauer <strong>Titel</strong>, <strong>Raum</strong> und{" "}
         <strong>Gerätetyp</strong> sind — und je eher ein <strong>Foto</strong>{" "}
         der Fehlermeldung dabei ist —, desto schneller kann die IT helfen.
+      </Callout>
+
+      <H3>Akute Probleme während des Unterrichts</H3>
+
+      <Callout
+        type="warning"
+        title="Bei dringenden Störungen zusätzlich direkt melden"
+      >
+        Bei <strong>akuten Störungen während einer laufenden Stunde</strong>{" "}
+        wenden Sie sich zusätzlich direkt an die IT vor Ort oder an{" "}
+        <a href="mailto:admin@bgzwn.at" className="text-primary hover:underline">
+          admin@bgzwn.at
+        </a>
+        . Ein Foto der Fehlermeldung beschleunigt die Lösung erheblich — bitte
+        erstellen Sie nach Möglichkeit trotzdem ein Fehlerticket zur
+        Dokumentation.
       </Callout>
     </>
   );
