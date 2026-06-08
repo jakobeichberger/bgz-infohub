@@ -41,6 +41,7 @@ bgz-infohub/
 │   │   ├── vwa/                # VWA/ABA: Ablauf, Aufbau, Zitieren, Word, Bewertung (Unterseiten: aufbau, schreiben, zitieren, vorlagen, praesentation)
 │   │   ├── lizenzen/           # Gratis Software (GitHub, JetBrains, Autodesk, Figma, etc.)
 │   │   ├── lehrkraefte/        # IT-Schnellhilfe fuer Lehrkraefte (Beamer, PC, Ton, Teams, Quickfixes)
+│   │   ├── iqes/               # IQES Evaluations-/Schulentwicklungsplattform (Lehrkraefte: Login, Vorlagen, Passwort)
 │   │   └── hilfe/              # FAQ, Kontakte, Support
 │   └── en/infohub/             # 15 Englische Seiten (gleiche Struktur)
 ├── components/

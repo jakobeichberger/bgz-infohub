@@ -122,6 +122,10 @@ export default function InfoHubPage() {
           Quickfixes für Beamer-, Computer-, Ton- und Präsentationsprobleme im
           Unterricht.
         </Card>
+        <Card href="/infohub/iqes" icon="📊" title="IQES">
+          Evaluations- &amp; Schulentwicklungsplattform: Anmeldung,
+          Fragebogen-Vorlagen, Passwort (für Lehrkräfte).
+        </Card>
         <Card href="/infohub/hilfe" icon="🆘" title="Hilfe & Kontakte">
           Ansprechpartner, häufige Probleme und Lösungen, wichtige Links.
         </Card>

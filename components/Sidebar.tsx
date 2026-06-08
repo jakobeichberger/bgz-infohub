@@ -39,6 +39,7 @@ const navItemsDE: NavItem[] = [
   // Ausgeblendet (Seite existiert weiterhin, nur nicht verlinkt):
   // { href: "/infohub/lizenzen", label: "Gratis Software", icon: "🎁" },
   { href: "/infohub/lehrkraefte", label: "Lehrkräfte: IT-Schnellhilfe", icon: "🧑‍🏫" },
+  { href: "/infohub/iqes", label: "IQES", icon: "📊" },
   { href: "/infohub/hilfe", label: "Hilfe & Kontakte", icon: "🆘" },
 ];
 
@@ -70,6 +71,7 @@ const navItemsEN: NavItem[] = [
   // Hidden (page still exists, just not linked):
   // { href: "/en/infohub/lizenzen", label: "Free Software", icon: "🎁" },
   { href: "/en/infohub/lehrkraefte", label: "Teachers: IT Quick Help", icon: "🧑‍🏫" },
+  { href: "/en/infohub/iqes", label: "IQES", icon: "📊" },
   { href: "/en/infohub/hilfe", label: "Help & Contacts", icon: "🆘" },
 ];
 

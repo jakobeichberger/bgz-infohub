@@ -23,6 +23,7 @@ const allPages = [
   { href: "/infohub/vwa/praesentation/", label: "VWA Präsentation", desc: "Aufbau, Fragen, Tipps", icon: "🎤" },
   // Ausgeblendet: { href: "/infohub/lizenzen/", label: "Gratis Software", desc: "Kostenlose Lizenzen", icon: "🎁" },
   { href: "/infohub/lehrkraefte/", label: "Lehrkräfte: IT-Schnellhilfe", desc: "Beamer, Computer, Ton, Quickfixes", icon: "🧑‍🏫" },
+  { href: "/infohub/iqes/", label: "IQES", desc: "Evaluation, Umfragen, Fragebögen (Lehrkräfte)", icon: "📊" },
   { href: "/infohub/hilfe/", label: "Hilfe & Kontakte", desc: "Support, FAQ, Links", icon: "🆘" },
 ];
 

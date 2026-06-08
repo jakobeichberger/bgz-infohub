@@ -121,6 +121,10 @@ export default function InfoHubPageEN() {
           Quick fixes for projector, computer, audio and presentation problems
           in the classroom.
         </Card>
+        <Card href="/en/infohub/iqes" icon="📊" title="IQES">
+          Evaluation &amp; school development platform: login, questionnaire
+          templates, password (for teachers).
+        </Card>
         <Card href="/en/infohub/hilfe" icon="🆘" title="Help & Contacts">
           Contact persons, common problems and solutions, important links.
         </Card>
