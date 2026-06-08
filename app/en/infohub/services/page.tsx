@@ -55,6 +55,81 @@ export default function ServicesPageEN() {
         <a href="mailto:bnb@bgzwn.at" className="text-primary hover:underline">bnb@bgzwn.at</a>.
       </Callout>
 
+      {/* ─────── Parent self-registration ─────── */}
+      <H3>Self-Registration for Parents</H3>
+
+      <P>
+        With your own parent account you can see your child&apos;s timetable and
+        absences and book parent–teacher meetings. You can set up the account
+        yourself in just a few steps.
+      </P>
+
+      <Callout type="warning" title="Important: the correct email address">
+        Registration only works with <strong>exactly</strong> the email address
+        you gave the school as your contact address — usually the same one your{" "}
+        <strong>edu.Flow</strong> messages are sent to. If the addresses do not
+        match, registration will fail.
+      </Callout>
+
+      <StepList>
+        <Step title="Open WebUntis and click &quot;Registrieren&quot; (Register)">
+          Go to the school&apos;s WebUntis start page:{" "}
+          <a
+            href="https://bgzehnwn.webuntis.com/WebUntis/?school=bgzehnwn#/basic/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            bgzehnwn.webuntis.com
+          </a>{" "}
+          and click <strong>&quot;Registrieren&quot;</strong> below the login
+          button (next to &quot;Noch keinen Zugang?&quot; / Don&apos;t have
+          access yet?).
+        </Step>
+        <Step title="Enter your email address">
+          Enter the email address stored at the school and click{" "}
+          <strong>&quot;Senden&quot;</strong> (Send).
+        </Step>
+        <Step title="Click the confirmation link in the email">
+          You will receive an email from WebUntis containing a{" "}
+          <strong>confirmation link</strong>. Click the link to complete
+          registration. If the link does not work, enter the{" "}
+          <strong>confirmation code</strong> from the email in the registration
+          window instead.
+        </Step>
+        <Step title="Registration complete">
+          You will receive a confirmation email (&quot;Registrierung
+          abgeschlossen&quot; / Registration complete). You can now log in —
+          your <strong>username</strong> is your email address.
+        </Step>
+      </StepList>
+
+      <Callout type="info" title="Forgot your password?">
+        On the{" "}
+        <a
+          href="https://bgzehnwn.webuntis.com/WebUntis/?school=bgzehnwn#/basic/login"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          WebUntis start page
+        </a>{" "}
+        click <strong>&quot;Passwort vergessen?&quot;</strong> (Forgot
+        password?). You will receive an email with a new password; to activate
+        it, click the link in the email.
+      </Callout>
+
+      <P>
+        <a
+          href="/templates/webuntis-selbstregistrierung-eltern.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          📄 Download the self-registration guide as a PDF (German)
+        </a>
+      </P>
+
       <H3>Colour codes in the timetable</H3>
       <Table
         headers={["Colour", "Meaning"]}

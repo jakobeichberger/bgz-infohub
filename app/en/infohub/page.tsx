@@ -3,6 +3,7 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { CardGrid, Card } from "@/components/ui/CardGrid";
 import { H2, P } from "@/components/ui/Section";
 import { Callout } from "@/components/ui/Callout";
+import { Search } from "@/components/Search";
 
 export const metadata: Metadata = {
   title: "InfoHub — BG Zehnergasse",
@@ -59,6 +60,17 @@ export default function InfoHubPageEN() {
         can find all important information about school accounts, iPads,
         digital services and support — clearly explained and easy to navigate.
       </P>
+
+      {/* ═══════════════ Search ═══════════════ */}
+      <div className="my-8">
+        <p className="text-sm text-txt-light mb-2">
+          <strong className="text-txt">Find something quickly:</strong> Type a
+          term into the search box — e.g. <em>password</em>, <em>WiFi</em> or{" "}
+          <em>edu.Card</em>. The search scans all pages and instantly shows
+          matching results.
+        </p>
+        <Search variant="hero" placeholder="e.g. forgot password" />
+      </div>
 
       <Callout type="info" title="School code for edu.Suite services">
         The school code for all edu.Suite services (edu.Flow, edu.Pay,

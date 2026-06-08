@@ -82,6 +82,81 @@ export default function ServicesPage() {
         <a href="mailto:bnb@bgzwn.at" className="text-primary hover:underline">bnb@bgzwn.at</a>.
       </Callout>
 
+      {/* ─────── Selbstregistrierung Eltern ─────── */}
+      <H3>Selbstregistrierung für Eltern</H3>
+
+      <P>
+        Mit einem eigenen Eltern-Zugang sehen Sie den Stundenplan und die
+        Abwesenheiten Ihres Kindes und können den Elternsprechtag buchen. Den
+        Zugang richten Sie in wenigen Schritten selbst ein.
+      </P>
+
+      <Callout type="warning" title="Wichtig: die richtige E-Mail-Adresse">
+        Die Registrierung gelingt <strong>nur</strong> mit genau der
+        E-Mail-Adresse, die Sie der Schule als Kontaktadresse bekannt gegeben
+        haben — in der Regel jene, an die auch Ihre{" "}
+        <strong>edu.Flow</strong>-Nachrichten zugestellt werden. Stimmen die
+        Adressen nicht überein, schlägt die Registrierung fehl.
+      </Callout>
+
+      <StepList>
+        <Step title="WebUntis öffnen und auf „Registrieren“ klicken">
+          Rufen Sie die schuleigene WebUntis-Startseite auf:{" "}
+          <a
+            href="https://bgzehnwn.webuntis.com/WebUntis/?school=bgzehnwn#/basic/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            bgzehnwn.webuntis.com
+          </a>{" "}
+          und klicken Sie unter dem Login-Button neben „Noch keinen Zugang?“ auf{" "}
+          <strong>„Registrieren“</strong>.
+        </Step>
+        <Step title="E-Mail-Adresse eingeben">
+          Tragen Sie Ihre bei der Schule hinterlegte E-Mail-Adresse ein und
+          klicken Sie auf <strong>„Senden“</strong>.
+        </Step>
+        <Step title="Bestätigungslink in der E-Mail anklicken">
+          Sie erhalten von WebUntis eine E-Mail mit einem{" "}
+          <strong>Bestätigungslink</strong>. Mit einem Klick auf den Link
+          schließen Sie die Registrierung ab. Funktioniert der Link nicht,
+          geben Sie stattdessen den in der E-Mail angegebenen{" "}
+          <strong>Bestätigungscode</strong> im Registrierungsfenster ein.
+        </Step>
+        <Step title="Registrierung abgeschlossen">
+          Sie erhalten eine Bestätigungs-E-Mail
+          („Registrierung abgeschlossen“). Ab sofort können Sie sich anmelden —
+          Ihr <strong>Benutzername</strong> ist Ihre E-Mail-Adresse.
+        </Step>
+      </StepList>
+
+      <Callout type="info" title="Passwort vergessen?">
+        Auf der{" "}
+        <a
+          href="https://bgzehnwn.webuntis.com/WebUntis/?school=bgzehnwn#/basic/login"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          WebUntis-Startseite
+        </a>{" "}
+        klicken Sie auf <strong>„Passwort vergessen?“</strong>. Sie erhalten
+        eine E-Mail mit einem neuen Passwort; um es zu aktivieren, klicken Sie
+        auf den Link in der E-Mail.
+      </Callout>
+
+      <P>
+        <a
+          href="/templates/webuntis-selbstregistrierung-eltern.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          📄 Anleitung zur Selbstregistrierung als PDF herunterladen
+        </a>
+      </P>
+
       <H3>Farbcodes im Stundenplan</H3>
       <Table
         headers={["Farbe", "Bedeutung"]}

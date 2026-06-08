@@ -3,6 +3,7 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { CardGrid, Card } from "@/components/ui/CardGrid";
 import { H2, P } from "@/components/ui/Section";
 import { Callout } from "@/components/ui/Callout";
+import { Search } from "@/components/Search";
 
 export const metadata: Metadata = {
   title: "InfoHub — BG Zehnergasse",
@@ -60,6 +61,17 @@ export default function InfoHubPage() {
         Schulkonto, iPad, digitale Services und Hilfestellungen — einfach
         erklärt und übersichtlich aufbereitet.
       </P>
+
+      {/* ═══════════════ Suche ═══════════════ */}
+      <div className="my-8">
+        <p className="text-sm text-txt-light mb-2">
+          <strong className="text-txt">Schnell etwas finden:</strong> Tippen Sie
+          einen Begriff ins Suchfeld — z.&nbsp;B. <em>Passwort</em>,{" "}
+          <em>WLAN</em> oder <em>edu.Card</em>. Die Suche durchsucht alle Seiten
+          und zeigt sofort passende Treffer an.
+        </p>
+        <Search variant="hero" placeholder="z. B. Passwort vergessen" />
+      </div>
 
       <Callout type="info" title="Schulcode für edu.Suite-Dienste">
         Der Schulcode für alle edu.Suite-Dienste (edu.Flow, edu.Pay, edu.Card)

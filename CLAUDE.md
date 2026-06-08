@@ -45,13 +45,15 @@ bgz-infohub/
 │   │   └── hilfe/              # FAQ, Kontakte, Support
 │   └── en/infohub/             # 15 Englische Seiten (gleiche Struktur)
 ├── components/
-│   ├── Sidebar.tsx             # Navigation, Logo, Sprachumschalter, Dark Mode Toggle
+│   ├── Sidebar.tsx             # Navigation, Logo, Sprachumschalter, Dark Mode Toggle, Suchfeld
+│   ├── Search.tsx              # Clientseitige Volltextsuche (lazy fetch search-index.json)
 │   └── ui/
 │       ├── PageHeader.tsx      # <h1> mit primary Farbe + border-bottom
 │       ├── CardGrid.tsx        # Responsive Grid + Card (intern/extern/ohne Link)
 │       ├── Section.tsx         # H2, H3, P, UL, OL, Table, InlineCode
 │       ├── Callout.tsx         # Info/Success/Warning/Danger mit expliziten dark:-Klassen
-│       └── StepList.tsx        # Nummerierte Steps mit vertikaler Verbindungslinie
+│       ├── StepList.tsx        # Nummerierte Steps mit vertikaler Verbindungslinie
+│       └── LinkCards.tsx       # Shared Link-Karten-Grid (intern/extern, dotClass)
 ├── public/
 │   ├── .htaccess               # Apache: HTTPS, 404, Security Headers, Caching, Compression
 │   ├── bgz-logo.png            # Schullogo 512x512 (auch in Sidebar)
@@ -66,6 +68,8 @@ bgz-infohub/
 ├── components/LastUpdated.tsx  # Zeigt "Zuletzt aktualisiert"-Datum pro Seite (Client, usePathname)
 ├── lib/last-updated.json       # GENERIERT: Route → ISO-Datum (nicht manuell editieren)
 ├── scripts/gen-last-updated.mjs # Generiert lib/last-updated.json aus git (laeuft vor dev/build)
+├── scripts/gen-search-index.mjs # Generiert public/search-index.json via TS-Compiler-API (vor dev/build)
+├── public/search-index.json    # GENERIERT (gitignored): Volltext-Suchindex, lazy gefetcht
 └── CLAUDE.md                   # Diese Datei
 ```
 
@@ -79,6 +83,15 @@ bgz-infohub/
 - **Deterministische Datumsformatierung** (eigene Monats-Arrays, KEIN `Intl`/`new Date()`) — sonst Hydration-Mismatch zwischen Build (Node) und Browser.
 - In `app/layout.tsx` einmalig `<LastUpdated />` nach `{children}` eingebunden → gilt fuer alle Seiten, kein Boilerplate pro Seite.
 - `lib/last-updated.json` ist generiert; nicht manuell editieren (wird bei jedem Build ueberschrieben).
+
+### Volltextsuche (clientseitig, indiziert)
+- **Build-Zeit-Generator** `scripts/gen-search-index.mjs` parst jede `app/**/page.tsx` mit der **TypeScript-Compiler-API** (`import ts from "typescript"` — bereits devDependency, KEINE neue Abhaengigkeit) und extrahiert sichtbaren Text: `metadata.title`/`description`, `PageHeader`/`Step`/`Callout`/`Card`-`title`/`alt`/`label`-Attribute (Whitelist!), JSX-Textknoten und String-Literale aus Array-Literalen (`Table`-Zeilen, `LinkCards`-items). `className`/`href`/`src`/`icon` werden ignoriert → kein CSS-/URL-Rauschen.
+- Ausgabe nach **`public/search-index.json`** (Array von `{url, lang, title, desc, headings, text}`). NUR Inhaltsseiten (`/infohub*`, `/en/infohub*`); `/`, `/en`, 404 und `/lizenzen` ausgeschlossen. Aktuell 42 Eintraege (21 DE + 21 EN), ~250 KB (gzip via .htaccess).
+- Laeuft automatisch vor `dev`/`build` (in package.json-Scripts vorangestellt, wie gen-last-updated). Manuell: `npm run gen-search`.
+- **`public/search-index.json` ist gitignored** (generiert, bei jedem Build neu) — im Gegensatz zu `lib/last-updated.json` (committet).
+- **Komponente** `components/Search.tsx` (Client): sichtbares Suchfeld oben in der Sidebar (`<Search onNavigate={() => setOpen(false)} />`). **Lazy `fetch("/search-index.json")`** beim ersten Fokus (NICHT ins Bundle gebuendelt; same-origin → CSP `connect-src 'self'` ok). Sprachfilter via `isEN`. Gewichtetes Scoring: **title ×10 > desc ×5 > headings ×3 > text ×1** (desc = kuratierte Zusammenfassung, wichtigstes Signal nach dem Titel; war anfangs gar nicht durchsucht → Bug behoben). Substring-Matching (Eltern tippen Teilwoerter), Multi-Token AND-Bonus. Ergebnis-Dropdown mit hervorgehobenem Treffer-Snippet (`<mark bg-primary/20>`).
+- **a11y**: Combobox-Muster (`role="combobox"`/`listbox`/`option`, `aria-activedescendant`, `aria-live` Trefferzahl), Tastatur ↑/↓/Enter/Esc, 44px Touch-Target, focus-visible.
+- Neue Seiten erscheinen **automatisch** im Index (Generator scannt alle page.tsx) — keine manuelle Liste pflegen.
 
 ### Routing & i18n
 - `/infohub/*` — 15 Deutsche Seiten
@@ -193,7 +206,8 @@ Tailwind 4 hat Probleme mit `text-[var(--text)]` — Next.js splittet JS-Chunks 
 4. Navigation EN: `navItemsEN` Array in `components/Sidebar.tsx`
 5. 404-Vorschlaege: `allPages` Array in `app/not-found.tsx`
 6. Homepage-Karte: Karten-Array in `app/infohub/page.tsx` und `app/en/infohub/page.tsx`
-7. `npm run build` — pruefen ob alle 35+ Seiten generiert werden
+7. `npm run build` — pruefen ob alle Seiten generiert werden
+8. **Suche**: NICHTS noetig — die Volltextsuche (`scripts/gen-search-index.mjs`) nimmt jede neue `page.tsx` automatisch auf.
 
 ### Rechtsquellen-Format (konsistent mit diplo.eichberger.tech)
 ```tsx

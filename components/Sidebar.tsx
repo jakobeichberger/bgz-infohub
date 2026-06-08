@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import { Search } from "./Search";
 
 type NavItem = {
   href: string;
@@ -234,6 +235,10 @@ export function Sidebar() {
               </div>
             </div>
           </Link>
+        </div>
+
+        <div className="p-3 pb-0">
+          <Search onNavigate={() => setOpen(false)} />
         </div>
 
         <nav className="p-3 space-y-1">
