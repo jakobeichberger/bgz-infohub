@@ -11,7 +11,7 @@ Jakob betreibt auch **diplo.eichberger.tech** (DiploGuide fuer HTL WN) — Desig
 **Zielgruppe**: Eltern und Schueler mit wenig IT-Erfahrung. Texte muessen einfach, klar und schrittweise erklaert sein. Grosse Tap-Targets fuer mobile Nutzung.
 
 ## Tech Stack
-- **Next.js 15** (App Router) mit `output: "export"` und `trailingSlash: true`
+- **Next.js 16** (App Router) mit `output: "export"` und `trailingSlash: true`
 - **React 19**, **TypeScript**
 - **Tailwind CSS 4** mit `@theme inline` Block in globals.css
 - Fonts: Roboto (Headings), Ubuntu (Body) via Google Fonts `@import url(...)`
@@ -64,7 +64,7 @@ bgz-infohub/
 ├── scripts/
 │   └── create_vwa_word_template.py  # Python-Script zur Regeneration der Word-Vorlage
 ├── next.config.ts              # output: "export", trailingSlash: true
-├── package.json                # next 15, react 19, tailwindcss 4
+├── package.json                # next 16, react 19, tailwindcss 4
 ├── components/LastUpdated.tsx  # Zeigt "Zuletzt aktualisiert"-Datum pro Seite (Client, usePathname)
 ├── lib/last-updated.json       # GENERIERT: Route → ISO-Datum (nicht manuell editieren)
 ├── scripts/gen-last-updated.mjs # Generiert lib/last-updated.json aus git (laeuft vor dev/build)
@@ -189,6 +189,40 @@ bgz-infohub/
 | `--code-bg` | `bg-code-bg` | `bg-code-bg` |
 
 ## Wichtige Learnings & Fallstricke
+
+### Sidebar-Abschnittsanker: kein requestAnimationFrame (August 2026)
+Der H2-Scan in `Sidebar.tsx` lief frueher in `requestAnimationFrame` + 200ms-Rescan.
+**rAF ist pausiert, solange ein Tab im Hintergrund/verborgen ist** — dann blieb das
+Abschnitts-Submenu leer, bis der Tab sichtbar wurde. Jetzt: synchroner Scan im Effect
++ `MutationObserver` auf `#main`. Damit entfaellt sowohl die rAF- als auch die
+200ms-Abhaengigkeit; spaet gerenderte Inhalte werden automatisch nachgezogen.
+`setSections` hat einen Gleichheits-Guard, damit Observer-Callbacks keine
+Render-Schleife ausloesen.
+
+**Debug-Hinweis:** Beim Testen im verborgenen Browser-Tab (`document.visibilityState
+=== "hidden"`) feuert rAF nicht. Das betrifft auch den Scroll-Spy, der weiterhin
+bewusst rAF-gedrosselt ist — er laesst sich in einem verborgenen Tab nicht
+verifizieren, funktioniert im sichtbaren Tab aber normal. Nicht als Bug fehldeuten.
+
+### Next.js 16 — Upgrade-Fallstricke (August 2026)
+Upgrade von 15 auf 16 wegen Security-Advisories (alle 4 High-Vulns waren transitive
+next-Abhaengigkeiten: nanoid, postcss, sharp). Danach `npm audit` = 0 Vulnerabilities.
+
+- **`next lint` existiert nicht mehr.** Das alte `"lint": "next lint"`-Script wurde
+  durch `"typecheck": "tsc --noEmit"` ersetzt (nutzt das bereits vorhandene
+  TypeScript, keine neuen Abhaengigkeiten). ESLint ist in diesem Projekt bewusst
+  nicht eingerichtet.
+- **`tsconfig.json`: `jsx` MUSS `react-jsx` sein** (nicht mehr `preserve`) und
+  `.next/dev/types/**/*.ts` gehoert in `include`. Next schreibt das beim ersten
+  Build automatisch um — dabei expandiert es allerdings alle JSON-Arrays
+  mehrzeilig. Die kompakte Formatierung wurde manuell wiederhergestellt.
+- **Erster Build nach dem Upgrade kann fehlschlagen** (`Cannot find module for
+  page: ...`), weil Next die tsconfig mitten im Build umschreibt. Einfach
+  `rm -rf .next && npm run build` wiederholen — danach stabil.
+- **Static Export erzeugt jetzt 48 statt 47 Seiten**: zusaetzlich
+  `_not-found/index.html`. `404.html` bleibt unveraendert bestehen.
+- Der sichtbare Seiteninhalt ist nach dem Upgrade **byte-identisch** — verifiziert
+  ueber Textvergleich aller 47 Seiten gegen den Next-15-Build.
 
 ### Tailwind CSS 4 — KEINE `[var(--xxx)]` Syntax verwenden!
 Tailwind 4 hat Probleme mit `text-[var(--text)]` — Next.js splittet JS-Chunks und die Klasse wird mittendrin zerteilt, was CSS-Parsing-Warnings erzeugt. **Loesung**: `@theme inline` Block + native Klassen.

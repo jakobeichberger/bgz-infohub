@@ -134,26 +134,32 @@ export function Sidebar() {
   }, [open]);
 
   // Scan the current page for its H2 section anchors → sidebar sub-menu.
-  // Runs after each navigation; a second pass catches late-rendered content.
+  // Runs after each navigation. The previous version wrapped the scan in
+  // requestAnimationFrame plus a 200ms rescan; rAF is suspended while a tab is
+  // hidden, so the sub-menu stayed empty until the tab became visible, and the
+  // 200ms guess was the only safeguard against late-rendered content. Scanning
+  // synchronously and observing #main removes both dependencies.
   useEffect(() => {
     setActiveSection("");
-    let t = 0;
     const scan = () => {
       const main = document.getElementById("main");
-      if (!main) return setSections([]);
-      const hs = Array.from(main.querySelectorAll("h2")).filter(
-        (h) => h.id && h.textContent && h.textContent.trim()
+      if (!main) return;
+      const next = Array.from(main.querySelectorAll("h2"))
+        .filter((h) => h.id && h.textContent && h.textContent.trim())
+        .map((h) => ({ id: h.id, label: h.textContent!.trim() }));
+      // Bail out when nothing changed so observer callbacks cannot loop.
+      setSections((prev) =>
+        prev.length === next.length &&
+        prev.every((p, i) => p.id === next[i].id && p.label === next[i].label)
+          ? prev
+          : next
       );
-      setSections(hs.map((h) => ({ id: h.id, label: h.textContent!.trim() })));
     };
-    const raf = requestAnimationFrame(() => {
-      scan();
-      t = window.setTimeout(scan, 200);
-    });
-    return () => {
-      cancelAnimationFrame(raf);
-      clearTimeout(t);
-    };
+    scan();
+    const target = document.getElementById("main") ?? document.body;
+    const mo = new MutationObserver(scan);
+    mo.observe(target, { childList: true, subtree: true });
+    return () => mo.disconnect();
   }, [pathname]);
 
   // Highlight the section currently in view (scroll-spy): the last heading
