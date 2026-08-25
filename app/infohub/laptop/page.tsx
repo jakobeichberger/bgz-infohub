@@ -3,11 +3,12 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { H2, H3, P, UL, Table } from "@/components/ui/Section";
 import { Callout } from "@/components/ui/Callout";
 import { LinkCards } from "@/components/ui/LinkCards";
+import { StepList, Step } from "@/components/ui/StepList";
 
 export const metadata: Metadata = {
   title: "Laptop-Vorgaben — Oberstufe",
   description:
-    "Offizielle Notebook-Anforderungen für die Oberstufe am BG Zehnergasse: Mindestspezifikationen, Kaufberatung und Tipps.",
+    "Offizielle Notebook-Anforderungen für die Oberstufe am BG Zehnergasse: Mindestspezifikationen, Kaufberatung, Bildungsrabatte und die eduabo-Schulaktion (Miete oder Kauf) für 2026/27.",
 };
 
 export default function LaptopPage() {
@@ -285,6 +286,308 @@ export default function LaptopPage() {
         (Oberstufe dauert 4 Jahre). Prüfen Sie auch eine
         Geräteversicherung gegen Sturz- und Flüssigkeitsschäden.
       </Callout>
+
+      {/* ═══ eduabo Schulaktion ═══ */}
+      <H2>Schulaktion: Notebook über eduabo (Schuljahr 2026/27)</H2>
+
+      <P>
+        Sie müssen das passende Notebook <strong>nicht</strong> selbst
+        zusammensuchen: Für das Schuljahr <strong>2026/27</strong> stellt die
+        Schule gemeinsam mit dem Anbieter <strong>eduabo</strong> ein fertig
+        abgestimmtes Gerät bereit. Sie entscheiden nur zwischen zwei
+        Varianten — <strong>Miete im Abo</strong> oder{" "}
+        <strong>Einmalkauf</strong> — und das Notebook wird nach Hause
+        geliefert: beim Kauf sofort, beim Abo pünktlich zum Schulstart.
+      </P>
+
+      <Callout type="info" title="Elternbrief zum Nachlesen">
+        Alle Angaben in diesem Abschnitt stammen aus dem offiziellen
+        Elternbrief (Stand: 25.08.2026):{" "}
+        <a
+          href="/templates/Elternbrief-eduabo-2026-27.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          Elternbrief eduabo — Notebookauswahl 2026/27 (PDF)
+        </a>
+      </Callout>
+
+      <H3>Das angebotene Gerät</H3>
+
+      <P>
+        Angeboten wird <strong>ein</strong> mit der Schulleitung abgestimmtes
+        Modell: das <strong>Lenovo IdeaPad Slim 3 Gen8</strong>, ein
+        schlanker Allrounder für den Schulalltag. Die Tabelle zeigt, wie das
+        Gerät gegenüber den Mindestanforderungen der Schule (siehe oben)
+        abschneidet:
+      </P>
+
+      <Table
+        headers={[
+          "Eigenschaft",
+          "Vorgabe der Schule",
+          "Lenovo IdeaPad Slim 3 Gen8",
+          "Erfüllt?",
+        ]}
+        rows={[
+          [
+            "Bildschirm",
+            "mind. 14 Zoll, FullHD",
+            "14 Zoll, 1920×1080, IPS matt",
+            "Ja",
+          ],
+          [
+            "Prozessor",
+            "Core i5 / Core Ultra 5 oder Ryzen 5",
+            "AMD Ryzen 5 7520U (4 Kerne / 8 Threads), 2,8–4,3 GHz",
+            "Ja — Einstiegsklasse",
+          ],
+          ["Arbeitsspeicher", "mind. 16 GB", "16 GB LPDDR5", "Ja"],
+          ["Speicher", "mind. 512 GB SSD", "512 GB SSD", "Ja"],
+          [
+            "Betriebssystem",
+            "Windows 11 (nicht die S-Version)",
+            "Windows 11 Home",
+            "Ja",
+          ],
+          [
+            "Grafik",
+            "keine Vorgabe",
+            "AMD Radeon 610M (im Prozessor integriert)",
+            "—",
+          ],
+        ]}
+      />
+
+      <H3>Die zwei Varianten im Vergleich</H3>
+
+      <Table
+        headers={["Kriterium", "Variante 1: Miete im Abo", "Variante 2: Einmalkauf"]}
+        rows={[
+          ["Preis", "€ 20,99 pro Monat über 46 Monate", "€ 599,— einmalig"],
+          [
+            "Gesamtkosten",
+            "€ 965,54 (46 × € 20,99, eigene Berechnung)",
+            "€ 599,— plus Schutzpaket, falls gewünscht",
+          ],
+          [
+            "Rundum-Sorglos-Paket",
+            "automatisch inklusive, über die gesamte Mietlaufzeit",
+            "optional zubuchbar (Aufpreis)",
+          ],
+          [
+            "Eigentum am Gerät",
+            "Mietgerät von eduabo",
+            "gehört sofort Ihnen — auch nach der Schulzeit",
+          ],
+          ["Bonitätsprüfung", "keine", "entfällt (Sie zahlen sofort)"],
+          [
+            "Kündigung",
+            "bei Schulaustritt kündbar",
+            "entfällt",
+          ],
+          [
+            "Bei Bestellung verrechnet",
+            "Kaution (Höhe im Elternbrief nicht genannt)",
+            "voller Kaufpreis",
+          ],
+          [
+            "Lieferung nach Hause",
+            "pünktlich zum Schulstart",
+            "sofort",
+          ],
+        ]}
+      />
+
+      <H3>Das Rundum-Sorglos-Paket</H3>
+
+      <P>
+        Das Rundum-Sorglos-Paket geht deutlich über die gesetzliche
+        Gewährleistung hinaus. Es deckt genau die Fälle ab, die im Schulalltag
+        tatsächlich passieren: das Notebook fällt aus dem Rucksack, ein Getränk
+        läuft aus, oder das Gerät wird gestohlen. Die Schutzdauer passt sich
+        automatisch der Laufzeit an. Im <strong>Abo ist es enthalten</strong>,
+        beim <strong>Kauf können Sie es dazubuchen</strong>.
+      </P>
+
+      <Table
+        headers={["Leistung", "Standardgarantie", "Rundum-Sorglos"]}
+        rows={[
+          ["Sofortschutz ab Liefertag", "Ja", "Ja"],
+          ["Material-, Produktions- und Konstruktionsfehler", "Ja", "Ja"],
+          ["Arbeitslohn und Ersatzteile", "Ja", "Ja"],
+          ["Fahrt- bzw. Versandkosten", "Nein", "Ja"],
+          ["Ersatzleistung bei Totalschaden", "Nein", "Ja"],
+          ["Leihgerät in der Schule für Sofortersatz", "Nein", "Ja"],
+          ["Fall-, Sturz- und Glasbruchschäden", "Nein", "Ja"],
+          ["Wasser- und Feuchtigkeitsschäden", "Nein", "Ja"],
+          ["Überspannung und Elektronikschäden", "Nein", "Ja"],
+          ["Akkudefekte (Leistung unter 50 % in 4 Jahren)", "Nein", "Ja"],
+          ["Datenrettung und Datensicherung", "Nein", "Ja"],
+          ["Aufspielen von Betriebssystemen", "Nein", "Ja"],
+          ["Diebstahlschutz", "Nein", "Ja"],
+        ]}
+      />
+
+      <Callout type="info" title="Selbstbehalt">
+        Im Schadensfall zahlen Sie <strong>höchstens € 50,—</strong> pro
+        Schadensfall. Weitere Kosten fallen laut Elternbrief nicht an.
+      </Callout>
+
+      <H3>Beratung: Miete oder Kauf?</H3>
+
+      <P>
+        Die Schulaktion ist ein <strong>Angebot, keine Pflicht</strong>. Sie
+        können ebenso ein eigenes Notebook kaufen, solange es die
+        Mindestanforderungen oben erfüllt — etwa über die Bildungsrabatte im
+        nächsten Abschnitt. Die folgende Einordnung soll Ihnen die
+        Entscheidung erleichtern.
+      </P>
+
+      <P>
+        <strong>Für die Miete im Abo spricht:</strong>
+      </P>
+      <UL>
+        <li>
+          <strong>Wenn Sie Schäden absichern wollen:</strong> Sturz, Wasser,
+          Diebstahl und Akkuverschleiß sind mitversichert — genau die Risiken,
+          die in vier Jahren Schulalltag realistisch sind
+        </li>
+        <li>
+          <strong>Wenn ein Ausfall problematisch wäre:</strong> Bei einer
+          Reparatur bekommt Ihr Kind ein <strong>Leihgerät direkt in der
+          Schule</strong> und verliert keine Unterrichtszeit
+        </li>
+        <li>
+          <strong>Wenn eine große Einmalzahlung schwierig ist:</strong> Rund
+          21 Euro im Monat statt knapp 600 Euro auf einmal — und ohne
+          Bonitätsprüfung, das Angebot steht allen Familien offen
+        </li>
+        <li>
+          <strong>Wenn ein Schulwechsel möglich ist:</strong> Bei Schulaustritt
+          ist das Abo kündbar
+        </li>
+      </UL>
+
+      <P>
+        <strong>Für den Einmalkauf spricht:</strong>
+      </P>
+      <UL>
+        <li>
+          <strong>Wenn Sie rechnen:</strong> Der Kauf ist mit € 599,— rund{" "}
+          <strong>€ 367 günstiger</strong> als die 46 Monatsraten
+          (€ 965,54) — vorausgesetzt, nichts geht kaputt und Sie buchen das
+          Schutzpaket nicht dazu
+        </li>
+        <li>
+          <strong>Wenn das Gerät bleiben soll:</strong> Es gehört Ihnen sofort
+          und auch nach der Oberstufe — als Zweitgerät, für Geschwister oder
+          zum Weiterverkauf
+        </li>
+        <li>
+          <strong>Wenn Sie den Schutz selbst wählen wollen:</strong> Sie können
+          das Rundum-Sorglos-Paket gezielt dazubuchen — oder bewusst darauf
+          verzichten
+        </li>
+      </UL>
+
+      <Callout type="warning" title="Das sollten Sie vor der Bestellung wissen">
+        <ul>
+          <li>
+            <strong>Der Prozessor ist Einstiegsklasse.</strong> Der Ryzen 5
+            7520U erfüllt die Vorgabe der Schule und reicht für Office, Teams,
+            Browser und den normalen Unterricht gut aus. Wer viel{" "}
+            <strong>Bild- und Videobearbeitung, größere
+            Programmierprojekte oder virtuelle Maschinen</strong> plant, ist
+            mit einem stärkeren Gerät aus der 600–900-Euro-Klasse besser
+            bedient.
+          </li>
+          <li>
+            <strong>Zwei Preise fehlen im Elternbrief:</strong> die{" "}
+            <strong>Höhe der Kaution</strong> beim Abo und der{" "}
+            <strong>Aufpreis für das Rundum-Sorglos-Paket</strong> beim Kauf.
+            Fragen Sie beides vor dem Abschluss direkt bei eduabo nach — sonst
+            lassen sich die beiden Varianten nicht sauber vergleichen.
+          </li>
+          <li>
+            <strong>Preise können sich kurzfristig ändern.</strong> eduabo
+            weist selbst auf Bauteil-Knappheit hin, die zu Preiserhöhungen und
+            Lieferengpässen führen kann. Es gibt keine Preisgarantie.
+          </li>
+        </ul>
+      </Callout>
+
+      <H3>So bestellen Sie</H3>
+
+      <StepList>
+        <Step title="Schulstore öffnen">
+          Rufen Sie den Schulshop auf:{" "}
+          <a
+            href="https://eduabo.at/pages/brg-zehnergasse"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            eduabo.at/pages/brg-zehnergasse
+          </a>
+        </Step>
+        <Step title="Variante wählen">
+          Wählen Sie das Modell und danach <strong>„Miete“</strong> oder{" "}
+          <strong>„Kauf“</strong>. Beim Kauf entscheiden Sie zusätzlich, ob Sie
+          das Rundum-Sorglos-Paket dazubuchen möchten.
+        </Step>
+        <Step title="Bestellung abschließen">
+          Beim Kauf wird der <strong>Kaufpreis</strong> verrechnet, beim Abo
+          die <strong>Kaution</strong>. Danach erfolgt die Lieferung nach
+          Hause — beim Kauf sofort, beim Abo pünktlich zum Schulstart.
+        </Step>
+      </StepList>
+
+      <Callout type="success" title="Direkt zum Schulshop">
+        Alle Details und die Bestellung finden Sie unter{" "}
+        <a
+          href="https://eduabo.at/pages/brg-zehnergasse"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          eduabo.at/pages/brg-zehnergasse
+        </a>
+      </Callout>
+
+      <Callout type="info" title="Fragen zur Bestellung? — Kontakt eduabo">
+        Bei Fragen zu Bestellung, Kaution, Schutzpaket oder Lieferung wenden
+        Sie sich bitte <strong>direkt an eduabo</strong>, nicht an die Schule:
+        <ul>
+          <li>
+            E-Mail:{" "}
+            <a
+              href="mailto:service@eduabo.at"
+              className="text-primary hover:underline"
+            >
+              service@eduabo.at
+            </a>
+          </li>
+          <li>
+            Telefon:{" "}
+            <a href="tel:06787800" className="text-primary hover:underline">
+              06787800
+            </a>{" "}
+            (Mo–Fr 10:00–18:00 Uhr)
+          </li>
+          <li>Anschrift: Universitätsstraße 4, A-1090 Wien</li>
+        </ul>
+      </Callout>
+
+      <P>
+        <em>
+          Hinweis: Die Geräteauswahl wurde mit der Schulleitung abgestimmt. Der
+          Vertrag kommt jedoch ausschließlich zwischen Ihnen und eduabo
+          zustande — die Schule ist nicht Vertragspartner und übernimmt keine
+          Haftung für Preise, Lieferung oder Abwicklung. Preise und
+          Verfügbarkeit können sich jederzeit ändern.
+        </em>
+      </P>
 
       {/* ═══ Bildungsrabatte ═══ */}
       <H2>Bildungsrabatte beim Notebook-Kauf</H2>

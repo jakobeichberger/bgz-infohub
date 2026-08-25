@@ -3,11 +3,12 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { H2, H3, P, UL, Table } from "@/components/ui/Section";
 import { Callout } from "@/components/ui/Callout";
 import { LinkCards } from "@/components/ui/LinkCards";
+import { StepList, Step } from "@/components/ui/StepList";
 
 export const metadata: Metadata = {
   title: "Laptop Requirements — Upper Secondary",
   description:
-    "Official notebook requirements for upper secondary at BG Zehnergasse: minimum specifications, buying guide, and tips.",
+    "Official notebook requirements for upper secondary at BG Zehnergasse: minimum specifications, buying guide, education discounts, and the eduabo school offer (rent or buy) for 2026/27.",
 };
 
 export default function LaptopPageEN() {
@@ -281,6 +282,309 @@ export default function LaptopPageEN() {
         (upper secondary lasts 4 years). Also consider device insurance
         against drop and liquid damage.
       </Callout>
+
+      {/* === eduabo School Offer === */}
+      <H2>School Offer: Notebook via eduabo (School Year 2026/27)</H2>
+
+      <P>
+        You do <strong>not</strong> have to research a suitable notebook
+        yourself: for the <strong>2026/27</strong> school year, the school and
+        the provider <strong>eduabo</strong> jointly offer a pre-approved
+        device. You only choose between two options —{" "}
+        <strong>subscription rental</strong> or{" "}
+        <strong>one-time purchase</strong> — and the notebook is delivered to
+        your home: immediately when you buy, and in time for the start of
+        school when you subscribe.
+      </P>
+
+      <Callout type="info" title="Parent Letter (German)">
+        All information in this section comes from the official parent letter
+        (as of 25 August 2026):{" "}
+        <a
+          href="/templates/Elternbrief-eduabo-2026-27.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          Parent letter eduabo — Notebook selection 2026/27 (PDF, German)
+        </a>
+      </Callout>
+
+      <H3>The Device on Offer</H3>
+
+      <P>
+        <strong>One</strong> model, agreed with the school management, is
+        offered: the <strong>Lenovo IdeaPad Slim 3 Gen8</strong>, a slim
+        all-rounder for everyday school use. The table shows how it compares
+        against the school minimum requirements listed above:
+      </P>
+
+      <Table
+        headers={[
+          "Feature",
+          "School Requirement",
+          "Lenovo IdeaPad Slim 3 Gen8",
+          "Met?",
+        ]}
+        rows={[
+          [
+            "Display",
+            "At least 14 inches, FullHD",
+            "14 inches, 1920x1080, IPS matte",
+            "Yes",
+          ],
+          [
+            "Processor",
+            "Core i5 / Core Ultra 5 or Ryzen 5",
+            "AMD Ryzen 5 7520U (4 cores / 8 threads), 2.8-4.3 GHz",
+            "Yes - entry level",
+          ],
+          ["Memory", "At least 16 GB", "16 GB LPDDR5", "Yes"],
+          ["Storage", "At least 512 GB SSD", "512 GB SSD", "Yes"],
+          [
+            "Operating system",
+            "Windows 11 (not the S version)",
+            "Windows 11 Home",
+            "Yes",
+          ],
+          [
+            "Graphics",
+            "No requirement",
+            "AMD Radeon 610M (integrated in the processor)",
+            "-",
+          ],
+        ]}
+      />
+
+      <H3>The Two Options Compared</H3>
+
+      <Table
+        headers={["Criterion", "Option 1: Subscription", "Option 2: Purchase"]}
+        rows={[
+          ["Price", "EUR 20.99 per month for 46 months", "EUR 599 one-time"],
+          [
+            "Total cost",
+            "EUR 965.54 (46 x EUR 20.99, our own calculation)",
+            "EUR 599 plus protection package, if desired",
+          ],
+          [
+            "All-round protection package",
+            "Automatically included for the entire rental period",
+            "Optional add-on (extra charge)",
+          ],
+          [
+            "Ownership",
+            "Rental device from eduabo",
+            "Yours immediately - also after school",
+          ],
+          ["Credit check", "None", "Not applicable (you pay immediately)"],
+          [
+            "Cancellation",
+            "Can be cancelled when leaving the school",
+            "Not applicable",
+          ],
+          [
+            "Charged when ordering",
+            "Deposit (amount not stated in the parent letter)",
+            "Full purchase price",
+          ],
+          [
+            "Home delivery",
+            "In time for the start of school",
+            "Immediately",
+          ],
+        ]}
+      />
+
+      <H3>The All-Round Protection Package</H3>
+
+      <P>
+        The all-round protection package goes well beyond the statutory
+        warranty. It covers exactly the situations that actually happen at
+        school: the notebook falls out of the backpack, a drink spills, or the
+        device is stolen. The protection period automatically matches the
+        contract term. It is <strong>included with the subscription</strong>{" "}
+        and <strong>can be added when purchasing</strong>.
+      </P>
+
+      <Table
+        headers={["Coverage", "Standard Warranty", "All-Round Protection"]}
+        rows={[
+          ["Immediate protection from delivery day", "Yes", "Yes"],
+          ["Material, production and design defects", "Yes", "Yes"],
+          ["Labour and spare parts", "Yes", "Yes"],
+          ["Travel and shipping costs", "No", "Yes"],
+          ["Replacement in case of total loss", "No", "Yes"],
+          ["Loan device at school for immediate replacement", "No", "Yes"],
+          ["Drop, fall and glass breakage damage", "No", "Yes"],
+          ["Water and moisture damage", "No", "Yes"],
+          ["Power surge and electronics damage", "No", "Yes"],
+          ["Battery defects (capacity below 50 % within 4 years)", "No", "Yes"],
+          ["Data recovery and data backup", "No", "Yes"],
+          ["Operating system reinstallation", "No", "Yes"],
+          ["Theft protection", "No", "Yes"],
+        ]}
+      />
+
+      <Callout type="info" title="Excess (Deductible)">
+        In the event of a claim you pay at most <strong>EUR 50</strong> per
+        incident. According to the parent letter, no further costs apply.
+      </Callout>
+
+      <H3>Advice: Rent or Buy?</H3>
+
+      <P>
+        The school offer is an <strong>option, not an obligation</strong>. You
+        are equally free to buy your own notebook as long as it meets the
+        minimum requirements above — for example using the education discounts
+        in the next section. The following points are intended to make the
+        decision easier.
+      </P>
+
+      <P>
+        <strong>Arguments for the subscription:</strong>
+      </P>
+      <UL>
+        <li>
+          <strong>If you want damage covered:</strong> drops, water, theft and
+          battery wear are all insured — precisely the risks that are
+          realistic across four years of school
+        </li>
+        <li>
+          <strong>If downtime would be a problem:</strong> during a repair your
+          child receives a <strong>loan device directly at school</strong> and
+          loses no lesson time
+        </li>
+        <li>
+          <strong>If a large one-off payment is difficult:</strong> around 21
+          euros a month instead of almost 600 euros at once — and with no
+          credit check, so the offer is open to every family
+        </li>
+        <li>
+          <strong>If a change of school is possible:</strong> the subscription
+          can be cancelled when leaving the school
+        </li>
+      </UL>
+
+      <P>
+        <strong>Arguments for the one-time purchase:</strong>
+      </P>
+      <UL>
+        <li>
+          <strong>If you do the maths:</strong> at EUR 599 the purchase is
+          around <strong>EUR 367 cheaper</strong> than the 46 monthly
+          instalments (EUR 965.54) — provided nothing breaks and you do not add
+          the protection package
+        </li>
+        <li>
+          <strong>If the device should stay with you:</strong> it is yours
+          immediately and also after upper secondary — as a second device, for
+          siblings, or to resell
+        </li>
+        <li>
+          <strong>If you want to choose the protection yourself:</strong> you
+          can add the all-round protection package deliberately — or
+          deliberately go without it
+        </li>
+      </UL>
+
+      <Callout type="warning" title="What to Know Before Ordering">
+        <ul>
+          <li>
+            <strong>The processor is entry level.</strong> The Ryzen 5 7520U
+            meets the school requirement and is perfectly adequate for Office,
+            Teams, browsing and normal lessons. If you plan a lot of{" "}
+            <strong>photo and video editing, larger programming projects or
+            virtual machines</strong>, a stronger device from the 600-900 euro
+            class is the better choice.
+          </li>
+          <li>
+            <strong>Two prices are missing from the parent letter:</strong> the{" "}
+            <strong>amount of the deposit</strong> for the subscription and the{" "}
+            <strong>surcharge for the all-round protection package</strong>{" "}
+            when purchasing. Ask eduabo about both before signing — otherwise
+            the two options cannot be compared properly.
+          </li>
+          <li>
+            <strong>Prices may change at short notice.</strong> eduabo itself
+            points out component shortages that can lead to price increases and
+            supply bottlenecks. There is no price guarantee.
+          </li>
+        </ul>
+      </Callout>
+
+      <H3>How to Order</H3>
+
+      <StepList>
+        <Step title="Open the school store">
+          Go to the school shop:{" "}
+          <a
+            href="https://eduabo.at/pages/brg-zehnergasse"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            eduabo.at/pages/brg-zehnergasse
+          </a>
+        </Step>
+        <Step title="Choose your option">
+          Select the model and then <strong>Miete</strong> (rent) or{" "}
+          <strong>Kauf</strong> (buy). When buying, you additionally decide
+          whether to add the all-round protection package.
+        </Step>
+        <Step title="Complete the order">
+          When buying, the <strong>purchase price</strong> is charged; with the
+          subscription, the <strong>deposit</strong> is charged. Delivery then
+          goes to your home — immediately when buying, and in time for the
+          start of school with the subscription.
+        </Step>
+      </StepList>
+
+      <Callout type="success" title="Straight to the School Shop">
+        You will find all details and the order form at{" "}
+        <a
+          href="https://eduabo.at/pages/brg-zehnergasse"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          eduabo.at/pages/brg-zehnergasse
+        </a>
+      </Callout>
+
+      <Callout type="info" title="Questions About Your Order? - eduabo Contact">
+        For questions about ordering, the deposit, the protection package or
+        delivery, please contact <strong>eduabo directly</strong>, not the
+        school:
+        <ul>
+          <li>
+            Email:{" "}
+            <a
+              href="mailto:service@eduabo.at"
+              className="text-primary hover:underline"
+            >
+              service@eduabo.at
+            </a>
+          </li>
+          <li>
+            Phone:{" "}
+            <a href="tel:06787800" className="text-primary hover:underline">
+              06787800
+            </a>{" "}
+            (Mon-Fri 10:00-18:00)
+          </li>
+          <li>Address: Universitaetsstrasse 4, A-1090 Vienna</li>
+        </ul>
+      </Callout>
+
+      <P>
+        <em>
+          Note: the device selection was agreed with the school management.
+          However, the contract is concluded exclusively between you and
+          eduabo — the school is not a contracting party and accepts no
+          liability for prices, delivery or processing. Prices and availability
+          may change at any time.
+        </em>
+      </P>
 
       {/* === Education Discounts === */}
       <H2>Education Discounts When Buying a Notebook</H2>
