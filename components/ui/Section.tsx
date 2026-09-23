@@ -23,11 +23,13 @@ function slugify(s: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
-export function H2({ children }: { children: React.ReactNode }) {
-  const id = slugify(nodeText(children));
+// `id` overrides the auto-generated anchor — use it for sections that are
+// linked from outside (stable anchor even when the heading text changes).
+export function H2({ children, id }: { children: React.ReactNode; id?: string }) {
+  const anchor = id ?? slugify(nodeText(children));
   return (
     <h2
-      id={id || undefined}
+      id={anchor || undefined}
       className="scroll-mt-20 text-xl font-bold text-primary mt-10 mb-4 pb-2 border-b-2 border-border-app"
     >
       {children}

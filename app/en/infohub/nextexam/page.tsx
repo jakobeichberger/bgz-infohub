@@ -265,7 +265,7 @@ export default function NextExamPageEN() {
         clipboard is cleared when the exam starts.
       </P>
 
-      <H2>Downloads — Current Version: 2.1.0.3</H2>
+      <H2 id="downloads-nextexam">Downloads — Current Version: 2.1.0.3</H2>
 
       <P>
         Released 22 September 2026. All downloads from{" "}

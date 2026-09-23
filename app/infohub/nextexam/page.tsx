@@ -276,7 +276,7 @@ export default function NextExamPage() {
       </P>
 
       {/* ═══ Downloads ═══ */}
-      <H2>Downloads — Aktuelle Version: 2.1.0.3</H2>
+      <H2 id="downloads-nextexam">Downloads — Aktuelle Version: 2.1.0.3</H2>
 
       <P>
         Veröffentlicht am 22. September 2026. Alle Downloads von{" "}
