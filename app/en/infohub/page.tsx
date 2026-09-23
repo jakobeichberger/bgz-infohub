@@ -226,9 +226,9 @@ export default function InfoHubPageEN() {
             <tr className="hover:bg-hover-bg transition-colors">
               <td className="px-3 py-2 border-b border-border-app text-txt">iPad Hardware Support</td>
               <td className="px-3 py-2 border-b border-border-app text-txt">
-                +43 1 813 0000 / <a href="mailto:sales@acptechrent.at" className="text-primary hover:underline">sales@acptechrent.at</a>
+                <a href="https://www.justedu.at" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">justedu.at (service portal)</a>
               </td>
-              <td className="px-3 py-2 border-b border-border-app text-txt-light">ACP TechRent — warranty, repair, defects</td>
+              <td className="px-3 py-2 border-b border-border-app text-txt-light">ACP techWERK — report warranty cases online (register the device first)</td>
             </tr>
             <tr className="hover:bg-hover-bg transition-colors">
               <td className="px-3 py-2 border-b border-border-app text-txt">OeAD Digital Learning</td>

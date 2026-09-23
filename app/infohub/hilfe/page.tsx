@@ -54,8 +54,8 @@ export default function HilfePage() {
           ],
           [
             "iPad-Hardware (Defekt, Garantie, Reparatur)",
-            "sales@acptechrent.at / +43 1 813 0000",
-            "ACP TechRent — telefonisch oder per E-Mail",
+            "justedu.at (Serviceportal)",
+            "ACP techWERK — Garantiefall online melden (Gerät vorher registrieren)",
           ],
           [
             "Geräteinitiative, Befreiung, Gerätebörse",
@@ -191,7 +191,7 @@ export default function HilfePage() {
           )
         </li>
         <li>
-          Hardware-Defekt? ACP TechRent kontaktieren: +43 1 813 0000
+          Hardware-Defekt? Garantiefall über das Serviceportal justedu.at melden (Details unter iPad &amp; Geräte → Garantie)
         </li>
       </UL>
 

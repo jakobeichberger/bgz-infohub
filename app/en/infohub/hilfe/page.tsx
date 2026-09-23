@@ -31,7 +31,7 @@ export default function HilfePageEN() {
           ["WebUntis (parent accounts, grades, absences)", "bnb@bgzwn.at", "By email"],
           ["Data changes (address, name, phone)", "Your child's class advisor", "Data updated in SOKRATES → edu.Flow, edu.Pay"],
           ["edu.Flow & edu.Pay — platform issues", "eduflow@bgzwn.at / edupay@bgzwn.at", "By email"],
-          ["iPad hardware (defect, warranty, repair)", "sales@acptechrent.at / +43 1 813 0000", "ACP TechRent — phone or email"],
+          ["iPad hardware (defect, warranty, repair)", "justedu.at (service portal)", "ACP techWERK — report warranty cases online (register the device first)"],
           ["Device initiative, exemption, exchange", "digitaleslernen@oead.at / +43 720 080 356", "OeAD hotline Mon–Fri 07:30–18:00"],
           ["Portal Digitale Schule (PoDS)", "bildung.gv.at (after logging in)", "Online FAQ and guides"],
           ["Education Portal, ID Austria", "support@bildung.gv.at / +43 1 53120 3344", "Education Portal hotline"],
@@ -92,7 +92,7 @@ export default function HilfePageEN() {
         <li>If the problem persists: reset the iPad using a computer (see{" "}
           <Link href="/en/infohub/geraete" className="text-primary hover:underline">iPad &amp; Devices</Link>)
         </li>
-        <li>Hardware defect? Contact ACP TechRent: +43 1 813 0000</li>
+        <li>Hardware defect? Report a warranty case via the justedu.at service portal (details under iPad &amp; Devices → Warranty)</li>
       </UL>
 
       <H3>Account locked (too many failed attempts)</H3>

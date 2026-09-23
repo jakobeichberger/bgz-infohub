@@ -141,32 +141,145 @@ export default function GeraetePage() {
 
       <Callout type="warning" title="Wichtig: Die Schule leistet keinen Hardware-Support">
         Bei Hardware-Defekten (Display, Akku, Ladekabel etc.) ist{" "}
-        <strong>nicht die Schule</strong>, sondern der Lieferant ACP TechRent
-        zuständig. Die Schule unterstützt nur bei der Konfiguration von Apps
-        und Programmen für den Unterricht.
+        <strong>nicht die Schule</strong>, sondern der Lieferant{" "}
+        <strong>ACP techWERK</strong> (früher ACP TechRent) zuständig. Auch der
+        OeAD ist in die Abwicklung von Garantiefällen nicht eingebunden. Die
+        Schule unterstützt nur bei der Konfiguration von Apps und Programmen
+        für den Unterricht.
       </Callout>
 
       <Table
         headers={["Detail", "Information"]}
         rows={[
-          ["Lieferant", "ACP TechRent GmbH"],
-          ["Adresse", "Ernst Krenek Gasse 4, 1230 Wien"],
-          ["Telefon", "+43 1 813 0000"],
-          ["Fax", "+43 1 813 0000 159"],
-          ["E-Mail", "sales@acptechrent.at"],
-          ["Website", "acptechrent.at"],
+          ["Lieferant (iPads)", "ACP techWERK GmbH (früher ACP TechRent)"],
+          ["Garantiefall melden", "Online über das Serviceportal justedu.at"],
+          ["Voraussetzung", "Gerät vorher im Serviceportal registrieren"],
+          [
+            "Garantiedauer",
+            "2–4 Jahre ab Lieferung an die Schule (je nach Gerät), inkl. Zubehör (Stift, Tastaturcover, Netzteil)",
+          ],
+          [
+            "Akku",
+            "Wird in der Garantiezeit einmal getauscht, wenn er nur noch höchstens 50 % Kapazität hat oder nicht mehr lädt",
+          ],
+          [
+            "Kosten",
+            "Garantiefälle sind kostenlos — der Lieferant entscheidet, ob repariert oder getauscht wird",
+          ],
         ]}
       />
 
+      <StepList>
+        <Step title="iPad registrieren">
+          Registrieren Sie das Gerät einmalig im Serviceportal:{" "}
+          <a
+            href="https://www.justedu.at/account/devices/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            justedu.at — „Registriere dein Schulgerät“
+          </a>
+          .
+        </Step>
+        <Step title="Garantiefall melden">
+          Melden Sie den Defekt über das Serviceportal auf{" "}
+          <a
+            href="https://www.justedu.at"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            justedu.at
+          </a>
+          . Die Meldung übernehmen die Erziehungsberechtigten.
+        </Step>
+        <Step title="Reparatur oder Austausch">
+          Der Lieferant prüft den Fall und entscheidet, ob das iPad repariert
+          oder ausgetauscht wird.
+        </Step>
+      </StepList>
+
+      <Callout type="danger" title="Nicht von der Garantie gedeckt">
+        <ul>
+          <li>Schäden durch Herunterfallen oder andere mechanische Einwirkung</li>
+          <li>Flüssigkeitsschäden</li>
+          <li>Umwelteinflüsse (Überspannung, Überschwemmung, extreme Temperaturen)</li>
+          <li>Softwarefehler in Schulprogrammen</li>
+        </ul>
+        <p>
+          Für selbst verschuldete Schäden bietet der Lieferant{" "}
+          <strong>kostenpflichtige Reparaturen</strong> an. Liegt kein
+          Garantiefall vor, können Versand- und Prüfkosten verrechnet werden.
+        </p>
+      </Callout>
+
+      <Callout type="info" title="Andere Werkstatt & Reparaturbonus">
+        Sie dürfen das Gerät auch bei einem anderen Anbieter reparieren lassen,
+        z. B. mit der <strong>Geräte-Retter-Prämie</strong>. Dabei kann jedoch
+        die Garantie des Lieferanten erlöschen. Die Prämie kann derzeit nicht
+        direkt beim Lieferanten eingelöst werden. Bei älteren Geräten ist die
+        Garantie bereits im Herbst 2025 abgelaufen.
+      </Callout>
+
+      {/* ─── Versicherung ─── */}
+      <H3>Versicherung</H3>
+
+      <UL>
+        <li>
+          <strong>Haushaltsversicherung:</strong> Deckt Laptops und Tablets
+          meist gegen klassische Risiken (Brand, Sturm, Leitungswasser,
+          Einbruchsdiebstahl, Raub außerhalb der Wohnung) —{" "}
+          <strong>nicht</strong> aber einfachen Diebstahl oder Unachtsamkeit.
+          Fragen Sie bei Ihrer Versicherung nach.
+        </li>
+        <li>
+          <strong>Elektronikversicherung:</strong> Deckt typischerweise
+          Bruchschäden, Flüssigkeitsschäden, Bedienungsfehler, Überspannung
+          und Kurzschluss sowie Brand, Raub und Einbruch außerhalb der Wohnung
+          — nicht aber Datenverlust. Einige Lieferanten bieten solche
+          Versicherungen an.
+        </li>
+      </UL>
+
+      {/* ─── Verlust oder Diebstahl ─── */}
+      <H3>Verlust oder Diebstahl</H3>
+
       <P>
-        Mehr zu Garantie und Versicherung:{" "}
+        Da die Schule die iPads über ihre Geräteverwaltung (MDM) betreut, kann
+        sie ein verlorenes Gerät auf <strong>ausdrücklichen, schriftlichen
+        Wunsch</strong> der Eigentümerin bzw. des Eigentümers orten, sperren
+        oder löschen — sofern das Gerät erreichbar ist (
+        <a
+          href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011647&Paragraf=10"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          § 10 Z 4 IKT-Schulverordnung
+        </a>
+        ). Wenden Sie sich dafür schriftlich an die Schul-IT:{" "}
+        <a href="mailto:admin@bgzwn.at" className="text-primary hover:underline">
+          admin@bgzwn.at
+        </a>
+        . Standortinformationen werden nur an die Schülerin bzw. den Schüler
+        oder die Erziehungsberechtigten weitergegeben.
+      </P>
+
+      <Callout type="warning" title="Totalverlust">
+        Bleibt das iPad verloren, müssen die Erziehungsberechtigten selbst ein
+        neues Gerät beschaffen.
+      </Callout>
+
+      <P>
+        Alle Details zu Garantie, Versicherung und Reparaturen:{" "}
         <a
           href="https://digitaleslernen.oead.at/de/fuer-eltern/garantie-versicherung-reparaturen"
           target="_blank"
           rel="noopener noreferrer"
           className="text-primary hover:underline"
         >
-          digitaleslernen.oead.at/de/fuer-eltern/garantie-versicherung-reparaturen
+          OeAD — Garantie, Versicherung &amp; Reparaturen
         </a>
       </P>
 
@@ -202,6 +315,12 @@ export default function GeraetePage() {
           registrieren lassen.
         </li>
       </UL>
+
+      <P>
+        <strong>Hinweis:</strong> Geräte aus der Gerätebörse unterliegen den
+        Garantiebedingungen des jeweiligen Refurbishers, nicht jenen der
+        Geräteinitiative.
+      </P>
 
       <Callout type="warning" title="Apple-Familienverwaltung deaktivieren">
         Wenn das iPad in der Apple-Familienfreigabe registriert ist, kann

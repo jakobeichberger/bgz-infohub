@@ -307,7 +307,7 @@ Tailwind 4 hat Probleme mit `text-[var(--text)]` — Next.js splittet JS-Chunks 
 - `pods.gv.at` leitet komplett auf `bildung.gv.at` um → PoDS immer ueber `bildung.gv.at` verlinken, keine separaten PoDS-Links.
 - OeAD hat Pfade verschoben: Garantie → `digitaleslernen.oead.at/de/fuer-eltern/garantie-versicherung-reparaturen`, Geraetebörse → `.../de/fuer-eltern/schulwechsel-geraeteboerse`.
 - justEDU: iPad-9-Produktseiten sind weg (404) → nur Zubehoer-Links + allgemeiner Shop-Link.
-- `quarto.at` → `edusuite.at` (Rebranding). `acptechrent.at` leitet auf `acptechwerk.at` um (Firma heisst jetzt ACP techWERK) — Mail-Domain funktioniert noch.
+- `quarto.at` → `edusuite.at` (Rebranding). `acptechrent.at` leitet auf `acptechwerk.at` um (Firma heisst jetzt ACP techWERK). Alte ACP-TechRent-Kontakte (Telefon/Fax/sales@) wurden Sept. 2026 ueberall durch das Serviceportal justedu.at ersetzt (Quelle: OeAD-Seite garantie-versicherung-reparaturen).
 - Bot-Blocker (403/Challenge, im Browser aber ok): autodesk.com, unrealengine.com, notebooksbilliger.de, edustore.at — nicht als „kaputt“ werten.
 
 ### Schule-spezifische Infos
@@ -320,7 +320,7 @@ Tailwind 4 hat Probleme mit `text-[var(--text)]` — Next.js splittet JS-Chunks 
 - WLAN: WPA2/WPA3 Enterprise, RADIUS, Username **ohne** @bgzwn.at, Kontosperrung nach 10 Fehlversuchen (10 Min)
 - MDM: Microsoft InTune, nur iOS + Windows (KEIN Android)
 - edu.Card: Quarto Software (edusuite.at), Schulcode 304046
-- Geraeteinitiative: Apple iPads via OeAD/ACP TechRent (Ernst Krenek Gasse 4, 1230 Wien, +43 1 813 0000)
+- Geraeteinitiative: Apple iPads via OeAD, Lieferant **ACP techWERK GmbH** (frueher ACP TechRent). Garantiefall: Geraet zuerst auf justedu.at/account/devices/ registrieren, dann Meldung ueber Serviceportal justedu.at (durch Erziehungsberechtigte). Garantie 2–4 J. ab Lieferung inkl. Zubehoer, Akku 1× Tausch bei ≤50 %; nicht gedeckt: Sturz, Fluessigkeit, Umwelt, Schulsoftware. Verlust: Ortung/Sperre/Loeschung nur auf schriftlichen Wunsch (§ 10 Z 4 IKT-Schulverordnung) via admin@bgzwn.at
 - MS-ACH Vertrag: Microsoft 365 A3 Education, laeuft bis mind. 31.05.2027, 25 Schueler pro Lehrkraft-Lizenz
 - Next-Exam Version: **2.1.0.3** (22. September 2026), GPLv3, von Mag. Thomas Michael Weissel. 2.x bringt: iPad-Version (Student, iOS Assessment Mode), Bildungsportal-Anbindung, Modi ActiveSheets + lokale VM, Formular-Modus mit Google/Microsoft Forms, macOS Assessment Mode, Windows-Kiosk (optional), Linux-Cage, SEB-Kompatibilitaet, signierte/notarisierte Builds. Downloads: 5 Student- + 5 Teacher-Assets je Release (EXE, MSI, DMG arm64/x64, AppImage) — Versionsdaten immer ueber api.github.com/repos/Bildungsportal/next-exam/releases pruefen
 - Drucksystem: SafeQ by Y-Soft, FollowMe Printing, E-Mail-Druck an printme@bgzwn.at
@@ -330,7 +330,7 @@ Tailwind 4 hat Probleme mit `text-[var(--text)]` — Next.js splittet JS-Chunks 
   - bnb@bgzwn.at — WebUntis-Probleme
   - kanzlei@bgzwn.at — Verwaltung/Rueckerstattungen
   - Klassenvorstaende — Datenänderungen (Adresse, Telefon, Name)
-  - ACP TechRent (sales@acptechrent.at) — iPad Hardware-Support
+  - ACP techWERK via Serviceportal justedu.at — iPad Hardware-Support/Garantie (keine Telefon-/Mail-Kontakte mehr auf der Site)
   - OeAD Hotline: +43 720 080 356 — Geraeteinitiative
   - support@bildung.gv.at — Next-Exam Probleme
   - support-aba@aba.bildung.gv.at / +43 664 851 3000 — VWA/ABA Portal

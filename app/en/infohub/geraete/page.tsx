@@ -137,32 +137,143 @@ export default function GeraetePageEN() {
 
       <Callout type="warning" title="Important: The school does not provide hardware support">
         For hardware defects (display, battery, charging cable etc.) the
-        supplier <strong>ACP TechRent</strong> is responsible —{" "}
-        <strong>not the school</strong>. The school only assists with
+        supplier <strong>ACP techWERK</strong> (formerly ACP TechRent) is
+        responsible — <strong>not the school</strong>. The OeAD is not involved
+        in handling warranty cases either. The school only assists with
         configuring apps and programmes for lessons.
       </Callout>
 
       <Table
         headers={["Detail", "Information"]}
         rows={[
-          ["Supplier", "ACP TechRent GmbH"],
-          ["Address", "Ernst Krenek Gasse 4, 1230 Vienna"],
-          ["Phone", "+43 1 813 0000"],
-          ["Fax", "+43 1 813 0000 159"],
-          ["Email", "sales@acptechrent.at"],
-          ["Website", "acptechrent.at"],
+          ["Supplier (iPads)", "ACP techWERK GmbH (formerly ACP TechRent)"],
+          ["Report a warranty case", "Online via the justedu.at service portal"],
+          ["Requirement", "Register the device in the service portal first"],
+          [
+            "Warranty period",
+            "2–4 years from delivery to the school (depending on the device), incl. accessories (pen, keyboard cover, power adapter)",
+          ],
+          [
+            "Battery",
+            "Replaced once during the warranty if it has at most 50% capacity left or no longer charges",
+          ],
+          [
+            "Cost",
+            "Warranty cases are free — the supplier decides whether to repair or replace",
+          ],
         ]}
       />
 
+      <StepList>
+        <Step title="Register the iPad">
+          Register the device once in the service portal:{" "}
+          <a
+            href="https://www.justedu.at/account/devices/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            justedu.at — “Registriere dein Schulgerät” (register your school
+            device)
+          </a>
+          .
+        </Step>
+        <Step title="Report the warranty case">
+          Report the defect via the service portal at{" "}
+          <a
+            href="https://www.justedu.at"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            justedu.at
+          </a>
+          . Parents/guardians are responsible for reporting.
+        </Step>
+        <Step title="Repair or replacement">
+          The supplier assesses the case and decides whether the iPad is
+          repaired or replaced.
+        </Step>
+      </StepList>
+
+      <Callout type="danger" title="Not covered by the warranty">
+        <ul>
+          <li>Damage from dropping or other mechanical impact</li>
+          <li>Liquid damage</li>
+          <li>Environmental influences (power surges, flooding, extreme temperatures)</li>
+          <li>Software errors in school programs</li>
+        </ul>
+        <p>
+          For self-inflicted damage the supplier offers{" "}
+          <strong>paid repairs</strong>. If it is not a warranty case, shipping
+          and assessment costs may be charged.
+        </p>
+      </Callout>
+
+      <Callout type="info" title="Other repair shops & repair bonus">
+        You may also have the device repaired elsewhere, e.g. using the{" "}
+        <strong>Geräte-Retter-Prämie</strong> (Austrian repair bonus). However,
+        this can void the supplier&apos;s warranty, and the bonus currently
+        cannot be redeemed directly with the supplier. For older devices the
+        warranty already expired in autumn 2025.
+      </Callout>
+
+      {/* ─── Insurance ─── */}
+      <H3>Insurance</H3>
+
+      <UL>
+        <li>
+          <strong>Household insurance:</strong> usually covers laptops and
+          tablets against classic risks (fire, storm, burst pipes, burglary,
+          robbery outside the home) — but <strong>not</strong> simple theft or
+          carelessness. Check with your insurer.
+        </li>
+        <li>
+          <strong>Electronics insurance:</strong> typically covers breakage,
+          liquid damage, operating errors, power surges and short circuits, as
+          well as fire, robbery and burglary outside the home — but not data
+          loss. Some suppliers offer such insurance.
+        </li>
+      </UL>
+
+      {/* ─── Loss or theft ─── */}
+      <H3>Loss or theft</H3>
+
       <P>
-        More about warranty and insurance:{" "}
+        Because the school manages the iPads through its device management
+        (MDM), it can locate, lock or wipe a lost device at the{" "}
+        <strong>explicit written request</strong> of the owner — provided the
+        device is reachable (
+        <a
+          href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011647&Paragraf=10"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          § 10 Z 4 IKT-Schulverordnung
+        </a>
+        ). Please contact the school IT in writing:{" "}
+        <a href="mailto:admin@bgzwn.at" className="text-primary hover:underline">
+          admin@bgzwn.at
+        </a>
+        . Location information is only shared with the student or their
+        parents/guardians.
+      </P>
+
+      <Callout type="warning" title="Total loss">
+        If the iPad stays lost, parents/guardians must obtain a new device
+        themselves.
+      </Callout>
+
+      <P>
+        All details on warranty, insurance and repairs:{" "}
         <a
           href="https://digitaleslernen.oead.at/de/fuer-eltern/garantie-versicherung-reparaturen"
           target="_blank"
           rel="noopener noreferrer"
           className="text-primary hover:underline"
         >
-          digitaleslernen.oead.at/de/fuer-eltern/garantie-versicherung-reparaturen
+          OeAD — warranty, insurance &amp; repairs (German)
         </a>
       </P>
 
@@ -197,6 +308,12 @@ export default function GeraetePageEN() {
           , then have it registered with the school IT.
         </li>
       </UL>
+
+      <P>
+        <strong>Note:</strong> Devices from the device exchange are covered by
+        the warranty terms of the respective refurbisher, not those of the
+        device initiative.
+      </P>
 
       <Callout type="warning" title="Disable Apple Family Sharing">
         If the iPad is registered in Apple Family Sharing, the school IT

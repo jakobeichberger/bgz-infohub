@@ -262,16 +262,18 @@ export default function InfoHubPage() {
                 Hardware-Support iPad
               </td>
               <td className="px-3 py-2 border-b border-border-app text-txt">
-                +43 1 813 0000 /{" "}
                 <a
-                  href="mailto:sales@acptechrent.at"
+                  href="https://www.justedu.at"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-primary hover:underline"
                 >
-                  sales@acptechrent.at
+                  justedu.at (Serviceportal)
                 </a>
               </td>
               <td className="px-3 py-2 border-b border-border-app text-txt-light">
-                ACP TechRent — Garantie, Reparatur, Defekte
+                ACP techWERK — Garantiefall online melden (Gerät vorher
+                registrieren)
               </td>
             </tr>
             <tr className="hover:bg-hover-bg transition-colors">
