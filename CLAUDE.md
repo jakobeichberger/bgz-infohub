@@ -25,7 +25,7 @@ bgz-infohub/
 │   ├── layout.tsx              # Root Layout: Sidebar + main, Dark Mode Script im <head>
 │   ├── globals.css             # @import, @theme inline, CSS-Variablen :root/.dark
 │   ├── not-found.tsx           # Custom 404 mit Fuzzy-URL-Matching, bilingual
-│   ├── infohub/                # 15 Deutsche Seiten
+│   ├── infohub/                # 22 Deutsche Seiten (inkl. 5 VWA-Unterseiten)
 │   │   ├── page.tsx            # Homepage mit Karten + Kontakttabelle + Schnelllinks
 │   │   ├── schulaccount/       # Login, Passwort, E-Mail-Einrichtung
 │   │   ├── services/           # WebUntis, edu.Flow, edu.Pay, edu.Card, Drucken, PoDS
@@ -33,9 +33,10 @@ bgz-infohub/
 │   │   ├── wlan/               # WPA2/WPA3 Enterprise RADIUS fuer alle Plattformen
 │   │   ├── office365/          # MS 365 A3, OneDrive 5TB, OneNote, Teams, Copilot
 │   │   ├── educard/            # Physische edu.Card + digitale edu.digicard
+│   │   ├── chip/               # Schüler:innen-Chip (Zutritt): FAQ aus offiziellem PDF (public/templates/faq-schuelerinnen-chip.pdf)
 │   │   ├── nextexam/           # Pruefungssoftware: Modi, Downloads, umfangreiche FAQ
 │   │   ├── laptop/             # Oberstufe Notebook-Vorgaben, Kaufberatung, Bildungsrabatte (edustore/Lenovo/HP/MS/nbb), Arbeitsmittel-Pflicht
-│   │   ├── mdm/                # InTune: nur iOS + Windows (KEIN Android!)
+│   │   ├── mdm/                # Intune: nur iOS + Windows (KEIN Android!)
 │   │   ├── tipp10/             # 10-Finger-Schreibtrainer
 │   │   ├── bildungsportal/     # PoDS, ID Austria, Elternzugang
 │   │   ├── vwa/                # VWA/ABA: Ablauf, Aufbau, Zitieren, Word, Bewertung (Unterseiten: aufbau, schreiben, zitieren, vorlagen, praesentation)
@@ -43,7 +44,7 @@ bgz-infohub/
 │   │   ├── lehrkraefte/        # IT-Schnellhilfe fuer Lehrkraefte (Beamer, PC, Ton, Teams, Quickfixes, Fehlerticket-Anleitung)
 │   │   ├── iqes/               # IQES Evaluations-/Schulentwicklungsplattform (Lehrkraefte: Login, Vorlagen, Passwort)
 │   │   └── hilfe/              # FAQ, Kontakte, Support
-│   └── en/infohub/             # 15 Englische Seiten (gleiche Struktur)
+│   └── en/infohub/             # 22 Englische Seiten (gleiche Struktur)
 ├── components/
 │   ├── Sidebar.tsx             # Navigation, Logo, Sprachumschalter, Dark Mode Toggle, Suchfeld
 │   ├── Search.tsx              # Clientseitige Volltextsuche (lazy fetch search-index.json)
@@ -86,7 +87,7 @@ bgz-infohub/
 
 ### Volltextsuche (clientseitig, indiziert)
 - **Build-Zeit-Generator** `scripts/gen-search-index.mjs` parst jede `app/**/page.tsx` mit der **TypeScript-Compiler-API** (`import ts from "typescript"` — bereits devDependency, KEINE neue Abhaengigkeit) und extrahiert sichtbaren Text: `metadata.title`/`description`, `PageHeader`/`Step`/`Callout`/`Card`-`title`/`alt`/`label`-Attribute (Whitelist!), JSX-Textknoten und String-Literale aus Array-Literalen (`Table`-Zeilen, `LinkCards`-items). `className`/`href`/`src`/`icon` werden ignoriert → kein CSS-/URL-Rauschen.
-- Ausgabe nach **`public/search-index.json`** (Array von `{url, lang, title, desc, headings, text}`). NUR Inhaltsseiten (`/infohub*`, `/en/infohub*`); `/`, `/en`, 404 und `/lizenzen` ausgeschlossen. Aktuell 42 Eintraege (21 DE + 21 EN), ~250 KB (gzip via .htaccess).
+- Ausgabe nach **`public/search-index.json`** (Array von `{url, lang, title, desc, headings, text}`). NUR Inhaltsseiten (`/infohub*`, `/en/infohub*`); `/`, `/en`, 404 und `/lizenzen` ausgeschlossen. Aktuell 44 Eintraege (22 DE + 22 EN), ~260 KB (gzip via .htaccess).
 - Laeuft automatisch vor `dev`/`build` (in package.json-Scripts vorangestellt, wie gen-last-updated). Manuell: `npm run gen-search`.
 - **`public/search-index.json` ist gitignored** (generiert, bei jedem Build neu) — im Gegensatz zu `lib/last-updated.json` (committet).
 - **Komponente** `components/Search.tsx` (Client): sichtbares Suchfeld oben in der Sidebar (`<Search onNavigate={() => setOpen(false)} />`). **Lazy `fetch("/search-index.json")`** beim ersten Fokus (NICHT ins Bundle gebuendelt; same-origin → CSP `connect-src 'self'` ok). Sprachfilter via `isEN`. Gewichtetes Scoring: **title ×10 > desc ×5 > headings ×3 > text ×1** (desc = kuratierte Zusammenfassung, wichtigstes Signal nach dem Titel; war anfangs gar nicht durchsucht → Bug behoben). Substring-Matching (Eltern tippen Teilwoerter), Multi-Token AND-Bonus. Ergebnis-Dropdown mit hervorgehobenem Treffer-Snippet (`<mark bg-primary/20>`).
@@ -94,8 +95,8 @@ bgz-infohub/
 - Neue Seiten erscheinen **automatisch** im Index (Generator scannt alle page.tsx) — keine manuelle Liste pflegen.
 
 ### Routing & i18n
-- `/infohub/*` — 15 Deutsche Seiten
-- `/en/infohub/*` — 15 Englische Seiten (1:1 Kopien mit uebersetztem Inhalt)
+- `/infohub/*` — 22 Deutsche Seiten
+- `/en/infohub/*` — 22 Englische Seiten (1:1 Kopien mit uebersetztem Inhalt)
 - **Kein i18n-Framework** — rein URL-basiert, jede Seite ist eine eigene Datei
 - Sidebar erkennt Sprache: `pathname.startsWith("/en/") || pathname === "/en"`
 - Sprachumschalter-URL: `pathname.replace("/en/infohub", "/infohub")` bzw. `"/en" + pathname`
@@ -116,7 +117,7 @@ bgz-infohub/
 ```
 
 ### Sidebar (components/Sidebar.tsx)
-- 15 DE + 15 EN Navigationseintraege mit Emoji-Icons
+- 17 DE + 17 EN Navigationseintraege mit Emoji-Icons (+ 5 VWA-Unterpunkte)
 - Schullogo (40px Desktop, 24px Mobil) neben "BG Zehnergasse"
 - Mobile: Hamburger-Menue mit Overlay, fixed header oben
 - Desktop: Fixierte Sidebar links, sticky top-0
@@ -233,7 +234,7 @@ Tailwind 4 hat Probleme mit `text-[var(--text)]` — Next.js splittet JS-Chunks 
 - `trailingSlash: true` ist **PFLICHT** fuer Plesk/Apache, sonst 403 auf `/infohub/` (Next.js generiert `infohub.html` statt `infohub/index.html`)
 - `.htaccess` liegt in `public/` und wird nach `out/` kopiert
 - `next/image` im Static Export: Funktioniert, aber Bilder werden nicht optimiert. `width`/`height` Props trotzdem setzen fuer Layout Shift Prevention
-- `output: "export"` erzeugt 35 Seiten (15 DE + 15 EN + homepage DE/EN + 404 + root redirects)
+- `output: "export"` erzeugt 51 HTML-Seiten (22 DE + 22 EN + Root-Redirects `/`, `/en` + 404-Varianten + lizenzen DE/EN)
 
 ### Dark Mode Implementation
 - **Kein Flash**: Script im `<head>` liest `localStorage` und setzt `.dark` Klasse BEVOR React hydratiert
@@ -246,7 +247,7 @@ Tailwind 4 hat Probleme mit `text-[var(--text)]` — Next.js splittet JS-Chunks 
 2. Englische Seite: `app/en/infohub/NEUERSLUG/page.tsx`
 3. Navigation DE: `navItemsDE` Array in `components/Sidebar.tsx`
 4. Navigation EN: `navItemsEN` Array in `components/Sidebar.tsx`
-5. 404-Vorschlaege: `allPages` Array in `app/not-found.tsx`
+5. 404-Vorschlaege: `allPages` Array in `app/not-found.tsx` (inkl. `labelEN`/`descEN` — EN-Besucher sehen die englischen Texte)
 6. Homepage-Karte: Karten-Array in `app/infohub/page.tsx` und `app/en/infohub/page.tsx`
 7. `npm run build` — pruefen ob alle Seiten generiert werden
 8. **Suche**: NICHTS noetig — die Volltextsuche (`scripts/gen-search-index.mjs`) nimmt jede neue `page.tsx` automatisch auf.
@@ -302,9 +303,18 @@ Tailwind 4 hat Probleme mit `text-[var(--text)]` — Next.js splittet JS-Chunks 
 - `pods.gv.at/hilfe/` gibt 404 → Wurde zu `bildung.gv.at` geaendert
 - `befreiung.digitaleslernen.gv.at` nicht erreichbar → Geaendert zu `digitaleslernen.oead.at/de/fuer-eltern/avb-bezahlung-befreiung`
 - `bmbwf.gv.at` URLs aendern sich regelmaessig — bei Updates pruefen
+- **WebUntis**: `melpomene.webuntis.com/WebUntis/?school=bgzehnwn` landet auf „school not found“ (Stand Sept. 2026) → ueberall **`https://bgzehnwn.webuntis.com/WebUntis/?school=bgzehnwn#/basic/login`** verwenden (auch im offiziellen Selbstregistrierungs-PDF).
+- `pods.gv.at` leitet komplett auf `bildung.gv.at` um → PoDS immer ueber `bildung.gv.at` verlinken, keine separaten PoDS-Links.
+- OeAD hat Pfade verschoben: Garantie → `digitaleslernen.oead.at/de/fuer-eltern/garantie-versicherung-reparaturen`, Geraetebörse → `.../de/fuer-eltern/schulwechsel-geraeteboerse`.
+- justEDU: iPad-9-Produktseiten sind weg (404) → nur Zubehoer-Links + allgemeiner Shop-Link.
+- `quarto.at` → `edusuite.at` (Rebranding). `acptechrent.at` leitet auf `acptechwerk.at` um (Firma heisst jetzt ACP techWERK) — Mail-Domain funktioniert noch.
+- Bot-Blocker (403/Challenge, im Browser aber ok): autodesk.com, unrealengine.com, notebooksbilliger.de, edustore.at — nicht als „kaputt“ werten.
 
 ### Schule-spezifische Infos
 - Schulcode: **304046**
+- **Ministerium**: heisst seit 2025 **BMB** (Bundesministerium fuer Bildung), NICHT mehr BMBWF.
+- **Rechtszitate (auf RIS geprueft, Sept. 2026)**: Digitale Endgeraete = **§ 14a SchUG** („IKT-gestuetzter Unterricht“), NICHT „§ 14 Abs. 8a“. Automatische Abmeldung = **§ 45 Abs. 5 SchUG** (nur nicht mehr schulpflichtige Schueler; > 1 Woche / 5 nicht zusammenhaengende Tage / 30 Stunden unentschuldigt + keine Reaktion auf schriftliche Aufforderung). Geraeteinitiative-Gesetz: Abkuerzung **SchulDigiG**.
+- **Schueler:innen-Chip** (Zutritt): kostenlose Leihgabe (Eigentum der Schule), 1 Chip pro Schueler, Rueckgabe nach Schulende, Aktualisierung am Online-Terminal Aula 1. Stock, Ersatzchip 10 EUR (alter wird gesperrt), keine Eltern-Chips (~1.400 Chips), Zutritt ausserhalb der Morgen-Eingangszeiten wird registriert, Eingang videoueberwacht. Getrennt von der edu.Card.
 - Adresse: Zehnergasse 15, 2700 Wiener Neustadt
 - Schulkonto-Format: `nachname.vorname@bgzwn.at`
 - WLAN: WPA2/WPA3 Enterprise, RADIUS, Username **ohne** @bgzwn.at, Kontosperrung nach 10 Fehlversuchen (10 Min)
@@ -312,7 +322,7 @@ Tailwind 4 hat Probleme mit `text-[var(--text)]` — Next.js splittet JS-Chunks 
 - edu.Card: Quarto Software (edusuite.at), Schulcode 304046
 - Geraeteinitiative: Apple iPads via OeAD/ACP TechRent (Ernst Krenek Gasse 4, 1230 Wien, +43 1 813 0000)
 - MS-ACH Vertrag: Microsoft 365 A3 Education, laeuft bis mind. 31.05.2027, 25 Schueler pro Lehrkraft-Lizenz
-- Next-Exam Version: 1.1.3 (19. Maerz 2026), GPLv3, von Mag. Thomas Michael Weissel
+- Next-Exam Version: **2.1.0.3** (22. September 2026), GPLv3, von Mag. Thomas Michael Weissel. 2.x bringt: iPad-Version (Student, iOS Assessment Mode), Bildungsportal-Anbindung, Modi ActiveSheets + lokale VM, Formular-Modus mit Google/Microsoft Forms, macOS Assessment Mode, Windows-Kiosk (optional), Linux-Cage, SEB-Kompatibilitaet, signierte/notarisierte Builds. Downloads: 5 Student- + 5 Teacher-Assets je Release (EXE, MSI, DMG arm64/x64, AppImage) — Versionsdaten immer ueber api.github.com/repos/Bildungsportal/next-exam/releases pruefen
 - Drucksystem: SafeQ by Y-Soft, FollowMe Printing, E-Mail-Druck an printme@bgzwn.at
 - **Fehlerticket-System (Lehrkraefte)**: Microsoft Teams → Team **„bgzwn.LehrerInnen"** → Kanal **„IT-Helpdesk"** → Reiter **„Fehlerticket"** (Microsoft Lists). Neu via „+ Neues Element hinzufuegen". Felder: Problem (kurz)*, Problembeschreibung*, Raum*, Geraetetyp* (Auswahl: Beamer/Projektor, Ton/Beschallung, Klassennotebook, iPad, Internet/Webseiten/Firewall, LAN/WLAN/Netzwerkverbindung, Schliesssystem, sonstiges), Prioritaet (Kritisch/Hoch/Mittel/Niedrig), Foto hochladen, Status (NEU→in Bearbeitung→Erledigt, von IT), Zugewiesen an (von IT), Datum (automatisch). Anleitung auf der lehrkraefte-Seite.
 - Kontakte:
@@ -328,7 +338,7 @@ Tailwind 4 hat Probleme mit `text-[var(--text)]` — Next.js splittet JS-Chunks 
 ### Homepage-Struktur (app/infohub/page.tsx)
 - PageHeader
 - Willkommenstext
-- **14 Themenkarten** (muessen mit Sidebar-Navigation uebereinstimmen!)
+- **16 Themenkarten** (muessen mit Sidebar-Navigation uebereinstimmen!)
 - H2 "Wichtige Kontakte" mit Kontakttabelle (8 Eintraege)
 - H2 "Schnelllinks" mit externen Links (WebUntis, edu.Suite, bildung.gv.at, etc.)
 
@@ -339,7 +349,7 @@ Tailwind 4 hat Probleme mit `text-[var(--text)]` — Next.js splittet JS-Chunks 
 
 ### Build & Deployment
 ```bash
-npm run build                          # Production build → out/ (35 Seiten)
+npm run build                          # Production build → out/ (51 HTML-Seiten)
 npm run dev                            # Dev server auf Port 3001 (nicht 3000!)
 rm -rf .next && npm run build          # Clean build bei CSS-Cache-Problemen
 ```

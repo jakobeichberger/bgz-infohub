@@ -57,7 +57,7 @@ export default function LaptopPageEN() {
       <Table
         headers={["Feature", "Requirement"]}
         rows={[
-          ["Display", "At least 14 inches, recommended 14 or 15.4 inches, FullHD (1920x1080)"],
+          ["Display", "At least 14 inches, recommended 14 or 15.6 inches, FullHD (1920x1080)"],
           ["Processor", "Intel Core i5 / Core Ultra 5 (current generation) or equivalent AMD Ryzen 5"],
           ["RAM", "At least 16 GB RAM"],
           ["Storage", "At least 512 GB SSD"],
@@ -138,7 +138,7 @@ export default function LaptopPageEN() {
         rows={[
           [
             "Windows 11",
-            "Next-Exam (exam software) requires Windows. Many school programs are Windows-exclusive.",
+            "Many school programs are Windows-exclusive. Next-Exam is also available for macOS and Linux, but Windows offers the widest compatibility.",
           ],
           [
             "Intel Core i5 / Core Ultra 5 · AMD Ryzen 5",
@@ -173,7 +173,7 @@ export default function LaptopPageEN() {
           work on, light enough for commuting to school (approx. 1.3-1.5 kg)
         </li>
         <li>
-          <strong>15.4 inches</strong> — More room for split-screen, but
+          <strong>15.6 inches</strong> — More room for split-screen, but
           heavier in the backpack (approx. 1.7-2.0 kg)
         </li>
         <li>
@@ -608,7 +608,7 @@ export default function LaptopPageEN() {
           rel="noopener noreferrer"
           className="text-primary hover:underline"
         >
-          apple.com/at-edu
+          apple.com/at-edu/store
         </a>
         ) is aimed at <strong>university students, teachers and higher-education
         staff</strong>. Upper-secondary pupils are <strong>usually not

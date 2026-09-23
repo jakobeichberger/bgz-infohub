@@ -3,49 +3,68 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const allPages = [
-  { href: "/infohub/", label: "Startseite", desc: "Hauptseite des InfoHub", icon: "🏠" },
-  { href: "/infohub/geraete/", label: "iPad & Geräte", desc: "Geräteinitiative, iPad, Zubehör", icon: "📱" },
-  { href: "/infohub/schulaccount/", label: "Schulaccount", desc: "Login, Passwort, E-Mail", icon: "🔑" },
-  { href: "/infohub/office365/", label: "Microsoft 365", desc: "Office-Apps, OneDrive, Teams", icon: "💻" },
-  { href: "/infohub/services/", label: "Schulservices", desc: "WebUntis, edu.Flow, edu.Pay", icon: "🏫" },
-  { href: "/infohub/educard/", label: "edu.Card", desc: "Schülerausweis, Kopierkarte", icon: "🪪" },
-  { href: "/infohub/nextexam/", label: "Next-Exam", desc: "Digitale Prüfungen", icon: "📝" },
-  { href: "/infohub/laptop/", label: "Laptop-Vorgaben", desc: "Notebook für die Oberstufe", icon: "💻" },
-  { href: "/infohub/mdm/", label: "MDM-Einrichtung", desc: "Geräteverwaltung", icon: "⚙️" },
-  { href: "/infohub/tipp10/", label: "TIPP10", desc: "10-Finger-Schreibtrainer", icon: "⌨️" },
-  { href: "/infohub/bildungsportal/", label: "Bildungsportal", desc: "Bildungsportal für Eltern", icon: "🏛️" },
-  { href: "/infohub/vwa/", label: "VWA / ABA", desc: "Vorwissenschaftliche Arbeit", icon: "🎓" },
-  { href: "/infohub/vwa/aufbau/", label: "VWA Aufbau", desc: "Gliederung, Forschungsfrage, Formatierung", icon: "📋" },
-  { href: "/infohub/vwa/schreiben/", label: "Wissenschaftliches Schreiben", desc: "Stil, Sprache, Plagiat", icon: "✍️" },
-  { href: "/infohub/vwa/zitieren/", label: "Zitieren & Zotero", desc: "Literaturverwaltung, KI-Nutzung", icon: "📚" },
-  { href: "/infohub/vwa/vorlagen/", label: "VWA Vorlagen", desc: "Word-Vorlage, Tipps, Downloads", icon: "📄" },
-  { href: "/infohub/vwa/praesentation/", label: "VWA Präsentation", desc: "Aufbau, Fragen, Tipps", icon: "🎤" },
-  // Ausgeblendet: { href: "/infohub/lizenzen/", label: "Gratis Software", desc: "Kostenlose Lizenzen", icon: "🎁" },
-  { href: "/infohub/lehrkraefte/", label: "Lehrkräfte: IT-Schnellhilfe", desc: "Beamer, Computer, Ton, Quickfixes", icon: "🧑‍🏫" },
-  { href: "/infohub/iqes/", label: "IQES", desc: "Evaluation, Umfragen, Fragebögen (Lehrkräfte)", icon: "📊" },
-  { href: "/infohub/hilfe/", label: "Hilfe & Kontakte", desc: "Support, FAQ, Links", icon: "🆘" },
+type PageEntry = {
+  href: string;
+  label: string;
+  desc: string;
+  labelEN: string;
+  descEN: string;
+  icon: string;
+};
+
+const allPages: PageEntry[] = [
+  { href: "/infohub/", label: "Startseite", desc: "Hauptseite des InfoHub", labelEN: "Home", descEN: "InfoHub main page", icon: "🏠" },
+  { href: "/infohub/geraete/", label: "iPad & Geräte", desc: "Geräteinitiative, iPad, Zubehör", labelEN: "iPad & Devices", descEN: "Device initiative, iPad, accessories", icon: "📱" },
+  { href: "/infohub/wlan/", label: "WLAN-Anleitung", desc: "Schul-WLAN verbinden, Zertifikate", labelEN: "WiFi Guide", descEN: "Connect to school WiFi, certificates", icon: "📶" },
+  { href: "/infohub/schulaccount/", label: "Schulaccount", desc: "Login, Passwort, E-Mail", labelEN: "School Account", descEN: "Login, password, email", icon: "🔑" },
+  { href: "/infohub/office365/", label: "Microsoft 365", desc: "Office-Apps, OneDrive, Teams", labelEN: "Microsoft 365", descEN: "Office apps, OneDrive, Teams", icon: "💻" },
+  { href: "/infohub/services/", label: "Schulservices", desc: "WebUntis, edu.Flow, edu.Pay", labelEN: "School Services", descEN: "WebUntis, edu.Flow, edu.Pay", icon: "🏫" },
+  { href: "/infohub/educard/", label: "edu.Card", desc: "Schülerausweis, Kopierkarte", labelEN: "edu.Card", descEN: "Student ID, copy card", icon: "🪪" },
+  { href: "/infohub/chip/", label: "Schüler:innen-Chip", desc: "Zutritt, Chip aktualisieren, Verlust", labelEN: "Student Access Chip", descEN: "Entry, updating the chip, loss", icon: "🔐" },
+  { href: "/infohub/nextexam/", label: "Next-Exam", desc: "Digitale Prüfungen", labelEN: "Next-Exam", descEN: "Digital exams", icon: "📝" },
+  { href: "/infohub/laptop/", label: "Laptop-Vorgaben", desc: "Notebook für die Oberstufe", labelEN: "Laptop Requirements", descEN: "Notebook for upper secondary", icon: "💻" },
+  { href: "/infohub/mdm/", label: "MDM-Einrichtung", desc: "Geräteverwaltung", labelEN: "MDM Setup", descEN: "Device management", icon: "⚙️" },
+  { href: "/infohub/tipp10/", label: "TIPP10", desc: "10-Finger-Schreibtrainer", labelEN: "TIPP10", descEN: "Touch typing trainer", icon: "⌨️" },
+  { href: "/infohub/bildungsportal/", label: "Bildungsportal", desc: "Bildungsportal für Eltern", labelEN: "Education Portal", descEN: "Education Portal for parents", icon: "🏛️" },
+  { href: "/infohub/vwa/", label: "VWA / ABA", desc: "Vorwissenschaftliche Arbeit", labelEN: "VWA / ABA (Thesis)", descEN: "Pre-scientific thesis", icon: "🎓" },
+  { href: "/infohub/vwa/aufbau/", label: "VWA Aufbau", desc: "Gliederung, Forschungsfrage, Formatierung", labelEN: "Thesis Structure", descEN: "Outline, research question, formatting", icon: "📋" },
+  { href: "/infohub/vwa/schreiben/", label: "Wissenschaftliches Schreiben", desc: "Stil, Sprache, Plagiat", labelEN: "Academic Writing", descEN: "Style, language, plagiarism", icon: "✍️" },
+  { href: "/infohub/vwa/zitieren/", label: "Zitieren & Zotero", desc: "Literaturverwaltung, KI-Nutzung", labelEN: "Citations & Zotero", descEN: "Reference management, AI usage", icon: "📚" },
+  { href: "/infohub/vwa/vorlagen/", label: "VWA Vorlagen", desc: "Word-Vorlage, Tipps, Downloads", labelEN: "Thesis Templates", descEN: "Word template, tips, downloads", icon: "📄" },
+  { href: "/infohub/vwa/praesentation/", label: "VWA Präsentation", desc: "Aufbau, Fragen, Tipps", labelEN: "Thesis Presentation", descEN: "Structure, questions, tips", icon: "🎤" },
+  // Ausgeblendet: lizenzen (Gratis Software / Free Software)
+  { href: "/infohub/lehrkraefte/", label: "Lehrkräfte: IT-Schnellhilfe", desc: "Beamer, Computer, Ton, Quickfixes", labelEN: "Teachers: IT Quick Help", descEN: "Projector, computer, audio, quick fixes", icon: "🧑‍🏫" },
+  { href: "/infohub/iqes/", label: "IQES", desc: "Evaluation, Umfragen, Fragebögen (Lehrkräfte)", labelEN: "IQES", descEN: "Evaluation, surveys, questionnaires (teachers)", icon: "📊" },
+  { href: "/infohub/hilfe/", label: "Hilfe & Kontakte", desc: "Support, FAQ, Links", labelEN: "Help & Contacts", descEN: "Support, FAQ, links", icon: "🆘" },
 ];
 
 export default function NotFound() {
   const pathname = usePathname();
   const isEN = pathname.startsWith("/en/") || pathname === "/en";
 
-  // Simple fuzzy match: find pages that share path segments with the requested URL
+  // Simple fuzzy match: find pages that share path segments with the requested URL.
+  // "infohub" is part of every URL, so it must not count as a keyword.
   const keywords = pathname
     .replace(/^\/en/, "")
     .split("/")
-    .filter((s) => s.length > 2);
+    .filter((s) => s.length > 2 && s.toLowerCase() !== "infohub");
 
   const suggestions = allPages
-    .filter((p) =>
-      keywords.some(
-        (k) =>
-          p.href.includes(k) ||
-          p.label.toLowerCase().includes(k.toLowerCase()) ||
-          p.desc.toLowerCase().includes(k.toLowerCase())
-      )
-    )
+    .filter((p) => {
+      // last path segment, e.g. "wlan" — lets typos like "wlann" or
+      // "wlan-anleitung" still find the page
+      const slug = p.href.split("/").filter(Boolean).pop() ?? "";
+      return keywords.some((k) => {
+        const kw = k.toLowerCase();
+        // match both languages, so e.g. "/en/infohub/password" still works
+        const text = [p.label, p.desc, p.labelEN, p.descEN].join(" ").toLowerCase();
+        return (
+          p.href.includes(kw) ||
+          text.includes(kw) ||
+          (slug !== "infohub" && slug.length > 2 && kw.includes(slug))
+        );
+      });
+    })
     .slice(0, 3);
 
   const prefix = isEN ? "/en" : "";
@@ -90,13 +109,13 @@ export default function NotFound() {
                     className="text-sm font-semibold block"
                     style={{ color: "var(--primary)" }}
                   >
-                    {s.label}
+                    {isEN ? s.labelEN : s.label}
                   </span>
                   <span
                     className="text-xs block"
                     style={{ color: "var(--text-light)" }}
                   >
-                    {s.desc}
+                    {isEN ? s.descEN : s.desc}
                   </span>
                 </div>
               </Link>

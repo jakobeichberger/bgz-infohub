@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { H2, H3, P, UL, Table, InlineCode } from "@/components/ui/Section";
 import { Callout } from "@/components/ui/Callout";
@@ -92,9 +93,9 @@ export default function SchulaccountPageEN() {
       <Table
         headers={["Example password", "Characters", "Security"]}
         rows={[
-          ["My dog loves to eat 3 bananas!", "32", "Very secure"],
-          ["In summer I go swimming 7 times.", "35", "Very secure"],
-          ["Pizza with pineapple? Never, thanks!", "38", "Very secure"],
+          ["My dog loves to eat 3 bananas!", "30", "Very secure"],
+          ["In summer I go swimming 7 times.", "32", "Very secure"],
+          ["Pizza with pineapple? Never, thanks!", "36", "Very secure"],
         ]}
       />
 
@@ -105,8 +106,12 @@ export default function SchulaccountPageEN() {
       </P>
       <UL>
         <li>
-          Sentence: &quot;On Monday I always eat 2 rolls for breakfast!&quot; →
-          Password: <InlineCode>OMIae2rfb!</InlineCode>
+          Sentence: &quot;On Monday at 7 I always eat 2 rolls for breakfast at home!&quot; →
+          Password: <InlineCode>OMa7Iae2rfbah!</InlineCode>
+        </li>
+        <li>
+          Sentence: &quot;My cat Mimi sleeps 16 hours every day on the
+          sofa.&quot; → Password: <InlineCode>McMs16hedots.</InlineCode>
         </li>
       </UL>
 
@@ -114,8 +119,8 @@ export default function SchulaccountPageEN() {
         <strong>Method 3 — Random word combination:</strong>
       </P>
       <UL>
-        <li><InlineCode>Cloud Fork Octopus Rocket</InlineCode> (27 characters)</li>
-        <li><InlineCode>Cactus Friday Moonstone Soup7</InlineCode> (30 characters)</li>
+        <li><InlineCode>Cloud Fork Octopus Rocket</InlineCode> (25 characters)</li>
+        <li><InlineCode>Cactus Friday Moonstone Soup7</InlineCode> (29 characters)</li>
       </UL>
 
       <H3>Examples of bad passwords</H3>
@@ -125,6 +130,7 @@ export default function SchulaccountPageEN() {
         rows={[
           ["Zehnergasse2025", "Contains forbidden word"],
           ["Gymnasium!1234", "Contains forbidden word"],
+          ["bgzwn12345678", "Contains forbidden word"],
           ["Password1234", "On every hacker list"],
           ["12345678abcd", "Simple sequence"],
           ["MaxMuster2010", "Name + birth year"],
@@ -223,12 +229,12 @@ export default function SchulaccountPageEN() {
       <Callout type="info" title="Dedicated page">
         Full details on A3 licence benefits, OneDrive, OneNote, Copilot and
         installation:{" "}
-        <a
+        <Link
           href="/en/infohub/office365"
           className="text-primary hover:underline font-semibold"
         >
           Microsoft 365 → View full details
-        </a>
+        </Link>
       </Callout>
     </>
   );

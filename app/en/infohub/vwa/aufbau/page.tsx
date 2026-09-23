@@ -106,13 +106,13 @@ export default function VwaAufbauPageEN() {
       <Callout type="info" title="Binding offset">
         The binding offset (1 cm extra on the left) is the area covered by
         the binding. This results in a total left margin of 3.5 cm. The
-        BG Zehnergasse templates already have these settings pre-configured.
+        BG Zehnergasse Word template already has these settings pre-configured.
       </Callout>
 
       {/* ═══ Navigation ═══ */}
       <H2>More VWA Topics</H2>
       <CardGrid>
-        <Card href="/en/infohub/vwa" icon="🎓" title="Overview">Timeline, formats, assessment</Card>
+        <Card href="/en/infohub/vwa" icon="🎓" title="Overview">Matura overview, formats, assessment</Card>
         <Card href="/en/infohub/vwa/schreiben" icon="✍️" title="Academic Writing">Style, language, plagiarism</Card>
         <Card href="/en/infohub/vwa/zitieren" icon="📚" title="Citations & Zotero">Reference management, AI usage</Card>
         <Card href="/en/infohub/vwa/vorlagen" icon="📄" title="Templates & Tools">Word template, tips, downloads</Card>

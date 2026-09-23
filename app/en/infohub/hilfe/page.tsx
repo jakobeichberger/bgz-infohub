@@ -33,6 +33,7 @@ export default function HilfePageEN() {
           ["edu.Flow & edu.Pay — platform issues", "eduflow@bgzwn.at / edupay@bgzwn.at", "By email"],
           ["iPad hardware (defect, warranty, repair)", "sales@acptechrent.at / +43 1 813 0000", "ACP TechRent — phone or email"],
           ["Device initiative, exemption, exchange", "digitaleslernen@oead.at / +43 720 080 356", "OeAD hotline Mon–Fri 07:30–18:00"],
+          ["Portal Digitale Schule (PoDS)", "bildung.gv.at (after logging in)", "Online FAQ and guides"],
           ["Education Portal, ID Austria", "support@bildung.gv.at / +43 1 53120 3344", "Education Portal hotline"],
         ]}
       />
@@ -81,14 +82,14 @@ export default function HilfePageEN() {
       <UL>
         <li>Make sure you are connected to the school WiFi</li>
         <li>iPad: AirPrint only works on school WiFi</li>
-        <li>Mac: Printing only works on teacher WiFi</li>
+        <li>Mac: Print via Universal Print (see School Services → Printing)</li>
         <li>Alternative: Send document to <code>printme@bgzwn.at</code> (from school address)</li>
       </UL>
 
       <H3>iPad frozen / not responding</H3>
       <UL>
         <li><strong>Force restart:</strong> Hold Home + Power button simultaneously (or on newer iPads: press Volume Up, Volume Down, then hold Power)</li>
-        <li>If problem persists: Reset iPad via iTunes (see{" "}
+        <li>If the problem persists: reset the iPad using a computer (see{" "}
           <Link href="/en/infohub/geraete" className="text-primary hover:underline">iPad &amp; Devices</Link>)
         </li>
         <li>Hardware defect? Contact ACP TechRent: +43 1 813 0000</li>
@@ -107,6 +108,19 @@ export default function HilfePageEN() {
       <H3>Multiple children — edu.Pay shows wrong child</H3>
       <UL>
         <li>Clear browser cookies after logging out, or use a private / incognito window</li>
+      </UL>
+
+      <H3>PoDS activation code expired</H3>
+      <UL>
+        <li>
+          Activation codes are valid for <strong>30 days</strong>
+        </li>
+        <li>
+          Request a new code from{" "}
+          <a href="mailto:admin@bgzwn.at" className="text-primary hover:underline">
+            admin@bgzwn.at
+          </a>
+        </li>
       </UL>
 
       <H3>Change personal data (address, name, phone)</H3>
@@ -133,7 +147,7 @@ export default function HilfePageEN() {
 
       <LinkCards
         items={[
-          { href: "https://melpomene.webuntis.com/WebUntis/?school=bgzehnwn", label: "WebUntis", desc: "Timetable & class register" },
+          { href: "https://bgzehnwn.webuntis.com/WebUntis/?school=bgzehnwn#/basic/login", label: "WebUntis", desc: "Timetable & class register" },
           { href: "https://portal.office.com", label: "Office 365 Portal", desc: "Word, Excel, Teams, OneDrive, change password" },
           { href: "https://edusuite.at/portal/", label: "edu.Suite Portal", desc: "edu.Flow, edu.Pay, edu.Card (code: 304046)" },
           { href: "https://www.bildung.gv.at", label: "Education Portal", desc: "Central login for all education services" },

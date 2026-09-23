@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/ui/PageHeader";
-import { H2, H3, P, UL, Table } from "@/components/ui/Section";
+import { H2, P, UL, Table } from "@/components/ui/Section";
 import { Callout } from "@/components/ui/Callout";
 import { CardGrid, Card } from "@/components/ui/CardGrid";
 import { StepList, Step } from "@/components/ui/StepList";

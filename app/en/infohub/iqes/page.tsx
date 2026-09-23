@@ -124,8 +124,9 @@ export default function IqesPageEN() {
       </P>
 
       <Callout type="info" title="Note">
-        Because IQES and the school account have separate passwords, the school
-        IT (<InlineCode>fad@bgzwn.at</InlineCode>) also <strong>cannot</strong>{" "}
+        Because IQES and the school account have separate passwords, the
+        school&apos;s IQES contact (<InlineCode>fad@bgzwn.at</InlineCode>) also{" "}
+        <strong>cannot</strong>{" "}
         reset your IQES password directly — use the reset link above.
       </Callout>
 

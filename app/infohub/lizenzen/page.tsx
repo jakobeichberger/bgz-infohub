@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/ui/PageHeader";
-import { H2, H3, P, UL, Table } from "@/components/ui/Section";
+import { H2, P, UL, Table } from "@/components/ui/Section";
 import { Callout } from "@/components/ui/Callout";
 import { CardGrid, Card } from "@/components/ui/CardGrid";
 
@@ -123,7 +123,7 @@ export default function LizenzenPage() {
         <Card icon="🎮" title="Unity (Spieleentwicklung)">
           Kostenloser Student Plan. Spiele und interaktive 3D-Anwendungen
           entwickeln.{" "}
-          <a href="https://unity.com/products/unity-student" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">unity.com/student</a>
+          <a href="https://unity.com/products/unity-student" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">unity.com/products/unity-student</a>
         </Card>
         <Card icon="🎬" title="Unreal Engine">
           Komplett kostenlos für Bildung. Professionelle Game Engine für 3D,

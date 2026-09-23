@@ -35,7 +35,7 @@ export default function ServicesPageEN() {
       <Table
         headers={["Detail", "Information"]}
         rows={[
-          ["Direct link", "melpomene.webuntis.com/WebUntis/?school=bgzehnwn"],
+          ["Direct link", "bgzehnwn.webuntis.com"],
           ["Username", "lastname.firstname (not the email address)"],
           ["Password", "Your personal school account password"],
         ]}
@@ -47,10 +47,16 @@ export default function ServicesPageEN() {
         <a href="https://webuntis.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">webuntis.com</a>.
       </P>
 
+      <P>
+        <strong>With login:</strong> Personal timetable, absence overview
+        (open / unexcused / excused) and booking for parent–teacher day.
+      </P>
+
       <Callout type="info" title="Note for parents">
         Parents can access WebUntis through the{" "}
         <a href="https://www.bildung.gv.at" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Bildungsportal</a>{" "}
-        or use their child&apos;s login. For problems with your WebUntis
+        or set up their own parent account (see “Self-Registration for
+        Parents” below). For problems with your WebUntis
         parent account, please contact{" "}
         <a href="mailto:bnb@bgzwn.at" className="text-primary hover:underline">bnb@bgzwn.at</a>.
       </Callout>
@@ -169,17 +175,21 @@ export default function ServicesPageEN() {
         school attendance is compulsory. Parents must notify the class advisor by{" "}
         <strong>7:30 AM on the first day of absence</strong>. A medical
         certificate is required for absences longer than one week or frequent
-        short-term illness. After more than 5 unexcused absences, the student
-        may be automatically de-enrolled (
-        <a href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=45" target="_blank" rel="noopener noreferrer">§ 45 para. 4</a>).
+        short-term illness. Students no longer of compulsory school age who
+        are absent without excuse for more than a week, on five
+        non-consecutive school days or for 30 lessons in a school year, and
+        who do not respond to a written reminder, are deemed to have left the
+        school (
+        <a href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=45" target="_blank" rel="noopener noreferrer">§ 45 para. 5</a>).
       </Callout>
 
       {/* ═══ edu.Suite ═══ */}
       <H2>edu.Suite — Central Access Portal</H2>
 
       <P>
-        edu.Suite by Quarto Software GmbH is the shared login portal for
-        edu.Flow, edu.Pay and edu.Card.
+        edu.Suite by Quarto Software GmbH (
+        <a href="https://edusuite.at/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">edusuite.at</a>
+        ) is the shared login portal for edu.Flow, edu.Pay and edu.Card.
       </P>
 
       <Table
@@ -191,6 +201,12 @@ export default function ServicesPageEN() {
           ["Parent login", "Via verified edu.Flow account"],
         ]}
       />
+
+      <P>
+        You can also find the link on{" "}
+        <a href="https://www.bgzwn.at" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">bgzwn.at</a>{" "}
+        under &quot;Weblinks&quot; → &quot;EDUSUITE&quot;.
+      </P>
 
       <Callout type="info" title="Parent synchronisation">
         Parent accounts are synchronised <strong>nightly</strong>. Changes to
@@ -211,7 +227,8 @@ export default function ServicesPageEN() {
 
       <P>
         edu.Flow is the official communication platform between school and
-        parents.
+        parents. Student and parent data are imported from the SOKRATES-BUND
+        system.
       </P>
 
       <H3>Initial setup</H3>
@@ -234,6 +251,28 @@ export default function ServicesPageEN() {
           edu.Pay.
         </Step>
       </StepList>
+
+      <P>
+        <strong>Access:</strong> Via the{" "}
+        <a href="https://edusuite.at/portal/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">edu.Suite portal</a>{" "}
+        or directly from the WebUntis main menu.
+      </P>
+
+      <UL>
+        <li>Mobile-optimised with push notifications</li>
+        <li>
+          Can be installed as a web app on your home screen —{" "}
+          <a
+            href="https://www.eduflow.at/EduFlow.Wiki/doku.php?id=portal:webapp"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            guide (German)
+          </a>
+        </li>
+        <li>Each parent gets their own account</li>
+      </UL>
 
       <Callout type="warning" title="Emails not arriving?">
         Especially with <strong>hotmail.com</strong>, <strong>outlook.com</strong>,{" "}
@@ -267,6 +306,25 @@ export default function ServicesPageEN() {
         <li>Locker and bookshelf rental</li>
       </UL>
 
+      <H3>Sign-in for students</H3>
+      <StepList>
+        <Step title="Open edu.Suite">
+          Go to{" "}
+          <a href="https://edusuite.at/portal/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">edusuite.at/portal/</a>{" "}
+          and enter the school code <strong>304046</strong>.
+        </Step>
+        <Step title="Choose &quot;Über Office 365 anmelden&quot; (Sign in with Office 365)">
+          Sign in with{" "}
+          <InlineCode>lastname.firstname@bgzwn.at</InlineCode>.
+        </Step>
+      </StepList>
+
+      <H3>Sign-in for parents</H3>
+      <P>
+        Follow the same steps, but sign in with your verified parent email
+        address and your parent password.
+      </P>
+
       <Table
         headers={["Payment method", "Note"]}
         rows={[
@@ -282,9 +340,23 @@ export default function ServicesPageEN() {
 
       <Callout type="info" title="Overpayment / Refund">
         Amounts under EUR 10 can be transferred to the copy card. From
-        EUR 10 a refund is possible — send the application form with name,
-        class and signature to{" "}
+        EUR 10 a refund is possible — send the{" "}
+        <a
+          href="https://wiki.bgzwn.at/lib/exe/fetch.php?media=antrag_rueckerstattung.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          application form
+        </a>{" "}
+        with name, class and signature to{" "}
         <a href="mailto:kanzlei@bgzwn.at" className="text-primary hover:underline">kanzlei@bgzwn.at</a>.
+      </Callout>
+
+      <Callout type="warning" title="Several children?">
+        If you have several children at the school, clear your cookies after
+        logging out or use a private / incognito window to avoid mixing up
+        accounts.
       </Callout>
 
       {/* ═══ edu.Card ═══ */}
@@ -297,12 +369,12 @@ export default function ServicesPageEN() {
       </P>
 
       <Callout type="info" title="Dedicated page">
-        <a
+        <Link
           href="/en/infohub/educard"
           className="text-primary hover:underline font-semibold"
         >
           edu.Card &amp; edu.digicard → View full details
-        </a>
+        </Link>
       </Callout>
 
       {/* ═══ Printing ═══ */}
@@ -428,7 +500,8 @@ export default function ServicesPageEN() {
         <a href="https://www.bildung.gv.at" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">bildung.gv.at</a>.
         Activation code expired? Contact{" "}
         <a href="mailto:admin@bgzwn.at" className="text-primary hover:underline">admin@bgzwn.at</a>{" "}
-        for a new code.
+        for a new code. Please note: the school is not the operator of PoDS
+        and can only provide limited support.
       </Callout>
     </>
   );

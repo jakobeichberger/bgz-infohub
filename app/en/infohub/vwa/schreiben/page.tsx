@@ -360,7 +360,7 @@ export default function VwaSchreibenPageEN() {
       {/* ═══ Navigation ═══ */}
       <H2>More VWA Topics</H2>
       <CardGrid>
-        <Card href="/en/infohub/vwa" icon="🎓" title="Overview">Timeline, formats, assessment</Card>
+        <Card href="/en/infohub/vwa" icon="🎓" title="Overview">Matura overview, formats, assessment</Card>
         <Card href="/en/infohub/vwa/aufbau" icon="📋" title="Structure & Research Question">Outline, formatting</Card>
         <Card href="/en/infohub/vwa/zitieren" icon="📚" title="Citations & Zotero">Reference management, AI usage</Card>
         <Card href="/en/infohub/vwa/vorlagen" icon="📄" title="Templates & Tools">Word template, tips, downloads</Card>

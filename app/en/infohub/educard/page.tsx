@@ -317,7 +317,7 @@ export default function EduCardPageEN() {
           },
           {
             href: "https://www.bmbwf.gv.at/educard",
-            label: "BMBWF edu.card Info",
+            label: "BMB edu.card Info",
             desc: "Ministry page on edu.card",
           },
         ]}

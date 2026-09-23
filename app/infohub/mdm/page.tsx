@@ -5,7 +5,7 @@ import { Callout } from "@/components/ui/Callout";
 import { StepList, Step } from "@/components/ui/StepList";
 
 export const metadata: Metadata = {
-  title: "MDM-Einrichtung — BG Zehnergasse",
+  title: "MDM-Einrichtung",
   description:
     "Schritt-für-Schritt-Anleitungen zur Geräteverwaltung (Mobile Device Management) auf iOS und Windows.",
 };
@@ -16,7 +16,7 @@ export default function MdmPage() {
       <PageHeader title="MDM-Einrichtung" />
 
       <P>
-        Die Schule nutzt <strong>Microsoft InTune</strong> zur
+        Die Schule nutzt <strong>Microsoft Intune</strong> zur
         Geräteverwaltung (Mobile Device Management). Hier finden Sie
         Anleitungen für jede Plattform — einfach Schritt für Schritt erklärt.
       </P>
@@ -185,8 +185,8 @@ export default function MdmPage() {
       <H3>Option 3: Full Management</H3>
       <P>
         Wird automatisch bei Geräten der Geräteinitiative konfiguriert. Das
-        iPad wird beim ersten Einschalten über Apple DEP (Device Enrollment
-        Program) in die Schulverwaltung aufgenommen — keine manuelle
+        iPad wird beim ersten Einschalten über Apple Automated Device Enrollment
+        (früher DEP) in die Schulverwaltung aufgenommen — keine manuelle
         Einrichtung nötig.
       </P>
 
@@ -372,14 +372,14 @@ export default function MdmPage() {
         <li>
           §{" "}
           <a
-            href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=14"
+            href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=14a"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:underline"
           >
             SchUG, BGBl. Nr. 472/1986 i.d.g.F.
           </a>{" "}
-          — § 14 Abs. 8a (Verwendung digitaler Endgeräte im Unterricht)
+          — § 14a (Verwendung digitaler Endgeräte im Unterricht)
         </li>
         <li>
           §{" "}

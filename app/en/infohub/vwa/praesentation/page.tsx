@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/ui/PageHeader";
-import { H2, H3, P, UL, Table } from "@/components/ui/Section";
+import { H2, P, UL, Table } from "@/components/ui/Section";
 import { Callout } from "@/components/ui/Callout";
 import { CardGrid, Card } from "@/components/ui/CardGrid";
 
@@ -132,7 +132,7 @@ export default function VwaPraesentationPageEN() {
       {/* ═══ Navigation ═══ */}
       <H2>More VWA Topics</H2>
       <CardGrid>
-        <Card href="/en/infohub/vwa" icon="🎓" title="Overview">Timeline, formats, assessment</Card>
+        <Card href="/en/infohub/vwa" icon="🎓" title="Overview">Matura overview, formats, assessment</Card>
         <Card href="/en/infohub/vwa/aufbau" icon="📋" title="Structure & Research Question">Outline, formatting</Card>
         <Card href="/en/infohub/vwa/schreiben" icon="✍️" title="Academic Writing">Style, language, plagiarism</Card>
         <Card href="/en/infohub/vwa/zitieren" icon="📚" title="Citations & Zotero">Reference management, AI usage</Card>

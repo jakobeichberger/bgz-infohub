@@ -237,7 +237,7 @@ export default function VwaPageEN() {
           },
           {
             href: "https://www.bmb.gv.at/Themen/schule/schulpraxis/zentralmatura/srdp_ahs/aba.html",
-            label: "BMBWF — ABA/VWA",
+            label: "BMB — ABA/VWA",
             desc: "Ministry page on the Concluding Paper",
           },
           {

@@ -6,7 +6,7 @@ import { Callout } from "@/components/ui/Callout";
 import { LinkCards } from "@/components/ui/LinkCards";
 
 export const metadata: Metadata = {
-  title: "Hilfe & Kontakte — BG Zehnergasse",
+  title: "Hilfe & Kontakte",
   description:
     "Support-Kontakte, häufige Probleme und Lösungen, alle wichtigen Links für Eltern und Schüler am BG Zehnergasse.",
 };
@@ -64,7 +64,7 @@ export default function HilfePage() {
           ],
           [
             "Portal Digitale Schule (PoDS)",
-            "pods.gv.at/hilfe",
+            "bildung.gv.at (nach dem Login)",
             "Online-FAQ und Anleitungen",
           ],
           [
@@ -165,7 +165,7 @@ export default function HilfePage() {
       <UL>
         <li>Stellen Sie sicher, dass Sie mit dem Schul-WLAN verbunden sind</li>
         <li>iPad: AirPrint funktioniert nur im Schul-WLAN</li>
-        <li>Mac: Drucken funktioniert nur im Lehrer-WLAN</li>
+        <li>Mac: Drucken über Universal Print (Anleitung unter Schulservices → Drucken)</li>
         <li>
           Alternative: Dokument an{" "}
           <code>printme@bgzwn.at</code> senden (von der Schuladresse)
@@ -180,7 +180,7 @@ export default function HilfePage() {
           Leiser, dann Power halten)
         </li>
         <li>
-          Falls das Problem bestehen bleibt: iPad über iTunes zurücksetzen
+          Falls das Problem bestehen bleibt: iPad über einen Computer zurücksetzen
           (siehe{" "}
           <Link
             href="/infohub/geraete"
@@ -267,7 +267,7 @@ export default function HilfePage() {
       <LinkCards
         items={[
           {
-            href: "https://melpomene.webuntis.com/WebUntis/?school=bgzehnwn",
+            href: "https://bgzehnwn.webuntis.com/WebUntis/?school=bgzehnwn#/basic/login",
             label: "WebUntis",
             desc: "Stundenplan & Klassenbuch",
           },
@@ -282,19 +282,9 @@ export default function HilfePage() {
             desc: "edu.Flow, edu.Pay, edu.Card (Schulcode: 304046)",
           },
           {
-            href: "https://www.pods.gv.at",
-            label: "Portal Digitale Schule",
-            desc: "PoDS — Digitale Schulverwaltung",
-          },
-          {
-            href: "https://www.bildung.gv.at",
-            label: "Bildungsportal (PoDS)",
-            desc: "Portal Digitale Schule — jetzt im Bildungsportal",
-          },
-          {
             href: "https://www.bildung.gv.at",
             label: "Bildungsportal",
-            desc: "Zentrales Login für alle Bildungsdienste",
+            desc: "Zentrales Login für alle Bildungsdienste (inkl. Portal Digitale Schule)",
           },
           {
             href: "https://digitaleslernen.oead.at/de/faqs",

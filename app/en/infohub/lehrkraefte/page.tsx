@@ -310,8 +310,8 @@ export default function LehrkraeftePageEN() {
             <strong>school WiFi</strong> (not guest WiFi)?
           </li>
           <li>
-            <strong>Windows:</strong> WiFi <strong>and</strong> Bluetooth
-            enabled? Miracast needs both for device detection.
+            <strong>Windows:</strong> WiFi enabled? Miracast connects to the
+            receiver directly over WiFi (Wi-Fi Direct).
           </li>
           <li>
             Device not found: turn WiFi off and on again on your device, then

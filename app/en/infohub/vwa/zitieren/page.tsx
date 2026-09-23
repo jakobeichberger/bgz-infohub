@@ -164,7 +164,7 @@ export default function VwaZitierenPageEN() {
         <Step title="Choose a citation style">
           On the first citation Zotero asks for the style. Recommended for VWA:{" "}
           &quot;APA 7th Edition&quot; (natural sciences) or &quot;Chicago
-          Manual of Style 17th (note)&quot; (humanities). The style can be
+          Manual of Style 18th (note)&quot; (humanities). The style can be
           changed at any time.
         </Step>
         <Step title="Insert a citation">
@@ -273,7 +273,7 @@ export default function VwaZitierenPageEN() {
       {/* ═══ Navigation ═══ */}
       <H2>More VWA Topics</H2>
       <CardGrid>
-        <Card href="/en/infohub/vwa" icon="🎓" title="Overview">Timeline, formats, assessment</Card>
+        <Card href="/en/infohub/vwa" icon="🎓" title="Overview">Matura overview, formats, assessment</Card>
         <Card href="/en/infohub/vwa/aufbau" icon="📋" title="Structure & Research Question">Outline, formatting</Card>
         <Card href="/en/infohub/vwa/schreiben" icon="✍️" title="Academic Writing">Style, language, plagiarism</Card>
         <Card href="/en/infohub/vwa/vorlagen" icon="📄" title="Templates & Tools">Word template, tips, downloads</Card>

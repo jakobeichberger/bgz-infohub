@@ -106,14 +106,14 @@ export default function VwaAufbauPage() {
       <Callout type="info" title="Bundsteg beachten">
         Der Bundsteg (1 cm zusätzlich links) ist der Bereich, der durch die
         Bindung verdeckt wird. Insgesamt ergibt sich ein linker Rand von
-        3,5 cm. Die BG Zehnergasse Vorlagen haben diese Einstellungen bereits
+        3,5 cm. Die Word-Vorlage des BG Zehnergasse hat diese Einstellungen bereits
         vorkonfiguriert.
       </Callout>
 
       {/* ═══ Navigation ═══ */}
       <H2>Weitere VWA-Themen</H2>
       <CardGrid>
-        <Card href="/infohub/vwa" icon="🎓" title="Übersicht">Zeitplan, Formate, Bewertung</Card>
+        <Card href="/infohub/vwa" icon="🎓" title="Übersicht">Matura-Überblick, Formate, Bewertung</Card>
         <Card href="/infohub/vwa/schreiben" icon="✍️" title="Wissenschaftliches Schreiben">Stil, Sprache, Plagiat</Card>
         <Card href="/infohub/vwa/zitieren" icon="📚" title="Zitieren & Zotero">Literaturverwaltung, KI-Nutzung</Card>
         <Card href="/infohub/vwa/vorlagen" icon="📄" title="Vorlagen & Tools">Word-Vorlage, Tipps, Downloads</Card>

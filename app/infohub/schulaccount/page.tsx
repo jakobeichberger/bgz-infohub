@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { H2, H3, P, UL, Table, InlineCode } from "@/components/ui/Section";
 import { Callout } from "@/components/ui/Callout";
 import { StepList, Step } from "@/components/ui/StepList";
 
 export const metadata: Metadata = {
-  title: "Schulaccount & Office 365 — BG Zehnergasse",
+  title: "Schulaccount & Office 365",
   description:
     "Schulkonto, Login-Daten, Passwort-Regeln, Passwort zurücksetzen und Microsoft Office 365 am BG Zehnergasse.",
 };
@@ -102,9 +103,9 @@ export default function SchulaccountPage() {
       <Table
         headers={["Beispiel-Passwort", "Zeichen", "Sicherheit"]}
         rows={[
-          ["Mein Hund frisst gerne 3 Bananen!", "35", "Sehr sicher"],
-          ["Im Sommer gehe ich 7x schwimmen.", "35", "Sehr sicher"],
-          ["Pizza mit Ananas? Niemals, danke!", "36", "Sehr sicher"],
+          ["Mein Hund frisst gerne 3 Bananen!", "33", "Sehr sicher"],
+          ["Im Sommer gehe ich 7x schwimmen.", "32", "Sehr sicher"],
+          ["Pizza mit Ananas? Niemals, danke!", "33", "Sehr sicher"],
         ]}
       />
 
@@ -115,12 +116,12 @@ export default function SchulaccountPage() {
       </P>
       <UL>
         <li>
-          Satz: &quot;Am Montag esse ich immer 2 Semmeln zum Frühstück!&quot; →
-          Passwort: <InlineCode>AMeii2SzF!</InlineCode>
+          Satz: &quot;Am Montag esse ich um 7 Uhr immer 2 Semmeln zum Frühstück!&quot; →
+          Passwort: <InlineCode>AMeiu7Ui2SzF!</InlineCode>
         </li>
         <li>
-          Satz: &quot;Meine Katze schläft jeden Tag 16 Stunden lang.&quot; →
-          Passwort: <InlineCode>MKsjT16Sl.</InlineCode>
+          Satz: &quot;Meine Katze Mimi schläft jeden Tag 16 Stunden lang auf dem Sofa.&quot; →
+          Passwort: <InlineCode>MKMsjT16SladS.</InlineCode>
         </li>
       </UL>
 
@@ -129,10 +130,10 @@ export default function SchulaccountPage() {
       </P>
       <UL>
         <li>
-          <InlineCode>Wolke Gabel Tintenfisch Rakete</InlineCode> (33 Zeichen)
+          <InlineCode>Wolke Gabel Tintenfisch Rakete</InlineCode> (30 Zeichen)
         </li>
         <li>
-          <InlineCode>Kaktus Freitag Mondstein Suppe7</InlineCode> (32 Zeichen)
+          <InlineCode>Kaktus Freitag Mondstein Suppe7</InlineCode> (31 Zeichen)
         </li>
       </UL>
 
@@ -269,12 +270,12 @@ export default function SchulaccountPage() {
       <Callout type="info" title="Eigene Seite">
         Alle Details zu den Vorteilen der A3-Lizenz, OneDrive, OneNote,
         Copilot und Installation:{" "}
-        <a
+        <Link
           href="/infohub/office365"
           className="text-primary hover:underline font-semibold"
         >
           Microsoft 365 → Zur vollständigen Übersicht
-        </a>
+        </Link>
       </Callout>
     </>
   );

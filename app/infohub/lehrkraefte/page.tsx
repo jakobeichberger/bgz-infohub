@@ -332,8 +332,8 @@ export default function LehrkraeftePage() {
             angemeldet (nicht Gast-WLAN)?
           </li>
           <li>
-            <strong>Windows:</strong> WLAN <strong>und</strong> Bluetooth
-            aktiviert? Miracast braucht beides zur Geräteerkennung.
+            <strong>Windows:</strong> WLAN aktiviert? Miracast verbindet sich
+            direkt per WLAN (Wi-Fi Direct) mit dem Empfänger.
           </li>
           <li>
             Gerät wird nicht gefunden: WLAN am Gerät kurz aus- und einschalten,

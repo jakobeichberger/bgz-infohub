@@ -16,7 +16,7 @@ export default function MdmPageEN() {
       <PageHeader title="MDM Setup" />
 
       <P>
-        The school uses <strong>Microsoft InTune</strong> for device management
+        The school uses <strong>Microsoft Intune</strong> for device management
         (Mobile Device Management). Here you will find instructions for each
         platform — explained step by step.
       </P>
@@ -170,7 +170,7 @@ export default function MdmPageEN() {
       <H3>Option 3: Full Management</H3>
       <P>
         Configured automatically for devices from the device initiative. The
-        iPad is enrolled via Apple DEP (Device Enrollment Program) on first
+        iPad is enrolled via Apple Automated Device Enrollment (formerly DEP) on first
         boot — no manual setup needed.
       </P>
 
@@ -329,14 +329,14 @@ export default function MdmPageEN() {
         <li>
           §{" "}
           <a
-            href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=14"
+            href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=14a"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:underline"
           >
             SchUG, BGBl. Nr. 472/1986 i.d.g.F.
           </a>{" "}
-          — § 14 Abs. 8a (use of digital devices in the classroom)
+          — § 14a (use of digital devices in the classroom)
         </li>
         <li>
           §{" "}

@@ -6,7 +6,7 @@ import { StepList, Step } from "@/components/ui/StepList";
 import { LinkCards } from "@/components/ui/LinkCards";
 
 export const metadata: Metadata = {
-  title: "iPad & Geräte — BG Zehnergasse",
+  title: "iPad & Geräte",
   description:
     "Geräteinitiative Digitales Lernen, iPad-Verwaltung, Kinderschutz, Garantie, Zubehör und Gerätebörse am BG Zehnergasse.",
 };
@@ -28,7 +28,7 @@ export default function GeraetePage() {
 
       <P>
         Die Geräteinitiative ist Teil des 8-Punkte-Plans zur Digitalisierung
-        des Unterrichts des BMBWF. Ziel ist es, allen Schülerinnen und Schülern
+        des Unterrichts des BMB. Ziel ist es, allen Schülerinnen und Schülern
         der Sekundarstufe I gleichen Zugang zu digitaler Bildung zu
         ermöglichen. Die Rechtsgrundlage bildet das
         Schulunterrichts-Digitalisierungsgesetz (SchulDigiG).
@@ -38,10 +38,10 @@ export default function GeraetePage() {
         headers={["Detail", "Information"]}
         rows={[
           ["Gerät", "Apple iPad (von der Schule gewählt)"],
-          ["Verwaltung", "Microsoft InTune (MDM)"],
+          ["Verwaltung", "Microsoft Intune (MDM)"],
           [
             "Eigenanteil Eltern",
-            "25 % des Gerätepreises (gem. SchDigiG § 5 Abs. 2)",
+            "25 % des Gerätepreises (gem. SchulDigiG § 5 Abs. 2)",
           ],
           [
             "Berechtigt",
@@ -95,7 +95,7 @@ export default function GeraetePage() {
             rel="noopener noreferrer"
             className="text-primary hover:underline"
           >
-            SchDigiG § 5
+            SchulDigiG § 5
           </a>
           )
         </li>
@@ -161,12 +161,12 @@ export default function GeraetePage() {
       <P>
         Mehr zu Garantie und Versicherung:{" "}
         <a
-          href="https://digitaleslernen.oead.at/de/garantie-versicherung"
+          href="https://digitaleslernen.oead.at/de/fuer-eltern/garantie-versicherung-reparaturen"
           target="_blank"
           rel="noopener noreferrer"
           className="text-primary hover:underline"
         >
-          digitaleslernen.oead.at/de/garantie-versicherung
+          digitaleslernen.oead.at/de/fuer-eltern/garantie-versicherung-reparaturen
         </a>
       </P>
 
@@ -191,7 +191,7 @@ export default function GeraetePage() {
           <strong>Anderes Gerät an der alten Schule:</strong> Tauschen Sie
           das Gerät über die{" "}
           <a
-            href="https://digitaleslernen.oead.at/de/fuer-eltern/geraete-support/geraeteboerse"
+            href="https://digitaleslernen.oead.at/de/fuer-eltern/schulwechsel-geraeteboerse"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:underline"
@@ -280,11 +280,11 @@ export default function GeraetePage() {
         </a>
       </Callout>
 
-      {/* ═══════════════ Geräteverwaltung (AAD) ═══════════════ */}
-      <H2>Geräteverwaltung (Azure AD / InTune)</H2>
+      {/* ═══════════════ Geräteverwaltung (Entra ID) ═══════════════ */}
+      <H2>Geräteverwaltung (Microsoft Entra ID / Intune)</H2>
 
       <P>
-        Die Schule nutzt Microsoft Azure Active Directory mit drei
+        Die Schule nutzt Microsoft Entra ID und Intune mit drei
         Verwaltungsstufen:
       </P>
 
@@ -297,12 +297,12 @@ export default function GeraetePage() {
             "Keiner",
           ],
           [
-            "Partial (AAD Registered)",
+            "Partial (Entra registered)",
             "Arbeitsprofil wird angelegt, Schuldaten getrennt",
             "Kein Zugriff auf persönliche Daten",
           ],
           [
-            "Full (AAD Joined)",
+            "Full (Entra joined)",
             "Vollständig schulverwaltet (iPad-Initiative)",
             "Geräterichtlinien werden durchgesetzt",
           ],
@@ -334,21 +334,23 @@ export default function GeraetePage() {
 
       <P>
         Falls das iPad schwerwiegende Probleme hat, können Sie es auf
-        Werkseinstellungen zurücksetzen. Sie benötigen dafür einen Computer
-        mit iTunes.
+        Werkseinstellungen zurücksetzen. Sie benötigen dafür einen Mac oder
+        Windows-PC.
       </P>
 
       <StepList>
-        <Step title="iTunes installieren">
-          Laden Sie iTunes auf Ihren Computer herunter und installieren Sie
-          es.
+        <Step title="Computer vorbereiten">
+          <strong>Mac:</strong> Sie verwenden den Finder — keine Installation
+          nötig. <strong>Windows:</strong> Installieren Sie die App{" "}
+          <strong>„Apple-Geräte“</strong> aus dem Microsoft Store.
         </Step>
         <Step title="Recovery-Modus aktivieren">
           Folgen Sie der offiziellen Apple-Anleitung, um das iPad in den
           Wiederherstellungsmodus zu versetzen.
         </Step>
         <Step title="iPad wiederherstellen">
-          Wählen Sie in iTunes &quot;Wiederherstellen&quot; und warten Sie, bis
+          Wählen Sie im Finder bzw. in der App „Apple-Geräte“
+          &quot;Wiederherstellen&quot; und warten Sie, bis
           der Vorgang abgeschlossen ist.
         </Step>
         <Step title="Neu einrichten">
@@ -397,16 +399,6 @@ export default function GeraetePage() {
             label: "Rundum-Sorglos-Paket",
             desc: "Schutz- und Servicepaket für das iPad",
           },
-          {
-            href: "https://www.justedu.at/ipad-9-gen-inkl-justedu-active-pen/",
-            label: "iPad 9. Gen inkl. Active Pen",
-            desc: "Komplettset: iPad mit justEDU Active Pen",
-          },
-          {
-            href: "https://www.justedu.at/ipad-wi-fi-64gb-space-grau-10-2-9-gen-2/",
-            label: "iPad Wi-Fi 64 GB (10,2\", 9. Gen)",
-            desc: "iPad einzeln, Space Grau",
-          },
         ]}
       />
 
@@ -437,7 +429,7 @@ export default function GeraetePage() {
         </Step>
         <Step title="Werksreset durchführen">
           Setzen Sie das iPad über Einstellungen → Allgemein → iPad
-          zurücksetzen auf Werkseinstellungen zurück.
+          übertragen/zurücksetzen auf Werkseinstellungen zurück.
         </Step>
         <Step title="Privat neu einrichten">
           Das iPad kann jetzt mit einer privaten Apple-ID ohne
@@ -471,7 +463,7 @@ export default function GeraetePage() {
             desc: "Eigenanteil bezahlen oder Befreiung beantragen",
           },
           {
-            href: "https://digitaleslernen.oead.at/de/garantie-versicherung",
+            href: "https://digitaleslernen.oead.at/de/fuer-eltern/garantie-versicherung-reparaturen",
             label: "Garantie & Versicherung",
             desc: "Informationen zu Garantie und Reparatur",
           },
@@ -482,6 +474,49 @@ export default function GeraetePage() {
           },
         ]}
       />
+
+      {/* ═══ Rechtsquellen ═══ */}
+      <H2>Rechtsquellen</H2>
+
+      <UL>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=14a"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            SchUG, BGBl. Nr. 472/1986 i.d.g.F.
+          </a>{" "}
+          — § 14a (Einsatz digitaler Endgeräte im Unterricht)
+        </li>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011647"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            IKT-Schulverordnung, BGBl. II Nr. 382/2021 i.d.g.F.
+          </a>{" "}
+          — § 10 (Geräteverwaltung, Kinderschutz)
+        </li>
+        <li>
+          §{" "}
+          <a
+            href="https://www.ris.bka.gv.at/eli/bgbl/i/2021/9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            SchulDigiG, BGBl. I Nr. 9/2021 i.d.g.F.
+          </a>{" "}
+          — § 5 (Eigenanteil; Rechtsrahmen der Geräteinitiative
+          &quot;Digitales Lernen&quot;)
+        </li>
+      </UL>
     </>
   );
 }

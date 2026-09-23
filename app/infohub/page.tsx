@@ -6,7 +6,7 @@ import { Callout } from "@/components/ui/Callout";
 import { Search } from "@/components/Search";
 
 export const metadata: Metadata = {
-  title: "InfoHub — BG Zehnergasse",
+  title: { absolute: "BG Zehnergasse InfoHub — Informationsportal" },
   description:
     "Zentrales Informationsportal für Eltern und Schüler am BG Zehnergasse: Schulkonto, iPad, IT-Services, Anleitungen und Hilfe.",
 };
@@ -25,11 +25,11 @@ function QuickLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
+      className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
     >
       <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
       <div>
-        <span className="text-sm font-medium text-txt group-hover:text-primary group-hover:text-primary transition-colors">
+        <span className="text-sm font-medium text-txt group-hover:text-primary transition-colors">
           {label}
         </span>
         <span className="text-xs text-txt-light block">
@@ -103,6 +103,9 @@ export default function InfoHubPage() {
           Schülerausweis, Kopierkarte, Verlust melden, digitaler Ausweis am
           Smartphone.
         </Card>
+        <Card href="/infohub/chip" icon="🔐" title="Schüler:innen-Chip">
+          Zutritt zur Schule, Chip aktualisieren, Verlust und Ersatzchip.
+        </Card>
         <Card href="/infohub/nextexam" icon="📝" title="Next-Exam">
           Digitale Prüfungsumgebung — Downloads, Anleitungen und Schnellhilfe.
         </Card>
@@ -110,8 +113,8 @@ export default function InfoHubPage() {
           Notebook-Anforderungen für die Oberstufe, Kaufberatung und Tipps.
         </Card>
         <Card href="/infohub/mdm" icon="⚙️" title="MDM-Einrichtung">
-          Geräteverwaltung einrichten — Schritt für Schritt für iOS, Android
-          und Windows.
+          Geräteverwaltung einrichten — Schritt für Schritt für iOS und
+          Windows.
         </Card>
         <Card href="/infohub/tipp10" icon="⌨️" title="TIPP10 Tipptrainer">
           Kostenloses 10-Finger-Schreibtraining — Online, Software und
@@ -147,7 +150,7 @@ export default function InfoHubPage() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
         <QuickLink
-          href="https://melpomene.webuntis.com/WebUntis/?school=bgzehnwn"
+          href="https://bgzehnwn.webuntis.com/WebUntis/?school=bgzehnwn#/basic/login"
           label="WebUntis öffnen"
           description="Stundenplan, Abwesenheiten melden, Sprechstunden"
         />
@@ -162,14 +165,9 @@ export default function InfoHubPage() {
           description="edu.Flow, edu.Pay, edu.Card (Schulcode: 304046)"
         />
         <QuickLink
-          href="https://www.pods.gv.at"
-          label="Portal Digitale Schule (PoDS)"
-          description="Digitale Schulverwaltung des Bundes"
-        />
-        <QuickLink
           href="https://www.bildung.gv.at"
           label="Bildungsportal"
-          description="Zentrales Login für alle Bildungsdienste"
+          description="Zentrales Login für alle Bildungsdienste (inkl. PoDS)"
         />
         <QuickLink
           href="https://www.bgzwn.at"

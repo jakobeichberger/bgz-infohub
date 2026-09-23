@@ -18,7 +18,7 @@ export default function NextExamPageEN() {
 
       <P>
         Next-Exam is a free, open-source digital examination environment
-        recommended by the Austrian Federal Ministry of Education (BMBWF) for
+        recommended by the Austrian Federal Ministry of Education (BMB) for
         all Austrian schools. It enables secure digital exams on laptops and
         tablets — without complex IT infrastructure.
       </P>
@@ -34,9 +34,9 @@ export default function NextExamPageEN() {
         rows={[
           ["Licence", "GPLv3 — free and open source"],
           ["Operating systems", "Windows, macOS (Intel + ARM), Linux"],
-          ["Mobile", "iOS / Android app planned for 2027"],
+          ["iPad", "Student version for iPad (iOS) since version 2.1"],
           ["BYOD", "Works with students' own devices"],
-          ["Network", "School network (WiFi) sufficient — no internet required"],
+          ["Network", "School network (WiFi) sufficient — internet only for online modes (e.g. Microsoft 365, Moodle)"],
           ["Privacy", "Collects no user data"],
           ["Developer", "Mag. Thomas Michael Weissel"],
           ["Source code", "github.com/Bildungsportal/next-exam"],
@@ -48,13 +48,15 @@ export default function NextExamPageEN() {
       <Table
         headers={["Mode", "Description"]}
         rows={[
-          ["Mathematics", "GeoGebra integration for mathematical tasks"],
+          ["Mathematics", "GeoGebra integration for mathematical tasks (incl. 3D and spreadsheet)"],
           ["Languages", "Text editor with spell check (DE, EN, FR, ES, IT)"],
           ["Eduvidual / Moodle", "Access to Moodle tests"],
-          ["Google Forms", "Students fill in specified forms"],
+          ["Forms", "Students fill in specified Google or Microsoft forms"],
           ["Microsoft 365", "Edit Excel or Word documents"],
           ["Website", "Teacher-specified URLs displayed"],
           ["RDP", "Remote Desktop via Microsoft RD Web Client"],
+          ["ActiveSheets (new in 2.x)", "Fill in a PDF worksheet on the device, digital marking by the teacher"],
+          ["Local VM (new in 2.x)", "Windows 11 machine for specialist software (e.g. programming, CAD)"],
         ]}
       />
 
@@ -87,6 +89,28 @@ export default function NextExamPageEN() {
         Audio Recording</strong>. Without this, the screen stays black.
       </Callout>
 
+      <H3>For Teachers</H3>
+
+      <StepList>
+        <Step title="Download and start Next-Exam Teacher">
+          Download the Teacher app from the download section below. Enter an
+          exam name and optionally choose a save location.
+        </Step>
+        <Step title="Configure the exam">
+          Choose the exam mode (Mathematics, Languages, Moodle etc.) and set
+          optional settings such as language-exam tools.
+        </Step>
+        <Step title="Give students access">
+          The server address and PIN are displayed — share them with the class.
+          Students connect with the Student app.
+        </Step>
+        <Step title="End the exam">
+          Click &quot;Geräte freigeben&quot; (release devices) → submissions
+          are collected. &quot;Letzte Abgaben zusammenfassen&quot; (combine
+          latest submissions) merges all work into one PDF.
+        </Step>
+      </StepList>
+
       <H2>Security Features</H2>
 
       <UL>
@@ -96,6 +120,19 @@ export default function NextExamPageEN() {
         <li>Optional password-protected offline mode</li>
         <li>Automatic backup every 6 minutes</li>
         <li>No data collection by Next-Exam itself</li>
+        <li>
+          <strong>macOS &amp; iPad:</strong> Apple Assessment Mode — the system
+          itself locks app switching and keyboard shortcuts (since 2.1)
+        </li>
+        <li>
+          <strong>Windows:</strong> optional kiosk mode with a temporary user
+          account; <strong>Linux:</strong> Cage mode for final exams
+        </li>
+        <li>
+          Can be used instead of Safe Exam Browser (SEB), e.g. for
+          eduvidual/Moodle tests
+        </li>
+        <li>Encrypted exam files and digitally signed submission PDFs</li>
       </UL>
 
       <Callout type="success" title="Privacy">
@@ -117,7 +154,7 @@ export default function NextExamPageEN() {
         headers={["Feature", "Student App", "Teacher App"]}
         rows={[
           ["Filename contains", "\"Student\"", "\"Teacher\""],
-          ["File size (Windows EXE)", "~309 MB", "~122 MB"],
+          ["File size (Windows EXE)", "~342 MB", "~127 MB"],
           ["Start screen shows", "Server address + PIN field", "Exam name + save location"],
           ["Function", "Connects to teacher", "Creates exam server"],
         ]}
@@ -132,7 +169,7 @@ export default function NextExamPageEN() {
       <UL>
         <li>Start the app <strong>from a folder</strong> (Desktop or Downloads) — not directly from the browser download</li>
         <li>On <strong>Windows</strong>: Right-click → &quot;Run as administrator&quot;</li>
-        <li>On <strong>macOS</strong>: Right-click → &quot;Open&quot; (not double-click, to bypass Gatekeeper)</li>
+        <li>On <strong>macOS</strong>: If the app is blocked on first launch → System Settings → Privacy &amp; Security → &quot;Open Anyway&quot;</li>
         <li>On <strong>Linux</strong>: AppImage must be executable: <code>chmod +x Next-Exam-Student*.AppImage</code></li>
       </UL>
 
@@ -160,8 +197,9 @@ export default function NextExamPageEN() {
 
       <H3>Windows security warning on start</H3>
       <P>
-        Windows shows a SmartScreen warning for unknown applications. This is
-        normal. Click <strong>&quot;More info&quot;</strong> →
+        Since version 2.1 the Windows versions are digitally signed. If Windows
+        still shows a SmartScreen warning, click{" "}
+        <strong>&quot;More info&quot;</strong> →{" "}
         <strong>&quot;Run anyway&quot;</strong>.
       </P>
 
@@ -196,11 +234,11 @@ export default function NextExamPageEN() {
 
       <H3>Does Next-Exam work without the internet?</H3>
       <P>
-        Yes — for Mathematics, Languages, and Microsoft 365 modes,{" "}
+        Yes — for Mathematics and Languages modes,{" "}
         <strong>no internet is required</strong>. A local school network
-        (Wi-Fi) is sufficient for the student and teacher apps to connect.
-        Only the Moodle, Google Forms, and Website modes require internet
-        access.
+        (Wi-Fi) is sufficient for the student and teacher apps to connect. The
+        online modes Microsoft 365, Moodle, Forms (Google/Microsoft Forms), and
+        Website require internet access.
       </P>
 
       <H3>Is my screen being recorded?</H3>
@@ -227,10 +265,10 @@ export default function NextExamPageEN() {
         clipboard is cleared when the exam starts.
       </P>
 
-      <H2>Downloads — Current Version: 1.1.3</H2>
+      <H2>Downloads — Current Version: 2.1.0.3</H2>
 
       <P>
-        Released 19 March 2026. All downloads from{" "}
+        Released 22 September 2026. All downloads from{" "}
         <a
           href="https://github.com/Bildungsportal/next-exam/releases"
           target="_blank"
@@ -244,109 +282,111 @@ export default function NextExamPageEN() {
 
       <H3>Student App</H3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-4">
-        {[
+      <LinkCards
+        items={[
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/1.1.3/Next-Exam-Student_1.1.3.1_20260318_x64.exe",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.0.3/Next-Exam-Student_2.1.0.3_20260922_x64.exe",
             label: "Windows (EXE)",
-            desc: "Student — portable, no installation",
+            desc: "Student — portable, no installation (342 MB)",
+            dotClass: "bg-green-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/1.1.3/Next-Exam-Student_1.1.3.1_20260318_arm64.dmg",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.0.3/Next-Exam-Student_2.1.0.3_20260922_x64.msi",
+            label: "Windows (MSI)",
+            desc: "Student — installer (287 MB)",
+            dotClass: "bg-green-500",
+          },
+          {
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.0.3/Next-Exam-Student_2.1.0.3_20260922_arm64.dmg",
             label: "macOS (Apple Silicon)",
-            desc: "Student — for M1/M2/M3/M4 Macs",
+            desc: "Student — for M1/M2/M3/M4 Macs (338 MB)",
+            dotClass: "bg-green-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/1.1.3/Next-Exam-Student_1.1.3.1_20260318_x64.dmg",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.0.3/Next-Exam-Student_2.1.0.3_20260922_x64.dmg",
             label: "macOS (Intel)",
-            desc: "Student — for older Macs",
+            desc: "Student — for older Macs (348 MB)",
+            dotClass: "bg-green-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/1.1.3/Next-Exam-Student_1.1.3.1_20260318_x86_64.AppImage",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.0.3/Next-Exam-Student_2.1.0.3_20260922_x86_64.AppImage",
             label: "Linux (AppImage)",
-            desc: "Student — Ubuntu, Fedora etc.",
+            desc: "Student — Ubuntu, Fedora etc. (322 MB)",
+            dotClass: "bg-green-500",
           },
-        ].map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
-          >
-            <div className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-            <div>
-              <span className="text-sm font-medium text-txt group-hover:text-primary transition-colors">
-                {link.label}
-              </span>
-              <span className="text-xs text-txt-light block">
-                {link.desc}
-              </span>
-            </div>
-          </a>
-        ))}
-      </div>
+        ]}
+      />
 
       <H3>Teacher App</H3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-4">
-        {[
+      <LinkCards
+        items={[
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/1.1.3/Next-Exam-Teacher_1.1.3.1_20260318_x64.exe",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.0.3/Next-Exam-Teacher_2.1.0.3_20260922_x64.exe",
             label: "Windows (EXE)",
-            desc: "Teacher — portable, no installation",
+            desc: "Teacher — portable, no installation (127 MB)",
+            dotClass: "bg-blue-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/1.1.3/Next-Exam-Teacher_1.1.3.1_20260318_arm64.dmg",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.0.3/Next-Exam-Teacher_2.1.0.3_20260922_x64.msi",
+            label: "Windows (MSI)",
+            desc: "Teacher — installer (158 MB)",
+            dotClass: "bg-blue-500",
+          },
+          {
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.0.3/Next-Exam-Teacher_2.1.0.3_20260922_arm64.dmg",
             label: "macOS (Apple Silicon)",
-            desc: "Teacher — for M1/M2/M3/M4 Macs",
+            desc: "Teacher — for M1/M2/M3/M4 Macs (179 MB)",
+            dotClass: "bg-blue-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/1.1.3/Next-Exam-Teacher_1.1.3.1_20260318_x64.dmg",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.0.3/Next-Exam-Teacher_2.1.0.3_20260922_x64.dmg",
             label: "macOS (Intel)",
-            desc: "Teacher — for older Macs",
+            desc: "Teacher — for older Macs (188 MB)",
+            dotClass: "bg-blue-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/1.1.3/Next-Exam-Teacher_1.1.3.1_20260318_x86_64.AppImage",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.0.3/Next-Exam-Teacher_2.1.0.3_20260922_x86_64.AppImage",
             label: "Linux (AppImage)",
-            desc: "Teacher — Ubuntu, Fedora etc.",
+            desc: "Teacher — Ubuntu, Fedora etc. (198 MB)",
+            dotClass: "bg-blue-500",
           },
-        ].map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group"
-          >
-            <div className="w-2 h-2 rounded-full bg-blue-500 flex-shrink-0" />
-            <div>
-              <span className="text-sm font-medium text-txt group-hover:text-primary transition-colors">
-                {link.label}
-              </span>
-              <span className="text-xs text-txt-light block">
-                {link.desc}
-              </span>
-            </div>
-          </a>
-        ))}
-      </div>
+        ]}
+      />
 
       <Callout type="warning" title="Download note">
         Microsoft Edge sometimes blocks the download — use Firefox or Chrome.
-        Windows security warnings for unknown applications are normal and can
-        be confirmed.
+        On a Mac, pick the matching version (Apple Silicon or Intel): Next-Exam
+        warns if the wrong version is running via Rosetta.
       </Callout>
 
       <H2>Version History</H2>
 
+      <H3>Version 2.1.0.3 — 22 September 2026</H3>
+      <P>
+        Patch release: GeoGebra update (incl. statistics and regression), fixes
+        for spell check and printing, PIN codes starting with 0 now work,
+        digitally signed Windows builds.
+      </P>
+
+      <H3>Version 2.1.0.2 — 11 September 2026</H3>
+      <P>
+        Patch release: the Education Portal connection now uses the production
+        environment by default; fixes for portal login and exam status.
+      </P>
+
+      <H3>Version 2.1 — 10 September 2026</H3>
+      <UL>
+        <li>Completely redesigned Teacher dashboard (groups in all modes, submission overview, exam log, time limit)</li>
+        <li><strong>iPad version</strong> of the Student app (iOS Assessment Mode)</li>
+        <li>Connection to the <strong>Education Portal</strong> — prepare and load exams centrally</li>
+        <li>New modes <strong>ActiveSheets</strong> (PDF worksheets with digital marking) and <strong>local VM</strong></li>
+        <li>More security: macOS Assessment Mode, optional Windows kiosk mode, Linux Cage mode, SEB compatibility</li>
+        <li>Printing rebuilt, Microsoft Forms in forms mode</li>
+      </UL>
+
       <H3>Version 1.1.3 — 19 March 2026</H3>
-      <P>Patch release with bug fixes and stability improvements.</P>
-
-      <H3>Version 1.1.2 — 11 March 2026</H3>
-      <P>Patch release with bug fixes.</P>
-
-      <H3>Version 1.1.1 — 27 January 2026</H3>
-      <P>Patch release with bug fixes.</P>
-
-      <H3>Version 1.1.0 — 12 December 2025</H3>
-      <P>Major feature release with new exam modes and UI improvements.</P>
+      <P>Last release of the 1.x series (bug fixes).</P>
 
       <P>
         Full release notes on{" "}
@@ -360,12 +400,12 @@ export default function NextExamPageEN() {
         </a>
       </P>
 
-      <H2>BMBWF Rollout Timeline</H2>
+      <H2>BMB Rollout Timeline</H2>
 
       <Table
         headers={["Period", "Milestone"]}
         rows={[
-          ["Now", "Available to all schools"],
+          ["Now", "Available to all schools — since version 2.1 with Education Portal connection and iPad version"],
           ["2025–2026", "Training planning and portal integration"],
           ["2027–2028", "Qualification mandatory; iOS/Android client"],
           ["2029–2031", "Pilot for regular exams and 2031 Matura"],
@@ -379,8 +419,8 @@ export default function NextExamPageEN() {
         items={[
           { href: "https://github.com/Bildungsportal/next-exam/releases", label: "GitHub Releases", desc: "All versions and downloads" },
           { href: "https://life-edu.eu/next-exam/", label: "Next-Exam Project Site", desc: "Documentation and FAQ" },
-          { href: "https://www.bildung.gv.at/filter/faq/page.php?lang=de&p=212&t", label: "Bildungsportal — Next-Exam", desc: "Official BMBWF info page" },
-          { href: "https://www.bmb.gv.at/Themen/schule/zrp/dibi/dip.html", label: "BMBWF Rollout Plan", desc: "Strategy and timeline" },
+          { href: "https://www.bildung.gv.at/filter/faq/page.php?lang=de&p=212&t", label: "Bildungsportal — Next-Exam", desc: "Official BMB info page" },
+          { href: "https://www.bmb.gv.at/Themen/schule/zrp/dibi/dip.html", label: "BMB Rollout Plan", desc: "Strategy and timeline" },
         ]}
       />
 

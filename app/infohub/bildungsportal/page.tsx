@@ -7,9 +7,9 @@ import { StepList, Step } from "@/components/ui/StepList";
 import { LinkCards } from "@/components/ui/LinkCards";
 
 export const metadata: Metadata = {
-  title: "Bildungsportal & IT-Services — BG Zehnergasse",
+  title: "Bildungsportal & IT-Services",
   description:
-    "Bildungsportal für Eltern und Schüler, edu.digicard, BMBWF IT-Dienstleistungen und Lernplattformen.",
+    "Bildungsportal für Eltern und Schüler, edu.digicard, BMB IT-Dienstleistungen und Lernplattformen.",
 };
 
 export default function BildungsportalPage() {
@@ -28,7 +28,7 @@ export default function BildungsportalPage() {
           bildung.gv.at
         </a>
         ) ist Österreichs zentrale digitale Bildungsplattform, betrieben vom
-        BMBWF. Es bietet einen einheitlichen Login und ein personalisiertes
+        BMB. Es bietet einen einheitlichen Login und ein personalisiertes
         Dashboard für Schülerinnen, Eltern und Lehrende.
       </P>
 
@@ -88,15 +88,11 @@ export default function BildungsportalPage() {
         rows={[
           [
             "ID Austria (empfohlen)",
-            "Österreichische Staatsbürger — sicherste Methode",
+            "Für alle mit ID Austria — sicherste Methode",
           ],
           [
             "Benutzername / Passwort",
             "Zugangsdaten von der Schule erhalten",
-          ],
-          [
-            "Digitales Service Tirol",
-            "Für Tiroler Erziehungsberechtigte",
           ],
         ]}
       />
@@ -236,8 +232,8 @@ export default function BildungsportalPage() {
         und im Google Play Store erhältlich.
       </Callout>
 
-      {/* ═══════════════ BMBWF IT-Services ═══════════════ */}
-      <H2>IT-Dienstleistungen des BMBWF</H2>
+      {/* ═══════════════ BMB IT-Services ═══════════════ */}
+      <H2>IT-Dienstleistungen des BMB</H2>
 
       <P>
         Das Bundesministerium für Bildung stellt allen österreichischen Schulen
@@ -246,7 +242,7 @@ export default function BildungsportalPage() {
 
       <CardGrid>
         <Card icon="🪪" title="edu.digicard">
-          Digitaler Schülerausweis am Smartphone — ersetzt den physischen
+          Digitaler Schülerausweis am Smartphone — ergänzt den physischen
           Ausweis.
         </Card>
         <Card icon="🌐" title="Bildungsportal">
@@ -273,7 +269,7 @@ export default function BildungsportalPage() {
       </CardGrid>
 
       <Callout type="success" title="Alle Dienste DSGVO-konform">
-        Sämtliche IT-Services des BMBWF erfüllen die Anforderungen der
+        Sämtliche IT-Services des BMB erfüllen die Anforderungen der
         Datenschutz-Grundverordnung (DSGVO).
       </Callout>
 
@@ -309,7 +305,7 @@ export default function BildungsportalPage() {
           },
           {
             href: "https://www.bmbwf.gv.at/Themen/schule/zrp/dibi/pods.html",
-            label: "BMBWF zu PoDS",
+            label: "BMB zu PoDS",
             desc: "Offizielle Infos zu Portal Digitale Schule",
           },
           {

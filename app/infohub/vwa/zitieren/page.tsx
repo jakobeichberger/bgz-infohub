@@ -23,8 +23,8 @@ export default function VwaZitierenPage() {
         Literatur effizient verwalten.
       </P>
 
-      {/* ═══ Richtig Zitieren ═══ */}
-      <H2>Richtig Zitieren</H2>
+      {/* ═══ Richtig zitieren ═══ */}
+      <H2>Richtig zitieren</H2>
 
       <P>
         Der Zitierstil wird in Absprache mit der Betreuungsperson gewählt und
@@ -167,7 +167,7 @@ export default function VwaZitierenPage() {
         <Step title="Zitierstil wählen">
           Beim ersten Zitat fragt Zotero nach dem Stil. Für VWA empfohlen:{" "}
           &quot;APA 7th Edition&quot; (naturwiss.) oder &quot;Chicago Manual
-          of Style 17th (note)&quot; (geisteswiss.). Der Stil kann jederzeit
+          of Style 18th (note)&quot; (geisteswiss.). Der Stil kann jederzeit
           nachträglich geändert werden.
         </Step>
         <Step title="Zitat einfügen">
@@ -181,7 +181,7 @@ export default function VwaZitierenPage() {
           aktualisiert sich bei neuen Zitaten.
         </Step>
         <Step title="Vor Abgabe: Refresh">
-          Zotero Tab → &quot;Refresh&quot; klicken, um sicherzustellen dass
+          Zotero Tab → &quot;Refresh&quot; klicken, um sicherzustellen, dass
           alle Zitate und das Verzeichnis aktuell sind.
         </Step>
       </StepList>
@@ -277,7 +277,7 @@ export default function VwaZitierenPage() {
       {/* ═══ Navigation ═══ */}
       <H2>Weitere VWA-Themen</H2>
       <CardGrid>
-        <Card href="/infohub/vwa" icon="🎓" title="Übersicht">Zeitplan, Formate, Bewertung</Card>
+        <Card href="/infohub/vwa" icon="🎓" title="Übersicht">Matura-Überblick, Formate, Bewertung</Card>
         <Card href="/infohub/vwa/aufbau" icon="📋" title="Aufbau & Forschungsfrage">Gliederung, Formatierung</Card>
         <Card href="/infohub/vwa/schreiben" icon="✍️" title="Wissenschaftliches Schreiben">Stil, Sprache, Plagiat</Card>
         <Card href="/infohub/vwa/vorlagen" icon="📄" title="Vorlagen & Tools">Word-Vorlage, Tipps, Downloads</Card>

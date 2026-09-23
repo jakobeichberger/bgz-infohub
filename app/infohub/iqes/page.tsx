@@ -125,7 +125,8 @@ export default function IqesPage() {
 
       <Callout type="info" title="Tipp">
         Da IQES und Schulkonto getrennte Passwörter haben, kann auch die
-        Schul-IT (<InlineCode>fad@bgzwn.at</InlineCode>) Ihr IQES-Passwort{" "}
+        IQES-Betreuung der Schule (<InlineCode>fad@bgzwn.at</InlineCode>) Ihr
+        IQES-Passwort{" "}
         <strong>nicht</strong> direkt zurücksetzen — nutzen Sie dafür den
         Reset-Link oben.
       </Callout>

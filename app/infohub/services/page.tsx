@@ -6,7 +6,7 @@ import { Callout } from "@/components/ui/Callout";
 import { StepList, Step } from "@/components/ui/StepList";
 
 export const metadata: Metadata = {
-  title: "Schulservices — BG Zehnergasse",
+  title: "Schulservices",
   description:
     "WebUntis, edu.Flow, edu.Pay, edu.Card, Drucken und Portal Digitale Schule (PoDS) am BG Zehnergasse.",
 };
@@ -46,7 +46,7 @@ export default function ServicesPage() {
         rows={[
           [
             "Direktlink",
-            "melpomene.webuntis.com/WebUntis/?school=bgzehnwn",
+            "bgzehnwn.webuntis.com",
           ],
           ["Benutzername", "nachname.vorname (nicht die E-Mail-Adresse)"],
           ["Passwort", "Ihr persönliches Schulaccount-Passwort"],
@@ -77,7 +77,8 @@ export default function ServicesPage() {
       <Callout type="info" title="Hinweis für Eltern">
         Eltern können WebUntis über das{" "}
         <a href="https://www.bildung.gv.at" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Bildungsportal</a>{" "}
-        nutzen oder den Zugang ihres Kindes mitbenutzen. Bei Problemen mit
+        nutzen oder sich einen eigenen Eltern-Zugang einrichten (siehe
+        „Selbstregistrierung für Eltern“ unten). Bei Problemen mit
         dem WebUntis-Elternaccount schreiben Sie bitte an{" "}
         <a href="mailto:bnb@bgzwn.at" className="text-primary hover:underline">bnb@bgzwn.at</a>.
       </Callout>
@@ -198,9 +199,12 @@ export default function ServicesPage() {
         Erziehungsberechtigte müssen Abwesenheiten bis{" "}
         <strong>7:30 Uhr am ersten Fehltag</strong> dem Klassenvorstand melden.
         Bei Abwesenheiten über eine Woche oder häufigen Kurzerkrankungen ist
-        eine ärztliche Bestätigung erforderlich. Bei mehr als 5 unentschuldigten
-        Tagen oder 30 Stunden droht die automatische Abmeldung
-        (<a href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=45" target="_blank" rel="noopener noreferrer">§ 45 Abs. 4</a>).
+        eine ärztliche Bestätigung erforderlich. Bleiben nicht mehr
+        schulpflichtige Schülerinnen und Schüler länger als eine Woche, an fünf
+        nicht zusammenhängenden Schultagen oder 30 Unterrichtsstunden im
+        Unterrichtsjahr unentschuldigt fern und reagieren nicht auf eine
+        schriftliche Aufforderung, gelten sie als vom Schulbesuch abgemeldet
+        (<a href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009600&Paragraf=45" target="_blank" rel="noopener noreferrer">§ 45 Abs. 5</a>).
       </Callout>
 
       {/* ═══════════════ edu.Suite ═══════════════ */}
@@ -209,12 +213,12 @@ export default function ServicesPage() {
       <P>
         Die edu.Suite von Quarto Software GmbH (
         <a
-          href="https://www.quarto.at/home.html"
+          href="https://edusuite.at/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-primary hover:underline"
         >
-          quarto.at
+          edusuite.at
         </a>
         ) ist das gemeinsame Login-Portal für edu.Flow, edu.Pay und edu.Card.
       </P>
@@ -448,12 +452,12 @@ export default function ServicesPage() {
       </P>
 
       <Callout type="info" title="Eigene Seite">
-        <a
+        <Link
           href="/infohub/educard"
           className="text-primary hover:underline font-semibold"
         >
           edu.Card &amp; edu.digicard → Zur vollständigen Übersicht
-        </a>
+        </Link>
       </Callout>
 
       {/* ═══════════════ Drucken ═══════════════ */}
@@ -580,7 +584,7 @@ export default function ServicesPage() {
         rows={[
           [
             "Schüler/in",
-            "pods.gv.at → Login → \"Ich bin SchülerIn\" → \"Anmeldung mit Microsoft\"",
+            "bildung.gv.at → Login → \"Ich bin SchülerIn\" → \"Anmeldung mit Microsoft\"",
           ],
           [
             "Eltern",

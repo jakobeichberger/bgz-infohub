@@ -47,7 +47,7 @@ export default function Office365PageEN() {
           ["OneNote", "Digital notebook — notes, drawings, audio"],
           ["Outlook", "Email client with calendar and tasks"],
           ["Access (Windows only)", "Database management"],
-          ["Publisher (Windows only)", "Desktop publishing for flyers, posters, etc."],
+          ["Publisher (Windows only, retired in October 2026)", "Desktop publishing for flyers, posters, etc."],
         ]}
       />
 
@@ -162,9 +162,9 @@ export default function Office365PageEN() {
 
       <H3>Data Protection</H3>
 
-      <Callout type="success" title="Commercial Data Protection">
+      <Callout type="success" title="Enterprise Data Protection">
         Microsoft Copilot Chat for Education users operates with{" "}
-        <strong>Commercial Data Protection</strong>:
+        <strong>Enterprise Data Protection</strong>:
         <ul>
           <li>Inputs and outputs are <strong>not</strong> used to train AI models</li>
           <li>Microsoft employees have no access to the data</li>

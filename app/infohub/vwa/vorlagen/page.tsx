@@ -34,7 +34,7 @@ export default function VwaVorlagenPage() {
           title="Word-Vorlage"
         >
           Professionelle Word-Vorlage mit vordefinierten Formatvorlagen,
-          automatischem Inhaltsverzeichnis und BG Zehnergasse Branding.
+          automatischem Inhaltsverzeichnis und dem Branding des BG Zehnergasse.
           Einfach Platzhalter ersetzen und losschreiben.
         </Card>
       </CardGrid>
@@ -129,7 +129,7 @@ export default function VwaVorlagenPage() {
       {/* ═══ Navigation ═══ */}
       <H2>Weitere VWA-Themen</H2>
       <CardGrid>
-        <Card href="/infohub/vwa" icon="🎓" title="Übersicht">Zeitplan, Formate, Bewertung</Card>
+        <Card href="/infohub/vwa" icon="🎓" title="Übersicht">Matura-Überblick, Formate, Bewertung</Card>
         <Card href="/infohub/vwa/aufbau" icon="📋" title="Aufbau & Forschungsfrage">Gliederung, Formatierung</Card>
         <Card href="/infohub/vwa/schreiben" icon="✍️" title="Wissenschaftliches Schreiben">Stil, Sprache, Plagiat</Card>
         <Card href="/infohub/vwa/zitieren" icon="📚" title="Zitieren & Zotero">Literaturverwaltung, KI-Nutzung</Card>

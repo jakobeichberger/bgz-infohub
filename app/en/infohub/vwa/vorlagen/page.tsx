@@ -126,7 +126,7 @@ export default function VwaVorlagenPageEN() {
       {/* ═══ Navigation ═══ */}
       <H2>More VWA Topics</H2>
       <CardGrid>
-        <Card href="/en/infohub/vwa" icon="🎓" title="Overview">Timeline, formats, assessment</Card>
+        <Card href="/en/infohub/vwa" icon="🎓" title="Overview">Matura overview, formats, assessment</Card>
         <Card href="/en/infohub/vwa/aufbau" icon="📋" title="Structure & Research Question">Outline, formatting</Card>
         <Card href="/en/infohub/vwa/schreiben" icon="✍️" title="Academic Writing">Style, language, plagiarism</Card>
         <Card href="/en/infohub/vwa/zitieren" icon="📚" title="Citations & Zotero">Reference management, AI usage</Card>

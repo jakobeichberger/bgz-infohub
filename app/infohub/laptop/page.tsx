@@ -58,7 +58,7 @@ export default function LaptopPage() {
       <Table
         headers={["Eigenschaft", "Anforderung"]}
         rows={[
-          ["Bildschirm", "Mindestens 14 Zoll, empfohlen 14 oder 15,4 Zoll, FullHD (1920×1080)"],
+          ["Bildschirm", "Mindestens 14 Zoll, empfohlen 14 oder 15,6 Zoll, FullHD (1920×1080)"],
           ["Prozessor", "Intel Core i5 / Core Ultra 5 (aktuelle Generation) oder gleichwertiger AMD Ryzen 5"],
           ["Arbeitsspeicher", "Mindestens 16 GB RAM"],
           ["Speicher", "Mindestens 512 GB SSD"],
@@ -142,7 +142,7 @@ export default function LaptopPage() {
         rows={[
           [
             "Windows 11",
-            "Next-Exam (Prüfungssoftware) benötigt Windows. Viele Schulprogramme sind Windows-exklusiv.",
+            "Viele Schulprogramme sind Windows-exklusiv. Next-Exam gibt es zwar auch für macOS und Linux, Windows bietet aber die größte Kompatibilität.",
           ],
           [
             "Intel Core i5 / Core Ultra 5 · AMD Ryzen 5",
@@ -177,7 +177,7 @@ export default function LaptopPage() {
           Arbeiten, leicht genug für den Schulweg (ca. 1,3–1,5 kg)
         </li>
         <li>
-          <strong>15,4 Zoll</strong> — Mehr Platz für Split-Screen, aber
+          <strong>15,6 Zoll</strong> — Mehr Platz für Split-Screen, aber
           schwerer im Rucksack (ca. 1,7–2,0 kg)
         </li>
         <li>
@@ -612,7 +612,7 @@ export default function LaptopPage() {
           rel="noopener noreferrer"
           className="text-primary hover:underline"
         >
-          apple.com/at-edu
+          apple.com/at-edu/store
         </a>
         ) richtet sich an <strong>Studierende, Lehrkräfte und
         Hochschulmitarbeitende</strong>. Oberstufenschüler:innen sind dort{" "}
