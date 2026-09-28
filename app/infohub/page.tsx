@@ -248,6 +248,22 @@ export default function InfoHubPage() {
             </tr>
             <tr className="hover:bg-hover-bg transition-colors">
               <td className="px-3 py-2 border-b border-border-app text-txt">
+                Schüler:innen-Chip
+              </td>
+              <td className="px-3 py-2 border-b border-border-app text-txt">
+                <a
+                  href="mailto:equ@bgzwn.at"
+                  className="text-primary hover:underline"
+                >
+                  equ@bgzwn.at
+                </a>
+              </td>
+              <td className="px-3 py-2 border-b border-border-app text-txt-light">
+                Sonja Equiluz, BA BAMU — Verlust, Sperre, Ersatzchip
+              </td>
+            </tr>
+            <tr className="hover:bg-hover-bg transition-colors">
+              <td className="px-3 py-2 border-b border-border-app text-txt">
                 Datenänderungen (Adresse, Name, Telefon)
               </td>
               <td className="px-3 py-2 border-b border-border-app text-txt">

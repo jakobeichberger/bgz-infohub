@@ -29,6 +29,7 @@ export default function HilfePageEN() {
           ["School account, WiFi, software, password reset", "admin@bgzwn.at", "By email or in person at IT office"],
           ["Payments, certificates, edu.Pay refund", "kanzlei@bgzwn.at", "By email or in person at office"],
           ["WebUntis (parent accounts, grades, absences)", "bnb@bgzwn.at", "By email"],
+          ["Student access chip (loss, blocking, replacement)", "equ@bgzwn.at", "Sonja Equiluz, BA BAMU — by email"],
           ["Data changes (address, name, phone)", "Your child's class advisor", "Data updated in SOKRATES → edu.Flow, edu.Pay"],
           ["edu.Flow & edu.Pay — platform issues", "eduflow@bgzwn.at / edupay@bgzwn.at", "By email"],
           ["iPad hardware (defect, warranty, repair)", "justedu.at (service portal)", "ACP techWERK — report warranty cases online (register the device first)"],

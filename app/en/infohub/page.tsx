@@ -219,6 +219,13 @@ export default function InfoHubPageEN() {
               <td className="px-3 py-2 border-b border-border-app text-txt-light">WebUntis issues, parent access, grade overview</td>
             </tr>
             <tr className="hover:bg-hover-bg transition-colors">
+              <td className="px-3 py-2 border-b border-border-app text-txt">Student Access Chip</td>
+              <td className="px-3 py-2 border-b border-border-app text-txt">
+                <a href="mailto:equ@bgzwn.at" className="text-primary hover:underline">equ@bgzwn.at</a>
+              </td>
+              <td className="px-3 py-2 border-b border-border-app text-txt-light">Sonja Equiluz, BA BAMU — loss, blocking, replacement chip</td>
+            </tr>
+            <tr className="hover:bg-hover-bg transition-colors">
               <td className="px-3 py-2 border-b border-border-app text-txt">Data changes (address, name, phone)</td>
               <td className="px-3 py-2 border-b border-border-app text-txt">Your child&apos;s class advisor</td>
               <td className="px-3 py-2 border-b border-border-app text-txt-light">Update personal data in SOKRATES → edu.Flow, edu.Pay</td>

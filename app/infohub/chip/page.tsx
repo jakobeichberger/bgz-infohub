@@ -50,6 +50,7 @@ export default function ChipPage() {
           ],
           ["Verlust", "Sofort melden, damit der Chip gesperrt werden kann"],
           ["Ersatzchip", "10 EUR — der ursprüngliche Chip wird dabei gesperrt"],
+          ["Ansprechpartnerin", "Sonja Equiluz, BA BAMU — equ@bgzwn.at"],
         ]}
       />
 
@@ -123,8 +124,12 @@ export default function ChipPage() {
 
       <H3>Was mache ich, wenn ich meinen Chip verliere?</H3>
       <P>
-        Melden Sie den Verlust <strong>sofort</strong>, damit der Chip{" "}
-        <strong>gesperrt</strong> werden kann.
+        Melden Sie den Verlust <strong>sofort</strong> bei{" "}
+        <strong>Sonja Equiluz, BA BAMU</strong> (
+        <a href="mailto:equ@bgzwn.at" className="text-primary hover:underline">
+          equ@bgzwn.at
+        </a>
+        ), damit der Chip <strong>gesperrt</strong> werden kann.
       </P>
 
       <H3>Bekomme ich bei Verlust einen Ersatzchip?</H3>

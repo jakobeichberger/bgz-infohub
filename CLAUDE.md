@@ -314,7 +314,7 @@ Tailwind 4 hat Probleme mit `text-[var(--text)]` — Next.js splittet JS-Chunks 
 - Schulcode: **304046**
 - **Ministerium**: heisst seit 2025 **BMB** (Bundesministerium fuer Bildung), NICHT mehr BMBWF.
 - **Rechtszitate (auf RIS geprueft, Sept. 2026)**: Digitale Endgeraete = **§ 14a SchUG** („IKT-gestuetzter Unterricht“), NICHT „§ 14 Abs. 8a“. Automatische Abmeldung = **§ 45 Abs. 5 SchUG** (nur nicht mehr schulpflichtige Schueler; > 1 Woche / 5 nicht zusammenhaengende Tage / 30 Stunden unentschuldigt + keine Reaktion auf schriftliche Aufforderung). Geraeteinitiative-Gesetz: Abkuerzung **SchulDigiG**.
-- **Schueler:innen-Chip** (Zutritt): kostenlose Leihgabe (Eigentum der Schule), 1 Chip pro Schueler, Rueckgabe nach Schulende, Aktualisierung am Online-Terminal Aula 1. Stock, Ersatzchip 10 EUR (alter wird gesperrt), keine Eltern-Chips (~1.400 Chips), Zutritt ausserhalb der Morgen-Eingangszeiten wird registriert, Eingang videoueberwacht. Getrennt von der edu.Card.
+- **Schueler:innen-Chip** (Zutritt): kostenlose Leihgabe (Eigentum der Schule), 1 Chip pro Schueler, Rueckgabe nach Schulende, Aktualisierung am Online-Terminal Aula 1. Stock, Ersatzchip 10 EUR (alter wird gesperrt), keine Eltern-Chips (~1.400 Chips), Zutritt ausserhalb der Morgen-Eingangszeiten wird registriert, Eingang videoueberwacht. Getrennt von der edu.Card. **Ansprechpartnerin Chip-Zugangssystem: Sonja Equiluz, BA BAMU (equ@bgzwn.at)** — Verlust/Sperre/Ersatzchip.
 - Adresse: Zehnergasse 15, 2700 Wiener Neustadt
 - Schulkonto-Format: `nachname.vorname@bgzwn.at`
 - WLAN: WPA2/WPA3 Enterprise, RADIUS, Username **ohne** @bgzwn.at, Kontosperrung nach 10 Fehlversuchen (10 Min)
@@ -328,6 +328,7 @@ Tailwind 4 hat Probleme mit `text-[var(--text)]` — Next.js splittet JS-Chunks 
 - Kontakte:
   - admin@bgzwn.at — IT-Administration (allgemein)
   - bnb@bgzwn.at — WebUntis-Probleme
+  - equ@bgzwn.at — Sonja Equiluz, BA BAMU: Schueler:innen-Chip / Zugangssystem (Verlust, Sperre, Ersatzchip)
   - kanzlei@bgzwn.at — Verwaltung/Rueckerstattungen
   - Klassenvorstaende — Datenänderungen (Adresse, Telefon, Name)
   - ACP techWERK via Serviceportal justedu.at — iPad Hardware-Support/Garantie (keine Telefon-/Mail-Kontakte mehr auf der Site)
@@ -339,7 +340,7 @@ Tailwind 4 hat Probleme mit `text-[var(--text)]` — Next.js splittet JS-Chunks 
 - PageHeader
 - Willkommenstext
 - **16 Themenkarten** (muessen mit Sidebar-Navigation uebereinstimmen!)
-- H2 "Wichtige Kontakte" mit Kontakttabelle (8 Eintraege)
+- H2 "Wichtige Kontakte" mit Kontakttabelle (9 Eintraege)
 - H2 "Schnelllinks" mit externen Links (WebUntis, edu.Suite, bildung.gv.at, etc.)
 
 ### VWA/ABA Template

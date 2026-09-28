@@ -43,6 +43,11 @@ export default function HilfePage() {
             "Per E-Mail",
           ],
           [
+            "Schüler:innen-Chip (Verlust, Sperre, Ersatzchip)",
+            "equ@bgzwn.at",
+            "Sonja Equiluz, BA BAMU — per E-Mail",
+          ],
+          [
             "Datenänderungen (Adresse, Name, Telefon)",
             "Jeweiliger Klassenvorstand",
             "Daten werden in SOKRATES eingepflegt → edu.Flow, edu.Pay",

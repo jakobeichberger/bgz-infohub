@@ -51,6 +51,7 @@ export default function ChipPageEN() {
           ],
           ["Loss", "Report immediately so the chip can be blocked"],
           ["Replacement chip", "EUR 10 — the original chip is blocked"],
+          ["Contact person", "Sonja Equiluz, BA BAMU — equ@bgzwn.at"],
         ]}
       />
 
@@ -124,8 +125,12 @@ export default function ChipPageEN() {
 
       <H3>What do I do if I lose my chip?</H3>
       <P>
-        Report the loss <strong>immediately</strong> so that the chip can be{" "}
-        <strong>blocked</strong>.
+        Report the loss <strong>immediately</strong> to{" "}
+        <strong>Sonja Equiluz, BA BAMU</strong> (
+        <a href="mailto:equ@bgzwn.at" className="text-primary hover:underline">
+          equ@bgzwn.at
+        </a>
+        ) so that the chip can be <strong>blocked</strong>.
       </P>
 
       <H3>Do I get a replacement chip if I lose it?</H3>
