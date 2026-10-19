@@ -35,7 +35,7 @@ export default function NextExamPage() {
         rows={[
           ["Lizenz", "GPLv3 — kostenlos und quelloffen"],
           ["Betriebssysteme", "Windows, macOS (Intel + ARM), Linux"],
-          ["iPad", "Student-Version für iPad (iOS) seit Version 2.1"],
+          ["iPad", "Student-Version für iPad (iOS) seit Version 2.1 — im App Store"],
           ["BYOD", "Funktioniert mit eigenen Geräten der Schüler"],
           ["Netzwerk", "Schulnetzwerk (WLAN) ausreichend — Internet nur für Online-Modi (z. B. Microsoft 365, Moodle)"],
           ["Datenschutz", "Sammelt keine Benutzerdaten"],
@@ -161,7 +161,7 @@ export default function NextExamPage() {
         headers={["Merkmal", "Student-App", "Teacher-App"]}
         rows={[
           ["Dateiname enthält", "\"Student\"", "\"Teacher\""],
-          ["Dateigröße (Windows EXE)", "~342 MB", "~127 MB"],
+          ["Dateigröße (Windows EXE)", "~342 MB", "~126 MB"],
           ["Startbildschirm zeigt", "Feld für Serveradresse + PIN", "Feld für Prüfungsname + Speicherort"],
           ["Funktion", "Verbindet sich mit Lehrkraft", "Erstellt Prüfungsserver"],
         ]}
@@ -276,10 +276,10 @@ export default function NextExamPage() {
       </P>
 
       {/* ═══ Downloads ═══ */}
-      <H2 id="downloads-nextexam">Downloads — Aktuelle Version: 2.1.0.3</H2>
+      <H2 id="downloads-nextexam">Downloads — Aktuelle Version: 2.1.2.5</H2>
 
       <P>
-        Veröffentlicht am 22. September 2026. Alle Downloads von{" "}
+        Veröffentlicht am 17. Oktober 2026. Alle Downloads von{" "}
         <a
           href="https://github.com/Bildungsportal/next-exam/releases"
           target="_blank"
@@ -296,44 +296,51 @@ export default function NextExamPage() {
       <Table
         headers={["Betriebssystem", "Format", "Download"]}
         rows={[
-          ["Windows", "EXE (portable)", "Next-Exam-Student_2.1.0.3 (342 MB)"],
-          ["Windows", "MSI (Installer)", "Next-Exam-Student_2.1.0.3 (287 MB)"],
-          ["macOS (Apple Silicon)", "DMG", "Next-Exam-Student_2.1.0.3 (338 MB)"],
-          ["macOS (Intel)", "DMG", "Next-Exam-Student_2.1.0.3 (348 MB)"],
-          ["Linux", "AppImage", "Next-Exam-Student_2.1.0.3 (322 MB)"],
+          ["Windows", "EXE (portable)", "Next-Exam-Student_2.1.2.5 (342 MB)"],
+          ["Windows", "MSI (Installer)", "Next-Exam-Student_2.1.2.5 (288 MB)"],
+          ["macOS (Apple Silicon)", "DMG", "Next-Exam-Student_2.1.2.5 (338 MB)"],
+          ["macOS (Intel)", "DMG", "Next-Exam-Student_2.1.2.5 (348 MB)"],
+          ["Linux", "AppImage", "Next-Exam-Student_2.1.2.5 (322 MB)"],
+          ["iPad (iPadOS)", "App Store", "Next-Exam Student"],
         ]}
       />
 
       <LinkCards
         items={[
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.0.3/Next-Exam-Student_2.1.0.3_20260922_x64.exe",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.2.5/Next-Exam-Student_2.1.2.5_20261017_x64.exe",
             label: "Windows (EXE)",
             desc: "Student — portable, keine Installation (342 MB)",
             dotClass: "bg-green-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.0.3/Next-Exam-Student_2.1.0.3_20260922_x64.msi",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.2.5/Next-Exam-Student_2.1.2.5_20261017_x64.msi",
             label: "Windows (MSI)",
-            desc: "Student — Installer (287 MB)",
+            desc: "Student — Installer (288 MB)",
             dotClass: "bg-green-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.0.3/Next-Exam-Student_2.1.0.3_20260922_arm64.dmg",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.2.5/Next-Exam-Student_2.1.2.5_20261017_arm64.dmg",
             label: "macOS (Apple Silicon)",
             desc: "Student — für M1/M2/M3/M4 Macs (338 MB)",
             dotClass: "bg-green-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.0.3/Next-Exam-Student_2.1.0.3_20260922_x64.dmg",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.2.5/Next-Exam-Student_2.1.2.5_20261017_x64.dmg",
             label: "macOS (Intel)",
             desc: "Student — für ältere Macs (348 MB)",
             dotClass: "bg-green-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.0.3/Next-Exam-Student_2.1.0.3_20260922_x86_64.AppImage",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.2.5/Next-Exam-Student_2.1.2.5_20261017_x86_64.AppImage",
             label: "Linux (AppImage)",
             desc: "Student — Ubuntu, Fedora etc. (322 MB)",
+            dotClass: "bg-green-500",
+          },
+          {
+            href: "https://apps.apple.com/at/app/next-exam-student/id6805802749",
+            label: "iPad (App Store)",
+            desc: "Student — Next-Exam Student für iPadOS",
             dotClass: "bg-green-500",
           },
         ]}
@@ -344,33 +351,33 @@ export default function NextExamPage() {
       <LinkCards
         items={[
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.0.3/Next-Exam-Teacher_2.1.0.3_20260922_x64.exe",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.2.5/Next-Exam-Teacher_2.1.2.5_20261017_x64.exe",
             label: "Windows (EXE)",
-            desc: "Teacher — portable, keine Installation (127 MB)",
+            desc: "Teacher — portable, keine Installation (126 MB)",
             dotClass: "bg-blue-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.0.3/Next-Exam-Teacher_2.1.0.3_20260922_x64.msi",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.2.5/Next-Exam-Teacher_2.1.2.5_20261017_x64.msi",
             label: "Windows (MSI)",
-            desc: "Teacher — Installer (158 MB)",
+            desc: "Teacher — Installer (157 MB)",
             dotClass: "bg-blue-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.0.3/Next-Exam-Teacher_2.1.0.3_20260922_arm64.dmg",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.2.5/Next-Exam-Teacher_2.1.2.5_20261017_arm64.dmg",
             label: "macOS (Apple Silicon)",
-            desc: "Teacher — für M1/M2/M3/M4 Macs (179 MB)",
+            desc: "Teacher — für M1/M2/M3/M4 Macs (178 MB)",
             dotClass: "bg-blue-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.0.3/Next-Exam-Teacher_2.1.0.3_20260922_x64.dmg",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.2.5/Next-Exam-Teacher_2.1.2.5_20261017_x64.dmg",
             label: "macOS (Intel)",
-            desc: "Teacher — für ältere Macs (188 MB)",
+            desc: "Teacher — für ältere Macs (187 MB)",
             dotClass: "bg-blue-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.0.3/Next-Exam-Teacher_2.1.0.3_20260922_x86_64.AppImage",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.2.5/Next-Exam-Teacher_2.1.2.5_20261017_x86_64.AppImage",
             label: "Linux (AppImage)",
-            desc: "Teacher — Ubuntu, Fedora etc. (198 MB)",
+            desc: "Teacher — Ubuntu, Fedora etc. (197 MB)",
             dotClass: "bg-blue-500",
           },
         ]}
@@ -385,6 +392,41 @@ export default function NextExamPage() {
 
       {/* ═══ Changelog ═══ */}
       <H2>Versionshistorie</H2>
+
+      <H3>Version 2.1.2.5 — 17. Oktober 2026</H3>
+      <UL>
+        <li>
+          <strong>Mehr Sicherheit:</strong> KI-Assistenten wie Grammarly,
+          ChatGPT oder Copilot können Prüfungstexte nicht mehr mitlesen oder
+          verändern.
+        </li>
+        <li>
+          <strong>Windows:</strong> Apps, die sich vor Screenshots verbergen
+          oder den Fokus entziehen, werden erkannt; Kompatibilität mit
+          Windows 11 24H2 verbessert.
+        </li>
+        <li>
+          Klare Meldung, wenn die Abgabe wegen Verbindungsverlust scheitert;
+          das automatische Backup stoppt nicht mehr.
+        </li>
+        <li>
+          Fokusverlust wird bei Stift- und Touch-Eingabe nicht mehr
+          fälschlich ausgelöst.
+        </li>
+        <li>
+          PDF-Formulare: echte Formularfelder werden erkannt; ActiveSheets
+          lassen sich als ZIP exportieren und importieren.
+        </li>
+        <li>
+          Microsoft-365-Modus: Verbindung wird automatisch erneuert, neuer
+          Button „Verbindung erneuern“.
+        </li>
+        <li>
+          <strong>iPad:</strong> neu u. a. Microsoft-365-Modus, Webseiten als
+          Prüfungsmaterial und Fokusverlust-Erkennung; zahlreiche
+          Fehlerbehebungen.
+        </li>
+      </UL>
 
       <H3>Version 2.1.0.3 — 22. September 2026</H3>
       <P>
