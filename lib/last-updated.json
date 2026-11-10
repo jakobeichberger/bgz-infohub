@@ -6,7 +6,7 @@
   "/en/infohub/chip": "2026-09-28T11:31:14+02:00",
   "/en/infohub/educard": "2026-09-23T11:51:14+02:00",
   "/en/infohub/geraete": "2026-09-23T12:54:48+02:00",
-  "/en/infohub/hilfe": "2026-09-28T11:31:14+02:00",
+  "/en/infohub/hilfe": "2026-11-10T07:45:18+01:00",
   "/en/infohub/iqes": "2026-09-23T11:51:14+02:00",
   "/en/infohub/laptop": "2026-09-23T11:51:14+02:00",
   "/en/infohub/lehrkraefte": "2026-09-23T11:51:14+02:00",
@@ -23,13 +23,13 @@
   "/en/infohub/vwa/schreiben": "2026-09-23T11:51:14+02:00",
   "/en/infohub/vwa/vorlagen": "2026-09-23T11:51:14+02:00",
   "/en/infohub/vwa/zitieren": "2026-09-23T11:51:14+02:00",
-  "/en/infohub/wlan": "2026-04-08T15:42:36+02:00",
+  "/en/infohub/wlan": "2026-11-10T07:45:18+01:00",
   "/infohub": "2026-09-28T11:31:14+02:00",
   "/infohub/bildungsportal": "2026-09-23T11:51:14+02:00",
   "/infohub/chip": "2026-09-28T11:31:14+02:00",
   "/infohub/educard": "2026-09-23T11:51:14+02:00",
   "/infohub/geraete": "2026-09-23T12:54:48+02:00",
-  "/infohub/hilfe": "2026-09-28T11:31:14+02:00",
+  "/infohub/hilfe": "2026-11-10T07:45:18+01:00",
   "/infohub/iqes": "2026-09-23T11:51:14+02:00",
   "/infohub/laptop": "2026-09-23T11:51:14+02:00",
   "/infohub/lehrkraefte": "2026-09-23T11:51:14+02:00",
@@ -46,5 +46,5 @@
   "/infohub/vwa/schreiben": "2026-09-23T11:51:14+02:00",
   "/infohub/vwa/vorlagen": "2026-09-23T11:51:14+02:00",
   "/infohub/vwa/zitieren": "2026-09-23T11:51:14+02:00",
-  "/infohub/wlan": "2026-04-08T15:42:36+02:00"
+  "/infohub/wlan": "2026-11-10T07:45:18+01:00"
 }
