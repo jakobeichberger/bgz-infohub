@@ -64,6 +64,13 @@ export default function HilfePageEN() {
       <H3>WiFi not connecting</H3>
       <UL>
         <li>Check that the correct school network is selected</li>
+        <li>
+          Personal devices: is the school certificate{" "}
+          <code>bgzwn-NEO-CA</code> installed? Guide and download on the{" "}
+          <Link href="/en/infohub/wlan" className="text-primary hover:underline">
+            WLAN page
+          </Link>
+        </li>
         <li>Use the school account (<code>lastname.firstname</code>) to sign in — not the email address</li>
         <li>Restart the device and try again</li>
         <li>Still having problems?{" "}

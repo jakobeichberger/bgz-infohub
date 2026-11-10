@@ -18,6 +18,12 @@ ErrorDocument 404 /404/index.html
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [L,R=301]
 
+# --- WLAN CA certificate (templates/bgzwn-NEO-CA.cer) ---
+# Correct MIME type so iPhone/iPad/Android offer to install the certificate
+<IfModule mod_mime.c>
+  AddType application/x-x509-ca-cert .cer
+</IfModule>
+
 # --- Security headers ---
 <IfModule mod_headers.c>
   # Prevent clickjacking

@@ -136,6 +136,14 @@ export default function HilfePage() {
       <UL>
         <li>Prüfen Sie, ob das richtige Schulnetzwerk gewählt ist</li>
         <li>
+          Eigene Geräte: Ist das Schul-Zertifikat{" "}
+          <code>bgzwn-NEO-CA</code> installiert? Anleitung und Download auf
+          der{" "}
+          <Link href="/infohub/wlan" className="text-primary hover:underline">
+            WLAN-Seite
+          </Link>
+        </li>
+        <li>
           Verwenden Sie das Schulkonto (<code>nachname.vorname</code>) zum
           Anmelden — nicht die E-Mail-Adresse
         </li>

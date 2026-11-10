@@ -30,7 +30,7 @@ bgz-infohub/
 │   │   ├── schulaccount/       # Login, Passwort, E-Mail-Einrichtung
 │   │   ├── services/           # WebUntis, edu.Flow, edu.Pay, edu.Card, Drucken, PoDS
 │   │   ├── geraete/            # iPad-Initiative, Kinderschutz, Geraeteverwaltung, Factory Reset
-│   │   ├── wlan/               # WPA2/WPA3 Enterprise RADIUS fuer alle Plattformen
+│   │   ├── wlan/               # WPA2/WPA3 Enterprise RADIUS, Schul-CA bgzwn-NEO-CA installieren (Schritt 1) fuer alle Plattformen
 │   │   ├── office365/          # MS 365 A3, OneDrive 5TB, OneNote, Teams, Copilot
 │   │   ├── educard/            # Physische edu.Card + digitale edu.digicard
 │   │   ├── chip/               # Schüler:innen-Chip (Zutritt): FAQ aus offiziellem PDF (public/templates/faq-schuelerinnen-chip.pdf)
@@ -61,7 +61,9 @@ bgz-infohub/
 │   ├── favicon.ico             # BGZ Logo als Favicon
 │   ├── apple-touch-icon.png    # BGZ Logo fuer iOS
 │   └── templates/
-│       └── bgz-vwa-word.docx   # Word-Vorlage mit Logo, Styles, Auto-TOC
+│       ├── bgz-vwa-word.docx   # Word-Vorlage mit Logo, Styles, Auto-TOC
+│       ├── bgzwn-NEO-CA.cer    # Oeffentliches Schul-CA-Root fuer WLAN (DER, kein Private Key)
+│       └── wlan-zertifikat-anleitung.pdf  # WLAN-Zertifikat-Anleitung (Stand 09.11.2026)
 ├── scripts/
 │   └── create_vwa_word_template.py  # Python-Script zur Regeneration der Word-Vorlage
 ├── next.config.ts              # output: "export", trailingSlash: true
@@ -317,7 +319,7 @@ Tailwind 4 hat Probleme mit `text-[var(--text)]` — Next.js splittet JS-Chunks 
 - **Schueler:innen-Chip** (Zutritt): kostenlose Leihgabe (Eigentum der Schule), 1 Chip pro Schueler, Rueckgabe nach Schulende, Aktualisierung am Online-Terminal Aula 1. Stock, Ersatzchip 10 EUR (alter wird gesperrt), keine Eltern-Chips (~1.400 Chips), Zutritt ausserhalb der Morgen-Eingangszeiten wird registriert, Eingang videoueberwacht. Getrennt von der edu.Card. **Ansprechpartnerin Chip-Zugangssystem: Sonja Equiluz, BA BAMU (equ@bgzwn.at)** — Verlust/Sperre/Ersatzchip.
 - Adresse: Zehnergasse 15, 2700 Wiener Neustadt
 - Schulkonto-Format: `nachname.vorname@bgzwn.at`
-- WLAN: WPA2/WPA3 Enterprise, RADIUS, Username **ohne** @bgzwn.at, Kontosperrung nach 10 Fehlversuchen (10 Min)
+- WLAN: WPA2/WPA3 Enterprise, RADIUS, Username **ohne** @bgzwn.at, Kontosperrung nach 10 Fehlversuchen (10 Min). PEAP + MSCHAPv2, RADIUS-Server **neo.bgzwn.at**, Schul-CA **bgzwn-NEO-CA** (gueltig bis Aug. 2030, SHA-256 `2E:D1:29:57:…:A4:1E:B9:22`). Seit Nov. 2026: BYOD-Geraete installieren die CA einmal (Download `public/templates/bgzwn-NEO-CA.cer`, Anleitung `wlan-zertifikat-anleitung.pdf`) und pruefen das Serverzertifikat — **NICHT mehr „Warnung einfach akzeptieren“ / „Nicht validieren“** empfehlen (Evil-Twin-Risiko). Domaenen-PCs der Schule brauchen nichts. `.htaccess` liefert `.cer` als `application/x-x509-ca-cert` (iOS/Android bieten Installation an).
 - MDM: Microsoft InTune, nur iOS + Windows (KEIN Android)
 - edu.Card: Quarto Software (edusuite.at), Schulcode 304046
 - Geraeteinitiative: Apple iPads via OeAD, Lieferant **ACP techWERK GmbH** (frueher ACP TechRent). Garantiefall: Geraet zuerst auf justedu.at/account/devices/ registrieren, dann Meldung ueber Serviceportal justedu.at (durch Erziehungsberechtigte). Garantie 2–4 J. ab Lieferung inkl. Zubehoer, Akku 1× Tausch bei ≤50 %; nicht gedeckt: Sturz, Fluessigkeit, Umwelt, Schulsoftware. Verlust: Ortung/Sperre/Loeschung nur auf schriftlichen Wunsch (§ 10 Z 4 IKT-Schulverordnung) via admin@bgzwn.at

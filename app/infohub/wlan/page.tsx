@@ -7,8 +7,11 @@ import { StepList, Step } from "@/components/ui/StepList";
 export const metadata: Metadata = {
   title: "WLAN-Anleitung — Schul-WLAN verbinden",
   description:
-    "Anleitung zur WLAN-Verbindung am BG Zehnergasse: WPA2/WPA3 Enterprise, Radius-Login, Zertifikate und Problemlösung.",
+    "Anleitung zur WLAN-Verbindung am BG Zehnergasse: Schul-Zertifikat bgzwn-NEO-CA installieren, WPA2/WPA3 Enterprise (PEAP/MSCHAPv2) einrichten und Problemlösung.",
 };
+
+const fileLink =
+  "flex items-center gap-3 p-3 rounded-lg bg-card border border-border-app hover:border-primary/40 transition-all hover:-translate-y-0.5 hover:shadow-md group";
 
 export default function WlanPage() {
   return (
@@ -19,6 +22,8 @@ export default function WlanPage() {
         Das Schul-WLAN verwendet <strong>WPA2/WPA3 Enterprise</strong> mit
         RADIUS-Authentifizierung. Das bedeutet: Sie melden sich mit Ihrem
         persönlichen Schulkonto an — es gibt kein gemeinsames WLAN-Passwort.
+        Vorher installieren Sie <strong>einmal</strong> das Zertifikat der
+        Schule, damit Ihr Gerät das echte Schul-WLAN erkennt.
       </P>
 
       <Callout type="info" title="Zugangsdaten">
@@ -27,6 +32,159 @@ export default function WlanPage() {
           <li><strong>Passwort:</strong> Ihr persönliches Schulaccount-Passwort</li>
         </ul>
       </Callout>
+
+      <Callout type="success" title="Schul-PCs: nichts zu tun">
+        Windows-PCs der Schule (Domäne) vertrauen dem Schul-Zertifikat
+        bereits. Diese Anleitung gilt für <strong>private bzw. eigene
+        Geräte</strong>: Windows-Notebook, Mac, Handy, Tablet.
+      </Callout>
+
+      {/* ═══ Schritt 1: Zertifikat ═══ */}
+      <H2>Schritt 1: Schul-Zertifikat installieren</H2>
+
+      <P>
+        Laden Sie die Schul-Zertifizierungsstelle{" "}
+        <InlineCode>bgzwn-NEO-CA</InlineCode> herunter und installieren Sie
+        sie einmal auf Ihrem Gerät. Die Datei ist öffentlich und enthält kein
+        Passwort und keinen geheimen Schlüssel. Sie ist gültig bis{" "}
+        <strong>August 2030</strong>.
+      </P>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-6">
+        <a href="/templates/bgzwn-NEO-CA.cer" className={fileLink}>
+          <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+          <div>
+            <span className="text-sm font-medium text-txt group-hover:text-primary transition-colors">
+              Schul-Zertifikat herunterladen
+            </span>
+            <span className="text-xs text-txt-light block">
+              bgzwn-NEO-CA.cer (1 KB)
+            </span>
+          </div>
+        </a>
+        <a
+          href="/templates/wlan-zertifikat-anleitung.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={fileLink}
+        >
+          <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+          <div>
+            <span className="text-sm font-medium text-txt group-hover:text-primary transition-colors">
+              Anleitung als PDF
+            </span>
+            <span className="text-xs text-txt-light block">
+              Zum Ausdrucken — alle Geräte auf einer Seite
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <H3>Windows (privates Gerät)</H3>
+      <StepList>
+        <Step title="Datei öffnen">
+          <InlineCode>bgzwn-NEO-CA.cer</InlineCode> doppelklicken →{" "}
+          <strong>Zertifikat installieren…</strong>
+        </Step>
+        <Step title="Speicherort wählen">
+          <strong>Aktueller Benutzer</strong> (oder <strong>Lokaler
+          Computer</strong>, wenn Sie Administrator sind).
+        </Step>
+        <Step title="Speicher festlegen">
+          <strong>Alle Zertifikate in folgendem Speicher speichern</strong> →
+          Durchsuchen → <strong>Vertrauenswürdige
+          Stammzertifizierungsstellen</strong> → OK → Weiter → Fertig stellen.
+        </Step>
+        <Step title="Bestätigen">
+          Eine Sicherheitswarnung ggf. mit <strong>Ja</strong> bestätigen.
+        </Step>
+      </StepList>
+
+      <H3>macOS</H3>
+      <StepList>
+        <Step title="Datei öffnen">
+          <InlineCode>bgzwn-NEO-CA.cer</InlineCode> doppelklicken — die
+          Schlüsselbundverwaltung öffnet sich.
+        </Step>
+        <Step title="Schlüsselbund wählen">
+          Schlüsselbund <strong>System</strong> oder{" "}
+          <strong>Anmeldung</strong> wählen → Hinzufügen.
+        </Step>
+        <Step title="Vertrauen einstellen">
+          Zertifikat <InlineCode>bgzwn-NEO-CA</InlineCode> suchen →
+          doppelklicken → Abschnitt <strong>Vertrauen</strong> aufklappen →
+          „Bei Verwendung dieses Zertifikats“: <strong>Immer
+          vertrauen</strong>.
+        </Step>
+        <Step title="Speichern">
+          Fenster schließen und mit dem Mac-Passwort bzw. Touch ID bestätigen.
+        </Step>
+      </StepList>
+
+      <H3>iPhone / iPad</H3>
+      <StepList>
+        <Step title="Zertifikat laden">
+          Den Download-Link oben in <strong>Safari</strong> öffnen →{" "}
+          <strong>Zulassen</strong>.
+        </Step>
+        <Step title="Profil installieren">
+          Einstellungen → Allgemein → <strong>VPN &amp;
+          Geräteverwaltung</strong> → Profil <InlineCode>bgzwn-NEO-CA</InlineCode>{" "}
+          → Installieren.
+        </Step>
+        <Step title="Vertrauen einschalten">
+          Einstellungen → Allgemein → Info →{" "}
+          <strong>Zertifikatsvertrauenseinstellungen</strong> →{" "}
+          <InlineCode>bgzwn-NEO-CA</InlineCode> einschalten. Diesen Schritt
+          nicht vergessen!
+        </Step>
+      </StepList>
+
+      <H3>Android</H3>
+      <StepList>
+        <Step title="Datei öffnen">
+          <InlineCode>bgzwn-NEO-CA.cer</InlineCode> öffnen → als{" "}
+          <strong>CA-Zertifikat</strong> installieren (nicht als
+          „VPN-/App-Nutzerzertifikat“).
+        </Step>
+        <Step title="Namen vergeben">
+          Name <InlineCode>bgzwn-NEO-CA</InlineCode> → OK (ggf. PIN des
+          Geräts eingeben).
+        </Step>
+        <Step title="Falls die Datei sich nicht öffnen lässt">
+          Einstellungen → Sicherheit → Zertifikat installieren →{" "}
+          <strong>CA-Zertifikat</strong> → heruntergeladene Datei auswählen.
+        </Step>
+      </StepList>
+
+      <Callout type="warning" title="Android: Menüs je nach Hersteller">
+        Die Menüs heißen je nach Hersteller unterschiedlich — Samsung:
+        Biometrie/Sicherheit → Zertifikate installieren; Pixel: Sicherheit
+        und Datenschutz → Zertifikat installieren. Prüfen können Sie die Installation meist
+        unter „Vertrauenswürdige Anmeldedaten“ → Nutzer.
+      </Callout>
+
+      {/* ═══ Schritt 2: Einstellungen ═══ */}
+      <H2>Schritt 2: WLAN-Einstellungen (alle Geräte)</H2>
+
+      <P>
+        Wenn Ihr Gerät nach Details fragt, verwenden Sie diese Einstellungen.
+        Die Anleitungen für die einzelnen Geräte folgen darunter.
+      </P>
+
+      <Table
+        headers={["Feld", "Einstellung"]}
+        rows={[
+          ["Sicherheit", "WPA2-/WPA3-Enterprise (802.1X)"],
+          ["EAP-Methode", "PEAP"],
+          ["Phase 2 / innere Authentifizierung", "MSCHAPv2"],
+          ["CA-Zertifikat", "bgzwn-NEO-CA (bzw. Systemzertifikate nach der Installation)"],
+          ["Server / Domäne", "neo.bgzwn.at"],
+          ["Anonyme Identität", "leer lassen"],
+          ["Benutzername / Identität", "nachname.vorname"],
+          ["Passwort", "Ihr Schulpasswort"],
+        ]}
+      />
 
       {/* ═══ Windows ═══ */}
       <H2>Windows 10 / 11</H2>
@@ -42,17 +200,27 @@ export default function WlanPage() {
             <li><strong>Passwort:</strong> Ihr Schulpasswort</li>
           </ul>
         </Step>
-        <Step title="Zertifikatswarnung bestätigen">
-          Es erscheint eine Warnung zum Serverzertifikat. Klicken Sie auf
-          <strong> &quot;Verbinden&quot;</strong> bzw.
-          <strong> &quot;Trotzdem verbinden&quot;</strong>. Das ist normal
-          und sicher — siehe Abschnitt unten.
+        <Step title="Zertifikat prüfen">
+          Fragt Windows, ob die Verbindung fortgesetzt werden soll, klicken
+          Sie auf <strong>Zertifikatdetails anzeigen</strong>. Steht dort{" "}
+          <InlineCode>neo.bgzwn.at</InlineCode>, ausgestellt von{" "}
+          <InlineCode>bgzwn-NEO-CA</InlineCode>, klicken Sie auf{" "}
+          <strong>Verbinden</strong>.
         </Step>
         <Step title="Fertig">
           Sie sind jetzt verbunden. Die Verbindung bleibt bis zum nächsten
           Passwortwechsel gespeichert.
         </Step>
       </StepList>
+
+      <Callout type="info" title="Manuell einrichten (falls nötig)">
+        WLAN-Eigenschaften → Sicherheit → <strong>Microsoft: Geschütztes EAP
+        (PEAP)</strong> → Einstellungen → bei den
+        Stammzertifizierungsstellen <InlineCode>bgzwn-NEO-CA</InlineCode>{" "}
+        anhaken → Servername <InlineCode>neo.bgzwn.at</InlineCode> (falls
+        das Feld vorhanden ist) → Authentifizierungsmethode{" "}
+        <strong>Gesichertes Kennwort (EAP-MSCHAP v2)</strong>.
+      </Callout>
 
       <Callout type="warning" title="Windows fragt nach Domäne?">
         Falls Windows nach einer Domäne fragt, lassen Sie das Feld leer oder
@@ -72,10 +240,13 @@ export default function WlanPage() {
             <li><strong>Passwort:</strong> Ihr Schulpasswort</li>
           </ul>
         </Step>
-        <Step title="Zertifikat akzeptieren">
-          macOS zeigt ein Fenster mit Zertifikatsdetails. Klicken Sie auf
-          <strong> &quot;Fortfahren&quot;</strong> (Continue). Bestätigen
-          Sie ggf. mit Ihrem Mac-Passwort oder Touch ID.
+        <Step title="Zertifikat prüfen">
+          Zeigt macOS ein Zertifikat an, klicken Sie auf{" "}
+          <strong>Zertifikat einblenden</strong>. Steht dort{" "}
+          <InlineCode>neo.bgzwn.at</InlineCode>, ausgestellt von{" "}
+          <InlineCode>bgzwn-NEO-CA</InlineCode>, klicken Sie auf{" "}
+          <strong>Fortfahren</strong> und bestätigen ggf. mit Mac-Passwort
+          oder Touch ID.
         </Step>
         <Step title="Fertig">
           Die Verbindung wird im Schlüsselbund gespeichert.
@@ -96,10 +267,11 @@ export default function WlanPage() {
             <li><strong>Passwort:</strong> Ihr Schulpasswort</li>
           </ul>
         </Step>
-        <Step title="Zertifikat vertrauen">
-          Es erscheint &quot;Zertifikat nicht vertrauenswürdig&quot; — tippen
-          Sie oben rechts auf <strong>&quot;Vertrauen&quot;</strong>. Das ist
-          normal und sicher.
+        <Step title="Zertifikat prüfen">
+          Erscheint ein Zertifikat, prüfen Sie: Name{" "}
+          <InlineCode>neo.bgzwn.at</InlineCode>, ausgestellt von{" "}
+          <InlineCode>bgzwn-NEO-CA</InlineCode>. Dann oben rechts auf{" "}
+          <strong>Vertrauen</strong> tippen.
         </Step>
         <Step title="Fertig">
           Das WLAN verbindet sich ab jetzt automatisch.
@@ -117,23 +289,24 @@ export default function WlanPage() {
           <ul>
             <li><strong>EAP-Methode:</strong> PEAP</li>
             <li><strong>Phase-2-Authentifizierung:</strong> MSCHAPV2</li>
-            <li><strong>CA-Zertifikat:</strong> &quot;Nicht validieren&quot; oder &quot;Systemzertifikate verwenden&quot;</li>
-            <li><strong>Domäne:</strong> <InlineCode>bgzwn.at</InlineCode> (falls gefragt)</li>
+            <li><strong>CA-Zertifikat:</strong> <InlineCode>bgzwn-NEO-CA</InlineCode> (in Schritt 1 installiert)</li>
+            <li><strong>Domäne:</strong> <InlineCode>neo.bgzwn.at</InlineCode></li>
             <li><strong>Identität:</strong> <InlineCode>nachname.vorname</InlineCode></li>
             <li><strong>Anonyme Identität:</strong> leer lassen</li>
             <li><strong>Passwort:</strong> Ihr Schulpasswort</li>
           </ul>
         </Step>
         <Step title="Verbinden">
-          Tippen Sie auf &quot;Verbinden&quot;. Bei einer Zertifikatswarnung
-          auf &quot;Akzeptieren&quot; tippen.
+          Tippen Sie auf &quot;Verbinden&quot;.
         </Step>
       </StepList>
 
       <Callout type="info" title="Android-Versionen unterschiedlich">
         Die Menübezeichnungen variieren je nach Hersteller (Samsung, Xiaomi,
         Pixel etc.) und Android-Version. Die Einstellungen sind aber immer
-        dieselben: PEAP + MSCHAPV2.
+        dieselben: PEAP + MSCHAPV2, CA-Zertifikat{" "}
+        <InlineCode>bgzwn-NEO-CA</InlineCode>, Domäne{" "}
+        <InlineCode>neo.bgzwn.at</InlineCode>.
       </Callout>
 
       {/* ═══ Linux ═══ */}
@@ -149,7 +322,8 @@ export default function WlanPage() {
           ["Sicherheit", "WPA & WPA2 Enterprise"],
           ["Authentifizierung", "Protected EAP (PEAP)"],
           ["Anonyme Identität", "(leer lassen)"],
-          ["CA-Zertifikat", "\"Nicht erforderlich\" oder Systemzertifikate"],
+          ["CA-Zertifikat", "Datei bgzwn-NEO-CA.cer auswählen"],
+          ["Domäne (falls vorhanden)", "neo.bgzwn.at"],
           ["PEAP-Version", "Automatisch"],
           ["Innere Authentifizierung", "MSCHAPv2"],
           ["Benutzername", "nachname.vorname"],
@@ -157,51 +331,67 @@ export default function WlanPage() {
         ]}
       />
 
-      {/* ═══ Zertifikatswarnung ═══ */}
-      <H2>Zertifikatswarnung — Was bedeutet das?</H2>
+      {/* ═══ Zertifikat ═══ */}
+      <H2>Warum ein Zertifikat?</H2>
 
       <P>
-        Beim ersten Verbinden mit dem Schul-WLAN zeigt Ihr Gerät eine
-        Warnung zum Serverzertifikat. <strong>Das ist normal und kann
-        bedenkenlos akzeptiert werden.</strong>
+        Beim Anmelden weist sich der WLAN-Anmeldeserver der Schule (
+        <InlineCode>neo.bgzwn.at</InlineCode>) mit einem Zertifikat aus.
+        Damit prüft Ihr Gerät, dass es wirklich mit dem Schulnetz verbunden
+        ist — und nicht mit einem <strong>gefälschten Hotspot</strong>, der
+        nur Ihr Schulpasswort abgreifen will.
       </P>
-
-      <H3>Warum erscheint die Warnung?</H3>
 
       <UL>
         <li>
-          Das Schul-WLAN verwendet einen <strong>RADIUS-Server</strong>,
-          der sich mit einem Zertifikat bei Ihrem Gerät ausweist
+          Das Zertifikat stellt die Schule selbst aus (
+          <InlineCode>bgzwn-NEO-CA</InlineCode>). Deshalb kennt Ihr Gerät es
+          erst, wenn Sie es einmal installiert haben (Schritt 1).
         </li>
         <li>
-          Da dieses Zertifikat intern von der Schule ausgestellt ist (und
-          nicht von einer öffentlichen Zertifizierungsstelle wie Let&apos;s
-          Encrypt), stuft Ihr Gerät es beim ersten Mal als
-          &quot;unbekannt&quot; ein
+          Danach erkennt Ihr Gerät den Schul-Server automatisch — einmal
+          installieren reicht bis August 2030.
         </li>
         <li>
-          Sobald Sie es einmal akzeptieren, wird es gespeichert und die
-          Warnung erscheint nicht mehr
+          Die Installation ist sicher: Es ist nur das öffentliche
+          Stammzertifikat der Schule — kein Passwort, kein geheimer
+          Schlüssel.
         </li>
       </UL>
 
-      <Callout type="success" title="Sicher akzeptieren">
-        Sie befinden sich im Schulgebäude und verbinden sich mit dem
-        offiziellen Schulnetzwerk. Die Zertifikatswarnung kann{" "}
-        <strong>ohne Bedenken akzeptiert</strong> werden. Im Zweifelsfall
-        fragen Sie die IT-Administration.
+      <Callout type="danger" title="Unbekanntes Zertifikat? Nicht verbinden!">
+        Zeigt Ihr Gerät ein Zertifikat an, das <strong>nicht</strong> für{" "}
+        <InlineCode>neo.bgzwn.at</InlineCode> gilt oder nicht von{" "}
+        <InlineCode>bgzwn-NEO-CA</InlineCode> ausgestellt wurde, geben Sie
+        Ihr Passwort nicht ein und melden Sie es an{" "}
+        <a
+          href="mailto:admin@bgzwn.at"
+          className="text-primary hover:underline"
+        >
+          admin@bgzwn.at
+        </a>
+        .
       </Callout>
+
+      <H3>Zertifikat selbst überprüfen (optional)</H3>
+      <P>
+        Wer ganz sicher gehen will, vergleicht den Fingerabdruck (SHA-256)
+        der heruntergeladenen Datei:
+      </P>
+      <p className="text-sm bg-code-bg text-txt px-3 py-2 rounded font-mono break-all mb-4">
+        2E:D1:29:57:A8:0E:B6:07:FD:B9:8E:2D:85:55:D4:EA:BE:D8:BF:21:46:02:75:96:E6:C0:F2:E5:A4:1E:B9:22
+      </p>
 
       <H3>Zusammenfassung je Gerät</H3>
 
       <Table
-        headers={["Gerät", "Was tun bei Zertifikatswarnung?"]}
+        headers={["Gerät", "Zertifikat installieren", "Beim Verbinden"]}
         rows={[
-          ["Windows", "\"Verbinden\" / \"Trotzdem verbinden\" klicken"],
-          ["macOS", "\"Fortfahren\" klicken, ggf. Mac-Passwort bestätigen"],
-          ["iPhone / iPad", "\"Vertrauen\" tippen (oben rechts)"],
-          ["Android", "\"Akzeptieren\" tippen oder CA-Zertifikat auf \"Nicht validieren\" setzen"],
-          ["Linux", "CA-Zertifikat auf \"Nicht erforderlich\" setzen"],
+          ["Windows", "Vertrauenswürdige Stammzertifizierungsstellen", "Details prüfen → \"Verbinden\""],
+          ["macOS", "Schlüsselbund → \"Immer vertrauen\"", "Zertifikat einblenden → \"Fortfahren\""],
+          ["iPhone / iPad", "Profil installieren + Vertrauen einschalten", "Zertifikat prüfen → \"Vertrauen\""],
+          ["Android", "Als CA-Zertifikat installieren", "CA bgzwn-NEO-CA, Domäne neo.bgzwn.at"],
+          ["Linux", "Nicht nötig", "Datei bgzwn-NEO-CA.cer als CA-Zertifikat wählen"],
         ]}
       />
 
@@ -239,12 +429,19 @@ export default function WlanPage() {
       <H3>Zertifikatswarnung erscheint immer wieder</H3>
       <UL>
         <li>
-          <strong>iPhone/iPad:</strong> Einstellungen → Allgemein → VPN &amp;
-          Geräteverwaltung → installierte Profile prüfen
+          <strong>Alle Geräte:</strong> Schulnetzwerk „vergessen“ bzw.
+          entfernen, prüfen ob <InlineCode>bgzwn-NEO-CA</InlineCode>{" "}
+          installiert ist, dann neu verbinden
         </li>
         <li>
-          <strong>macOS:</strong> Schlüsselbundverwaltung öffnen → altes
-          WLAN-Zertifikat der Schule löschen → neu verbinden
+          <strong>iPhone/iPad:</strong> Einstellungen → Allgemein → Info →
+          Zertifikatsvertrauenseinstellungen → ist{" "}
+          <InlineCode>bgzwn-NEO-CA</InlineCode> eingeschaltet?
+        </li>
+        <li>
+          <strong>macOS:</strong> Schlüsselbundverwaltung → bei{" "}
+          <InlineCode>bgzwn-NEO-CA</InlineCode> „Immer vertrauen“ gesetzt?
+          Alte, gespeicherte WLAN-Einträge der Schule löschen → neu verbinden
         </li>
         <li>
           <strong>Windows:</strong> WLAN-Profil löschen: Einstellungen →
@@ -257,8 +454,8 @@ export default function WlanPage() {
       <UL>
         <li>EAP-Methode auf <strong>PEAP</strong> setzen (nicht TLS oder TTLS)</li>
         <li>Phase-2 auf <strong>MSCHAPV2</strong> setzen</li>
-        <li>CA-Zertifikat auf &quot;Nicht validieren&quot; setzen</li>
-        <li>Domäne auf <InlineCode>bgzwn.at</InlineCode> setzen (falls das Feld vorhanden ist)</li>
+        <li>CA-Zertifikat auf <InlineCode>bgzwn-NEO-CA</InlineCode> setzen — ist es nicht in der Liste, zuerst Schritt 1 erledigen</li>
+        <li>Domäne auf <InlineCode>neo.bgzwn.at</InlineCode> setzen</li>
         <li>Anonyme Identität <strong>leer</strong> lassen</li>
       </UL>
 
