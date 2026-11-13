@@ -234,7 +234,7 @@ export default function NextExamPage() {
 
       <H3>Muss Next-Exam installiert werden?</H3>
       <P>
-        Nein. Die Windows-EXE und die Linux-AppImage sind{" "}
+        Nein. Die Windows-EXE der Schüler-App und die Linux-AppImage sind{" "}
         <strong>portabel</strong> und können direkt aus einem Ordner
         gestartet werden. Nur die MSI-Variante (Windows) führt eine
         klassische Installation durch. Auf macOS wird die App wie üblich
@@ -276,10 +276,10 @@ export default function NextExamPage() {
       </P>
 
       {/* ═══ Downloads ═══ */}
-      <H2 id="downloads-nextexam">Downloads — Aktuelle Version: 2.1.2.5</H2>
+      <H2 id="downloads-nextexam">Downloads — Aktuelle Version: 2.1.3</H2>
 
       <P>
-        Veröffentlicht am 17. Oktober 2026. Alle Downloads von{" "}
+        Veröffentlicht am 11. November 2026. Alle Downloads von{" "}
         <a
           href="https://github.com/Bildungsportal/next-exam/releases"
           target="_blank"
@@ -296,11 +296,11 @@ export default function NextExamPage() {
       <Table
         headers={["Betriebssystem", "Format", "Download"]}
         rows={[
-          ["Windows", "EXE (portable)", "Next-Exam-Student_2.1.2.5 (342 MB)"],
-          ["Windows", "MSI (Installer)", "Next-Exam-Student_2.1.2.5 (288 MB)"],
-          ["macOS (Apple Silicon)", "DMG", "Next-Exam-Student_2.1.2.5 (338 MB)"],
-          ["macOS (Intel)", "DMG", "Next-Exam-Student_2.1.2.5 (348 MB)"],
-          ["Linux", "AppImage", "Next-Exam-Student_2.1.2.5 (322 MB)"],
+          ["Windows", "EXE (portable)", "Next-Exam-Student_2.1.3 (342 MB)"],
+          ["Windows", "MSI (Installer)", "Next-Exam-Student_2.1.3 (288 MB)"],
+          ["macOS (Apple Silicon)", "DMG", "Next-Exam-Student_2.1.3 (338 MB)"],
+          ["macOS (Intel)", "DMG", "Next-Exam-Student_2.1.3 (348 MB)"],
+          ["Linux", "AppImage", "Next-Exam-Student_2.1.3 (321 MB)"],
           ["iPad (iPadOS)", "App Store", "Next-Exam Student"],
         ]}
       />
@@ -308,33 +308,33 @@ export default function NextExamPage() {
       <LinkCards
         items={[
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.2.5/Next-Exam-Student_2.1.2.5_20261017_x64.exe",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.3/Next-Exam-Student_2.1.3.0_20261110_x64.exe",
             label: "Windows (EXE)",
             desc: "Student — portable, keine Installation (342 MB)",
             dotClass: "bg-green-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.2.5/Next-Exam-Student_2.1.2.5_20261017_x64.msi",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.3/Next-Exam-Student_2.1.3.0_20261110_x64.msi",
             label: "Windows (MSI)",
             desc: "Student — Installer (288 MB)",
             dotClass: "bg-green-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.2.5/Next-Exam-Student_2.1.2.5_20261017_arm64.dmg",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.3/Next-Exam-Student_2.1.3.0_20261110_arm64.dmg",
             label: "macOS (Apple Silicon)",
             desc: "Student — für M1/M2/M3/M4 Macs (338 MB)",
             dotClass: "bg-green-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.2.5/Next-Exam-Student_2.1.2.5_20261017_x64.dmg",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.3/Next-Exam-Student_2.1.3.0_20261110_x64.dmg",
             label: "macOS (Intel)",
             desc: "Student — für ältere Macs (348 MB)",
             dotClass: "bg-green-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.2.5/Next-Exam-Student_2.1.2.5_20261017_x86_64.AppImage",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.3/Next-Exam-Student_2.1.3.0_20261110_x86_64.AppImage",
             label: "Linux (AppImage)",
-            desc: "Student — Ubuntu, Fedora etc. (322 MB)",
+            desc: "Student — Ubuntu, Fedora etc. (321 MB)",
             dotClass: "bg-green-500",
           },
           {
@@ -351,31 +351,31 @@ export default function NextExamPage() {
       <LinkCards
         items={[
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.2.5/Next-Exam-Teacher_2.1.2.5_20261017_x64.exe",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.3/Next-Exam-Teacher_2.1.3.0_20261110_x64.exe",
             label: "Windows (EXE)",
-            desc: "Teacher — portable, keine Installation (126 MB)",
+            desc: "Teacher — Windows-Version (126 MB)",
             dotClass: "bg-blue-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.2.5/Next-Exam-Teacher_2.1.2.5_20261017_x64.msi",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.3/Next-Exam-Teacher_2.1.3.0_20261110_x64.msi",
             label: "Windows (MSI)",
             desc: "Teacher — Installer (157 MB)",
             dotClass: "bg-blue-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.2.5/Next-Exam-Teacher_2.1.2.5_20261017_arm64.dmg",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.3/Next-Exam-Teacher_2.1.3.0_20261110_arm64.dmg",
             label: "macOS (Apple Silicon)",
             desc: "Teacher — für M1/M2/M3/M4 Macs (178 MB)",
             dotClass: "bg-blue-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.2.5/Next-Exam-Teacher_2.1.2.5_20261017_x64.dmg",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.3/Next-Exam-Teacher_2.1.3.0_20261110_x64.dmg",
             label: "macOS (Intel)",
             desc: "Teacher — für ältere Macs (187 MB)",
             dotClass: "bg-blue-500",
           },
           {
-            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.2.5/Next-Exam-Teacher_2.1.2.5_20261017_x86_64.AppImage",
+            href: "https://github.com/Bildungsportal/next-exam/releases/download/2.1.3/Next-Exam-Teacher_2.1.3.0_20261110_x86_64.AppImage",
             label: "Linux (AppImage)",
             desc: "Teacher — Ubuntu, Fedora etc. (197 MB)",
             dotClass: "bg-blue-500",
@@ -392,6 +392,43 @@ export default function NextExamPage() {
 
       {/* ═══ Changelog ═══ */}
       <H2>Versionshistorie</H2>
+
+      <H3>Version 2.1.3 — 11. November 2026</H3>
+      <UL>
+        <li>
+          <strong>iPad:</strong> Der Microsoft-365-Prüfungsmodus ist jetzt
+          auch auf dem iPad verfügbar; dazu Fokusverlust-Erkennung,
+          Druckverbot und private Rechtschreibprüfung. Das Schul-WLAN
+          funktioniert auch ohne Profil.
+        </li>
+        <li>
+          Bildschirmschoner und Apps, die den Fokusverlust umgehen wollen,
+          werden erkannt.
+        </li>
+        <li>
+          Die Tipprhythmus-Sperre greift nur noch bei sehr schnellem,
+          gleichmäßigem Tippen.
+        </li>
+        <li>
+          Ohne eigenes Prüfungspasswort können Schüler:innen die Prüfung
+          ohne Passwortabfrage beenden.
+        </li>
+        <li>
+          Abgegebene PDFs zeigen auf jeder Seite „Name | Seite A/B“.
+        </li>
+        <li>
+          Microsoft 365: Bei geänderten Vorlagen fragt Next-Exam nach, ob
+          bestehende OneDrive-Dateien ersetzt werden sollen.
+        </li>
+        <li>
+          Lehrer-App: Speicherlecks behoben, Login über ID Austria und
+          Bildungsportal funktioniert auch im Eduvidual-Modus.
+        </li>
+        <li>
+          Die portable Windows-Version (EXE ohne Installation) gibt es nur
+          noch für die Schüler-App.
+        </li>
+      </UL>
 
       <H3>Version 2.1.2.5 — 17. Oktober 2026</H3>
       <UL>
