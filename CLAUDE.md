@@ -71,6 +71,8 @@ bgz-infohub/
 ├── components/LastUpdated.tsx  # Zeigt "Zuletzt aktualisiert"-Datum pro Seite (Client, usePathname)
 ├── lib/last-updated.json       # GENERIERT: Route → ISO-Datum (nicht manuell editieren)
 ├── scripts/gen-last-updated.mjs # Generiert lib/last-updated.json aus git (laeuft vor dev/build)
+├── components/StatsBeacon.tsx  # Cookieloser Zaehl-Beacon (Seitenaufrufe + /templates-Downloads)
+├── public/stats/               # PHP: collect.php, index.php (Dashboard /stats/), lib.php
 ├── scripts/gen-search-index.mjs # Generiert public/search-index.json via TS-Compiler-API (vor dev/build)
 ├── public/search-index.json    # GENERIERT (gitignored): Volltext-Suchindex, lazy gefetcht
 └── CLAUDE.md                   # Diese Datei
@@ -95,6 +97,14 @@ bgz-infohub/
 - **Komponente** `components/Search.tsx` (Client): sichtbares Suchfeld oben in der Sidebar (`<Search onNavigate={() => setOpen(false)} />`). **Lazy `fetch("/search-index.json")`** beim ersten Fokus (NICHT ins Bundle gebuendelt; same-origin → CSP `connect-src 'self'` ok). Sprachfilter via `isEN`. Gewichtetes Scoring: **title ×10 > desc ×5 > headings ×3 > text ×1** (desc = kuratierte Zusammenfassung, wichtigstes Signal nach dem Titel; war anfangs gar nicht durchsucht → Bug behoben). Substring-Matching (Eltern tippen Teilwoerter), Multi-Token AND-Bonus. Ergebnis-Dropdown mit hervorgehobenem Treffer-Snippet (`<mark bg-primary/20>`).
 - **a11y**: Combobox-Muster (`role="combobox"`/`listbox`/`option`, `aria-activedescendant`, `aria-live` Trefferzahl), Tastatur ↑/↓/Enter/Esc, 44px Touch-Target, focus-visible.
 - Neue Seiten erscheinen **automatisch** im Index (Generator scannt alle page.tsx) — keine manuelle Liste pflegen.
+
+### Zugriffsstatistik (cookielos, wie diplo.eichberger.tech/stats)
+- **Auswertung**: `https://infohub.bgzwn.at/stats/` (nicht verlinkt, `noindex`, kein Passwort — nur aggregierte Zahlen). Zeitraum 7/30/90 Tage/12 Monate.
+- **Code**: `public/stats/` (`collect.php` nimmt an, `index.php` = Dashboard, `lib.php` = gemeinsame Funktionen) → wird beim Build nach `out/stats/` kopiert. **Braucht PHP am Plesk-Hosting** (Hosting-Einstellungen → PHP-Unterstuetzung).
+- **Client**: `components/StatsBeacon.tsx` (in `app/layout.tsx`): pro Seitenaufruf `sendBeacon` mit Pfad + Einstiegs-Domain; Klicks auf `/templates/*` (Zertifikat, PDFs, Word-Vorlage) als Download. Nicht auf localhost, nicht bei DNT/GPC. Same-origin → CSP `connect-src 'self'` passt.
+- **Datenschutz**: keine Cookies, kein localStorage, keine IP, kein User-Agent gespeichert (nur Kategorien Geraet/Browser/OS/Browsersprache). Bots gefiltert. 24 Monate Aufbewahrung (automatisches Loeschen).
+- **Speicherort** (Footer im Dashboard zeigt ihn an): bevorzugt `../infohub-stats-data/` AUSSERHALB des Webroots; falls nicht beschreibbar `stats-data/` im Webroot. Monatsdateien `JJJJ-MM.php` mit 404-Guard-Zeile (auch ohne .htaccess nicht lesbar). **Liegt sie im Webroot: `stats-data/` beim Hochladen/rsync `--delete` NIE loeschen** (`--exclude stats-data/`).
+- Download-Namen im Dashboard: `$downloadNames` in `public/stats/index.php` (neue Dateien in `public/templates/` dort ergaenzen, sonst erscheint der Dateiname).
 
 ### Routing & i18n
 - `/infohub/*` — 22 Deutsche Seiten

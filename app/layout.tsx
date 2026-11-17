@@ -3,6 +3,7 @@ import "./globals.css";
 import { Sidebar } from "@/components/Sidebar";
 import { LastUpdated } from "@/components/LastUpdated";
 import { SkipLink } from "@/components/SkipLink";
+import { StatsBeacon } from "@/components/StatsBeacon";
 
 export const metadata: Metadata = {
   title: {
@@ -45,6 +46,7 @@ export default function RootLayout({
           <main id="main" className="flex-1 min-w-0 px-4 sm:px-8 py-8 max-w-4xl mx-auto w-full">
             {children}
             <LastUpdated />
+            <StatsBeacon />
           </main>
         </div>
       </body>
